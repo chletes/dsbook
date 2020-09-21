@@ -41,7 +41,7 @@ dat %>%
   ggtitle(toupper("Homicide Per 100,000 in G-8 Countries")) + 
   xlab("") + 
   ylab("# of gun-related homicides\nper 100,000 people") +
-  ggthemes::theme_economist() +
+  #ggthemes::theme_economist() +
   theme(axis.text.x = element_text(size = 8, vjust = -12),
         axis.ticks.x=element_blank(),
         axis.line.x = element_blank(),
