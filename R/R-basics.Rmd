@@ -340,7 +340,19 @@ c <- -1
 
 1\. What is the sum of the first 100 positive integers? The formula for the sum of integers $1$ through $n$ is $n(n+1)/2$. Define $n=100$ and then use R to compute the sum of $1$ through $100$ using the formula. What is the sum?
 
+```{r}
+n <- 100
+n*(n+1)/2
+```
+
+
 2\. Now use the same formula to compute the sum of the integers from 1 through 1,000.
+
+```{r}
+n <- 1000
+n*(n+1)/2
+```
+
 
 3\. Look at the result of typing the following code into R:
 
@@ -447,14 +459,13 @@ It is important to know that the order of the entries in `murders$population` pr
 The object `murders$population` is not one number but several. We call these types of objects _vectors_. A single number is technically a vector of length 1, but in general we use the term vectors to refer to objects with several entries. The function `length` tells you how many entries are in the vector:
 
 ```{r}
-pop <- murders$population
-length(pop)
+length(murders$population)
 ```
 
 This particular vector is _numeric_ since population sizes are numbers:
 
 ```{r}
-class(pop)
+class(murders$population)
 ```
 In a numeric vector, every entry must be a number. 
 
@@ -584,7 +595,7 @@ Yet matrices have a major advantage over data frames: we can perform matrix alge
 We can define a matrix using the `matrix` function. We need to specify the number of rows and columns.
 
 ```{r}
-mat <- matrix(1:12, 4, 3)
+mat <- matrix(data = 1:12, nrow = 4, ncol = 3)
 mat
 ```
 
@@ -622,7 +633,7 @@ You can subset both rows and columns:
 mat[1:2, 2:3]
 ```
 
-We can convert matrices into data frames using the function `as.data.frame`:
+We can convert matrices into data frames using the function `as.data.frame` or `data.frame`:
 
 ```{r}
 as.data.frame(mat)
@@ -646,28 +657,61 @@ library(dslabs)
 data(murders)
 ```
 
-Use the function `str` to examine the structure of the `murders` object. Which of the following best describes the variables represented in this data frame?
+Use the function `str` to examine the structure of the `murders` object. 
+
+```{r}
+str(murders)
+```
+
+Which of the following best describes the variables represented in this data frame?
     
 a. The 51 states.
 b. The murder rates for all 50 states and DC.
-c. The state name, the abbreviation of the state name, the state's region, and the state's population and total number of murders for 2010. 
+*c.* The state name, the abbreviation of the state name, the state's region, and the state's population and total number of murders for 2010. 
 d. `str` shows no relevant information.
     
 2\. What are the column names used by the data frame for these five variables?
+
+```{r}
+names(murders)
+```
+
     
 3\. Use the accessor `$` to extract the state abbreviations and assign them to the object `a`. What is the class of this object?
 
+```{r}
+a <- murders$abb
+class(a)
+```
+
+
 4\. Now use the square brackets to extract the state abbreviations and assign them to the object `b`. Use the `identical` function to determine if `a` and `b` are the same.
+
+```{r}
+b <- murders[["abb"]]
+class(b)
+```
+
 
 5\. We saw that the `region` column stores a factor. You can corroborate this by typing: 
 
-```{r, eval=FALSE}
+```{r}
 class(murders$region)
 ```
 
 With one line of code, use the function `levels` and `length` to determine the number of regions defined by this dataset.
 
+```{r}
+length(levels(murders$region))
+```
+
+
 6\. The function `table` takes a vector and returns the frequency of each element. You can quickly see how many states are in each region by applying this function. Use this function in one line of code to create a table of states per region.
+
+```{r}
+table(murders$region)
+```
+
 
 ##  Vectors {#vectors}
 
@@ -750,7 +794,7 @@ seq(1, 10)
 The first argument defines the start, and the second defines the end which is included. The default is to go up in increments of 1, but a third argument lets us tell it how much to jump by:
 
 ```{r}
-seq(1, 10, 2)
+seq(from = 1, to = 10, by = 2)
 ```
 
 If we want consecutive integers, we can use the following shorthand:
@@ -768,7 +812,7 @@ class(1:10)
 However, if we create a sequence including non-integers, the class changes:
 
 ```{r}
-class(seq(1, 10, 0.5))
+class(seq(from = 1, to = 10, by = 0.5))
 ```
 
 ### Subsetting
@@ -820,13 +864,13 @@ R also offers functions to change from one type to another. For example, you can
 ```{r}
 x <- 1:5
 y <- as.character(x)
-y
+class(y)
 ```
 
 You can turn it back with `as.numeric`:
 
 ```{r}
-as.numeric(y)
+class(as.numeric(y))
 ```
  
 This function is actually quite useful since datasets that include numbers as character strings are common. 
@@ -835,7 +879,7 @@ This function is actually quite useful since datasets that include numbers as ch
 
 When a function tries to coerce one type to another and encounters an impossible case, it usually gives us a warning and turns the entry into a special value called an `NA` for "not available".  For example:
 
-```{r}
+```{r, warning=false}
 x <- c("1", "b", "3")
 as.numeric(x)
 ```
@@ -846,44 +890,97 @@ As a data scientist you will encounter the `NA`s often as they are generally use
 
 ## Exercises
 
-1\. Use the function `c` to create a vector with the average high temperatures in January for Beijing, Lagos, Paris, Rio de Janeiro, San Juan, and Toronto, which are 35, 88, 42, 84, 81, and 30 degrees Fahrenheit. Call the object `temp`.
+1\. Use the function `c` to create a vector with the average high temperatures in January for Beijing, Lagos, Paris, Rio de Janeiro, San Juan, and Toronto, which are 35, 88, 42, 84,81, and 30 degrees Fahrenheit. Call the object `temp`.
+
+```{r}
+temp <- c(35, 88, 42, 84, 81, 30)
+```
+
 
 2\. Now create a vector with the city names and call the object `city`.
+
+```{r}
+city <- c("Beijing", "Lagos", "Paris", "Rio de Janeiro", "San Juan", "Toronto")
+```
+
 
 
 3\. Use the `names` function and the objects defined in the previous exercises to associate the temperature data with its corresponding city.
 
+```{r}
+names(temp) <- city
+temp
+```
+
+
  
 4\. Use the `[` and `:` operators to access the temperature of the first three cities on the list.
+```{r}
+temp[1:3]
+```
+
     
  
 5\. Use the `[` operator to access the temperature of Paris and San Juan. 
+```{r}
+temp[c(3,5)]
+```
+
    
 6\. Use the `:` operator to create a sequence of numbers $12,13,14,\dots,73$. 
+```{r}
+seq(from = 12, to = 73)
+```
+
    
 7\. Create a vector containing all the positive odd numbers smaller than 100.
+```{r}
+seq(from = 0, to = 99, by = 2)
+```
+
 
 8\. Create a vector of numbers that starts at 6, does not pass 55, and adds numbers in increments of 4/7: 6, 6 + 4/7, 6 + 8/7, and so on. How many numbers does the list have? Hint: use `seq` and `length`.
+
+```{r}
+length(seq(from = 6, to = 55, by = 4/7))
+```
+
  
 9\. What is the class of the following object `a <- seq(1, 10, 0.5)`?
+```{r}
+class(seq(1, 10, 0.5))
+```
 
 
 
 10\. What is the class of the following object `a <- seq(1, 10)`?
+```{r}
+class(seq(1, 10))
+```
 
    
 11\. The class of `class(a<-1)` is numeric, not integer. R defaults to numeric and to force an integer, you need to add the letter `L`. Confirm that the class of `1L` is integer.
+
+```{r}
+class(1L)
+```
+
 
   
 12\. Define the following vector:
 
 ```{r}
 x <- c("1", "3", "5")
+class(x)
 ```
 
 and coerce it to get integers.
   
-  
+```{r}
+x <- as.integer(x)
+class(x)
+```
+
 
 
 ## Sorting
@@ -892,9 +989,10 @@ Now that we have mastered some basic R knowledge, let's try to gain some insight
 
 ### `sort` 
 
-Say we want to rank the states from least to most gun murders. The function `sort` sorts a vector in increasing order. We can therefore see the largest number of gun murders by typing:
+Say we want to rank the states from least to most gun murders. The function `sort` sorts a vector in *increasing* order. We can therefore see the largest number of gun murders by typing:
 
 ```{r}
+rm(list = ls())
 library(dslabs)
 data(murders)
 sort(murders$total)
@@ -936,11 +1034,10 @@ murders$abb[1:6]
 This means we can order the state names by their total murders. We first obtain the index that orders the vectors according to murder totals and then index the state names vector:
 
 ```{r}
-ind <- order(murders$total) 
+ind <- order(murders$total[1:6]) 
+murders$state[ind]
 murders$abb[ind] 
 ```
-
-According to the above, California had the most murders.
 
 ### `max` and `which.max`
 
@@ -959,6 +1056,12 @@ murders$state[i_max]
 
 For the minimum, we can use `min` and `which.min` in the same way.
 
+```{r}
+i_min <- which.min(murders$total)
+murders$state[i_min]
+```
+
+
 Does this mean California is the most dangerous state? In an upcoming section, we argue that we should be considering rates instead of totals. Before doing that, we introduce one last order-related function: `rank`.
 
 ### `rank`
@@ -973,17 +1076,25 @@ rank(x)
 
 To summarize, let's look at the results of the three functions we have introduced:
 
-```{r, echo=FALSE}
+```{r}
 tmp <- data.frame(original=x, sort=sort(x), order=order(x), rank=rank(x))
 if(knitr::is_html_output()){
   knitr::kable(tmp, "html") %>%
     kableExtra::kable_styling(bootstrap_options = "striped", full_width = FALSE)
-} else{
+}else if(knitr::is_latex_output()){
   knitr::kable(tmp, "latex", booktabs = TRUE) %>%
     kableExtra::kable_styling(font_size = 8)
+}else{
+  tmp
 }
 ```
+Notice that:
 
+* in _sort_ we have the original column sorted : the values that goes from the smallest to the biggest;
+
+* _order_ gives us the indexes needed to obtain the sorted data : to obtain the original column sorted, we use `original[order(original)]`
+
+* _rank_ gives as the rank of the original vector : 31 is the 3rd smallest, 4 is the 1st smallest, etc. 
 
 ### Beware of recycling
 
@@ -1008,25 +1119,47 @@ data("murders")
 
 1\. Use the `$` operator to access the population size data and store it as the object `pop`. Then use the `sort` function to redefine `pop` so that it is sorted. Finally, use the `[` operator to report the smallest population size.
 
+```{r}
+sort(murders$population)[1]
+```
+
+
 2\. Now instead of the smallest population size, find the index of the entry with the smallest population size. Hint: use `order` instead of `sort`.
+```{r}
+order(murders$population)[1]
+```
+
   
 3\. We can actually perform the same operation as in the previous exercise using the function `which.min`. Write one line of code that does this.
 
-4\. Now we know how small the smallest state is and we know which row represents it. Which state is it? Define a variable `states` to be the state names from the `murders` data frame. Report the name of the state with the smallest population.
-
-5\. You can create a data frame using the `data.frame` function. Here is a quick example:
-
-
 ```{r}
-temp <- c(35, 88, 42, 84, 81, 30)
-city <- c("Beijing", "Lagos", "Paris", "Rio de Janeiro", 
-          "San Juan", "Toronto")
-city_temps <- data.frame(name = city, temperature = temp)
+which.min(murders$population)
 ```
 
+
+4\. Now we know how small the smallest state is and we know which row represents it. Which state is it? Define a variable `states` to be the state names from the `murders` data frame. Report the name of the state with the smallest population.
+
+```{r}
+murders$state[which.min(murders$population)]
+```
+
+
+5\. You can create a data frame using the `data.frame` function. 
 Use the `rank` function to determine the population rank of each state from smallest population size to biggest. Save these ranks in an object called `ranks`, then create a data frame with the state name and its rank. Call the data frame `my_df`.
 
+```{r}
+my_df <- data.frame(state = murders$state, rank = rank(murders$population))
+my_df
+```
+
+
 6\. Repeat the previous exercise, but this time order `my_df` so that the states are ordered from least populous to most populous. Hint: create an object `ind` that stores the indexes needed to order the population values. Then use the bracket operator `[` to re-order each column in the data frame.
+
+```{r}
+ind <- order(my_df$rank)
+my_df[ind,]
+```
+
 
 7\. The `na_example` vector represents a series of counts. You can quickly examine the object using:
     
@@ -1042,17 +1175,29 @@ mean(na_example)
 ```
     
 The `is.na` function returns a logical vector that tells us which entries are `NA`. Assign this logical vector to an object called `ind` and determine how many `NA`s does `na_example` have.
+
+```{r}
+ind <- is.na(na_example)
+sum(ind)
+```
+
     
    
 8\. Now compute the average again, but only for the entries that are not `NA`. Hint: remember the `!` operator.
 
- 
+```{r}
+mean(na_example[!ind])
+```
+
+
 
 ## Vector arithmetics
 
 California had the most murders, but does this mean it is the most dangerous state? What if it just has many more people than any other state? We can quickly confirm that California indeed has the largest population:
 
-```{r}
+
+```{r echo = 2:}
+rm(list = ls())
 library(dslabs)
 data("murders")
 murders$state[which.max(murders$population)]
@@ -1073,10 +1218,10 @@ and want to convert to centimeters. Notice what happens when we multiply `inches
 inches * 2.54
 ```
  
-In the line above, we multiplied each element by 2.54.  Similarly, if for each entry we want to compute how many inches taller or shorter than 69 inches, the average height for males, we can subtract it from every entry like this:
+In the line above, we multiplied each element by 2.54.  Similarly, if for each entry we want to compute how many inches taller or shorter than the average height for males, we can subtract it from every entry like this:
 
 ```{r}
-inches - 69
+inches - mean(inches)
 ```
 
 
@@ -1113,14 +1258,16 @@ This implies that to compute the murder rates we can simply type:
 
 ```{r}
 murder_rate <- murders$total / murders$population * 100000
+murder_rate
 ```
 
 Once we do this, we notice that California is no longer near the top of the list. In fact, we can use what we have learned to order the states by murder rate:
 
 ```{r}
-murders$abb[order(murder_rate)]
+murders$abb[order(murder_rate, decreasing = TRUE)]
 ```
 
+The highest murder rate is in the District of Columbia. 
 
 ## Exercises 
 
@@ -1130,20 +1277,34 @@ murders$abb[order(murder_rate)]
 temp <- c(35, 88, 42, 84, 81, 30)
 city <- c("Beijing", "Lagos", "Paris", "Rio de Janeiro", 
           "San Juan", "Toronto")
-city_temps <- data.frame(name = city, temperature = temp)
+city_temps <- data.frame(name = city, temp_fah = temp)
+city_temps
 ```     
 
 Remake the data frame using the code above, but add a line that converts the temperature from Fahrenheit to Celsius. The conversion is $C = \frac{5}{9} \times (F - 32)$.
+
+```{r}
+city_temps <- data.frame(name = city, temp_celsi = (5/9)*(temp-32))
+city_temps
+```
+
     
 2\. What is the following sum $1+1/2^2 + 1/3^2 + \dots 1/100^2$? Hint: thanks to Euler, we know it should be close to $\pi^2/6$.
 
 3\. Compute the per 100,000 murder rate for each state and store it in the object `murder_rate`. Then compute the average murder rate for the US using the function `mean`. What is the average?
 
+```{r}
+murder_rate <- murders$total / murders$population * 100000
+mean(murder_rate)
+```
+
+
 ## Indexing
 
 R provides a powerful and convenient way of indexing vectors. We can, for example, subset a vector based on properties of another vector. In this section, we continue working with our US murders example, which we can load like this:
 
-```{r}
+```{r echo = 2:}
+rm(list = ls())
 library(dslabs)
 data("murders")
 ```
@@ -1156,21 +1317,17 @@ We have now calculated the murder rate using:
 murder_rate <- murders$total / murders$population * 100000 
 ```
 
-Imagine you are moving from Italy where, according to an ABC news report, the murder rate is only 0.71 per 100,000. You would prefer to move to a state with a similar murder rate. Another powerful feature of R is that we can use logicals to index vectors. If we compare a vector to a single number, it actually performs the test for each entry. The following is an example related to the question above:
+Imagine you are moving from Italy where, according to an ABC news report, the murder rate is only 0.71 per 100,000. You would prefer to move to a state with a similar murder rate. Another powerful feature of R is that we can use logicals to index vectors. If we compare a vector to a single number, it actually performs the test for each entry. The following is an example related to the question above.  To see which states these are, we can leverage the fact that vectors can be indexed with logicals.
 
 ```{r}
 ind <- murder_rate < 0.71
+murders$state[ind]
 ```
 
 If we instead want to know if a value is less or equal, we can use:
 
 ```{r}
 ind <- murder_rate <= 0.71
-```
-
-Note that we get back a logical vector with `TRUE` for each entry smaller than or equal to 0.71. To see which states these are, we can leverage the fact that vectors can be indexed with logicals.
-
-```{r}
 murders$state[ind]
 ```
 
@@ -1213,6 +1370,12 @@ Suppose we want to look up California's murder rate. For this type of operation,
 ind <- which(murders$state == "California")
 murder_rate[ind]
 ```
+WE could use : 
+
+```{r}
+ind <- murders$state == "California"
+murder_rate[ind]
+```
 
 
 ### `match`
@@ -1220,14 +1383,13 @@ murder_rate[ind]
 If instead of just one state we want to find out the murder rates for several states, say New York, Florida, and Texas, we can use the function `match`. This function tells us which indexes of a second vector match each of the entries of a first vector:
 
 ```{r}
-ind <- match(c("New York", "Florida", "Texas"), murders$state)
-ind
+ind <- match(x = c("New York", "Florida", "Texas"), table = murders$state)
 ```
 
 Now we can look at the murder rates:
 
 ```{r}
-murder_rate[ind]
+data.frame(states = murders$state[ind], indexes = ind, murder_rate = murder_rate[ind])
 ```
 
 ### `%in%`
@@ -1245,7 +1407,7 @@ Note that we will be using `%in%` often throughout the book.
 
 ```{r}
 match(c("New York", "Florida", "Texas"), murders$state)
-which(murders$state%in%c("New York", "Florida", "Texas"))
+which(murders$state %in% c("New York", "Florida", "Texas"))
 ```
 
 ## Exercises 
@@ -1256,21 +1418,60 @@ library(dslabs)
 data(murders)
 ```
 
-1\. Compute the per 100,000 murder rate for each state and store it in an object called `murder_rate`. Then use logical operators to create a logical vector named `low` that tells us which entries of `murder_rate` are lower than 1.
+1\. Compute the per 100000 murder rate for each state and store it in an object called `murder_rate`. Then use logical operators to create a logical vector named `low` that tells us which entries of `murder_rate` are lower than 1.
+
+```{r}
+murder_rate <- murders$total / murders$population * 100000
+low <- murder_rate < 1
+murders$state[low]
+```
+
 
 2\. Now use the results from the previous exercise and the function `which` to determine the indices of `murder_rate` associated with values lower than 1.
 
-3\. Use the results from the previous exercise to report the names of the states with murder rates lower than 1.
+```{r}
+low <- which(murder_rate < 1)
+murders$state[low]
+```
+
 
 4\. Now extend the code from exercises 2 and 3 to report the states in the Northeast with murder rates lower than 1. Hint: use the previously defined logical vector `low` and the logical operator `&`.
 
-5\. In a previous exercise we computed the murder rate for each state and the average of these numbers. How many states are below the average? 
+```{r}
+NE_and_safe <- murders$region == "Northeast" & murder_rate < 1
+data.frame(states = murders$state[NE_and_safe], region = murders$region[NE_and_safe], murder_rate = murder_rate[NE_and_safe])
+```
+
+
+5\. In a previous exercise we computed the murder rate for each state and the average of these numbers. How many states are below the average?
+
+```{r}
+avg_murder_rate = mean(murder_rate)
+sum(murder_rate < avg_murder_rate)
+```
+
 
 6\. Use the match function to identify the states with abbreviations AK, MI, and IA. Hint: start by defining an index of the entries of `murders$abb` that match the three abbreviations, then use the `[` operator to extract the states.
 
+```{r}
+murders$state[match(x = c("AK", "MI", "IA"), table = murders$abb)]
+```
+
+
 7\. Use the `%in%` operator to create a logical vector that answers the question: which of the following are actual abbreviations: MA, ME, MI, MO, MU?
 
+```{r}
+abbs <- c("MA", "ME", "MI", "MO", "MU")
+data.frame(state = abbs, ins = (abbs %in% murders$abb))
+```
+
+
 8\. Extend the code you used in exercise 7 to report the one entry that is **not** an actual abbreviation. Hint: use the `!` operator, which turns `FALSE` into `TRUE` and vice versa, then `which` to obtain an index.
+
+```{r}
+abbs[!(abbs %in% murders$abb)]
+```
+
 
 ## Basic plots
 
@@ -1287,7 +1488,10 @@ plot(x, y)
 ```
 
 
-```{r first-plot, out.width="60%", echo=FALSE}
+```{r first-plot, out.width="60%", echo=5:}
+rm(list = ls())
+library(dslabs)
+data(murders)
 rafalib::mypar()
 x <- murders$population / 10^6
 y <- murders$total
@@ -1332,7 +1536,7 @@ murders$rate <- with(murders, total / population * 100000)
 boxplot(rate~region, data = murders)
 ```
 
-```{r r-base-boxplot, out.width="60%", echo=FALSE}
+```{r r-base-boxplot, out.width="60%"}
 rafalib::mypar()
 murders$rate <- with(murders, total / population * 100000)
 boxplot(rate~region, data = murders)
@@ -1360,7 +1564,7 @@ image(x)
 
 1\. We made a plot of total murders versus population and noted a strong relationship. Not surprisingly, states with larger populations had more murders. 
 
-```{r, eval = FALSE}
+```{r echo=3:}
 library(dslabs)
 data(murders)
 population_in_millions <- murders$population/10^6
@@ -1369,12 +1573,26 @@ plot(population_in_millions, total_gun_murders)
 ```
 
 Keep in mind that many states have populations below 5 million and are bunched up. We may gain further insights from making this plot in the log scale. Transform the variables using the `log10` transformation and then plot them.
+
+```{r}
+plot(log10(population_in_millions), log10(total_gun_murders))
+```
+
     
     
 2\. Create a histogram of the state populations.
 
+```{r}
+x <- with(murders, total)
+hist(x = x, xlab = "State Population")
+```
+
     
 3\. Generate boxplots of the state populations by region.
+```{r}
+rafalib::mypar()
+boxplot(population~region, data = murders)
+```
    
     
 
