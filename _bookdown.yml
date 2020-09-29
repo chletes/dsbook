@@ -67,7 +67,6 @@ rmd_files: [
   "ml/recommendation-systems.Rmd",
   "ml/clustering.Rmd",
   "productivity/productivity-intro.Rmd",
-  "R/installing-r-and-rstudio.Rmd",
   "productivity/installing-git.Rmd",
   "productivity/unix.Rmd",
   "productivity/git.Rmd",
