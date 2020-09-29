@@ -72,9 +72,11 @@ tmp <- data.frame(a = a, is_a_positive = a > 0, answer1 = 1/a, answer2 = NA, res
 if(knitr::is_html_output()){
   knitr::kable(tmp, "html") %>%
     kableExtra::kable_styling(bootstrap_options = "striped", full_width = FALSE)
-} else{
+} else if (knitr::is_latex_output()){
   knitr::kable(tmp, "latex", booktabs = TRUE) %>%
     kableExtra::kable_styling(font_size = 8)
+}else {
+  tmp
 }
 ```
 
@@ -82,6 +84,7 @@ Here is an example of how this function can be readily used to replace all the m
 
 ```{r}
 data(na_example)
+sum(is.na(na_example))
 no_nas <- ifelse(is.na(na_example), 0, na_example) 
 sum(is.na(no_nas))
 ```
@@ -186,7 +189,7 @@ For more on this more advanced topic we recommend the R packages book^[http://r-
 
 ## For-loops
 
-The formula for the sum of the series $1+2+\dots+n$ is $n(n+1)/2$. What if we weren't sure that was the right function? How could we check? Using what we learned about functions we can create one that computes the $S_n$:
+The formula for the sum of the series $1+2+\dots+n$ is $n(n+1)/2$. What if we weren't sure that was the right function? How could we check? Using what we learned about functions we can create one that computes the sum $S_n$:
 
 ```{r}
 compute_s_n <- function(n){
@@ -230,7 +233,7 @@ plot(n, s_n)
 
 
 If you noticed that it appears to be a quadratic, you are on the right track because the formula is $n(n+1)/2$.
-<!--
+
 which we can confirm with a table:
 
 ```{r show_s_n_table}
@@ -244,7 +247,6 @@ plot(n, s_n)
 lines(n, n*(n+1)/2)
 ```
 
--->
 
 ## Vectorization and functionals {#vectorization}
 
@@ -286,7 +288,7 @@ Other functionals are `apply`, `lapply`, `tapply`, `mapply`, `vapply`, and `repl
 
 1\. What will this conditional expression return?
 
-```{r, eval=FALSE}
+```{r}
 x <- c(1,2,-3,4)
 
 if(all(x>0)){
@@ -305,11 +307,30 @@ c. `any(!x)`
 d. `all(!x)`
 
 3\. The function `nchar` tells you how many characters long a character vector is. Write a line of code that assigns to the object `new_names` the state abbreviation when the state name is longer than 8 characters.
+
+```{r}
+new_names <- ifelse(nchar(murders$state) > 8, murders$abb, murders$state)
+new_names
+```
+
     
-  
 4\. Create a function `sum_n` that for any given value, say $n$, computes the sum of the integers from 1 to n (inclusive). Use the function to determine the sum of integers from 1 to 5,000.
 
+```{r}
+sum_n <- function(x){
+  sum(1:x)
+}
+sum_n(5000)
+```
+
+
 5\. Create a function `altman_plot` that takes two arguments, `x` and `y`, and plots the difference against the sum.
+```{r}
+altman_plot <- function(x, y){
+  plot(x = x-y, y = x+y)
+}
+```
+
   
 6\. After running the code below, what is the value of `x`?
 
@@ -319,17 +340,50 @@ my_func <- function(y){
   x <- 5
   y+5
 }
+x
 ```
 
 7\. Write a function `compute_s_n` that for any given $n$ computes the sum $S_n = 1^2 + 2^2 + 3^2 + \dots n^2$. Report the value of the sum when $n=10$.
+
+```{r}
+compute_s_n <- function(n){
+  result <- sum((1:n)^2)
+  ifelse(n == 10, result, 0)
+}
+compute_s_n(3)
+compute_s_n(10)
+```
+
  
 8\. Define an empty numerical vector `s_n` of size 25 using `s_n <- vector("numeric", 25)` and store in the results of $S_1, S_2, \dots S_{25}$ using a for-loop.
 
+```{r}
+s_n <- vector("numeric", 25)
+for (i in 1:25){
+  s_n[i] <- compute_s_n(i)
+}
+s_n
+```
+
+
 9\. Repeat exercise 8, but this time use `sapply`.
+
+```{r}
+s_n <- sapply(1:25, compute_s_n)
+s_n
+```
+
 
 10\. Repeat exercise 8, but this time use `map_dbl`.
 
+```{r}
+s_n <- 1:25
+map_dbl(s_n, compute_s_n)
+```
+
+
 11\. Plot $S_n$ versus $n$. Use points defined by $n=1,\dots,25$.
+
 
 12\. Confirm that the formula for this sum is $S_n= n(n+1)(2n+1)/6$.
 

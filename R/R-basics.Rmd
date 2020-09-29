@@ -1575,7 +1575,7 @@ plot(population_in_millions, total_gun_murders)
 Keep in mind that many states have populations below 5 million and are bunched up. We may gain further insights from making this plot in the log scale. Transform the variables using the `log10` transformation and then plot them.
 
 ```{r}
-plot(log10(population_in_millions), log10(total_gun_murders))
+plot(log10(population_in_millions), log10(total_gun_murders), xlab = "Population in millions", ylab = "Total gun murders")
 ```
 
     
