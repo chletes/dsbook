@@ -71,13 +71,13 @@ install_pkg("ggthemes")
 install_pkg("ggrepel")
 install_pkg("ggridges")
 install_pkg("gganimate")
+install_pkg("devtools")
 devtools::install_github("rensa/ggflags")
 ```
 
 Some various utilities:
 
 ```{r echo=TRUE, warning=FALSE, message=FALSE, eval=FALSE}
-install_pkg("devtools")
 install_pkg("kableExtra")
 install_pkg("matrixStats")
 install_pkg("gtools")
@@ -134,6 +134,7 @@ install_pkg("tufte")
 The following is to generate a pdf version. The format can be customised by changing options at the top of the `index.Rmd` file.
 
 ```{r echo=TRUE, warning=FALSE, message=FALSE, eval=FALSE}
+options(bookdown.render.file_scope = FALSE)
 bookdown::render_book("index.Rmd", output_format = "bookdown::pdf_book")
 ```
 

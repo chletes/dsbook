@@ -879,7 +879,7 @@ This function is actually quite useful since datasets that include numbers as ch
 
 When a function tries to coerce one type to another and encounters an impossible case, it usually gives us a warning and turns the entry into a special value called an `NA` for "not available".  For example:
 
-```{r, warning=false}
+```{r, warning=FALSE}
 x <- c("1", "b", "3")
 as.numeric(x)
 ```
@@ -1195,11 +1195,14 @@ mean(na_example[!ind])
 
 California had the most murders, but does this mean it is the most dangerous state? What if it just has many more people than any other state? We can quickly confirm that California indeed has the largest population:
 
-
-```{r echo = 2:}
+```{r echo = FALSE}
 rm(list = ls())
 library(dslabs)
 data("murders")
+```
+
+
+```{r}
 murders$state[which.max(murders$population)]
 ```
 
@@ -1301,9 +1304,9 @@ mean(murder_rate)
 
 ## Indexing
 
-R provides a powerful and convenient way of indexing vectors. We can, for example, subset a vector based on properties of another vector. In this section, we continue working with our US murders example, which we can load like this:
+R provides a powerful and convenient way of indexing vectors. We can, for example, subset a vector based on properties of another vector. In this section, we continue working with our US murders example.
 
-```{r echo = 2:}
+```{r echo = FALSE}
 rm(list = ls())
 library(dslabs)
 data("murders")
@@ -1487,11 +1490,14 @@ y <- murders$total
 plot(x, y)
 ```
 
-
-```{r first-plot, out.width="60%", echo=5:}
+```{r echo = FALSE}
 rm(list = ls())
 library(dslabs)
 data(murders)
+```
+
+
+```{r first-plot, out.width="60%"}
 rafalib::mypar()
 x <- murders$population / 10^6
 y <- murders$total
@@ -1564,9 +1570,12 @@ image(x)
 
 1\. We made a plot of total murders versus population and noted a strong relationship. Not surprisingly, states with larger populations had more murders. 
 
-```{r echo=3:}
+```{r echo = FALSE}
 library(dslabs)
 data(murders)
+```
+
+```{r}
 population_in_millions <- murders$population/10^6
 total_gun_murders <- murders$total
 plot(population_in_millions, total_gun_murders)

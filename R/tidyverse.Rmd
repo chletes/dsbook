@@ -245,9 +245,12 @@ $$ \mbox{original data }
 
 For such an operation, we can use the pipe `%>%`. The code looks like this:
 
-```{r, echo = 3:}
+```{r echo = FALSE}
 rm(list = ls())
 data(murders)
+```
+
+```{r}
 murders <- mutate(murders, rate = total / population * 100000)
 murders %>% select(state, region, rate) %>% filter(rate <= 0.71)
 ```
