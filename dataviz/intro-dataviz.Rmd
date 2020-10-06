@@ -1,6 +1,7 @@
 # (PART) Data Visualization {-}
 
 ```{r, echo=FALSE}
+rm(list = ls())
 img_path <- "dataviz/img"
 ```
 
@@ -16,7 +17,7 @@ head(murders)
 
 What do you learn from staring at this table? How quickly can you determine which states have the largest populations? Which states have the smallest? How large is a typical state? Is there a relationship between population size and total murders? How do murder rates vary across regions of the country?  For most human brains, it is quite difficult to extract this information just by looking at the numbers. In contrast, the answer to all the questions above are readily available from examining this plot: 
 
-```{r ggplot-example-plot-0, echo=FALSE, message=FALSE, warning=FALSE}
+```{r ggplot-example-plot-0, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(ggthemes)
 library(ggrepel)
@@ -46,7 +47,7 @@ The growing availability of informative datasets and software tools has led to i
 
 A particularly effective example is a Wall Street Journal article^[http://graphics.wsj.com/infectious-diseases-and-vaccines/?mc_cid=711ddeb86e] showing data related to the impact of vaccines on battling infectious diseases. One of the graphs shows measles cases by US state through the years with a vertical line demonstrating when the vaccine was introduced.
 
-```{r wsj-vaccines-example, echo=FALSE, out.width="100%", fig.height=5}
+```{r wsj-vaccines-example, out.width="100%", fig.height=5}
 #knitr::include_graphics(file.path(img_path,"wsj-vaccines.png"))
 data(us_contagious_diseases)
 the_disease <- "Measles"
@@ -78,7 +79,7 @@ dat %>% ggplot(aes(year, state, fill = rate)) +
 Another striking example comes from a New York Times chart^[http://graphics8.nytimes.com/images/2011/02/19/nyregion/19schoolsch/19schoolsch-popup.gif], which summarizes scores from the NYC Regents Exams. As described in 
 the article^[https://www.nytimes.com/2011/02/19/nyregion/19schools.html], these scores are collected for several reasons, including to determine if a student graduates from high school. In New York City you need a 65 to pass. The distribution of the test scores forces us to notice something somewhat problematic:
 
-```{r regents-exams-example, echo=FALSE, warning=FALSE, out.width="80%", fig.height=2.5}
+```{r regents-exams-example, warning=FALSE, out.width="80%", fig.height=2.5}
 #knitr::include_graphics(file.path(img_path,"nythist.png"))
 data("nyc_regents_scores")
 nyc_regents_scores$total <- rowSums(nyc_regents_scores[,-1], na.rm=TRUE)
@@ -107,15 +108,14 @@ The most common test score is the minimum passing grade, with very few scores ju
 
 This is an example of how data visualization can lead to discoveries which would otherwise be missed if we simply subjected the data to a battery of data analysis tools or procedures. Data visualization is the strongest tool of what we call _exploratory data analysis_ (EDA). John W. Tukey^[https://en.wikipedia.org/wiki/John_Tukey], considered the father of EDA, once said,
 
->> "The greatest value of a picture is when it forces us to notice what we never 
-expected to see." 
+>> "The greatest value of a picture is when it forces us to notice what we never expected to see." 
 
 Many widely used data analysis tools were initiated by discoveries made via EDA. EDA is perhaps the most important part of data analysis, yet it is one that is often overlooked.
 
 Data visualization is also now pervasive in philanthropic and educational organizations. In the talks New Insights on Poverty^[https://www.ted.com/talks/hans_rosling_reveals_new_insights_on_poverty?language=en] and The Best Stats You've Ever Seen^[https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen], Hans Rosling forces us to notice the unexpected with a series of plots related to world health and economics. In his videos, he uses animated graphs to show us how the world is changing and how old narratives are no longer true.
 
 
-```{r gampnider-example-plot, echo=FALSE, warning=FALSE}
+```{r gampnider-example-plot, warning=FALSE}
 data(gapminder)
 
 west <- c("Western Europe","Northern Europe","Southern Europe",
