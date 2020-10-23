@@ -38,7 +38,7 @@ qplot(outlier_example, bins = 30)
 boxplot(outlier_example)
 ```
 
-```{r, boxplot-reveals-outliers, echo=FALSE, out.width="50%"}
+```{r, boxplot-reveals-outliers, out.width="50%"}
 rafalib::mypar()
 boxplot(outlier_example)
 ```
@@ -108,7 +108,7 @@ qqnorm(x)
 qqline(x)
 ```
 
-```{r outlier-qqnorm, echo=FALSE}
+```{r outlier-qqnorm}
 rafalib::mypar()
 x <- outlier_example[outlier_example < max_height]
 qqnorm(x)
@@ -216,7 +216,7 @@ reported_heights %>%
 
 This suggests that we have outliers, which is confirmed by creating a boxplot:
 
-```{r height-outlier-ggplot, echo=FALSE}
+```{r height-outlier-ggplot}
 reported_heights %>% 
   ggplot(aes(sex, height)) + 
   geom_boxplot()

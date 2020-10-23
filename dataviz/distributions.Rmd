@@ -1,4 +1,4 @@
-```{r, echo=FALSE}
+```{r}
 rm(list = ls())
 img_path <- "dataviz/img"
 ```
@@ -571,7 +571,7 @@ Another special case that receives a name are the _quartiles_, which are obtaine
 To introduce boxplots we will go back to the US murder data. 
 Suppose we want to summarize the murder rate distribution. Using the data visualization technique we have learned, we can quickly see that the normal approximation does not apply here:
 
-```{r hist-qqplot-non-normal-data, out.width = "100%",  fig.width = 6, fig.height = 3, echo=FALSE}
+```{r hist-qqplot-non-normal-data, out.width = "100%",  fig.width = 6, fig.height = 3}
 data(murders)
 murders <- murders %>% mutate(rate = total/population*100000)
 library(gridExtra)
@@ -589,7 +589,7 @@ Now suppose those used to receiving just two numbers as summaries ask us for a m
 Here Tukey offered some advice. Provide a five-number summary composed of the range along with the quartiles (the 25th, 50th, and 75th percentiles). Tukey further suggested that we ignore _outliers_ when computing the range and instead plot these as independent points. We provide a detailed explanation of outliers later. Finally, he suggested we plot these numbers as a "box" with "whiskers" like this:
  
 
-```{r first-boxplot, echo=FALSE}
+```{r first-boxplot}
 murders %>% ggplot(aes("",rate)) + geom_boxplot() +
   coord_cartesian(xlim = c(0, 2)) + xlab("")
 ```
@@ -613,7 +613,7 @@ However, to provide a complete picture we need to also provide a summary of the 
 
 We learned that boxplots are useful when we want to quickly compare two or more distributions. Here are the heights for men and women:
 
-```{r female-male-boxplots, echo=FALSE}
+```{r female-male-boxplots}
 heights %>% ggplot(aes(x=sex, y=height, fill=sex)) +
   geom_boxplot()
 ```
@@ -621,7 +621,7 @@ heights %>% ggplot(aes(x=sex, y=height, fill=sex)) +
 The plot immediately reveals that males are, on average, taller than females. The standard deviations appear to be similar. But does the normal approximation also work for the female height data collected by the survey? We expect that they will follow a normal distribution, just like males. However, exploratory plots reveal that the approximation is not as useful:
  
 
-```{r histogram-qqplot-female-heights, echo=FALSE, out.width="100%",  fig.width = 6, fig.height = 3}
+```{r histogram-qqplot-female-heights, out.width="100%",  fig.width = 6, fig.height = 3}
 p1 <- heights %>% filter(sex == "Female") %>%
   ggplot(aes(height)) +
   geom_density(fill="#F8766D") 
@@ -664,7 +664,7 @@ How many measurements do we have for each?
     
 3\. Study the following boxplots showing population sizes by country:
 
-```{r boxplot-exercise, echo=FALSE, message=FALSE}
+```{r boxplot-exercise, message=FALSE}
 library(tidyverse)
 library(dslabs)
 ds_theme_set()
@@ -818,7 +818,7 @@ heights %>%
 
 The geometry for boxplot is `geom_boxplot`. As discussed, boxplots are useful for comparing distributions. For example, below are the previously shown heights for women, but compared to men. For this geometry, we need arguments `x` as the categories, and `y` as the values. 
 
-```{r female-male-boxplots-geom, echo=FALSE}
+```{r female-male-boxplots-geom}
 heights %>% ggplot(aes(sex, height)) +
   geom_boxplot()
 ```

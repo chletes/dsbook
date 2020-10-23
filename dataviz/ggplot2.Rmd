@@ -8,7 +8,7 @@ Exploratory data visualization is perhaps the greatest strength of R. One can qu
 
 Throughout the book, we will be creating plots using the __ggplot2__^[https://ggplot2.tidyverse.org/] package. 
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
 library(dplyr)
 library(ggplot2)
 ```
@@ -27,7 +27,7 @@ To use __ggplot2__  you will have to learn several functions and arguments. Thes
 
 We will construct a graph that summarizes the US murders dataset that looks like this:
 
-```{r ggplot-example-plot, echo=FALSE}
+```{r ggplot-example-plot }
 library(dslabs)
 data(murders)
 library(ggthemes)
@@ -79,7 +79,7 @@ data(murders)
 ## `ggplot` objects 
 
 
-```{r, echo=FALSE}
+```{r }
 theme_set(theme_grey()) ## to immitate what happens with seeting theme
 ```
 
@@ -123,7 +123,7 @@ Usually, the first added layer defines the geometry. We want to make a scatterpl
 
 Taking a quick look at the cheat sheet, we see that the function used to create plots with this geometry is `geom_point`. 
 
-```{r, echo=FALSE, out.width="45%"}
+```{r, , out.width="45%"}
 ##https://ugoproto.github.io/ugo_r_doc/img/visualization_cs/ggplot2-cheatsheeta.png
 ##https://ugoproto.github.io/ugo_r_doc/img/visualization_cs/ggplot2-cheatsheetb.png
 knitr::include_graphics(c(file.path(img_path,"ggplot2-cheatsheeta.png"),
@@ -159,7 +159,7 @@ and, as expected, we see that at least two arguments are required `x` and `y`.
  
   __Aesthetic mappings__ describe how properties of the data connect with features of the graph, such as distance along an axis, size, or color. The `aes` function connects data with what we see on the graph by defining aesthetic mappings and will be one of the functions you use most often when plotting. The outcome of the `aes` function is often used as the argument of a geometry function. This example produces a scatterplot of total murders versus population in millions:
  
-```{r, eval = FALSE}
+```{r}
 murders %>% ggplot() + 
   geom_point(aes(x = population/10^6, y = total))
 ```
@@ -168,7 +168,7 @@ We can drop the `x = ` and `y =` if we wanted to since these are the first and s
 
 Instead of defining our plot from scratch, we can also add a layer to the `p` object that was defined above as `p <- ggplot(data = murders)`:
 
-```{r ggplot-example-3}
+```{r ggplot-example-3, eval=FALSE}
 p + geom_point(aes(population/10^6, total))
 ```
 
@@ -414,7 +414,7 @@ murders %>% ggplot(aes(population/10^6, total, label = abb)) +
   theme_economist()
 ```
 
-```{r, echo=FALSE}
+```{r }
 ds_theme_set()
 ```
 

@@ -403,7 +403,7 @@ p + geom_point(alpha = 0.5)
 
 Showing each individual point does not always reveal important characteristics of the distribution. Although not the case here, when the number of data points is so large that there is over-plotting, showing the data can be counterproductive. Boxplots help with this by providing a five-number summary, but this has limitations too. For example, boxplots will not permit us to discover bimodal distributions. To see this, note that the two plots below are summarizing the same dataset:
 
-```{r boxplot-dont-show-bimodal, warning=FALSE, out.width="100%", message = FALSE, echo=FALSE, fig.height=3}
+```{r boxplot-dont-show-bimodal, warning=FALSE, out.width="100%", message = FALSE, fig.height=3}
 set.seed(1987)
 z <- sample(c(0,1), 1000, replace = TRUE, prob = c(0.25, 0.75))
 x <- rnorm(100)*z + rnorm(100, 5)*(1 - z)
@@ -479,7 +479,7 @@ These `r length(country_list)` account for
 
 Let's remake the plot, but only for this subset by simply adding ` country %in% country_list` to the `filter` function:
 
-```{r income-histogram-west-v-devel, echo=FALSE}
+```{r income-histogram-west-v-devel}
 gapminder %>% 
   filter(year %in% years & country %in% country_list) %>%
   mutate(west = ifelse(group == "West", "West", "Developing")) %>%
@@ -522,7 +522,7 @@ gapminder %>%
 
 Finally, we point out that if what we are most interested in is comparing before and after values, it might make more sense to plot the percentage increases. We are still not ready to learn to code this, but here is what the plot would look like:
 
-```{r income-west-v-devel-before-after-ratio, echo=FALSE, warning=FALSE}
+```{r income-west-v-devel-before-after-ratio, warning=FALSE}
 gapminder %>% 
   filter(year %in% years & country %in% country_list) %>%
   mutate(year = ifelse(year == past_year, "past", "present")) %>%
@@ -559,7 +559,7 @@ The next message we need to convey is that the reason for this change in distrib
 
 However, we first need to learn how to make these smooth densities in a way that preserves information on the number of countries in each group. To understand why we need this, note the discrepancy in the size of each group:
 
-```{r, echo=FALSE}
+```{r}
 tmp <- gapminder %>% 
   filter(year == past_year & country %in% country_list) %>%
   mutate(group = ifelse(group == "West", "West", "Developing")) %>% 
@@ -655,7 +655,7 @@ Notice that we order the levels of the group so that the West's density is plott
 
 As a final point, we note that these distributions weigh every country the same. So if most of the population is improving, but living in a very large country, such as China, we might not appreciate this. We can actually weight the smooth densities using the `weight` mapping argument. The plot then looks like this:
 
-```{r income-smooth-density-counts-by-region-year-weighted, warning=FALSE, echo=FALSE}
+```{r income-smooth-density-counts-by-region-year-weighted, warning=FALSE}
 gapminder %>% 
     filter(year %in% years & country %in% country_list) %>%
   group_by(year) %>%
@@ -675,7 +675,7 @@ Throughout this section, we have been comparing regions of the world. We have se
 
 We define a few more regions and compare the averages across regions:
 
-```{r ecological-fallacy-averages, echo=FALSE}
+```{r ecological-fallacy-averages}
 gapminder <- gapminder %>% 
   mutate(group = case_when(
     region %in% c("Western Europe", "Northern Europe",
@@ -726,7 +726,7 @@ Now, back to our plot. Based on the plot above, do we conclude that a country wi
 
 Jumping to this conclusion based on a plot showing averages is referred to as the _ecological fallacy_. The almost perfect relationship between survival rates and income is only observed for the averages at the region level. Once we show all the data, we see a somewhat more complicated story:
 
-```{r ecological-fallacy-all-data, echo=FALSE}
+```{r ecological-fallacy-all-data}
 library(ggrepel)
 highlight <- c("Sierra Leone", "Mauritius",  "Sudan", "Botswana", "Tunisia",
                "Cambodia","Singapore","Chile", "Haiti", "Bolivia",
