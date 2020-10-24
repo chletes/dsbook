@@ -188,7 +188,7 @@ odds_men / odds_women
 
 We often see two-by-two tables written out as 
 
-```{r, echo=FALSE}
+```{r}
 mat <- cbind(c(" a "," c "), c(" b "," d "))
 colnames(mat) <- c("Men","Women")
 rownames(mat) <- c("Awarded", "Not Awarded")

@@ -476,6 +476,10 @@ mean(abs(z) < 2)
 
 The proportion is about 95%, which is what the normal distribution predicts! To further confirm that, in fact, the approximation is a good one, we can use quantile-quantile plots.
 
+```{r}
+knitr::include_graphics(file.path(img_path,"norm-dist-probs-combined.png"))
+```
+
 
 ## Quantile-quantile plots
 

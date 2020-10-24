@@ -16,7 +16,7 @@ Hans Rosling conveyed actual data-based trends in a dramatic way of his own, usi
 
 To answer these questions, we will be using the `gapminder` dataset provided in __dslabs__. This dataset was created using a number of spreadsheets available from the Gapminder Foundation. You can access the table like this:
 
-```{r load libraries, message=FALSE, echo=TRUE}
+```{r load libraries, message=FALSE}
 library(tidyverse)
 library(dslabs)
 data(gapminder)
@@ -45,7 +45,7 @@ gapminder %>%
 Turkey has the higher infant mortality rate. 
 
 We can use this code on all comparisons and find the following:
-```{r, echo = FALSE}
+```{r}
 comp_table <- tibble(comparison = rep(1:5, each = 2),
            country = c("Sri Lanka", "Turkey", "Poland", "South Korea", "Malaysia", "Russia", "Pakistan","Vietnam","Thailand","South Africa"))
 
@@ -260,7 +260,7 @@ We use the `color = "black"` argument to draw a boundary and clearly distinguish
 
 In this plot, we see that for the majority of countries, averages are below \$10 a day. However, the majority of the x-axis is dedicated to the `r filter(gapminder, year == past_year & !is.na(gdp)) %>% summarise(x = sum(dollars_per_day>10)) %>% pull(x)` countries with averages above \$10. So the plot is not very informative about countries with values below \$10 a day.
 
-It might be more informative to quickly be able to see how many countries have average daily incomes of about $1 (extremely poor), \$2 (very poor), \$4 (poor), \$8 (middle), \$16 (well off), \$32 (rich), \$64 (very rich) per day. These changes are multiplicative and log transformations convert multiplicative changes into additive ones: when using base 2, a doubling of a value turns into an increase by 1. 
+It might be more informative to quickly be able to see how many countries have average daily incomes of about $1 (extremely poor), \$2 (very poor), \$4 (poor), \$8 (middle), \$16 (well off), \$32 (rich), \$64 (very rich) per day. *These changes are multiplicative and log transformations convert multiplicative changes into additive ones: when using base 2, a doubling of a value turns into an increase by 1.*
 
 Here is the distribution if we apply a log base 2 transform:
 ```{r dollars-per-day-distribution-log}
@@ -276,7 +276,7 @@ In a way this provides a _close-up_ of the mid to lower income countries.
 
 In the case above, we used base 2 in the log transformations. Other common choices are base $\mathrm{e}$ (the natural log) and base 10.
 
-In general, we do not recommend using the natural log for data exploration and visualization. This is because while $2^2, 2^3, 2^4, \dots$ or $10^2, 10^3, \dots$ are easy to compute in our heads, the same is not true for  $\mathrm{e}^2, \mathrm{e}^3, \dots$, so the scale is not intuitive or easy to interpret.
+*In general, we do not recommend using the natural log for data exploration and visualization.* This is because while $2^2, 2^3, 2^4, \dots$ or $10^2, 10^3, \dots$ are easy to compute in our heads, the same is not true for  $\mathrm{e}^2, \mathrm{e}^3, \dots$, so the scale is not intuitive or easy to interpret.
 
 In the dollars per day example, we used base 2 instead of base 10 because the resulting range is easier to interpret. The range of the values being plotted is `r with(filter(gapminder, year==past_year), range(dollars_per_day, na.rm=TRUE))`. 
 

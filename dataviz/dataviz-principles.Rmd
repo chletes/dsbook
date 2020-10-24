@@ -197,7 +197,7 @@ knitr::include_graphics(file.path(img_path, "state-of-the-union.png"))
 
 Judging by the area of the circles, the US appears to have an economy over five times larger than China's and over 30 times larger than France's. However, if we look at the actual numbers, we see that this is not the case. The actual ratios are 2.6 and 5.8 times bigger than China and France, respectively. The reason for this distortion is that the radius, rather than the area, was made to be proportional to the quantity, which implies that the proportion between the areas is squared: 2.6 turns into 6.5 and 5.8 turns into 34.1. Here is a comparison of the circles we get if we make the value proportional to the radius and to the area:
 
-```{r area-not-radius, echo = FALSE}
+```{r area-not-radius}
 gdp <- c(14.6, 5.7, 5.3, 3.3, 2.5)
 gdp_data <- data.frame(Country = rep(c("United States", "China", "Japan", "Germany", "France"),2),
            y = factor(rep(c("Radius","Area"),each=5), levels = c("Radius", "Area")),
@@ -303,8 +303,8 @@ p1 <- heights %>%
   summarize(average = mean(height), se=sd(height)/sqrt(n())) %>%
   ggplot(aes(sex, average)) + 
   theme_excel() + 
-  geom_errorbar(aes(ymin = average - 2*se, ymax = average+2*se), width = 0.25) +
-  geom_bar(stat = "identity", width=0.5, fill = "blue", color = "black") +
+  geom_errorbar(aes(ymin = average - 2*se, ymax = average+2*se), width = 0.25)
++ geom_bar(stat = "identity", width=0.5, fill = "blue", color = "black") +
   ylab("Height in inches")
 p1
 ```
@@ -357,7 +357,7 @@ heights %>%
 
 In these histograms, the visual cue related to decreases or increases in height are shifts to the left or right, respectively: horizontal changes. Aligning the plots vertically helps us see this change when the axes are fixed:
 
-```{r common-axes-histograms-right-2, echo = FALSE}
+```{r common-axes-histograms-right-2}
 p2 <- heights %>% 
   ggplot(aes(height, ..density..)) +
   geom_histogram(binwidth = 1, color="black") +
@@ -755,7 +755,7 @@ options(digits=tmp)
 
 We are reporting precision up to 0.00001 cases per 10,000, a very small value in the context of the changes that are occurring across the dates. In this case, two significant figures is more than enough and clearly makes the point that rates are decreasing:
 
-```{r, echo = FALSE}
+```{r}
 dat <- dat %>% 
   mutate_at(c("Measles", "Pertussis", "Polio"), ~round(., digits=1))
 if(knitr::is_html_output()){

@@ -342,7 +342,7 @@ murders %>%
 
 An important part of exploratory data analysis is summarizing data. The average and standard deviation are two examples of widely used summary statistics. More informative summaries can often be achieved by first splitting data into groups. In this section, we cover two new __dplyr__ verbs that make these computations easier: `summarize` and `group_by`. We learn to access resulting values using the `pull` function.  
 
-```{r, message=FALSE, echo=FALSE}
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 library(tidyverse)
 ```
 
