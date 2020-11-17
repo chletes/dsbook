@@ -21,3 +21,11 @@ This work is licensed under the [Creative Commons Attribution-NonCommercial-Shar
 `git remote -v` will show the rafalab upstream.
 
 `git merge upstream/master --allow-unrelated-histories` and then fix conflicts.
+
+References :
+
+https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo#keep-your-fork-synced
+
+https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork
+
+https://www.educative.io/edpresso/the-fatal-refusing-to-merge-unrelated-histories-git-error
