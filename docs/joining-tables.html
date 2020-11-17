@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 22 Joining tables | Introduction to Data Science</title>
   <meta name="description" content="This book introduces concepts and skills that can help you tackle real-world data analysis challenges. It covers concepts from probability, statistical inference, linear regression and machine learning and helps you develop skills such as R programming, data wrangling with dplyr, data visualization with ggplot2, file organization with UNIX/Linux shell, version control with GitHub, and reproducible document preparation with R markdown." />
-  <meta name="generator" content="bookdown 0.20.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 22 Joining tables | Introduction to Data Science" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Rafael A. Irizarry" />
 
 
-<meta name="date" content="2020-11-16" />
+<meta name="date" content="2020-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,7 +51,10 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -305,7 +308,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.15" data-path="ggplot2.html"><a href="ggplot2.html#exercises-15"><i class="fa fa-check"></i><b>7.15</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>8</b> Visualizing data distributions</a><ul>
-<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a></li>
+<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="distributions.html"><a href="distributions.html#key-points"><i class="fa fa-check"></i><b>8.1.1</b> Key points</a></li>
+</ul></li>
 <li class="chapter" data-level="8.2" data-path="distributions.html"><a href="distributions.html#case-study-describing-student-heights"><i class="fa fa-check"></i><b>8.2</b> Case study: describing student heights</a></li>
 <li class="chapter" data-level="8.3" data-path="distributions.html"><a href="distributions.html#distribution-function"><i class="fa fa-check"></i><b>8.3</b> Distribution function</a></li>
 <li class="chapter" data-level="8.4" data-path="distributions.html"><a href="distributions.html#cdf-intro"><i class="fa fa-check"></i><b>8.4</b> Cumulative distribution functions</a></li>
@@ -806,78 +811,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="part"><span><b>VI Productivity Tools</b></span></li>
 <li class="chapter" data-level="35" data-path="introduction-to-productivity-tools.html"><a href="introduction-to-productivity-tools.html"><i class="fa fa-check"></i><b>35</b> Introduction to productivity tools</a></li>
-<li class="chapter" data-level="36" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html"><i class="fa fa-check"></i><b>36</b> Installing R and RStudio</a><ul>
-<li class="chapter" data-level="36.1" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-r"><i class="fa fa-check"></i><b>36.1</b> Installing R</a></li>
-<li class="chapter" data-level="36.2" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-rstudio"><i class="fa fa-check"></i><b>36.2</b> Installing RStudio</a></li>
+<li class="chapter" data-level="36" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>36</b> Accessing the terminal and installing Git</a><ul>
+<li class="chapter" data-level="36.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>36.1</b> Accessing the terminal on a Mac</a></li>
+<li class="chapter" data-level="36.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>36.2</b> Installing Git on the Mac</a></li>
+<li class="chapter" data-level="36.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>36.3</b> Installing Git and Git Bash on Windows</a></li>
+<li class="chapter" data-level="36.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>36.4</b> Accessing the terminal on Windows</a></li>
 </ul></li>
-<li class="chapter" data-level="37" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>37</b> Accessing the terminal and installing Git</a><ul>
-<li class="chapter" data-level="37.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>37.1</b> Accessing the terminal on a Mac</a></li>
-<li class="chapter" data-level="37.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>37.2</b> Installing Git on the Mac</a></li>
-<li class="chapter" data-level="37.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>37.3</b> Installing Git and Git Bash on Windows</a></li>
-<li class="chapter" data-level="37.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>37.4</b> Accessing the terminal on Windows</a></li>
+<li class="chapter" data-level="37" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>37</b> Organizing with Unix</a><ul>
+<li class="chapter" data-level="37.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>37.1</b> Naming convention</a></li>
+<li class="chapter" data-level="37.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>37.2</b> The terminal</a></li>
+<li class="chapter" data-level="37.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>37.3</b> The filesystem</a><ul>
+<li class="chapter" data-level="37.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>37.3.1</b> Directories and subdirectories</a></li>
+<li class="chapter" data-level="37.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>37.3.2</b> The home directory</a></li>
+<li class="chapter" data-level="37.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>37.3.3</b> Working directory</a></li>
+<li class="chapter" data-level="37.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>37.3.4</b> Paths</a></li>
 </ul></li>
-<li class="chapter" data-level="38" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>38</b> Organizing with Unix</a><ul>
-<li class="chapter" data-level="38.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>38.1</b> Naming convention</a></li>
-<li class="chapter" data-level="38.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>38.2</b> The terminal</a></li>
-<li class="chapter" data-level="38.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>38.3</b> The filesystem</a><ul>
-<li class="chapter" data-level="38.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>38.3.1</b> Directories and subdirectories</a></li>
-<li class="chapter" data-level="38.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>38.3.2</b> The home directory</a></li>
-<li class="chapter" data-level="38.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>38.3.3</b> Working directory</a></li>
-<li class="chapter" data-level="38.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>38.3.4</b> Paths</a></li>
+<li class="chapter" data-level="37.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>37.4</b> Unix commands</a><ul>
+<li class="chapter" data-level="37.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>37.4.1</b> <code>ls</code>: Listing directory content</a></li>
+<li class="chapter" data-level="37.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>37.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
+<li class="chapter" data-level="37.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>37.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
 </ul></li>
-<li class="chapter" data-level="38.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>38.4</b> Unix commands</a><ul>
-<li class="chapter" data-level="38.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>38.4.1</b> <code>ls</code>: Listing directory content</a></li>
-<li class="chapter" data-level="38.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>38.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
-<li class="chapter" data-level="38.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>38.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
+<li class="chapter" data-level="37.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>37.5</b> Some examples</a></li>
+<li class="chapter" data-level="37.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>37.6</b> More Unix commands</a><ul>
+<li class="chapter" data-level="37.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>37.6.1</b> <code>mv</code>: moving files</a></li>
+<li class="chapter" data-level="37.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>37.6.2</b> <code>cp</code>: copying files</a></li>
+<li class="chapter" data-level="37.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>37.6.3</b> <code>rm</code>: removing files</a></li>
+<li class="chapter" data-level="37.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>37.6.4</b> <code>less</code>: looking at a file</a></li>
 </ul></li>
-<li class="chapter" data-level="38.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>38.5</b> Some examples</a></li>
-<li class="chapter" data-level="38.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>38.6</b> More Unix commands</a><ul>
-<li class="chapter" data-level="38.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>38.6.1</b> <code>mv</code>: moving files</a></li>
-<li class="chapter" data-level="38.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>38.6.2</b> <code>cp</code>: copying files</a></li>
-<li class="chapter" data-level="38.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>38.6.3</b> <code>rm</code>: removing files</a></li>
-<li class="chapter" data-level="38.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>38.6.4</b> <code>less</code>: looking at a file</a></li>
-</ul></li>
-<li class="chapter" data-level="38.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>38.7</b> Preparing for a data science project</a></li>
-<li class="chapter" data-level="38.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>38.8</b> Advanced Unix</a><ul>
-<li class="chapter" data-level="38.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>38.8.1</b> Arguments</a></li>
-<li class="chapter" data-level="38.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>38.8.2</b> Getting help</a></li>
-<li class="chapter" data-level="38.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>38.8.3</b> Pipes</a></li>
-<li class="chapter" data-level="38.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>38.8.4</b> Wild cards</a></li>
-<li class="chapter" data-level="38.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>38.8.5</b> Environment variables</a></li>
-<li class="chapter" data-level="38.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>38.8.6</b> Shells</a></li>
-<li class="chapter" data-level="38.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>38.8.7</b> Executables</a></li>
-<li class="chapter" data-level="38.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>38.8.8</b> Permissions and file types</a></li>
-<li class="chapter" data-level="38.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>38.8.9</b> Commands you should learn</a></li>
-<li class="chapter" data-level="38.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>38.8.10</b> File manipulation in R</a></li>
+<li class="chapter" data-level="37.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>37.7</b> Preparing for a data science project</a></li>
+<li class="chapter" data-level="37.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>37.8</b> Advanced Unix</a><ul>
+<li class="chapter" data-level="37.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>37.8.1</b> Arguments</a></li>
+<li class="chapter" data-level="37.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>37.8.2</b> Getting help</a></li>
+<li class="chapter" data-level="37.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>37.8.3</b> Pipes</a></li>
+<li class="chapter" data-level="37.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>37.8.4</b> Wild cards</a></li>
+<li class="chapter" data-level="37.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>37.8.5</b> Environment variables</a></li>
+<li class="chapter" data-level="37.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>37.8.6</b> Shells</a></li>
+<li class="chapter" data-level="37.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>37.8.7</b> Executables</a></li>
+<li class="chapter" data-level="37.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>37.8.8</b> Permissions and file types</a></li>
+<li class="chapter" data-level="37.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>37.8.9</b> Commands you should learn</a></li>
+<li class="chapter" data-level="37.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>37.8.10</b> File manipulation in R</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="39" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>39</b> Git and GitHub</a><ul>
-<li class="chapter" data-level="39.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>39.1</b> Why use Git and GitHub?</a></li>
-<li class="chapter" data-level="39.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>39.2</b> GitHub accounts</a></li>
-<li class="chapter" data-level="39.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>39.3</b> GitHub repositories</a></li>
-<li class="chapter" data-level="39.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>39.4</b> Overview of Git</a><ul>
-<li class="chapter" data-level="39.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>39.4.1</b> Clone</a></li>
+<li class="chapter" data-level="38" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>38</b> Git and GitHub</a><ul>
+<li class="chapter" data-level="38.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>38.1</b> Why use Git and GitHub?</a></li>
+<li class="chapter" data-level="38.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>38.2</b> GitHub accounts</a></li>
+<li class="chapter" data-level="38.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>38.3</b> GitHub repositories</a></li>
+<li class="chapter" data-level="38.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>38.4</b> Overview of Git</a><ul>
+<li class="chapter" data-level="38.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>38.4.1</b> Clone</a></li>
 </ul></li>
-<li class="chapter" data-level="39.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>39.5</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="39.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>39.6</b> Using Git and GitHub in RStudio</a></li>
+<li class="chapter" data-level="38.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>38.5</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="38.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>38.6</b> Using Git and GitHub in RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="40" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>40</b> Reproducible projects with RStudio and R markdown</a><ul>
-<li class="chapter" data-level="40.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>40.1</b> RStudio projects</a></li>
-<li class="chapter" data-level="40.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>40.2</b> R markdown</a><ul>
-<li class="chapter" data-level="40.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>40.2.1</b> The header</a></li>
-<li class="chapter" data-level="40.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>40.2.2</b> R code chunks</a></li>
-<li class="chapter" data-level="40.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>40.2.3</b> Global options</a></li>
-<li class="chapter" data-level="40.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>40.2.4</b> knitR</a></li>
-<li class="chapter" data-level="40.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>40.2.5</b> More on R markdown</a></li>
+<li class="chapter" data-level="39" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>39</b> Reproducible projects with RStudio and R markdown</a><ul>
+<li class="chapter" data-level="39.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>39.1</b> RStudio projects</a></li>
+<li class="chapter" data-level="39.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>39.2</b> R markdown</a><ul>
+<li class="chapter" data-level="39.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>39.2.1</b> The header</a></li>
+<li class="chapter" data-level="39.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>39.2.2</b> R code chunks</a></li>
+<li class="chapter" data-level="39.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>39.2.3</b> Global options</a></li>
+<li class="chapter" data-level="39.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>39.2.4</b> knitR</a></li>
+<li class="chapter" data-level="39.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>39.2.5</b> More on R markdown</a></li>
 </ul></li>
-<li class="chapter" data-level="40.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>40.3</b> Organizing a data science project</a><ul>
-<li class="chapter" data-level="40.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>40.3.1</b> Create directories in Unix</a></li>
-<li class="chapter" data-level="40.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>40.3.2</b> Create an RStudio project</a></li>
-<li class="chapter" data-level="40.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>40.3.3</b> Edit some R scripts</a></li>
-<li class="chapter" data-level="40.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>40.3.4</b> Create some more directories using Unix</a></li>
-<li class="chapter" data-level="40.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>40.3.5</b> Add a README file</a></li>
-<li class="chapter" data-level="40.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>40.3.6</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="40.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>40.3.7</b> Add, commit, and push files using RStudio</a></li>
+<li class="chapter" data-level="39.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>39.3</b> Organizing a data science project</a><ul>
+<li class="chapter" data-level="39.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>39.3.1</b> Create directories in Unix</a></li>
+<li class="chapter" data-level="39.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>39.3.2</b> Create an RStudio project</a></li>
+<li class="chapter" data-level="39.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>39.3.3</b> Edit some R scripts</a></li>
+<li class="chapter" data-level="39.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>39.3.4</b> Create some more directories using Unix</a></li>
+<li class="chapter" data-level="39.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>39.3.5</b> Add a README file</a></li>
+<li class="chapter" data-level="39.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>39.3.6</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="39.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>39.3.7</b> Add, commit, and push files using RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -904,145 +905,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 22</span> Joining tables</h1>
 <p>The information we need for a given analysis may not be just in one table. For example, when forecasting elections we used the function <code>left_join</code> to combine the information from two tables. Here we use a simpler example to illustrate the general challenge of combining tables.</p>
 <p>Suppose we want to explore the relationship between population size for US states and electoral votes. We have the population size in this table:</p>
-<div class="sourceCode" id="cb768"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb768-1"><a href="joining-tables.html#cb768-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb768-2"><a href="joining-tables.html#cb768-2"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb768-3"><a href="joining-tables.html#cb768-3"></a><span class="kw">data</span>(murders)</span>
-<span id="cb768-4"><a href="joining-tables.html#cb768-4"></a><span class="kw">head</span>(murders)</span>
-<span id="cb768-5"><a href="joining-tables.html#cb768-5"></a><span class="co">#&gt;        state abb region population total</span></span>
-<span id="cb768-6"><a href="joining-tables.html#cb768-6"></a><span class="co">#&gt; 1    Alabama  AL  South    4779736   135</span></span>
-<span id="cb768-7"><a href="joining-tables.html#cb768-7"></a><span class="co">#&gt; 2     Alaska  AK   West     710231    19</span></span>
-<span id="cb768-8"><a href="joining-tables.html#cb768-8"></a><span class="co">#&gt; 3    Arizona  AZ   West    6392017   232</span></span>
-<span id="cb768-9"><a href="joining-tables.html#cb768-9"></a><span class="co">#&gt; 4   Arkansas  AR  South    2915918    93</span></span>
-<span id="cb768-10"><a href="joining-tables.html#cb768-10"></a><span class="co">#&gt; 5 California  CA   West   37253956  1257</span></span>
-<span id="cb768-11"><a href="joining-tables.html#cb768-11"></a><span class="co">#&gt; 6   Colorado  CO   West    5029196    65</span></span></code></pre></div>
+<div class="sourceCode" id="cb968"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb968-1"><a href="joining-tables.html#cb968-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb968-2"><a href="joining-tables.html#cb968-2"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb968-3"><a href="joining-tables.html#cb968-3"></a><span class="kw">data</span>(murders)</span>
+<span id="cb968-4"><a href="joining-tables.html#cb968-4"></a><span class="kw">head</span>(murders)</span></code></pre></div>
 <p>and electoral votes in this one:</p>
-<div class="sourceCode" id="cb769"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb769-1"><a href="joining-tables.html#cb769-1"></a><span class="kw">data</span>(polls_us_election_<span class="dv">2016</span>)</span>
-<span id="cb769-2"><a href="joining-tables.html#cb769-2"></a><span class="kw">head</span>(results_us_election_<span class="dv">2016</span>)</span>
-<span id="cb769-3"><a href="joining-tables.html#cb769-3"></a><span class="co">#&gt;          state electoral_votes clinton trump others</span></span>
-<span id="cb769-4"><a href="joining-tables.html#cb769-4"></a><span class="co">#&gt; 1   California              55    61.7  31.6    6.7</span></span>
-<span id="cb769-5"><a href="joining-tables.html#cb769-5"></a><span class="co">#&gt; 2        Texas              38    43.2  52.2    4.5</span></span>
-<span id="cb769-6"><a href="joining-tables.html#cb769-6"></a><span class="co">#&gt; 3      Florida              29    47.8  49.0    3.2</span></span>
-<span id="cb769-7"><a href="joining-tables.html#cb769-7"></a><span class="co">#&gt; 4     New York              29    59.0  36.5    4.5</span></span>
-<span id="cb769-8"><a href="joining-tables.html#cb769-8"></a><span class="co">#&gt; 5     Illinois              20    55.8  38.8    5.4</span></span>
-<span id="cb769-9"><a href="joining-tables.html#cb769-9"></a><span class="co">#&gt; 6 Pennsylvania              20    47.9  48.6    3.6</span></span></code></pre></div>
+<div class="sourceCode" id="cb969"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb969-1"><a href="joining-tables.html#cb969-1"></a><span class="kw">data</span>(polls_us_election_<span class="dv">2016</span>)</span>
+<span id="cb969-2"><a href="joining-tables.html#cb969-2"></a><span class="kw">head</span>(results_us_election_<span class="dv">2016</span>)</span></code></pre></div>
 <p>Just concatenating these two tables together will not work since the order of the states is not the same.</p>
-<div class="sourceCode" id="cb770"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb770-1"><a href="joining-tables.html#cb770-1"></a><span class="kw">identical</span>(results_us_election_<span class="dv">2016</span><span class="op">$</span>state, murders<span class="op">$</span>state)</span>
-<span id="cb770-2"><a href="joining-tables.html#cb770-2"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb970"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb970-1"><a href="joining-tables.html#cb970-1"></a><span class="kw">identical</span>(results_us_election_<span class="dv">2016</span><span class="op">$</span>state, murders<span class="op">$</span>state)</span>
+<span id="cb970-2"><a href="joining-tables.html#cb970-2"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
 <p>The <em>join</em> functions, described below, are designed to handle this challenge.</p>
 <div id="joins" class="section level2">
 <h2><span class="header-section-number">22.1</span> Joins</h2>
 <p>The <em>join</em> functions in the <strong>dplyr</strong> package make sure that the tables are combined so that matching rows are together. If you know SQL, you will see that the approach and syntax is very similar. The general idea is that one needs to identify one or more columns that will serve to match the two tables. Then a new table with the combined information is returned. Notice what happens if we join the two tables above by state using <code>left_join</code> (we will remove the <code>others</code> column and rename <code>electoral_votes</code> so that the tables fit on the page):</p>
-<div class="sourceCode" id="cb771"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb771-1"><a href="joining-tables.html#cb771-1"></a>tab &lt;-<span class="st"> </span><span class="kw">left_join</span>(murders, results_us_election_<span class="dv">2016</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb771-2"><a href="joining-tables.html#cb771-2"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>others) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="dt">ev =</span> electoral_votes)</span>
-<span id="cb771-3"><a href="joining-tables.html#cb771-3"></a><span class="kw">head</span>(tab)</span>
-<span id="cb771-4"><a href="joining-tables.html#cb771-4"></a><span class="co">#&gt;        state abb region population total ev clinton trump</span></span>
-<span id="cb771-5"><a href="joining-tables.html#cb771-5"></a><span class="co">#&gt; 1    Alabama  AL  South    4779736   135  9    34.4  62.1</span></span>
-<span id="cb771-6"><a href="joining-tables.html#cb771-6"></a><span class="co">#&gt; 2     Alaska  AK   West     710231    19  3    36.6  51.3</span></span>
-<span id="cb771-7"><a href="joining-tables.html#cb771-7"></a><span class="co">#&gt; 3    Arizona  AZ   West    6392017   232 11    45.1  48.7</span></span>
-<span id="cb771-8"><a href="joining-tables.html#cb771-8"></a><span class="co">#&gt; 4   Arkansas  AR  South    2915918    93  6    33.7  60.6</span></span>
-<span id="cb771-9"><a href="joining-tables.html#cb771-9"></a><span class="co">#&gt; 5 California  CA   West   37253956  1257 55    61.7  31.6</span></span>
-<span id="cb771-10"><a href="joining-tables.html#cb771-10"></a><span class="co">#&gt; 6   Colorado  CO   West    5029196    65  9    48.2  43.3</span></span></code></pre></div>
+<div class="sourceCode" id="cb971"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb971-1"><a href="joining-tables.html#cb971-1"></a>tab &lt;-<span class="st"> </span><span class="kw">left_join</span>(murders, results_us_election_<span class="dv">2016</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb971-2"><a href="joining-tables.html#cb971-2"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>others) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="dt">ev =</span> electoral_votes)</span>
+<span id="cb971-3"><a href="joining-tables.html#cb971-3"></a><span class="kw">head</span>(tab)</span></code></pre></div>
 <p>The data has been successfully joined and we can now, for example, make a plot to explore the relationship:</p>
-<div class="sourceCode" id="cb772"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb772-1"><a href="joining-tables.html#cb772-1"></a><span class="kw">library</span>(ggrepel)</span>
-<span id="cb772-2"><a href="joining-tables.html#cb772-2"></a>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, ev, <span class="dt">label =</span> abb)) <span class="op">+</span></span>
-<span id="cb772-3"><a href="joining-tables.html#cb772-3"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb772-4"><a href="joining-tables.html#cb772-4"></a><span class="st">  </span><span class="kw">geom_text_repel</span>() <span class="op">+</span><span class="st"> </span></span>
-<span id="cb772-5"><a href="joining-tables.html#cb772-5"></a><span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span></span>
-<span id="cb772-6"><a href="joining-tables.html#cb772-6"></a><span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span></span>
-<span id="cb772-7"><a href="joining-tables.html#cb772-7"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb972"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb972-1"><a href="joining-tables.html#cb972-1"></a><span class="kw">library</span>(ggrepel)</span>
+<span id="cb972-2"><a href="joining-tables.html#cb972-2"></a>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, ev, <span class="dt">label =</span> abb)) <span class="op">+</span></span>
+<span id="cb972-3"><a href="joining-tables.html#cb972-3"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb972-4"><a href="joining-tables.html#cb972-4"></a><span class="st">  </span><span class="kw">geom_text_repel</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb972-5"><a href="joining-tables.html#cb972-5"></a><span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span></span>
+<span id="cb972-6"><a href="joining-tables.html#cb972-6"></a><span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span></span>
+<span id="cb972-7"><a href="joining-tables.html#cb972-7"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/ev-vs-population-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>We see the relationship is close to linear with about 2 electoral votes for every million persons, but with very small states getting higher ratios.</p>
 <p>In practice, it is not always the case that each row in one table has a matching row in the other. For this reason, we have several versions of join. To illustrate this challenge, we will take subsets of the tables above. We create the tables <code>tab1</code> and <code>tab2</code> so that they have some states in common but not all:</p>
-<div class="sourceCode" id="cb773"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb773-1"><a href="joining-tables.html#cb773-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">slice</span>(murders, <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(state, population)</span>
-<span id="cb773-2"><a href="joining-tables.html#cb773-2"></a>tab_<span class="dv">1</span></span>
-<span id="cb773-3"><a href="joining-tables.html#cb773-3"></a><span class="co">#&gt;        state population</span></span>
-<span id="cb773-4"><a href="joining-tables.html#cb773-4"></a><span class="co">#&gt; 1    Alabama    4779736</span></span>
-<span id="cb773-5"><a href="joining-tables.html#cb773-5"></a><span class="co">#&gt; 2     Alaska     710231</span></span>
-<span id="cb773-6"><a href="joining-tables.html#cb773-6"></a><span class="co">#&gt; 3    Arizona    6392017</span></span>
-<span id="cb773-7"><a href="joining-tables.html#cb773-7"></a><span class="co">#&gt; 4   Arkansas    2915918</span></span>
-<span id="cb773-8"><a href="joining-tables.html#cb773-8"></a><span class="co">#&gt; 5 California   37253956</span></span>
-<span id="cb773-9"><a href="joining-tables.html#cb773-9"></a><span class="co">#&gt; 6   Colorado    5029196</span></span>
-<span id="cb773-10"><a href="joining-tables.html#cb773-10"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>results_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb773-11"><a href="joining-tables.html#cb773-11"></a><span class="st">  </span><span class="kw">filter</span>(state<span class="op">%in%</span><span class="kw">c</span>(<span class="st">&quot;Alabama&quot;</span>, <span class="st">&quot;Alaska&quot;</span>, <span class="st">&quot;Arizona&quot;</span>, </span>
-<span id="cb773-12"><a href="joining-tables.html#cb773-12"></a>                    <span class="st">&quot;California&quot;</span>, <span class="st">&quot;Connecticut&quot;</span>, <span class="st">&quot;Delaware&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb773-13"><a href="joining-tables.html#cb773-13"></a><span class="st">  </span><span class="kw">select</span>(state, electoral_votes) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="dt">ev =</span> electoral_votes)</span>
-<span id="cb773-14"><a href="joining-tables.html#cb773-14"></a>tab_<span class="dv">2</span></span>
-<span id="cb773-15"><a href="joining-tables.html#cb773-15"></a><span class="co">#&gt;         state ev</span></span>
-<span id="cb773-16"><a href="joining-tables.html#cb773-16"></a><span class="co">#&gt; 1  California 55</span></span>
-<span id="cb773-17"><a href="joining-tables.html#cb773-17"></a><span class="co">#&gt; 2     Arizona 11</span></span>
-<span id="cb773-18"><a href="joining-tables.html#cb773-18"></a><span class="co">#&gt; 3     Alabama  9</span></span>
-<span id="cb773-19"><a href="joining-tables.html#cb773-19"></a><span class="co">#&gt; 4 Connecticut  7</span></span>
-<span id="cb773-20"><a href="joining-tables.html#cb773-20"></a><span class="co">#&gt; 5      Alaska  3</span></span>
-<span id="cb773-21"><a href="joining-tables.html#cb773-21"></a><span class="co">#&gt; 6    Delaware  3</span></span></code></pre></div>
+<div class="sourceCode" id="cb973"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb973-1"><a href="joining-tables.html#cb973-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">slice</span>(murders, <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(state, population)</span>
+<span id="cb973-2"><a href="joining-tables.html#cb973-2"></a>tab_<span class="dv">1</span></span>
+<span id="cb973-3"><a href="joining-tables.html#cb973-3"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>results_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb973-4"><a href="joining-tables.html#cb973-4"></a><span class="st">  </span><span class="kw">filter</span>(state<span class="op">%in%</span><span class="kw">c</span>(<span class="st">&quot;Alabama&quot;</span>, <span class="st">&quot;Alaska&quot;</span>, <span class="st">&quot;Arizona&quot;</span>, </span>
+<span id="cb973-5"><a href="joining-tables.html#cb973-5"></a>                    <span class="st">&quot;California&quot;</span>, <span class="st">&quot;Connecticut&quot;</span>, <span class="st">&quot;Delaware&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb973-6"><a href="joining-tables.html#cb973-6"></a><span class="st">  </span><span class="kw">select</span>(state, electoral_votes) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="dt">ev =</span> electoral_votes)</span>
+<span id="cb973-7"><a href="joining-tables.html#cb973-7"></a>tab_<span class="dv">2</span></span></code></pre></div>
 <p>We will use these two tables as examples in the next sections.</p>
 <div id="left-join" class="section level3">
 <h3><span class="header-section-number">22.1.1</span> Left join</h3>
 <p>Suppose we want a table like <code>tab_1</code>, but adding electoral votes to whatever states we have available. For this, we use <code>left_join</code> with <code>tab_1</code> as the first argument. We specify which column to use to match with the <code>by</code> argument.</p>
-<div class="sourceCode" id="cb774"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb774-1"><a href="joining-tables.html#cb774-1"></a><span class="kw">left_join</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span>
-<span id="cb774-2"><a href="joining-tables.html#cb774-2"></a><span class="co">#&gt;        state population ev</span></span>
-<span id="cb774-3"><a href="joining-tables.html#cb774-3"></a><span class="co">#&gt; 1    Alabama    4779736  9</span></span>
-<span id="cb774-4"><a href="joining-tables.html#cb774-4"></a><span class="co">#&gt; 2     Alaska     710231  3</span></span>
-<span id="cb774-5"><a href="joining-tables.html#cb774-5"></a><span class="co">#&gt; 3    Arizona    6392017 11</span></span>
-<span id="cb774-6"><a href="joining-tables.html#cb774-6"></a><span class="co">#&gt; 4   Arkansas    2915918 NA</span></span>
-<span id="cb774-7"><a href="joining-tables.html#cb774-7"></a><span class="co">#&gt; 5 California   37253956 55</span></span>
-<span id="cb774-8"><a href="joining-tables.html#cb774-8"></a><span class="co">#&gt; 6   Colorado    5029196 NA</span></span></code></pre></div>
+<div class="sourceCode" id="cb974"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb974-1"><a href="joining-tables.html#cb974-1"></a><span class="kw">left_join</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span></code></pre></div>
 <p>Note that <code>NA</code>s are added to the two states not appearing in <code>tab_2</code>. Also, notice that this function, as well as all the other joins, can receive the first arguments through the pipe:</p>
-<div class="sourceCode" id="cb775"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb775-1"><a href="joining-tables.html#cb775-1"></a>tab_<span class="dv">1</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">left_join</span>(tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb975"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb975-1"><a href="joining-tables.html#cb975-1"></a>tab_<span class="dv">1</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">left_join</span>(tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span></code></pre></div>
 </div>
 <div id="right-join" class="section level3">
 <h3><span class="header-section-number">22.1.2</span> Right join</h3>
 <p>If instead of a table with the same rows as first table, we want one with the same rows as second table, we can use <code>right_join</code>:</p>
-<div class="sourceCode" id="cb776"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb776-1"><a href="joining-tables.html#cb776-1"></a>tab_<span class="dv">1</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">right_join</span>(tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span>
-<span id="cb776-2"><a href="joining-tables.html#cb776-2"></a><span class="co">#&gt;         state population ev</span></span>
-<span id="cb776-3"><a href="joining-tables.html#cb776-3"></a><span class="co">#&gt; 1     Alabama    4779736  9</span></span>
-<span id="cb776-4"><a href="joining-tables.html#cb776-4"></a><span class="co">#&gt; 2      Alaska     710231  3</span></span>
-<span id="cb776-5"><a href="joining-tables.html#cb776-5"></a><span class="co">#&gt; 3     Arizona    6392017 11</span></span>
-<span id="cb776-6"><a href="joining-tables.html#cb776-6"></a><span class="co">#&gt; 4  California   37253956 55</span></span>
-<span id="cb776-7"><a href="joining-tables.html#cb776-7"></a><span class="co">#&gt; 5 Connecticut         NA  7</span></span>
-<span id="cb776-8"><a href="joining-tables.html#cb776-8"></a><span class="co">#&gt; 6    Delaware         NA  3</span></span></code></pre></div>
+<div class="sourceCode" id="cb976"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb976-1"><a href="joining-tables.html#cb976-1"></a>tab_<span class="dv">1</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">right_join</span>(tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span></code></pre></div>
 <p>Now the NAs are in the column coming from <code>tab_1</code>.</p>
 </div>
 <div id="inner-join" class="section level3">
 <h3><span class="header-section-number">22.1.3</span> Inner join</h3>
 <p>If we want to keep only the rows that have information in both tables, we use <code>inner_join</code>. You can think of this as an intersection:</p>
-<div class="sourceCode" id="cb777"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb777-1"><a href="joining-tables.html#cb777-1"></a><span class="kw">inner_join</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span>
-<span id="cb777-2"><a href="joining-tables.html#cb777-2"></a><span class="co">#&gt;        state population ev</span></span>
-<span id="cb777-3"><a href="joining-tables.html#cb777-3"></a><span class="co">#&gt; 1    Alabama    4779736  9</span></span>
-<span id="cb777-4"><a href="joining-tables.html#cb777-4"></a><span class="co">#&gt; 2     Alaska     710231  3</span></span>
-<span id="cb777-5"><a href="joining-tables.html#cb777-5"></a><span class="co">#&gt; 3    Arizona    6392017 11</span></span>
-<span id="cb777-6"><a href="joining-tables.html#cb777-6"></a><span class="co">#&gt; 4 California   37253956 55</span></span></code></pre></div>
+<div class="sourceCode" id="cb977"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb977-1"><a href="joining-tables.html#cb977-1"></a><span class="kw">inner_join</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span></code></pre></div>
 </div>
 <div id="full-join" class="section level3">
 <h3><span class="header-section-number">22.1.4</span> Full join</h3>
 <p>If we want to keep all the rows and fill the missing parts with NAs, we can use <code>full_join</code>. You can think of this as a union:</p>
-<div class="sourceCode" id="cb778"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb778-1"><a href="joining-tables.html#cb778-1"></a><span class="kw">full_join</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span>
-<span id="cb778-2"><a href="joining-tables.html#cb778-2"></a><span class="co">#&gt;         state population ev</span></span>
-<span id="cb778-3"><a href="joining-tables.html#cb778-3"></a><span class="co">#&gt; 1     Alabama    4779736  9</span></span>
-<span id="cb778-4"><a href="joining-tables.html#cb778-4"></a><span class="co">#&gt; 2      Alaska     710231  3</span></span>
-<span id="cb778-5"><a href="joining-tables.html#cb778-5"></a><span class="co">#&gt; 3     Arizona    6392017 11</span></span>
-<span id="cb778-6"><a href="joining-tables.html#cb778-6"></a><span class="co">#&gt; 4    Arkansas    2915918 NA</span></span>
-<span id="cb778-7"><a href="joining-tables.html#cb778-7"></a><span class="co">#&gt; 5  California   37253956 55</span></span>
-<span id="cb778-8"><a href="joining-tables.html#cb778-8"></a><span class="co">#&gt; 6    Colorado    5029196 NA</span></span>
-<span id="cb778-9"><a href="joining-tables.html#cb778-9"></a><span class="co">#&gt; 7 Connecticut         NA  7</span></span>
-<span id="cb778-10"><a href="joining-tables.html#cb778-10"></a><span class="co">#&gt; 8    Delaware         NA  3</span></span></code></pre></div>
+<div class="sourceCode" id="cb978"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb978-1"><a href="joining-tables.html#cb978-1"></a><span class="kw">full_join</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span></code></pre></div>
 </div>
 <div id="semi-join" class="section level3">
 <h3><span class="header-section-number">22.1.5</span> Semi join</h3>
 <p>The <code>semi_join</code> function lets us keep the part of first table for which we have information in the second. It does not add the columns of the second:</p>
-<div class="sourceCode" id="cb779"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb779-1"><a href="joining-tables.html#cb779-1"></a><span class="kw">semi_join</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span>
-<span id="cb779-2"><a href="joining-tables.html#cb779-2"></a><span class="co">#&gt;        state population</span></span>
-<span id="cb779-3"><a href="joining-tables.html#cb779-3"></a><span class="co">#&gt; 1    Alabama    4779736</span></span>
-<span id="cb779-4"><a href="joining-tables.html#cb779-4"></a><span class="co">#&gt; 2     Alaska     710231</span></span>
-<span id="cb779-5"><a href="joining-tables.html#cb779-5"></a><span class="co">#&gt; 3    Arizona    6392017</span></span>
-<span id="cb779-6"><a href="joining-tables.html#cb779-6"></a><span class="co">#&gt; 4 California   37253956</span></span></code></pre></div>
+<div class="sourceCode" id="cb979"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb979-1"><a href="joining-tables.html#cb979-1"></a><span class="kw">semi_join</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span></code></pre></div>
 </div>
 <div id="anti-join" class="section level3">
 <h3><span class="header-section-number">22.1.6</span> Anti join</h3>
 <p>The function <code>anti_join</code> is the opposite of <code>semi_join</code>. It keeps the elements of the first table for which there is no information in the second:</p>
-<div class="sourceCode" id="cb780"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb780-1"><a href="joining-tables.html#cb780-1"></a><span class="kw">anti_join</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span>
-<span id="cb780-2"><a href="joining-tables.html#cb780-2"></a><span class="co">#&gt;      state population</span></span>
-<span id="cb780-3"><a href="joining-tables.html#cb780-3"></a><span class="co">#&gt; 1 Arkansas    2915918</span></span>
-<span id="cb780-4"><a href="joining-tables.html#cb780-4"></a><span class="co">#&gt; 2 Colorado    5029196</span></span></code></pre></div>
+<div class="sourceCode" id="cb980"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb980-1"><a href="joining-tables.html#cb980-1"></a><span class="kw">anti_join</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span></code></pre></div>
 <p>The following diagram summarizes the above joins:</p>
 <p><img src="wrangling/img/joins.png" width="40%" style="display: block; margin: auto;" />
 (Image courtesy of RStudio<a href="#fn79" class="footnote-ref" id="fnref79"><sup>79</sup></a>. CC-BY-4.0 license<a href="#fn80" class="footnote-ref" id="fnref80"><sup>80</sup></a>. Cropped from original.)</p>
@@ -1054,40 +984,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="binding-columns" class="section level3">
 <h3><span class="header-section-number">22.2.1</span> Binding columns</h3>
 <p>The <strong>dplyr</strong> function <em>bind_cols</em> binds two objects by making them columns in a tibble. For example, we quickly want to make a data frame consisting of numbers we can use.</p>
-<div class="sourceCode" id="cb781"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb781-1"><a href="joining-tables.html#cb781-1"></a><span class="kw">bind_cols</span>(<span class="dt">a =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">b =</span> <span class="dv">4</span><span class="op">:</span><span class="dv">6</span>)</span>
-<span id="cb781-2"><a href="joining-tables.html#cb781-2"></a><span class="co">#&gt; # A tibble: 3 x 2</span></span>
-<span id="cb781-3"><a href="joining-tables.html#cb781-3"></a><span class="co">#&gt;       a     b</span></span>
-<span id="cb781-4"><a href="joining-tables.html#cb781-4"></a><span class="co">#&gt;   &lt;int&gt; &lt;int&gt;</span></span>
-<span id="cb781-5"><a href="joining-tables.html#cb781-5"></a><span class="co">#&gt; 1     1     4</span></span>
-<span id="cb781-6"><a href="joining-tables.html#cb781-6"></a><span class="co">#&gt; 2     2     5</span></span>
-<span id="cb781-7"><a href="joining-tables.html#cb781-7"></a><span class="co">#&gt; 3     3     6</span></span></code></pre></div>
+<div class="sourceCode" id="cb981"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb981-1"><a href="joining-tables.html#cb981-1"></a><span class="kw">bind_cols</span>(<span class="dt">a =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">b =</span> <span class="dv">4</span><span class="op">:</span><span class="dv">6</span>)</span></code></pre></div>
 <p>This function requires that we assign names to the columns. Here we chose <code>a</code> and <code>b</code>.</p>
 <p>Note that there is an R-base function <code>cbind</code> with the exact same functionality. An important difference is that <code>cbind</code> can create different types of objects, while <code>bind_cols</code> always produces a data frame.</p>
 <p><code>bind_cols</code> can also bind two different data frames. For example, here we break up the <code>tab</code> data frame and then bind them back together:</p>
-<div class="sourceCode" id="cb782"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb782-1"><a href="joining-tables.html#cb782-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span>tab[, <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>]</span>
-<span id="cb782-2"><a href="joining-tables.html#cb782-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>tab[, <span class="dv">4</span><span class="op">:</span><span class="dv">6</span>]</span>
-<span id="cb782-3"><a href="joining-tables.html#cb782-3"></a>tab_<span class="dv">3</span> &lt;-<span class="st"> </span>tab[, <span class="dv">7</span><span class="op">:</span><span class="dv">8</span>]</span>
-<span id="cb782-4"><a href="joining-tables.html#cb782-4"></a>new_tab &lt;-<span class="st"> </span><span class="kw">bind_cols</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, tab_<span class="dv">3</span>)</span>
-<span id="cb782-5"><a href="joining-tables.html#cb782-5"></a><span class="kw">head</span>(new_tab)</span>
-<span id="cb782-6"><a href="joining-tables.html#cb782-6"></a><span class="co">#&gt;        state abb region population total ev clinton trump</span></span>
-<span id="cb782-7"><a href="joining-tables.html#cb782-7"></a><span class="co">#&gt; 1    Alabama  AL  South    4779736   135  9    34.4  62.1</span></span>
-<span id="cb782-8"><a href="joining-tables.html#cb782-8"></a><span class="co">#&gt; 2     Alaska  AK   West     710231    19  3    36.6  51.3</span></span>
-<span id="cb782-9"><a href="joining-tables.html#cb782-9"></a><span class="co">#&gt; 3    Arizona  AZ   West    6392017   232 11    45.1  48.7</span></span>
-<span id="cb782-10"><a href="joining-tables.html#cb782-10"></a><span class="co">#&gt; 4   Arkansas  AR  South    2915918    93  6    33.7  60.6</span></span>
-<span id="cb782-11"><a href="joining-tables.html#cb782-11"></a><span class="co">#&gt; 5 California  CA   West   37253956  1257 55    61.7  31.6</span></span>
-<span id="cb782-12"><a href="joining-tables.html#cb782-12"></a><span class="co">#&gt; 6   Colorado  CO   West    5029196    65  9    48.2  43.3</span></span></code></pre></div>
+<div class="sourceCode" id="cb982"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb982-1"><a href="joining-tables.html#cb982-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span>tab[, <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>]</span>
+<span id="cb982-2"><a href="joining-tables.html#cb982-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>tab[, <span class="dv">4</span><span class="op">:</span><span class="dv">6</span>]</span>
+<span id="cb982-3"><a href="joining-tables.html#cb982-3"></a>tab_<span class="dv">3</span> &lt;-<span class="st"> </span>tab[, <span class="dv">7</span><span class="op">:</span><span class="dv">8</span>]</span>
+<span id="cb982-4"><a href="joining-tables.html#cb982-4"></a>new_tab &lt;-<span class="st"> </span><span class="kw">bind_cols</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>, tab_<span class="dv">3</span>)</span>
+<span id="cb982-5"><a href="joining-tables.html#cb982-5"></a><span class="kw">head</span>(new_tab)</span></code></pre></div>
 </div>
 <div id="binding-by-rows" class="section level3">
 <h3><span class="header-section-number">22.2.2</span> Binding by rows</h3>
 <p>The <code>bind_rows</code> function is similar to <code>bind_cols</code>, but binds rows instead of columns:</p>
-<div class="sourceCode" id="cb783"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb783-1"><a href="joining-tables.html#cb783-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span>tab[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,]</span>
-<span id="cb783-2"><a href="joining-tables.html#cb783-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>tab[<span class="dv">3</span><span class="op">:</span><span class="dv">4</span>,]</span>
-<span id="cb783-3"><a href="joining-tables.html#cb783-3"></a><span class="kw">bind_rows</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>)</span>
-<span id="cb783-4"><a href="joining-tables.html#cb783-4"></a><span class="co">#&gt;      state abb region population total ev clinton trump</span></span>
-<span id="cb783-5"><a href="joining-tables.html#cb783-5"></a><span class="co">#&gt; 1  Alabama  AL  South    4779736   135  9    34.4  62.1</span></span>
-<span id="cb783-6"><a href="joining-tables.html#cb783-6"></a><span class="co">#&gt; 2   Alaska  AK   West     710231    19  3    36.6  51.3</span></span>
-<span id="cb783-7"><a href="joining-tables.html#cb783-7"></a><span class="co">#&gt; 3  Arizona  AZ   West    6392017   232 11    45.1  48.7</span></span>
-<span id="cb783-8"><a href="joining-tables.html#cb783-8"></a><span class="co">#&gt; 4 Arkansas  AR  South    2915918    93  6    33.7  60.6</span></span></code></pre></div>
+<div class="sourceCode" id="cb983"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb983-1"><a href="joining-tables.html#cb983-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span>tab[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,]</span>
+<span id="cb983-2"><a href="joining-tables.html#cb983-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>tab[<span class="dv">3</span><span class="op">:</span><span class="dv">4</span>,]</span>
+<span id="cb983-3"><a href="joining-tables.html#cb983-3"></a><span class="kw">bind_rows</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>)</span></code></pre></div>
 <p>This is based on an R-base function <code>rbind</code>.</p>
 </div>
 </div>
@@ -1097,89 +1009,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="intersect" class="section level3">
 <h3><span class="header-section-number">22.3.1</span> Intersect</h3>
 <p>You can take intersections of vectors of any type, such as numeric:</p>
-<div class="sourceCode" id="cb784"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb784-1"><a href="joining-tables.html#cb784-1"></a><span class="kw">intersect</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">6</span><span class="op">:</span><span class="dv">15</span>)</span>
-<span id="cb784-2"><a href="joining-tables.html#cb784-2"></a><span class="co">#&gt; [1]  6  7  8  9 10</span></span></code></pre></div>
+<div class="sourceCode" id="cb984"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb984-1"><a href="joining-tables.html#cb984-1"></a><span class="kw">intersect</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">6</span><span class="op">:</span><span class="dv">15</span>)</span>
+<span id="cb984-2"><a href="joining-tables.html#cb984-2"></a><span class="co">#&gt; [1]  6  7  8  9 10</span></span></code></pre></div>
 <p>or characters:</p>
-<div class="sourceCode" id="cb785"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb785-1"><a href="joining-tables.html#cb785-1"></a><span class="kw">intersect</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>,<span class="st">&quot;d&quot;</span>))</span>
-<span id="cb785-2"><a href="joining-tables.html#cb785-2"></a><span class="co">#&gt; [1] &quot;b&quot; &quot;c&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb985"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb985-1"><a href="joining-tables.html#cb985-1"></a><span class="kw">intersect</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>,<span class="st">&quot;d&quot;</span>))</span>
+<span id="cb985-2"><a href="joining-tables.html#cb985-2"></a><span class="co">#&gt; [1] &quot;b&quot; &quot;c&quot;</span></span></code></pre></div>
 <p>The <strong>dplyr</strong> package includes an <code>intersect</code> function that can be applied to tables with the same column names. This function returns the rows in common between two tables. To make sure we use the <strong>dplyr</strong> version of <code>intersect</code> rather than the base package version, we can use <code>dplyr::intersect</code> like this:</p>
-<div class="sourceCode" id="cb786"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb786-1"><a href="joining-tables.html#cb786-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span>tab[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,]</span>
-<span id="cb786-2"><a href="joining-tables.html#cb786-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>tab[<span class="dv">3</span><span class="op">:</span><span class="dv">7</span>,]</span>
-<span id="cb786-3"><a href="joining-tables.html#cb786-3"></a>dplyr<span class="op">::</span><span class="kw">intersect</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>)</span>
-<span id="cb786-4"><a href="joining-tables.html#cb786-4"></a><span class="co">#&gt;        state abb region population total ev clinton trump</span></span>
-<span id="cb786-5"><a href="joining-tables.html#cb786-5"></a><span class="co">#&gt; 1    Arizona  AZ   West    6392017   232 11    45.1  48.7</span></span>
-<span id="cb786-6"><a href="joining-tables.html#cb786-6"></a><span class="co">#&gt; 2   Arkansas  AR  South    2915918    93  6    33.7  60.6</span></span>
-<span id="cb786-7"><a href="joining-tables.html#cb786-7"></a><span class="co">#&gt; 3 California  CA   West   37253956  1257 55    61.7  31.6</span></span></code></pre></div>
+<div class="sourceCode" id="cb986"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb986-1"><a href="joining-tables.html#cb986-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span>tab[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,]</span>
+<span id="cb986-2"><a href="joining-tables.html#cb986-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>tab[<span class="dv">3</span><span class="op">:</span><span class="dv">7</span>,]</span>
+<span id="cb986-3"><a href="joining-tables.html#cb986-3"></a>dplyr<span class="op">::</span><span class="kw">intersect</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>)</span></code></pre></div>
 </div>
 <div id="union" class="section level3">
 <h3><span class="header-section-number">22.3.2</span> Union</h3>
 <p>Similarly <em>union</em> takes the union of vectors. For example:</p>
-<div class="sourceCode" id="cb787"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb787-1"><a href="joining-tables.html#cb787-1"></a><span class="kw">union</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">6</span><span class="op">:</span><span class="dv">15</span>)</span>
-<span id="cb787-2"><a href="joining-tables.html#cb787-2"></a><span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15</span></span>
-<span id="cb787-3"><a href="joining-tables.html#cb787-3"></a><span class="kw">union</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>,<span class="st">&quot;d&quot;</span>))</span>
-<span id="cb787-4"><a href="joining-tables.html#cb787-4"></a><span class="co">#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb987"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb987-1"><a href="joining-tables.html#cb987-1"></a><span class="kw">union</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">6</span><span class="op">:</span><span class="dv">15</span>)</span>
+<span id="cb987-2"><a href="joining-tables.html#cb987-2"></a><span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15</span></span>
+<span id="cb987-3"><a href="joining-tables.html#cb987-3"></a><span class="kw">union</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>,<span class="st">&quot;d&quot;</span>))</span>
+<span id="cb987-4"><a href="joining-tables.html#cb987-4"></a><span class="co">#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;</span></span></code></pre></div>
 <p>The <strong>dplyr</strong> package includes a version of <code>union</code> that combines all the rows of two tables with the same column names.</p>
-<div class="sourceCode" id="cb788"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb788-1"><a href="joining-tables.html#cb788-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span>tab[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,]</span>
-<span id="cb788-2"><a href="joining-tables.html#cb788-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>tab[<span class="dv">3</span><span class="op">:</span><span class="dv">7</span>,]</span>
-<span id="cb788-3"><a href="joining-tables.html#cb788-3"></a>dplyr<span class="op">::</span><span class="kw">union</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>) </span>
-<span id="cb788-4"><a href="joining-tables.html#cb788-4"></a><span class="co">#&gt;         state abb    region population total ev clinton trump</span></span>
-<span id="cb788-5"><a href="joining-tables.html#cb788-5"></a><span class="co">#&gt; 1     Alabama  AL     South    4779736   135  9    34.4  62.1</span></span>
-<span id="cb788-6"><a href="joining-tables.html#cb788-6"></a><span class="co">#&gt; 2      Alaska  AK      West     710231    19  3    36.6  51.3</span></span>
-<span id="cb788-7"><a href="joining-tables.html#cb788-7"></a><span class="co">#&gt; 3     Arizona  AZ      West    6392017   232 11    45.1  48.7</span></span>
-<span id="cb788-8"><a href="joining-tables.html#cb788-8"></a><span class="co">#&gt; 4    Arkansas  AR     South    2915918    93  6    33.7  60.6</span></span>
-<span id="cb788-9"><a href="joining-tables.html#cb788-9"></a><span class="co">#&gt; 5  California  CA      West   37253956  1257 55    61.7  31.6</span></span>
-<span id="cb788-10"><a href="joining-tables.html#cb788-10"></a><span class="co">#&gt; 6    Colorado  CO      West    5029196    65  9    48.2  43.3</span></span>
-<span id="cb788-11"><a href="joining-tables.html#cb788-11"></a><span class="co">#&gt; 7 Connecticut  CT Northeast    3574097    97  7    54.6  40.9</span></span></code></pre></div>
+<div class="sourceCode" id="cb988"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb988-1"><a href="joining-tables.html#cb988-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span>tab[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,]</span>
+<span id="cb988-2"><a href="joining-tables.html#cb988-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>tab[<span class="dv">3</span><span class="op">:</span><span class="dv">7</span>,]</span>
+<span id="cb988-3"><a href="joining-tables.html#cb988-3"></a>dplyr<span class="op">::</span><span class="kw">union</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>) </span></code></pre></div>
 </div>
 <div id="setdiff" class="section level3">
 <h3><span class="header-section-number">22.3.3</span> <code>setdiff</code></h3>
 <p>The set difference between a first and second argument can be obtained with <code>setdiff</code>. Unlike <code>intersect</code> and <code>union</code>, this function is not symmetric:</p>
-<div class="sourceCode" id="cb789"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb789-1"><a href="joining-tables.html#cb789-1"></a><span class="kw">setdiff</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">6</span><span class="op">:</span><span class="dv">15</span>)</span>
-<span id="cb789-2"><a href="joining-tables.html#cb789-2"></a><span class="co">#&gt; [1] 1 2 3 4 5</span></span>
-<span id="cb789-3"><a href="joining-tables.html#cb789-3"></a><span class="kw">setdiff</span>(<span class="dv">6</span><span class="op">:</span><span class="dv">15</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</span>
-<span id="cb789-4"><a href="joining-tables.html#cb789-4"></a><span class="co">#&gt; [1] 11 12 13 14 15</span></span></code></pre></div>
+<div class="sourceCode" id="cb989"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb989-1"><a href="joining-tables.html#cb989-1"></a><span class="kw">setdiff</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">6</span><span class="op">:</span><span class="dv">15</span>)</span>
+<span id="cb989-2"><a href="joining-tables.html#cb989-2"></a><span class="co">#&gt; [1] 1 2 3 4 5</span></span>
+<span id="cb989-3"><a href="joining-tables.html#cb989-3"></a><span class="kw">setdiff</span>(<span class="dv">6</span><span class="op">:</span><span class="dv">15</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</span>
+<span id="cb989-4"><a href="joining-tables.html#cb989-4"></a><span class="co">#&gt; [1] 11 12 13 14 15</span></span></code></pre></div>
 <p>As with the functions shown above, <strong>dplyr</strong> has a version for data frames:</p>
-<div class="sourceCode" id="cb790"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb790-1"><a href="joining-tables.html#cb790-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span>tab[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,]</span>
-<span id="cb790-2"><a href="joining-tables.html#cb790-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>tab[<span class="dv">3</span><span class="op">:</span><span class="dv">7</span>,]</span>
-<span id="cb790-3"><a href="joining-tables.html#cb790-3"></a>dplyr<span class="op">::</span><span class="kw">setdiff</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>)</span>
-<span id="cb790-4"><a href="joining-tables.html#cb790-4"></a><span class="co">#&gt;     state abb region population total ev clinton trump</span></span>
-<span id="cb790-5"><a href="joining-tables.html#cb790-5"></a><span class="co">#&gt; 1 Alabama  AL  South    4779736   135  9    34.4  62.1</span></span>
-<span id="cb790-6"><a href="joining-tables.html#cb790-6"></a><span class="co">#&gt; 2  Alaska  AK   West     710231    19  3    36.6  51.3</span></span></code></pre></div>
+<div class="sourceCode" id="cb990"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb990-1"><a href="joining-tables.html#cb990-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span>tab[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,]</span>
+<span id="cb990-2"><a href="joining-tables.html#cb990-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span>tab[<span class="dv">3</span><span class="op">:</span><span class="dv">7</span>,]</span>
+<span id="cb990-3"><a href="joining-tables.html#cb990-3"></a>dplyr<span class="op">::</span><span class="kw">setdiff</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>)</span></code></pre></div>
 </div>
 <div id="setequal" class="section level3">
 <h3><span class="header-section-number">22.3.4</span> <code>setequal</code></h3>
 <p>Finally, the function <code>setequal</code> tells us if two sets are the same, regardless of order. So notice that:</p>
-<div class="sourceCode" id="cb791"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb791-1"><a href="joining-tables.html#cb791-1"></a><span class="kw">setequal</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>)</span>
-<span id="cb791-2"><a href="joining-tables.html#cb791-2"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb991"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb991-1"><a href="joining-tables.html#cb991-1"></a><span class="kw">setequal</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>)</span>
+<span id="cb991-2"><a href="joining-tables.html#cb991-2"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
 <p>but:</p>
-<div class="sourceCode" id="cb792"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb792-1"><a href="joining-tables.html#cb792-1"></a><span class="kw">setequal</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dv">5</span><span class="op">:</span><span class="dv">1</span>)</span>
-<span id="cb792-2"><a href="joining-tables.html#cb792-2"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb992"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb992-1"><a href="joining-tables.html#cb992-1"></a><span class="kw">setequal</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dv">5</span><span class="op">:</span><span class="dv">1</span>)</span>
+<span id="cb992-2"><a href="joining-tables.html#cb992-2"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 <p>When applied to data frames that are not equal, regardless of order, the <strong>dplyr</strong> version provides a useful message letting us know how the sets are different:</p>
-<div class="sourceCode" id="cb793"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb793-1"><a href="joining-tables.html#cb793-1"></a>dplyr<span class="op">::</span><span class="kw">setequal</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>)</span>
-<span id="cb793-2"><a href="joining-tables.html#cb793-2"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb993"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb993-1"><a href="joining-tables.html#cb993-1"></a>dplyr<span class="op">::</span><span class="kw">setequal</span>(tab_<span class="dv">1</span>, tab_<span class="dv">2</span>)</span>
+<span id="cb993-2"><a href="joining-tables.html#cb993-2"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
 </div>
 </div>
 <div id="exercises-39" class="section level2">
 <h2><span class="header-section-number">22.4</span> Exercises</h2>
 <p>1. Install and load the <strong>Lahman</strong> library. This database includes data related to baseball teams. It includes summary statistics about how the players performed on offense and defense for several years. It also includes personal information about the players.</p>
 <p>The <code>Batting</code> data frame contains the offensive statistics for all players for many years. You can see, for example, the top 10 hitters by running this code:</p>
-<div class="sourceCode" id="cb794"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb794-1"><a href="joining-tables.html#cb794-1"></a><span class="kw">library</span>(Lahman)</span>
-<span id="cb794-2"><a href="joining-tables.html#cb794-2"></a></span>
-<span id="cb794-3"><a href="joining-tables.html#cb794-3"></a>top &lt;-<span class="st"> </span>Batting <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb794-4"><a href="joining-tables.html#cb794-4"></a><span class="st">  </span><span class="kw">filter</span>(yearID <span class="op">==</span><span class="st"> </span><span class="dv">2016</span>) <span class="op">%&gt;%</span></span>
-<span id="cb794-5"><a href="joining-tables.html#cb794-5"></a><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(HR)) <span class="op">%&gt;%</span></span>
-<span id="cb794-6"><a href="joining-tables.html#cb794-6"></a><span class="st">  </span><span class="kw">slice</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</span>
-<span id="cb794-7"><a href="joining-tables.html#cb794-7"></a></span>
-<span id="cb794-8"><a href="joining-tables.html#cb794-8"></a>top <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb994"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb994-1"><a href="joining-tables.html#cb994-1"></a><span class="kw">library</span>(Lahman)</span>
+<span id="cb994-2"><a href="joining-tables.html#cb994-2"></a></span>
+<span id="cb994-3"><a href="joining-tables.html#cb994-3"></a>top &lt;-<span class="st"> </span>Batting <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb994-4"><a href="joining-tables.html#cb994-4"></a><span class="st">  </span><span class="kw">filter</span>(yearID <span class="op">==</span><span class="st"> </span><span class="dv">2016</span>) <span class="op">%&gt;%</span></span>
+<span id="cb994-5"><a href="joining-tables.html#cb994-5"></a><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(HR)) <span class="op">%&gt;%</span></span>
+<span id="cb994-6"><a href="joining-tables.html#cb994-6"></a><span class="st">  </span><span class="kw">slice</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</span>
+<span id="cb994-7"><a href="joining-tables.html#cb994-7"></a></span>
+<span id="cb994-8"><a href="joining-tables.html#cb994-8"></a>top <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>()</span></code></pre></div>
 <p>But who are these players? We see an ID, but not the names. The player names are in this table</p>
-<div class="sourceCode" id="cb795"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb795-1"><a href="joining-tables.html#cb795-1"></a>Master <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb995"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb995-1"><a href="joining-tables.html#cb995-1"></a>Master <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>()</span></code></pre></div>
 <p>We can see column names <code>nameFirst</code> and <code>nameLast</code>. Use the <code>left_join</code> function to create a table of the top home run hitters. The table should have <code>playerID</code>, first name, last name, and number of home runs (HR). Rewrite the object <code>top</code> with this new table.</p>
 <p>2. Now use the <code>Salaries</code> data frame to add each player’s salary to the table you created in exercise 1. Note that salaries are different every year so make sure to filter for the year 2016, then use <code>right_join</code>. This time show first name, last name, team, HR, and salary.</p>
 <p>3. In a previous exercise, we created a tidy version of the <code>co2</code> dataset:</p>
-<div class="sourceCode" id="cb796"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb796-1"><a href="joining-tables.html#cb796-1"></a>co2_wide &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">matrix</span>(co2, <span class="dt">ncol =</span> <span class="dv">12</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb796-2"><a href="joining-tables.html#cb796-2"></a><span class="st">  </span><span class="kw">setNames</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">12</span>) <span class="op">%&gt;%</span></span>
-<span id="cb796-3"><a href="joining-tables.html#cb796-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="dv">1959</span><span class="op">:</span><span class="dv">1997</span>) <span class="op">%&gt;%</span></span>
-<span id="cb796-4"><a href="joining-tables.html#cb796-4"></a><span class="st">  </span><span class="kw">gather</span>(month, co2, <span class="op">-</span>year, <span class="dt">convert =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb996"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb996-1"><a href="joining-tables.html#cb996-1"></a>co2_wide &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">matrix</span>(co2, <span class="dt">ncol =</span> <span class="dv">12</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb996-2"><a href="joining-tables.html#cb996-2"></a><span class="st">  </span><span class="kw">setNames</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">12</span>) <span class="op">%&gt;%</span></span>
+<span id="cb996-3"><a href="joining-tables.html#cb996-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="dv">1959</span><span class="op">:</span><span class="dv">1997</span>) <span class="op">%&gt;%</span></span>
+<span id="cb996-4"><a href="joining-tables.html#cb996-4"></a><span class="st">  </span><span class="kw">gather</span>(month, co2, <span class="op">-</span>year, <span class="dt">convert =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <p>We want to see if the monthly trend is changing so we are going to remove the year effects and then plot the results. We will first compute the year averages. Use the <code>group_by</code> and <code>summarize</code> to compute the average co2 for each year. Save in an object called <code>yearly_avg</code>.</p>
 <p>4. Now use the <code>left_join</code> function to add the yearly average to the <code>co2_wide</code> dataset. Then compute the residuals: observed co2 measure - yearly average.</p>
 <p>5. Make a plot of the seasonal trends by year but only after removing the year effect.</p>

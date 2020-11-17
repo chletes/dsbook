@@ -388,6 +388,7 @@ d. They are the same dataset, but the first is not in the log scale, the second 
 
 ```{r echo=FALSE}
 rm(list = ls())
+img_path <- "dataviz/img"
 ```
 
 

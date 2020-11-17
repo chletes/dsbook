@@ -247,7 +247,9 @@ s <- sqrt(mean((x-m)^2))
 Using mathematical notation we write:
 
 $$
-\mu = \frac{1}{n} \sum_{i=1}^n x_i \\
+\mu = \frac{1}{n} \sum_{i=1}^n x_i 
+$$
+$$
 \sigma =  \sqrt{\frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2}
 $$
 

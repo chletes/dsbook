@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Introduction to data visualization | Introduction to Data Science</title>
   <meta name="description" content="This book introduces concepts and skills that can help you tackle real-world data analysis challenges. It covers concepts from probability, statistical inference, linear regression and machine learning and helps you develop skills such as R programming, data wrangling with dplyr, data visualization with ggplot2, file organization with UNIX/Linux shell, version control with GitHub, and reproducible document preparation with R markdown." />
-  <meta name="generator" content="bookdown 0.20.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Introduction to data visualization | Introduction to Data Science" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Rafael A. Irizarry" />
 
 
-<meta name="date" content="2020-11-16" />
+<meta name="date" content="2020-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,7 +51,10 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -305,7 +308,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.15" data-path="ggplot2.html"><a href="ggplot2.html#exercises-15"><i class="fa fa-check"></i><b>7.15</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>8</b> Visualizing data distributions</a><ul>
-<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a></li>
+<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="distributions.html"><a href="distributions.html#key-points"><i class="fa fa-check"></i><b>8.1.1</b> Key points</a></li>
+</ul></li>
 <li class="chapter" data-level="8.2" data-path="distributions.html"><a href="distributions.html#case-study-describing-student-heights"><i class="fa fa-check"></i><b>8.2</b> Case study: describing student heights</a></li>
 <li class="chapter" data-level="8.3" data-path="distributions.html"><a href="distributions.html#distribution-function"><i class="fa fa-check"></i><b>8.3</b> Distribution function</a></li>
 <li class="chapter" data-level="8.4" data-path="distributions.html"><a href="distributions.html#cdf-intro"><i class="fa fa-check"></i><b>8.4</b> Cumulative distribution functions</a></li>
@@ -806,78 +811,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="part"><span><b>VI Productivity Tools</b></span></li>
 <li class="chapter" data-level="35" data-path="introduction-to-productivity-tools.html"><a href="introduction-to-productivity-tools.html"><i class="fa fa-check"></i><b>35</b> Introduction to productivity tools</a></li>
-<li class="chapter" data-level="36" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html"><i class="fa fa-check"></i><b>36</b> Installing R and RStudio</a><ul>
-<li class="chapter" data-level="36.1" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-r"><i class="fa fa-check"></i><b>36.1</b> Installing R</a></li>
-<li class="chapter" data-level="36.2" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-rstudio"><i class="fa fa-check"></i><b>36.2</b> Installing RStudio</a></li>
+<li class="chapter" data-level="36" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>36</b> Accessing the terminal and installing Git</a><ul>
+<li class="chapter" data-level="36.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>36.1</b> Accessing the terminal on a Mac</a></li>
+<li class="chapter" data-level="36.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>36.2</b> Installing Git on the Mac</a></li>
+<li class="chapter" data-level="36.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>36.3</b> Installing Git and Git Bash on Windows</a></li>
+<li class="chapter" data-level="36.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>36.4</b> Accessing the terminal on Windows</a></li>
 </ul></li>
-<li class="chapter" data-level="37" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>37</b> Accessing the terminal and installing Git</a><ul>
-<li class="chapter" data-level="37.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>37.1</b> Accessing the terminal on a Mac</a></li>
-<li class="chapter" data-level="37.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>37.2</b> Installing Git on the Mac</a></li>
-<li class="chapter" data-level="37.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>37.3</b> Installing Git and Git Bash on Windows</a></li>
-<li class="chapter" data-level="37.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>37.4</b> Accessing the terminal on Windows</a></li>
+<li class="chapter" data-level="37" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>37</b> Organizing with Unix</a><ul>
+<li class="chapter" data-level="37.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>37.1</b> Naming convention</a></li>
+<li class="chapter" data-level="37.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>37.2</b> The terminal</a></li>
+<li class="chapter" data-level="37.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>37.3</b> The filesystem</a><ul>
+<li class="chapter" data-level="37.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>37.3.1</b> Directories and subdirectories</a></li>
+<li class="chapter" data-level="37.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>37.3.2</b> The home directory</a></li>
+<li class="chapter" data-level="37.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>37.3.3</b> Working directory</a></li>
+<li class="chapter" data-level="37.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>37.3.4</b> Paths</a></li>
 </ul></li>
-<li class="chapter" data-level="38" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>38</b> Organizing with Unix</a><ul>
-<li class="chapter" data-level="38.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>38.1</b> Naming convention</a></li>
-<li class="chapter" data-level="38.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>38.2</b> The terminal</a></li>
-<li class="chapter" data-level="38.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>38.3</b> The filesystem</a><ul>
-<li class="chapter" data-level="38.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>38.3.1</b> Directories and subdirectories</a></li>
-<li class="chapter" data-level="38.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>38.3.2</b> The home directory</a></li>
-<li class="chapter" data-level="38.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>38.3.3</b> Working directory</a></li>
-<li class="chapter" data-level="38.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>38.3.4</b> Paths</a></li>
+<li class="chapter" data-level="37.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>37.4</b> Unix commands</a><ul>
+<li class="chapter" data-level="37.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>37.4.1</b> <code>ls</code>: Listing directory content</a></li>
+<li class="chapter" data-level="37.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>37.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
+<li class="chapter" data-level="37.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>37.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
 </ul></li>
-<li class="chapter" data-level="38.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>38.4</b> Unix commands</a><ul>
-<li class="chapter" data-level="38.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>38.4.1</b> <code>ls</code>: Listing directory content</a></li>
-<li class="chapter" data-level="38.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>38.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
-<li class="chapter" data-level="38.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>38.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
+<li class="chapter" data-level="37.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>37.5</b> Some examples</a></li>
+<li class="chapter" data-level="37.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>37.6</b> More Unix commands</a><ul>
+<li class="chapter" data-level="37.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>37.6.1</b> <code>mv</code>: moving files</a></li>
+<li class="chapter" data-level="37.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>37.6.2</b> <code>cp</code>: copying files</a></li>
+<li class="chapter" data-level="37.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>37.6.3</b> <code>rm</code>: removing files</a></li>
+<li class="chapter" data-level="37.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>37.6.4</b> <code>less</code>: looking at a file</a></li>
 </ul></li>
-<li class="chapter" data-level="38.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>38.5</b> Some examples</a></li>
-<li class="chapter" data-level="38.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>38.6</b> More Unix commands</a><ul>
-<li class="chapter" data-level="38.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>38.6.1</b> <code>mv</code>: moving files</a></li>
-<li class="chapter" data-level="38.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>38.6.2</b> <code>cp</code>: copying files</a></li>
-<li class="chapter" data-level="38.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>38.6.3</b> <code>rm</code>: removing files</a></li>
-<li class="chapter" data-level="38.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>38.6.4</b> <code>less</code>: looking at a file</a></li>
-</ul></li>
-<li class="chapter" data-level="38.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>38.7</b> Preparing for a data science project</a></li>
-<li class="chapter" data-level="38.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>38.8</b> Advanced Unix</a><ul>
-<li class="chapter" data-level="38.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>38.8.1</b> Arguments</a></li>
-<li class="chapter" data-level="38.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>38.8.2</b> Getting help</a></li>
-<li class="chapter" data-level="38.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>38.8.3</b> Pipes</a></li>
-<li class="chapter" data-level="38.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>38.8.4</b> Wild cards</a></li>
-<li class="chapter" data-level="38.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>38.8.5</b> Environment variables</a></li>
-<li class="chapter" data-level="38.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>38.8.6</b> Shells</a></li>
-<li class="chapter" data-level="38.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>38.8.7</b> Executables</a></li>
-<li class="chapter" data-level="38.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>38.8.8</b> Permissions and file types</a></li>
-<li class="chapter" data-level="38.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>38.8.9</b> Commands you should learn</a></li>
-<li class="chapter" data-level="38.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>38.8.10</b> File manipulation in R</a></li>
+<li class="chapter" data-level="37.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>37.7</b> Preparing for a data science project</a></li>
+<li class="chapter" data-level="37.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>37.8</b> Advanced Unix</a><ul>
+<li class="chapter" data-level="37.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>37.8.1</b> Arguments</a></li>
+<li class="chapter" data-level="37.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>37.8.2</b> Getting help</a></li>
+<li class="chapter" data-level="37.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>37.8.3</b> Pipes</a></li>
+<li class="chapter" data-level="37.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>37.8.4</b> Wild cards</a></li>
+<li class="chapter" data-level="37.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>37.8.5</b> Environment variables</a></li>
+<li class="chapter" data-level="37.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>37.8.6</b> Shells</a></li>
+<li class="chapter" data-level="37.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>37.8.7</b> Executables</a></li>
+<li class="chapter" data-level="37.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>37.8.8</b> Permissions and file types</a></li>
+<li class="chapter" data-level="37.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>37.8.9</b> Commands you should learn</a></li>
+<li class="chapter" data-level="37.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>37.8.10</b> File manipulation in R</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="39" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>39</b> Git and GitHub</a><ul>
-<li class="chapter" data-level="39.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>39.1</b> Why use Git and GitHub?</a></li>
-<li class="chapter" data-level="39.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>39.2</b> GitHub accounts</a></li>
-<li class="chapter" data-level="39.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>39.3</b> GitHub repositories</a></li>
-<li class="chapter" data-level="39.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>39.4</b> Overview of Git</a><ul>
-<li class="chapter" data-level="39.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>39.4.1</b> Clone</a></li>
+<li class="chapter" data-level="38" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>38</b> Git and GitHub</a><ul>
+<li class="chapter" data-level="38.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>38.1</b> Why use Git and GitHub?</a></li>
+<li class="chapter" data-level="38.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>38.2</b> GitHub accounts</a></li>
+<li class="chapter" data-level="38.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>38.3</b> GitHub repositories</a></li>
+<li class="chapter" data-level="38.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>38.4</b> Overview of Git</a><ul>
+<li class="chapter" data-level="38.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>38.4.1</b> Clone</a></li>
 </ul></li>
-<li class="chapter" data-level="39.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>39.5</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="39.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>39.6</b> Using Git and GitHub in RStudio</a></li>
+<li class="chapter" data-level="38.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>38.5</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="38.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>38.6</b> Using Git and GitHub in RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="40" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>40</b> Reproducible projects with RStudio and R markdown</a><ul>
-<li class="chapter" data-level="40.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>40.1</b> RStudio projects</a></li>
-<li class="chapter" data-level="40.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>40.2</b> R markdown</a><ul>
-<li class="chapter" data-level="40.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>40.2.1</b> The header</a></li>
-<li class="chapter" data-level="40.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>40.2.2</b> R code chunks</a></li>
-<li class="chapter" data-level="40.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>40.2.3</b> Global options</a></li>
-<li class="chapter" data-level="40.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>40.2.4</b> knitR</a></li>
-<li class="chapter" data-level="40.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>40.2.5</b> More on R markdown</a></li>
+<li class="chapter" data-level="39" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>39</b> Reproducible projects with RStudio and R markdown</a><ul>
+<li class="chapter" data-level="39.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>39.1</b> RStudio projects</a></li>
+<li class="chapter" data-level="39.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>39.2</b> R markdown</a><ul>
+<li class="chapter" data-level="39.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>39.2.1</b> The header</a></li>
+<li class="chapter" data-level="39.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>39.2.2</b> R code chunks</a></li>
+<li class="chapter" data-level="39.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>39.2.3</b> Global options</a></li>
+<li class="chapter" data-level="39.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>39.2.4</b> knitR</a></li>
+<li class="chapter" data-level="39.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>39.2.5</b> More on R markdown</a></li>
 </ul></li>
-<li class="chapter" data-level="40.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>40.3</b> Organizing a data science project</a><ul>
-<li class="chapter" data-level="40.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>40.3.1</b> Create directories in Unix</a></li>
-<li class="chapter" data-level="40.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>40.3.2</b> Create an RStudio project</a></li>
-<li class="chapter" data-level="40.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>40.3.3</b> Edit some R scripts</a></li>
-<li class="chapter" data-level="40.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>40.3.4</b> Create some more directories using Unix</a></li>
-<li class="chapter" data-level="40.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>40.3.5</b> Add a README file</a></li>
-<li class="chapter" data-level="40.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>40.3.6</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="40.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>40.3.7</b> Add, commit, and push files using RStudio</a></li>
+<li class="chapter" data-level="39.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>39.3</b> Organizing a data science project</a><ul>
+<li class="chapter" data-level="39.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>39.3.1</b> Create directories in Unix</a></li>
+<li class="chapter" data-level="39.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>39.3.2</b> Create an RStudio project</a></li>
+<li class="chapter" data-level="39.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>39.3.3</b> Edit some R scripts</a></li>
+<li class="chapter" data-level="39.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>39.3.4</b> Create some more directories using Unix</a></li>
+<li class="chapter" data-level="39.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>39.3.5</b> Add a README file</a></li>
+<li class="chapter" data-level="39.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>39.3.6</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="39.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>39.3.7</b> Add, commit, and push files using RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -903,25 +904,81 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="introduction-to-data-visualization" class="section level1">
 <h1><span class="header-section-number">Chapter 6</span> Introduction to data visualization</h1>
 <p>Looking at the numbers and character strings that define a dataset is rarely useful. To convince yourself, print and stare at the US murders data table:</p>
-<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="introduction-to-data-visualization.html#cb259-1"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb259-2"><a href="introduction-to-data-visualization.html#cb259-2"></a><span class="kw">data</span>(murders)</span>
-<span id="cb259-3"><a href="introduction-to-data-visualization.html#cb259-3"></a><span class="kw">head</span>(murders)</span>
-<span id="cb259-4"><a href="introduction-to-data-visualization.html#cb259-4"></a><span class="co">#&gt;        state abb region population total</span></span>
-<span id="cb259-5"><a href="introduction-to-data-visualization.html#cb259-5"></a><span class="co">#&gt; 1    Alabama  AL  South    4779736   135</span></span>
-<span id="cb259-6"><a href="introduction-to-data-visualization.html#cb259-6"></a><span class="co">#&gt; 2     Alaska  AK   West     710231    19</span></span>
-<span id="cb259-7"><a href="introduction-to-data-visualization.html#cb259-7"></a><span class="co">#&gt; 3    Arizona  AZ   West    6392017   232</span></span>
-<span id="cb259-8"><a href="introduction-to-data-visualization.html#cb259-8"></a><span class="co">#&gt; 4   Arkansas  AR  South    2915918    93</span></span>
-<span id="cb259-9"><a href="introduction-to-data-visualization.html#cb259-9"></a><span class="co">#&gt; 5 California  CA   West   37253956  1257</span></span>
-<span id="cb259-10"><a href="introduction-to-data-visualization.html#cb259-10"></a><span class="co">#&gt; 6   Colorado  CO   West    5029196    65</span></span></code></pre></div>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="introduction-to-data-visualization.html#cb331-1"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb331-2"><a href="introduction-to-data-visualization.html#cb331-2"></a><span class="kw">data</span>(murders)</span>
+<span id="cb331-3"><a href="introduction-to-data-visualization.html#cb331-3"></a><span class="kw">head</span>(murders)</span></code></pre></div>
 <p>What do you learn from staring at this table? How quickly can you determine which states have the largest populations? Which states have the smallest? How large is a typical state? Is there a relationship between population size and total murders? How do murder rates vary across regions of the country? For most human brains, it is quite difficult to extract this information just by looking at the numbers. In contrast, the answer to all the questions above are readily available from examining this plot:</p>
+<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb332-1"><a href="introduction-to-data-visualization.html#cb332-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb332-2"><a href="introduction-to-data-visualization.html#cb332-2"></a><span class="kw">library</span>(ggthemes)</span>
+<span id="cb332-3"><a href="introduction-to-data-visualization.html#cb332-3"></a><span class="kw">library</span>(ggrepel)</span>
+<span id="cb332-4"><a href="introduction-to-data-visualization.html#cb332-4"></a></span>
+<span id="cb332-5"><a href="introduction-to-data-visualization.html#cb332-5"></a>r &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb332-6"><a href="introduction-to-data-visualization.html#cb332-6"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">pop=</span><span class="kw">sum</span>(population), <span class="dt">tot=</span><span class="kw">sum</span>(total)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb332-7"><a href="introduction-to-data-visualization.html#cb332-7"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rate =</span> tot<span class="op">/</span>pop<span class="op">*</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pull</span>(rate)</span>
+<span id="cb332-8"><a href="introduction-to-data-visualization.html#cb332-8"></a></span>
+<span id="cb332-9"><a href="introduction-to-data-visualization.html#cb332-9"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, <span class="dt">y =</span> total, <span class="dt">label =</span> abb)) <span class="op">+</span><span class="st">  </span></span>
+<span id="cb332-10"><a href="introduction-to-data-visualization.html#cb332-10"></a><span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">intercept =</span> <span class="kw">log10</span>(r), <span class="dt">lty=</span><span class="dv">2</span>, <span class="dt">col=</span><span class="st">&quot;darkgrey&quot;</span>) <span class="op">+</span></span>
+<span id="cb332-11"><a href="introduction-to-data-visualization.html#cb332-11"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color=</span>region), <span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb332-12"><a href="introduction-to-data-visualization.html#cb332-12"></a><span class="st">  </span><span class="kw">geom_text_repel</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb332-13"><a href="introduction-to-data-visualization.html#cb332-13"></a><span class="st">  </span><span class="kw">scale_x_log10</span>() <span class="op">+</span></span>
+<span id="cb332-14"><a href="introduction-to-data-visualization.html#cb332-14"></a><span class="st">  </span><span class="kw">scale_y_log10</span>() <span class="op">+</span></span>
+<span id="cb332-15"><a href="introduction-to-data-visualization.html#cb332-15"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Populations in millions (log scale)&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb332-16"><a href="introduction-to-data-visualization.html#cb332-16"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total number of murders (log scale)&quot;</span>) <span class="op">+</span></span>
+<span id="cb332-17"><a href="introduction-to-data-visualization.html#cb332-17"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;US Gun Murders in 2010&quot;</span>) <span class="op">+</span></span>
+<span id="cb332-18"><a href="introduction-to-data-visualization.html#cb332-18"></a><span class="st">  </span><span class="kw">scale_color_discrete</span>(<span class="dt">name=</span><span class="st">&quot;Region&quot;</span>) <span class="op">+</span></span>
+<span id="cb332-19"><a href="introduction-to-data-visualization.html#cb332-19"></a><span class="st">  </span><span class="kw">theme_economist</span>()</span></code></pre></div>
 <p><img src="book_files/figure-html/ggplot-example-plot-0-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>We are reminded of the saying “a picture is worth a thousand words”. Data visualization provides a powerful way to communicate a data-driven finding. In some cases, the visualization is so convincing that no follow-up analysis is required.</p>
 <p>The growing availability of informative datasets and software tools has led to increased reliance on data visualizations across many industries, academia, and government. A salient example is news organizations, which are increasingly embracing <em>data journalism</em> and including effective <em>infographics</em> as part of their reporting.</p>
 <p>A particularly effective example is a Wall Street Journal article<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a> showing data related to the impact of vaccines on battling infectious diseases. One of the graphs shows measles cases by US state through the years with a vertical line demonstrating when the vaccine was introduced.</p>
+<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb333-1"><a href="introduction-to-data-visualization.html#cb333-1"></a><span class="co">#knitr::include_graphics(file.path(img_path,&quot;wsj-vaccines.png&quot;))</span></span>
+<span id="cb333-2"><a href="introduction-to-data-visualization.html#cb333-2"></a><span class="kw">data</span>(us_contagious_diseases)</span>
+<span id="cb333-3"><a href="introduction-to-data-visualization.html#cb333-3"></a>the_disease &lt;-<span class="st"> &quot;Measles&quot;</span></span>
+<span id="cb333-4"><a href="introduction-to-data-visualization.html#cb333-4"></a>dat &lt;-<span class="st"> </span>us_contagious_diseases <span class="op">%&gt;%</span></span>
+<span id="cb333-5"><a href="introduction-to-data-visualization.html#cb333-5"></a><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>state<span class="op">%in%</span><span class="kw">c</span>(<span class="st">&quot;Hawaii&quot;</span>,<span class="st">&quot;Alaska&quot;</span>) <span class="op">&amp;</span><span class="st"> </span>disease <span class="op">==</span><span class="st"> </span>the_disease) <span class="op">%&gt;%</span></span>
+<span id="cb333-6"><a href="introduction-to-data-visualization.html#cb333-6"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rate =</span> count <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10000</span> <span class="op">*</span><span class="st"> </span><span class="dv">52</span> <span class="op">/</span><span class="st"> </span>weeks_reporting) <span class="op">%&gt;%</span></span>
+<span id="cb333-7"><a href="introduction-to-data-visualization.html#cb333-7"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, rate))</span>
+<span id="cb333-8"><a href="introduction-to-data-visualization.html#cb333-8"></a></span>
+<span id="cb333-9"><a href="introduction-to-data-visualization.html#cb333-9"></a>jet.colors &lt;-</span>
+<span id="cb333-10"><a href="introduction-to-data-visualization.html#cb333-10"></a><span class="kw">colorRampPalette</span>(<span class="kw">c</span>(<span class="st">&quot;#F0FFFF&quot;</span>, <span class="st">&quot;cyan&quot;</span>, <span class="st">&quot;#007FFF&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;#FFBF00&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;#7F0000&quot;</span>), <span class="dt">bias =</span> <span class="fl">2.25</span>)</span>
+<span id="cb333-11"><a href="introduction-to-data-visualization.html#cb333-11"></a></span>
+<span id="cb333-12"><a href="introduction-to-data-visualization.html#cb333-12"></a>dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, state, <span class="dt">fill =</span> rate)) <span class="op">+</span></span>
+<span id="cb333-13"><a href="introduction-to-data-visualization.html#cb333-13"></a><span class="st">  </span><span class="kw">geom_tile</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">size=</span><span class="fl">0.35</span>) <span class="op">+</span></span>
+<span id="cb333-14"><a href="introduction-to-data-visualization.html#cb333-14"></a><span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">expand=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">0</span>)) <span class="op">+</span></span>
+<span id="cb333-15"><a href="introduction-to-data-visualization.html#cb333-15"></a><span class="st">  </span><span class="kw">scale_fill_gradientn</span>(<span class="dt">colors =</span> <span class="kw">jet.colors</span>(<span class="dv">16</span>), <span class="dt">na.value =</span> <span class="st">&#39;white&#39;</span>) <span class="op">+</span></span>
+<span id="cb333-16"><a href="introduction-to-data-visualization.html#cb333-16"></a><span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept=</span><span class="dv">1963</span>, <span class="dt">col =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></span>
+<span id="cb333-17"><a href="introduction-to-data-visualization.html#cb333-17"></a><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb333-18"><a href="introduction-to-data-visualization.html#cb333-18"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">panel.grid =</span> <span class="kw">element_blank</span>()) <span class="op">+</span></span>
+<span id="cb333-19"><a href="introduction-to-data-visualization.html#cb333-19"></a><span class="st">  </span><span class="kw">coord_cartesian</span>(<span class="dt">clip =</span> <span class="st">&#39;off&#39;</span>) <span class="op">+</span></span>
+<span id="cb333-20"><a href="introduction-to-data-visualization.html#cb333-20"></a><span class="st">  </span><span class="kw">ggtitle</span>(the_disease) <span class="op">+</span></span>
+<span id="cb333-21"><a href="introduction-to-data-visualization.html#cb333-21"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></span>
+<span id="cb333-22"><a href="introduction-to-data-visualization.html#cb333-22"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span><span class="st">  </span></span>
+<span id="cb333-23"><a href="introduction-to-data-visualization.html#cb333-23"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;bottom&quot;</span>, <span class="dt">text =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">8</span>)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb333-24"><a href="introduction-to-data-visualization.html#cb333-24"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="dt">geom =</span> <span class="st">&quot;text&quot;</span>, <span class="dt">x =</span> <span class="dv">1963</span>, <span class="dt">y =</span> <span class="fl">50.5</span>, <span class="dt">label =</span> <span class="st">&quot;Vaccine introduced&quot;</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">hjust=</span><span class="dv">0</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/wsj-vaccines-example-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <!--(Source: [Wall Street Journal](http://graphics.wsj.com/infectious-diseases-and-vaccines/))-->
 <p>Another striking example comes from a New York Times chart<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a>, which summarizes scores from the NYC Regents Exams. As described in
 the article<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a>, these scores are collected for several reasons, including to determine if a student graduates from high school. In New York City you need a 65 to pass. The distribution of the test scores forces us to notice something somewhat problematic:</p>
+<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb334-1"><a href="introduction-to-data-visualization.html#cb334-1"></a><span class="co">#knitr::include_graphics(file.path(img_path,&quot;nythist.png&quot;))</span></span>
+<span id="cb334-2"><a href="introduction-to-data-visualization.html#cb334-2"></a><span class="kw">data</span>(<span class="st">&quot;nyc_regents_scores&quot;</span>)</span>
+<span id="cb334-3"><a href="introduction-to-data-visualization.html#cb334-3"></a>nyc_regents_scores<span class="op">$</span>total &lt;-<span class="st"> </span><span class="kw">rowSums</span>(nyc_regents_scores[,<span class="op">-</span><span class="dv">1</span>], <span class="dt">na.rm=</span><span class="ot">TRUE</span>)</span>
+<span id="cb334-4"><a href="introduction-to-data-visualization.html#cb334-4"></a></span>
+<span id="cb334-5"><a href="introduction-to-data-visualization.html#cb334-5"></a>nyc_regents_scores <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb334-6"><a href="introduction-to-data-visualization.html#cb334-6"></a><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(score)) <span class="op">%&gt;%</span></span>
+<span id="cb334-7"><a href="introduction-to-data-visualization.html#cb334-7"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(score, total)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb334-8"><a href="introduction-to-data-visualization.html#cb334-8"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;rect&quot;</span>, <span class="dt">xmin =</span> <span class="dv">65</span>, <span class="dt">xmax =</span> <span class="dv">99</span>, <span class="dt">ymin =</span> <span class="dv">0</span>, <span class="dt">ymax =</span> <span class="dv">35000</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>) <span class="op">+</span></span>
+<span id="cb334-9"><a href="introduction-to-data-visualization.html#cb334-9"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;#C4843C&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb334-10"><a href="introduction-to-data-visualization.html#cb334-10"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x =</span> <span class="dv">66</span>, <span class="dt">y =</span> <span class="dv">28000</span>, <span class="dt">label =</span> <span class="st">&quot;MINIMUM</span><span class="ch">\n</span><span class="st">REGENTS DIPLOMA</span><span class="ch">\n</span><span class="st">SCORE IS 65&quot;</span>, <span class="dt">hjust =</span> <span class="dv">0</span>, <span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb334-11"><a href="introduction-to-data-visualization.html#cb334-11"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x =</span> <span class="dv">0</span>, <span class="dt">y =</span> <span class="dv">12000</span>, <span class="dt">label =</span> <span class="st">&quot;2010 Regents scores on</span><span class="ch">\n</span><span class="st">the five most common tests&quot;</span>, <span class="dt">hjust =</span> <span class="dv">0</span>, <span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb334-12"><a href="introduction-to-data-visualization.html#cb334-12"></a><span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks =</span> <span class="kw">seq</span>(<span class="dv">5</span>, <span class="dv">95</span>, <span class="dv">5</span>), <span class="dt">limit =</span> <span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">99</span>)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb334-13"><a href="introduction-to-data-visualization.html#cb334-13"></a><span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">position =</span> <span class="st">&quot;right&quot;</span>) <span class="op">+</span></span>
+<span id="cb334-14"><a href="introduction-to-data-visualization.html#cb334-14"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Scraping by&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb334-15"><a href="introduction-to-data-visualization.html#cb334-15"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Number of tests&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb334-16"><a href="introduction-to-data-visualization.html#cb334-16"></a><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb334-17"><a href="introduction-to-data-visualization.html#cb334-17"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">panel.grid.major.x =</span> <span class="kw">element_blank</span>(), </span>
+<span id="cb334-18"><a href="introduction-to-data-visualization.html#cb334-18"></a>        <span class="dt">panel.grid.minor.x =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb334-19"><a href="introduction-to-data-visualization.html#cb334-19"></a>        <span class="dt">axis.ticks.length =</span> <span class="kw">unit</span>(<span class="op">-</span><span class="fl">0.2</span>, <span class="st">&quot;cm&quot;</span>),</span>
+<span id="cb334-20"><a href="introduction-to-data-visualization.html#cb334-20"></a>        <span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
 <p><img src="book_files/figure-html/regents-exams-example-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <!--(Source: [New York Times](http://graphics8.nytimes.com/images/2011/02/19/nyregion/19schoolsch/19schoolsch-popup.gif) via Amanda Cox)-->
 <p>The most common test score is the minimum passing grade, with very few scores just below the threshold. This unexpected result is consistent with students close to passing having their scores bumped up.</p>
@@ -934,6 +991,39 @@ expected to see.”</p>
 </blockquote>
 <p>Many widely used data analysis tools were initiated by discoveries made via EDA. EDA is perhaps the most important part of data analysis, yet it is one that is often overlooked.</p>
 <p>Data visualization is also now pervasive in philanthropic and educational organizations. In the talks New Insights on Poverty<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> and The Best Stats You’ve Ever Seen<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a>, Hans Rosling forces us to notice the unexpected with a series of plots related to world health and economics. In his videos, he uses animated graphs to show us how the world is changing and how old narratives are no longer true.</p>
+<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb335-1"><a href="introduction-to-data-visualization.html#cb335-1"></a><span class="kw">data</span>(gapminder)</span>
+<span id="cb335-2"><a href="introduction-to-data-visualization.html#cb335-2"></a></span>
+<span id="cb335-3"><a href="introduction-to-data-visualization.html#cb335-3"></a>west &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Western Europe&quot;</span>,<span class="st">&quot;Northern Europe&quot;</span>,<span class="st">&quot;Southern Europe&quot;</span>,</span>
+<span id="cb335-4"><a href="introduction-to-data-visualization.html#cb335-4"></a>          <span class="st">&quot;Northern America&quot;</span>,<span class="st">&quot;Australia and New Zealand&quot;</span>)</span>
+<span id="cb335-5"><a href="introduction-to-data-visualization.html#cb335-5"></a></span>
+<span id="cb335-6"><a href="introduction-to-data-visualization.html#cb335-6"></a>gapminder &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb335-7"><a href="introduction-to-data-visualization.html#cb335-7"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">case_when</span>(</span>
+<span id="cb335-8"><a href="introduction-to-data-visualization.html#cb335-8"></a>    region <span class="op">%in%</span><span class="st"> </span>west <span class="op">~</span><span class="st"> &quot;The West&quot;</span>,</span>
+<span id="cb335-9"><a href="introduction-to-data-visualization.html#cb335-9"></a>    region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Eastern Asia&quot;</span>, <span class="st">&quot;South-Eastern Asia&quot;</span>) <span class="op">~</span><span class="st"> &quot;East Asia&quot;</span>,</span>
+<span id="cb335-10"><a href="introduction-to-data-visualization.html#cb335-10"></a>    region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Caribbean&quot;</span>, <span class="st">&quot;Central America&quot;</span>, <span class="st">&quot;South America&quot;</span>) <span class="op">~</span><span class="st"> &quot;Latin America&quot;</span>,</span>
+<span id="cb335-11"><a href="introduction-to-data-visualization.html#cb335-11"></a>    continent <span class="op">==</span><span class="st"> &quot;Africa&quot;</span> <span class="op">&amp;</span><span class="st"> </span>region <span class="op">!=</span><span class="st"> &quot;Northern Africa&quot;</span> <span class="op">~</span><span class="st"> &quot;Sub-Saharan Africa&quot;</span>,</span>
+<span id="cb335-12"><a href="introduction-to-data-visualization.html#cb335-12"></a>    <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> &quot;Others&quot;</span>))</span>
+<span id="cb335-13"><a href="introduction-to-data-visualization.html#cb335-13"></a>gapminder &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb335-14"><a href="introduction-to-data-visualization.html#cb335-14"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">factor</span>(group, <span class="dt">levels =</span> <span class="kw">rev</span>(<span class="kw">c</span>(<span class="st">&quot;Others&quot;</span>, <span class="st">&quot;Latin America&quot;</span>, <span class="st">&quot;East Asia&quot;</span>,<span class="st">&quot;Sub-Saharan Africa&quot;</span>, <span class="st">&quot;The West&quot;</span>))))</span>
+<span id="cb335-15"><a href="introduction-to-data-visualization.html#cb335-15"></a></span>
+<span id="cb335-16"><a href="introduction-to-data-visualization.html#cb335-16"></a>years &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1962</span>, <span class="dv">2013</span>)</span>
+<span id="cb335-17"><a href="introduction-to-data-visualization.html#cb335-17"></a>p &lt;-<span class="st"> </span><span class="kw">filter</span>(gapminder, year<span class="op">%in%</span>years <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(group) <span class="op">&amp;</span><span class="st"> </span></span>
+<span id="cb335-18"><a href="introduction-to-data-visualization.html#cb335-18"></a><span class="st">         </span><span class="op">!</span><span class="kw">is.na</span>(fertility) <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(life_expectancy)) <span class="op">%&gt;%</span></span>
+<span id="cb335-19"><a href="introduction-to-data-visualization.html#cb335-19"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">population_in_millions =</span> population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>) <span class="op">%&gt;%</span></span>
+<span id="cb335-20"><a href="introduction-to-data-visualization.html#cb335-20"></a><span class="st">  </span><span class="kw">ggplot</span>( <span class="kw">aes</span>(fertility, <span class="dt">y=</span>life_expectancy, <span class="dt">col =</span> group, <span class="dt">size =</span> population_in_millions)) <span class="op">+</span></span>
+<span id="cb335-21"><a href="introduction-to-data-visualization.html#cb335-21"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">alpha =</span> <span class="fl">0.8</span>) <span class="op">+</span></span>
+<span id="cb335-22"><a href="introduction-to-data-visualization.html#cb335-22"></a><span class="st">  </span><span class="kw">guides</span>(<span class="dt">size=</span><span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb335-23"><a href="introduction-to-data-visualization.html#cb335-23"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.title =</span> <span class="kw">element_blank</span>(), <span class="dt">legend.title =</span> <span class="kw">element_blank</span>()) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb335-24"><a href="introduction-to-data-visualization.html#cb335-24"></a><span class="st">  </span><span class="kw">coord_cartesian</span>(<span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">30</span>, <span class="dv">85</span>)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb335-25"><a href="introduction-to-data-visualization.html#cb335-25"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Fertility rate (births per woman)&quot;</span>) <span class="op">+</span></span>
+<span id="cb335-26"><a href="introduction-to-data-visualization.html#cb335-26"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Life Expectancy&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb335-27"><a href="introduction-to-data-visualization.html#cb335-27"></a><span class="st">  </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="dv">7</span>, <span class="dt">y=</span><span class="dv">82</span>, <span class="dt">label=</span>year), <span class="dt">cex=</span><span class="dv">12</span>, <span class="dt">color=</span><span class="st">&quot;grey&quot;</span>) <span class="op">+</span></span>
+<span id="cb335-28"><a href="introduction-to-data-visualization.html#cb335-28"></a><span class="st">  </span><span class="kw">facet_grid</span>(. <span class="op">~</span><span class="st"> </span>year)</span>
+<span id="cb335-29"><a href="introduction-to-data-visualization.html#cb335-29"></a>    </span>
+<span id="cb335-30"><a href="introduction-to-data-visualization.html#cb335-30"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">strip.background =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb335-31"><a href="introduction-to-data-visualization.html#cb335-31"></a>    <span class="dt">strip.text.x =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb335-32"><a href="introduction-to-data-visualization.html#cb335-32"></a>   <span class="dt">strip.text.y =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb335-33"><a href="introduction-to-data-visualization.html#cb335-33"></a>   <span class="dt">legend.position =</span> <span class="st">&quot;top&quot;</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/gampnider-example-plot-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>It is also important to note that mistakes, biases, systematic errors and other unexpected problems often lead to data that should be handled with care. Failure to discover these problems can give rise to flawed analyses and false discoveries. As an example, consider that measurement devices sometimes fail and that most data analysis procedures are not designed to detect these.
 Yet these data analysis procedures will still give you an answer. The fact that it can be difficult or impossible to notice an error just from the reported results makes data visualization particularly important.</p>

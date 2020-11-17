@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 28 Smoothing | Introduction to Data Science</title>
   <meta name="description" content="This book introduces concepts and skills that can help you tackle real-world data analysis challenges. It covers concepts from probability, statistical inference, linear regression and machine learning and helps you develop skills such as R programming, data wrangling with dplyr, data visualization with ggplot2, file organization with UNIX/Linux shell, version control with GitHub, and reproducible document preparation with R markdown." />
-  <meta name="generator" content="bookdown 0.20.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 28 Smoothing | Introduction to Data Science" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Rafael A. Irizarry" />
 
 
-<meta name="date" content="2020-11-16" />
+<meta name="date" content="2020-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,7 +51,10 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -305,7 +308,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.15" data-path="ggplot2.html"><a href="ggplot2.html#exercises-15"><i class="fa fa-check"></i><b>7.15</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>8</b> Visualizing data distributions</a><ul>
-<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a></li>
+<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="distributions.html"><a href="distributions.html#key-points"><i class="fa fa-check"></i><b>8.1.1</b> Key points</a></li>
+</ul></li>
 <li class="chapter" data-level="8.2" data-path="distributions.html"><a href="distributions.html#case-study-describing-student-heights"><i class="fa fa-check"></i><b>8.2</b> Case study: describing student heights</a></li>
 <li class="chapter" data-level="8.3" data-path="distributions.html"><a href="distributions.html#distribution-function"><i class="fa fa-check"></i><b>8.3</b> Distribution function</a></li>
 <li class="chapter" data-level="8.4" data-path="distributions.html"><a href="distributions.html#cdf-intro"><i class="fa fa-check"></i><b>8.4</b> Cumulative distribution functions</a></li>
@@ -806,78 +811,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="part"><span><b>VI Productivity Tools</b></span></li>
 <li class="chapter" data-level="35" data-path="introduction-to-productivity-tools.html"><a href="introduction-to-productivity-tools.html"><i class="fa fa-check"></i><b>35</b> Introduction to productivity tools</a></li>
-<li class="chapter" data-level="36" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html"><i class="fa fa-check"></i><b>36</b> Installing R and RStudio</a><ul>
-<li class="chapter" data-level="36.1" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-r"><i class="fa fa-check"></i><b>36.1</b> Installing R</a></li>
-<li class="chapter" data-level="36.2" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-rstudio"><i class="fa fa-check"></i><b>36.2</b> Installing RStudio</a></li>
+<li class="chapter" data-level="36" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>36</b> Accessing the terminal and installing Git</a><ul>
+<li class="chapter" data-level="36.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>36.1</b> Accessing the terminal on a Mac</a></li>
+<li class="chapter" data-level="36.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>36.2</b> Installing Git on the Mac</a></li>
+<li class="chapter" data-level="36.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>36.3</b> Installing Git and Git Bash on Windows</a></li>
+<li class="chapter" data-level="36.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>36.4</b> Accessing the terminal on Windows</a></li>
 </ul></li>
-<li class="chapter" data-level="37" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>37</b> Accessing the terminal and installing Git</a><ul>
-<li class="chapter" data-level="37.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>37.1</b> Accessing the terminal on a Mac</a></li>
-<li class="chapter" data-level="37.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>37.2</b> Installing Git on the Mac</a></li>
-<li class="chapter" data-level="37.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>37.3</b> Installing Git and Git Bash on Windows</a></li>
-<li class="chapter" data-level="37.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>37.4</b> Accessing the terminal on Windows</a></li>
+<li class="chapter" data-level="37" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>37</b> Organizing with Unix</a><ul>
+<li class="chapter" data-level="37.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>37.1</b> Naming convention</a></li>
+<li class="chapter" data-level="37.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>37.2</b> The terminal</a></li>
+<li class="chapter" data-level="37.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>37.3</b> The filesystem</a><ul>
+<li class="chapter" data-level="37.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>37.3.1</b> Directories and subdirectories</a></li>
+<li class="chapter" data-level="37.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>37.3.2</b> The home directory</a></li>
+<li class="chapter" data-level="37.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>37.3.3</b> Working directory</a></li>
+<li class="chapter" data-level="37.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>37.3.4</b> Paths</a></li>
 </ul></li>
-<li class="chapter" data-level="38" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>38</b> Organizing with Unix</a><ul>
-<li class="chapter" data-level="38.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>38.1</b> Naming convention</a></li>
-<li class="chapter" data-level="38.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>38.2</b> The terminal</a></li>
-<li class="chapter" data-level="38.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>38.3</b> The filesystem</a><ul>
-<li class="chapter" data-level="38.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>38.3.1</b> Directories and subdirectories</a></li>
-<li class="chapter" data-level="38.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>38.3.2</b> The home directory</a></li>
-<li class="chapter" data-level="38.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>38.3.3</b> Working directory</a></li>
-<li class="chapter" data-level="38.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>38.3.4</b> Paths</a></li>
+<li class="chapter" data-level="37.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>37.4</b> Unix commands</a><ul>
+<li class="chapter" data-level="37.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>37.4.1</b> <code>ls</code>: Listing directory content</a></li>
+<li class="chapter" data-level="37.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>37.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
+<li class="chapter" data-level="37.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>37.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
 </ul></li>
-<li class="chapter" data-level="38.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>38.4</b> Unix commands</a><ul>
-<li class="chapter" data-level="38.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>38.4.1</b> <code>ls</code>: Listing directory content</a></li>
-<li class="chapter" data-level="38.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>38.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
-<li class="chapter" data-level="38.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>38.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
+<li class="chapter" data-level="37.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>37.5</b> Some examples</a></li>
+<li class="chapter" data-level="37.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>37.6</b> More Unix commands</a><ul>
+<li class="chapter" data-level="37.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>37.6.1</b> <code>mv</code>: moving files</a></li>
+<li class="chapter" data-level="37.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>37.6.2</b> <code>cp</code>: copying files</a></li>
+<li class="chapter" data-level="37.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>37.6.3</b> <code>rm</code>: removing files</a></li>
+<li class="chapter" data-level="37.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>37.6.4</b> <code>less</code>: looking at a file</a></li>
 </ul></li>
-<li class="chapter" data-level="38.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>38.5</b> Some examples</a></li>
-<li class="chapter" data-level="38.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>38.6</b> More Unix commands</a><ul>
-<li class="chapter" data-level="38.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>38.6.1</b> <code>mv</code>: moving files</a></li>
-<li class="chapter" data-level="38.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>38.6.2</b> <code>cp</code>: copying files</a></li>
-<li class="chapter" data-level="38.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>38.6.3</b> <code>rm</code>: removing files</a></li>
-<li class="chapter" data-level="38.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>38.6.4</b> <code>less</code>: looking at a file</a></li>
-</ul></li>
-<li class="chapter" data-level="38.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>38.7</b> Preparing for a data science project</a></li>
-<li class="chapter" data-level="38.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>38.8</b> Advanced Unix</a><ul>
-<li class="chapter" data-level="38.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>38.8.1</b> Arguments</a></li>
-<li class="chapter" data-level="38.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>38.8.2</b> Getting help</a></li>
-<li class="chapter" data-level="38.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>38.8.3</b> Pipes</a></li>
-<li class="chapter" data-level="38.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>38.8.4</b> Wild cards</a></li>
-<li class="chapter" data-level="38.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>38.8.5</b> Environment variables</a></li>
-<li class="chapter" data-level="38.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>38.8.6</b> Shells</a></li>
-<li class="chapter" data-level="38.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>38.8.7</b> Executables</a></li>
-<li class="chapter" data-level="38.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>38.8.8</b> Permissions and file types</a></li>
-<li class="chapter" data-level="38.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>38.8.9</b> Commands you should learn</a></li>
-<li class="chapter" data-level="38.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>38.8.10</b> File manipulation in R</a></li>
+<li class="chapter" data-level="37.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>37.7</b> Preparing for a data science project</a></li>
+<li class="chapter" data-level="37.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>37.8</b> Advanced Unix</a><ul>
+<li class="chapter" data-level="37.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>37.8.1</b> Arguments</a></li>
+<li class="chapter" data-level="37.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>37.8.2</b> Getting help</a></li>
+<li class="chapter" data-level="37.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>37.8.3</b> Pipes</a></li>
+<li class="chapter" data-level="37.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>37.8.4</b> Wild cards</a></li>
+<li class="chapter" data-level="37.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>37.8.5</b> Environment variables</a></li>
+<li class="chapter" data-level="37.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>37.8.6</b> Shells</a></li>
+<li class="chapter" data-level="37.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>37.8.7</b> Executables</a></li>
+<li class="chapter" data-level="37.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>37.8.8</b> Permissions and file types</a></li>
+<li class="chapter" data-level="37.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>37.8.9</b> Commands you should learn</a></li>
+<li class="chapter" data-level="37.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>37.8.10</b> File manipulation in R</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="39" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>39</b> Git and GitHub</a><ul>
-<li class="chapter" data-level="39.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>39.1</b> Why use Git and GitHub?</a></li>
-<li class="chapter" data-level="39.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>39.2</b> GitHub accounts</a></li>
-<li class="chapter" data-level="39.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>39.3</b> GitHub repositories</a></li>
-<li class="chapter" data-level="39.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>39.4</b> Overview of Git</a><ul>
-<li class="chapter" data-level="39.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>39.4.1</b> Clone</a></li>
+<li class="chapter" data-level="38" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>38</b> Git and GitHub</a><ul>
+<li class="chapter" data-level="38.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>38.1</b> Why use Git and GitHub?</a></li>
+<li class="chapter" data-level="38.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>38.2</b> GitHub accounts</a></li>
+<li class="chapter" data-level="38.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>38.3</b> GitHub repositories</a></li>
+<li class="chapter" data-level="38.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>38.4</b> Overview of Git</a><ul>
+<li class="chapter" data-level="38.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>38.4.1</b> Clone</a></li>
 </ul></li>
-<li class="chapter" data-level="39.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>39.5</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="39.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>39.6</b> Using Git and GitHub in RStudio</a></li>
+<li class="chapter" data-level="38.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>38.5</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="38.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>38.6</b> Using Git and GitHub in RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="40" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>40</b> Reproducible projects with RStudio and R markdown</a><ul>
-<li class="chapter" data-level="40.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>40.1</b> RStudio projects</a></li>
-<li class="chapter" data-level="40.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>40.2</b> R markdown</a><ul>
-<li class="chapter" data-level="40.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>40.2.1</b> The header</a></li>
-<li class="chapter" data-level="40.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>40.2.2</b> R code chunks</a></li>
-<li class="chapter" data-level="40.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>40.2.3</b> Global options</a></li>
-<li class="chapter" data-level="40.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>40.2.4</b> knitR</a></li>
-<li class="chapter" data-level="40.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>40.2.5</b> More on R markdown</a></li>
+<li class="chapter" data-level="39" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>39</b> Reproducible projects with RStudio and R markdown</a><ul>
+<li class="chapter" data-level="39.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>39.1</b> RStudio projects</a></li>
+<li class="chapter" data-level="39.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>39.2</b> R markdown</a><ul>
+<li class="chapter" data-level="39.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>39.2.1</b> The header</a></li>
+<li class="chapter" data-level="39.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>39.2.2</b> R code chunks</a></li>
+<li class="chapter" data-level="39.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>39.2.3</b> Global options</a></li>
+<li class="chapter" data-level="39.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>39.2.4</b> knitR</a></li>
+<li class="chapter" data-level="39.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>39.2.5</b> More on R markdown</a></li>
 </ul></li>
-<li class="chapter" data-level="40.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>40.3</b> Organizing a data science project</a><ul>
-<li class="chapter" data-level="40.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>40.3.1</b> Create directories in Unix</a></li>
-<li class="chapter" data-level="40.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>40.3.2</b> Create an RStudio project</a></li>
-<li class="chapter" data-level="40.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>40.3.3</b> Edit some R scripts</a></li>
-<li class="chapter" data-level="40.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>40.3.4</b> Create some more directories using Unix</a></li>
-<li class="chapter" data-level="40.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>40.3.5</b> Add a README file</a></li>
-<li class="chapter" data-level="40.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>40.3.6</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="40.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>40.3.7</b> Add, commit, and push files using RStudio</a></li>
+<li class="chapter" data-level="39.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>39.3</b> Organizing a data science project</a><ul>
+<li class="chapter" data-level="39.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>39.3.1</b> Create directories in Unix</a></li>
+<li class="chapter" data-level="39.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>39.3.2</b> Create an RStudio project</a></li>
+<li class="chapter" data-level="39.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>39.3.3</b> Edit some R scripts</a></li>
+<li class="chapter" data-level="39.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>39.3.4</b> Create some more directories using Unix</a></li>
+<li class="chapter" data-level="39.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>39.3.5</b> Add a README file</a></li>
+<li class="chapter" data-level="39.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>39.3.6</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="39.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>39.3.7</b> Add, commit, and push files using RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -903,14 +904,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="smoothing" class="section level1">
 <h1><span class="header-section-number">Chapter 28</span> Smoothing</h1>
 <p>Before continuing learning about machine learning algorithms, we introduce the important concept of <em>smoothing</em>. Smoothing is a very powerful technique used all across data analysis. Other names given to this technique are <em>curve fitting</em> and <em>low pass filtering</em>. It is designed to detect trends in the presence of noisy data in cases in which the shape of the trend is unknown. The <em>smoothing</em> name comes from the fact that to accomplish this feat, we assume that the trend is <em>smooth</em>, as in a smooth surface. In contrast, the noise, or deviation from the trend, is unpredictably wobbly:</p>
+<div class="sourceCode" id="cb1247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1247-1"><a href="smoothing.html#cb1247-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1247-2"><a href="smoothing.html#cb1247-2"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb1247-3"><a href="smoothing.html#cb1247-3"></a>n &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb1247-4"><a href="smoothing.html#cb1247-4"></a>x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="op">-</span>pi<span class="op">*</span><span class="dv">4</span>, pi<span class="op">*</span><span class="dv">4</span>, <span class="dt">len =</span> n)</span>
+<span id="cb1247-5"><a href="smoothing.html#cb1247-5"></a>tmp &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> x , <span class="dt">f =</span> <span class="kw">sin</span>(x) <span class="op">+</span><span class="st"> </span>x<span class="op">/</span><span class="dv">8</span>, <span class="dt">e =</span> <span class="kw">rnorm</span>(n, <span class="dv">0</span>, <span class="fl">0.5</span>)) </span>
+<span id="cb1247-6"><a href="smoothing.html#cb1247-6"></a>p1 &lt;-<span class="st"> </span><span class="kw">qplot</span>(x, f, <span class="dt">main =</span> <span class="st">&quot;smooth trend&quot;</span>, <span class="dt">ylim =</span> <span class="kw">range</span>(tmp<span class="op">$</span>f<span class="op">+</span>tmp<span class="op">$</span>e), <span class="dt">data =</span> tmp, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>)</span>
+<span id="cb1247-7"><a href="smoothing.html#cb1247-7"></a>p2 &lt;-<span class="st"> </span><span class="kw">qplot</span>(x, e, <span class="dt">main =</span> <span class="st">&quot;noise&quot;</span>, <span class="dt">ylim =</span> <span class="kw">range</span>(tmp<span class="op">$</span>f<span class="op">+</span>tmp<span class="op">$</span>e), <span class="dt">data =</span> tmp, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>)</span>
+<span id="cb1247-8"><a href="smoothing.html#cb1247-8"></a>p3 &lt;-<span class="st"> </span><span class="kw">qplot</span>(x, f<span class="op">+</span>e, <span class="dt">main =</span> <span class="st">&quot;data = smooth trend + noise&quot;</span>, <span class="dt">ylim =</span> <span class="kw">range</span>(tmp<span class="op">$</span>f<span class="op">+</span>tmp<span class="op">$</span>e), <span class="dt">data =</span> tmp, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>)</span>
+<span id="cb1247-9"><a href="smoothing.html#cb1247-9"></a>gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(p1, p2, p3)</span></code></pre></div>
 <p><img src="book_files/figure-html/signal-plus-noise-example-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>Part of what we explain in this section are the assumptions that permit us to extract the trend from the noise.</p>
 <p><strong>To understand why we cover this topic, remember that the concepts behind smoothing techniques are extremely useful in machine learning because conditional expectations/probabilities can be thought of as <em>trends</em> of unknown shapes that we need to estimate in the presence of uncertainty.</strong></p>
 <p>To explain these concepts, we will focus first on a problem with just one predictor. Specifically, we try to estimate the time trend in the 2008 US popular vote poll margin (difference between Obama and McCain).</p>
-<div class="sourceCode" id="cb1032"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1032-1"><a href="smoothing.html#cb1032-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb1032-2"><a href="smoothing.html#cb1032-2"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb1032-3"><a href="smoothing.html#cb1032-3"></a><span class="kw">data</span>(<span class="st">&quot;polls_2008&quot;</span>)</span>
-<span id="cb1032-4"><a href="smoothing.html#cb1032-4"></a><span class="kw">qplot</span>(day, margin, <span class="dt">data =</span> polls_<span class="dv">2008</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1248-1"><a href="smoothing.html#cb1248-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1248-2"><a href="smoothing.html#cb1248-2"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb1248-3"><a href="smoothing.html#cb1248-3"></a><span class="kw">data</span>(<span class="st">&quot;polls_2008&quot;</span>)</span>
+<span id="cb1248-4"><a href="smoothing.html#cb1248-4"></a><span class="kw">qplot</span>(day, margin, <span class="dt">data =</span> polls_<span class="dv">2008</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/polls-2008-data-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>For the purposes of this example, do not think of it as a forecasting problem. Instead, we are simply interested in learning the shape of the trend <em>after</em> the election is over.</p>
 <p>We assume that for any given day <span class="math inline">\(x\)</span>, there is a true preference among the electorate <span class="math inline">\(f(x)\)</span>, but due to the uncertainty introduced by the polling, each data point comes with an error <span class="math inline">\(\varepsilon\)</span>. A mathematical model for the observed poll margin <span class="math inline">\(Y_i\)</span> is:</p>
@@ -918,7 +928,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Y_i = f(x_i) + \varepsilon_i
 \]</span></p>
 <p>To think of this as a machine learning problem, consider that we want to predict <span class="math inline">\(Y\)</span> given a day <span class="math inline">\(x\)</span>. If we knew the conditional expectation <span class="math inline">\(f(x) = \mbox{E}(Y \mid X=x)\)</span>, we would use it. But since we don’t know this conditional expectation, we have to estimate it. Let’s use regression, since it is the only method we have learned up to now.</p>
-<pre><code>#&gt; `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1249-1"><a href="smoothing.html#cb1249-1"></a>resid &lt;-<span class="st"> </span><span class="kw">ifelse</span>(<span class="kw">lm</span>(margin<span class="op">~</span>day, <span class="dt">data =</span> polls_<span class="dv">2008</span>)<span class="op">$</span>resid <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>, <span class="st">&quot;+&quot;</span>, <span class="st">&quot;-&quot;</span>)</span>
+<span id="cb1249-2"><a href="smoothing.html#cb1249-2"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1249-3"><a href="smoothing.html#cb1249-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">resid =</span> resid) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1249-4"><a href="smoothing.html#cb1249-4"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb1249-5"><a href="smoothing.html#cb1249-5"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></span>
+<span id="cb1249-6"><a href="smoothing.html#cb1249-6"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> resid), <span class="dt">size =</span> <span class="dv">3</span>)</span>
+<span id="cb1249-7"><a href="smoothing.html#cb1249-7"></a><span class="co">#&gt; `geom_smooth()` using formula &#39;y ~ x&#39;</span></span></code></pre></div>
 <p><img src="book_files/figure-html/linear-regression-not-flexible-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The line we see does not appear to describe the trend very well. For example, on September 4 (day -62), the Republican Convention was held and the data suggest that it gave John McCain a boost in the polls. However, the regression line does not capture this potential trend. To see the <em>lack of fit</em> more clearly, we note that points above the fitted line (blue) and those below (red) are not evenly distributed across days. We therefore need an alternative, more flexible approach.</p>
 <div id="bin-smoothing" class="section level2">
@@ -934,18 +950,65 @@ E[Y_i | X_i = x_i ] \approx \mu \mbox{   if   }  |x_i - x_0| \leq 3.5
 \hat{f}(x_0) = \frac{1}{N_0} \sum_{i \in A_0}  Y_i
 \]</span></p>
 <p>The idea behind <em>bin smoothing</em> is to make this calculation with each value of <span class="math inline">\(x\)</span> as the center. In the poll example, for each day, we would compute the average of the values within a week with that day in the center. Here are two examples: <span class="math inline">\(x_0 = -125\)</span> and <span class="math inline">\(x_0 = -55\)</span>. The blue segment represents the resulting average.</p>
+<div class="sourceCode" id="cb1250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1250-1"><a href="smoothing.html#cb1250-1"></a>span &lt;-<span class="st"> </span><span class="fl">3.5</span></span>
+<span id="cb1250-2"><a href="smoothing.html#cb1250-2"></a>tmp &lt;-<span class="st"> </span>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span></span>
+<span id="cb1250-3"><a href="smoothing.html#cb1250-3"></a><span class="st">  </span><span class="kw">crossing</span>(<span class="dt">center =</span> polls_<span class="dv">2008</span><span class="op">$</span>day) <span class="op">%&gt;%</span></span>
+<span id="cb1250-4"><a href="smoothing.html#cb1250-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">dist =</span> <span class="kw">abs</span>(day <span class="op">-</span><span class="st"> </span>center)) <span class="op">%&gt;%</span></span>
+<span id="cb1250-5"><a href="smoothing.html#cb1250-5"></a><span class="st">  </span><span class="kw">filter</span>(dist <span class="op">&lt;=</span><span class="st"> </span>span) </span>
+<span id="cb1250-6"><a href="smoothing.html#cb1250-6"></a></span>
+<span id="cb1250-7"><a href="smoothing.html#cb1250-7"></a>tmp <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(center <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">125</span>, <span class="dv">-55</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb1250-8"><a href="smoothing.html#cb1250-8"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span><span class="st">   </span></span>
+<span id="cb1250-9"><a href="smoothing.html#cb1250-9"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> polls_<span class="dv">2008</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span></span>
+<span id="cb1250-10"><a href="smoothing.html#cb1250-10"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">2</span>) <span class="op">+</span><span class="st">    </span></span>
+<span id="cb1250-11"><a href="smoothing.html#cb1250-11"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="kw">aes</span>(<span class="dt">group =</span> center), </span>
+<span id="cb1250-12"><a href="smoothing.html#cb1250-12"></a>              <span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">formula=</span>y<span class="op">~</span><span class="dv">1</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb1250-13"><a href="smoothing.html#cb1250-13"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>center)</span></code></pre></div>
 <p><img src="book_files/figure-html/binsmoother-expained-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>By computing this mean for every point, we form an estimate of the underlying curve <span class="math inline">\(f(x)\)</span>. Below we show the procedure happening as we move from the -155 up to 0. At each value of <span class="math inline">\(x_0\)</span>, we keep the estimate <span class="math inline">\(\hat{f}(x_0)\)</span> and move on to the next point:</p>
-<p><img src="ml/img/binsmoother-animation.gif" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb1251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1251-1"><a href="smoothing.html#cb1251-1"></a><span class="co"># library(gganimate)</span></span>
+<span id="cb1251-2"><a href="smoothing.html#cb1251-2"></a>span &lt;-<span class="st"> </span><span class="dv">7</span></span>
+<span id="cb1251-3"><a href="smoothing.html#cb1251-3"></a>fit &lt;-<span class="st"> </span><span class="kw">with</span>(polls_<span class="dv">2008</span>, <span class="kw">ksmooth</span>(day, margin, <span class="dt">kernel=</span><span class="st">&quot;box&quot;</span>, <span class="dt">x.points =</span> day, <span class="dt">bandwidth =</span> span))</span>
+<span id="cb1251-4"><a href="smoothing.html#cb1251-4"></a>bin_fit &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> fit<span class="op">$</span>x, <span class="dt">.fitted=</span>fit<span class="op">$</span>y)</span>
+<span id="cb1251-5"><a href="smoothing.html#cb1251-5"></a>  </span>
+<span id="cb1251-6"><a href="smoothing.html#cb1251-6"></a><span class="co"># if(!file.exists(file.path(img_path,&quot;binsmoother-animation.gif&quot;))){</span></span>
+<span id="cb1251-7"><a href="smoothing.html#cb1251-7"></a><span class="co">#   p &lt;- tmp %&gt;% </span></span>
+<span id="cb1251-8"><a href="smoothing.html#cb1251-8"></a><span class="co">#     ggplot() +</span></span>
+<span id="cb1251-9"><a href="smoothing.html#cb1251-9"></a><span class="co">#     geom_smooth(aes(day, margin, group = center, frame = center), method = &quot;lm&quot;, formula=y~1, se = FALSE) +</span></span>
+<span id="cb1251-10"><a href="smoothing.html#cb1251-10"></a><span class="co">#     geom_point(aes(day, margin), data = polls_2008, size = 3, alpha = .5, color = &quot;grey&quot;) +</span></span>
+<span id="cb1251-11"><a href="smoothing.html#cb1251-11"></a><span class="co">#     geom_point(aes(day, margin, frame = center)) +</span></span>
+<span id="cb1251-12"><a href="smoothing.html#cb1251-12"></a><span class="co">#     geom_line(aes(x=x, y = .fitted, frame = x, cumulative = TRUE), data = bin_fit, color = &quot;red&quot;) + </span></span>
+<span id="cb1251-13"><a href="smoothing.html#cb1251-13"></a><span class="co">#     ggtitle(&quot;x0 = &quot;)</span></span>
+<span id="cb1251-14"><a href="smoothing.html#cb1251-14"></a><span class="co"># </span></span>
+<span id="cb1251-15"><a href="smoothing.html#cb1251-15"></a><span class="co">#   gganimate(p, filename = file.path(img_path,&quot;binsmoother-animation.gif&quot;), interval= .1)</span></span>
+<span id="cb1251-16"><a href="smoothing.html#cb1251-16"></a><span class="co"># }</span></span>
+<span id="cb1251-17"><a href="smoothing.html#cb1251-17"></a><span class="co"># if(knitr::is_html_output()){</span></span>
+<span id="cb1251-18"><a href="smoothing.html#cb1251-18"></a><span class="co">#   knitr::include_graphics(file.path(img_path,&quot;binsmooth-anim.gif&quot;))</span></span>
+<span id="cb1251-19"><a href="smoothing.html#cb1251-19"></a><span class="co"># } else{</span></span>
+<span id="cb1251-20"><a href="smoothing.html#cb1251-20"></a>  centers &lt;-<span class="st"> </span><span class="kw">quantile</span>(tmp<span class="op">$</span>center, <span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">6</span>)<span class="op">/</span><span class="dv">6</span>)</span>
+<span id="cb1251-21"><a href="smoothing.html#cb1251-21"></a>  tmp_bin_fit &lt;-<span class="st"> </span><span class="kw">crossing</span>(<span class="dt">center=</span>centers,bin_fit) <span class="op">%&gt;%</span></span>
+<span id="cb1251-22"><a href="smoothing.html#cb1251-22"></a><span class="st">    </span><span class="kw">group_by</span>(center) <span class="op">%&gt;%</span></span>
+<span id="cb1251-23"><a href="smoothing.html#cb1251-23"></a><span class="st">    </span><span class="kw">filter</span>(x <span class="op">&lt;=</span><span class="st"> </span>center) <span class="op">%&gt;%</span></span>
+<span id="cb1251-24"><a href="smoothing.html#cb1251-24"></a><span class="st">    </span><span class="kw">ungroup</span>()</span>
+<span id="cb1251-25"><a href="smoothing.html#cb1251-25"></a>        </span>
+<span id="cb1251-26"><a href="smoothing.html#cb1251-26"></a>  tmp <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(center <span class="op">%in%</span><span class="st"> </span>centers) <span class="op">%&gt;%</span></span>
+<span id="cb1251-27"><a href="smoothing.html#cb1251-27"></a><span class="st">    </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb1251-28"><a href="smoothing.html#cb1251-28"></a><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="kw">aes</span>(day, margin), <span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">formula=</span>y<span class="op">~</span><span class="dv">1</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb1251-29"><a href="smoothing.html#cb1251-29"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(day, margin), <span class="dt">data =</span> polls_<span class="dv">2008</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span></span>
+<span id="cb1251-30"><a href="smoothing.html#cb1251-30"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
+<span id="cb1251-31"><a href="smoothing.html#cb1251-31"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y =</span> .fitted), <span class="dt">data =</span> tmp_bin_fit, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb1251-32"><a href="smoothing.html#cb1251-32"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;x0 = &quot;</span>) <span class="op">+</span></span>
+<span id="cb1251-33"><a href="smoothing.html#cb1251-33"></a><span class="st">    </span><span class="kw">facet_wrap</span>(<span class="op">~</span>center, <span class="dt">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb1251-34"><a href="smoothing.html#cb1251-34"></a><span class="co"># }</span></span></code></pre></div>
+<p><img src="book_files/figure-html/binsmoother-animation-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The final code and resulting estimate look like this:</p>
-<div class="sourceCode" id="cb1034"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1034-1"><a href="smoothing.html#cb1034-1"></a>span &lt;-<span class="st"> </span><span class="dv">7</span> </span>
-<span id="cb1034-2"><a href="smoothing.html#cb1034-2"></a>fit &lt;-<span class="st"> </span><span class="kw">with</span>(polls_<span class="dv">2008</span>, </span>
-<span id="cb1034-3"><a href="smoothing.html#cb1034-3"></a>            <span class="kw">ksmooth</span>(day, margin, <span class="dt">kernel =</span> <span class="st">&quot;box&quot;</span>, <span class="dt">bandwidth =</span> span))</span>
-<span id="cb1034-4"><a href="smoothing.html#cb1034-4"></a></span>
-<span id="cb1034-5"><a href="smoothing.html#cb1034-5"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">smooth =</span> fit<span class="op">$</span>y) <span class="op">%&gt;%</span></span>
-<span id="cb1034-6"><a href="smoothing.html#cb1034-6"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
-<span id="cb1034-7"><a href="smoothing.html#cb1034-7"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb1034-8"><a href="smoothing.html#cb1034-8"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(day, smooth), <span class="dt">color=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1252-1"><a href="smoothing.html#cb1252-1"></a>span &lt;-<span class="st"> </span><span class="dv">7</span> </span>
+<span id="cb1252-2"><a href="smoothing.html#cb1252-2"></a>fit &lt;-<span class="st"> </span><span class="kw">with</span>(polls_<span class="dv">2008</span>, </span>
+<span id="cb1252-3"><a href="smoothing.html#cb1252-3"></a>            <span class="kw">ksmooth</span>(day, margin, <span class="dt">kernel =</span> <span class="st">&quot;box&quot;</span>, <span class="dt">bandwidth =</span> span))</span>
+<span id="cb1252-4"><a href="smoothing.html#cb1252-4"></a></span>
+<span id="cb1252-5"><a href="smoothing.html#cb1252-5"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">smooth =</span> fit<span class="op">$</span>y) <span class="op">%&gt;%</span></span>
+<span id="cb1252-6"><a href="smoothing.html#cb1252-6"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
+<span id="cb1252-7"><a href="smoothing.html#cb1252-7"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb1252-8"><a href="smoothing.html#cb1252-8"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(day, smooth), <span class="dt">color=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/binsmoother-final-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="kernels" class="section level2">
@@ -957,21 +1020,80 @@ E[Y_i | X_i = x_i ] \approx \mu \mbox{   if   }  |x_i - x_0| \leq 3.5
 \]</span></p>
 <p>in which each point receives a weight of either <span class="math inline">\(0\)</span> or <span class="math inline">\(1/N_0\)</span>, with <span class="math inline">\(N_0\)</span> the number of points in the week. In the code above, we used the argument <code>kernel="box"</code> in our call to the function <code>ksmooth</code>. This is because the weight function looks like a box.
 The <code>ksmooth</code> function provides a “smoother” option which uses the normal density to assign weights.</p>
+<div class="sourceCode" id="cb1253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1253-1"><a href="smoothing.html#cb1253-1"></a>x_<span class="dv">0</span> &lt;-<span class="st"> </span><span class="dv">-125</span></span>
+<span id="cb1253-2"><a href="smoothing.html#cb1253-2"></a></span>
+<span id="cb1253-3"><a href="smoothing.html#cb1253-3"></a>p1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> polls_<span class="dv">2008</span><span class="op">$</span>day) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">w_0 =</span> <span class="dv">1</span><span class="op">*</span><span class="kw">I</span>(<span class="kw">abs</span>(x <span class="op">-</span><span class="st"> </span>x_<span class="dv">0</span>)<span class="op">&lt;=</span>span<span class="op">/</span><span class="dv">2</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb1253-4"><a href="smoothing.html#cb1253-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">w_0 =</span> w_<span class="dv">0</span><span class="op">/</span><span class="kw">sum</span>(w_<span class="dv">0</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb1253-5"><a href="smoothing.html#cb1253-5"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x, w_<span class="dv">0</span>)) <span class="op">+</span></span>
+<span id="cb1253-6"><a href="smoothing.html#cb1253-6"></a><span class="st">  </span><span class="kw">geom_step</span>() <span class="op">+</span></span>
+<span id="cb1253-7"><a href="smoothing.html#cb1253-7"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Box&quot;</span>)</span>
+<span id="cb1253-8"><a href="smoothing.html#cb1253-8"></a></span>
+<span id="cb1253-9"><a href="smoothing.html#cb1253-9"></a>tmp &lt;-<span class="st"> </span><span class="kw">with</span>(<span class="kw">data.frame</span>(<span class="dt">day =</span> <span class="kw">seq</span>(<span class="kw">min</span>(polls_<span class="dv">2008</span><span class="op">$</span>day), <span class="kw">max</span>(polls_<span class="dv">2008</span><span class="op">$</span>day), <span class="fl">.25</span>)), </span>
+<span id="cb1253-10"><a href="smoothing.html#cb1253-10"></a>                       <span class="kw">ksmooth</span>(day, <span class="dv">1</span><span class="op">*</span><span class="kw">I</span>(day <span class="op">==</span><span class="st"> </span>x_<span class="dv">0</span>), <span class="dt">kernel =</span> <span class="st">&quot;normal&quot;</span>, <span class="dt">x.points =</span> day, <span class="dt">bandwidth =</span> span))</span>
+<span id="cb1253-11"><a href="smoothing.html#cb1253-11"></a>p2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> tmp<span class="op">$</span>x, <span class="dt">w_0 =</span> tmp<span class="op">$</span>y) <span class="op">%&gt;%</span></span>
+<span id="cb1253-12"><a href="smoothing.html#cb1253-12"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">w_0 =</span> w_<span class="dv">0</span><span class="op">/</span><span class="kw">sum</span>(w_<span class="dv">0</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb1253-13"><a href="smoothing.html#cb1253-13"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x, w_<span class="dv">0</span>)) <span class="op">+</span></span>
+<span id="cb1253-14"><a href="smoothing.html#cb1253-14"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb1253-15"><a href="smoothing.html#cb1253-15"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Normal&quot;</span>)</span>
+<span id="cb1253-16"><a href="smoothing.html#cb1253-16"></a>gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(p1, p2, <span class="dt">ncol =</span> <span class="dv">2</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/gaussian-kernel-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <!--
 With this animation, we see that points on the edge get less weight (the size of the point is proportional to its weight):
 
+
+```r
+tmp <- polls_2008 %>%
+  crossing(center = polls_2008$day) %>%
+  mutate(dist = abs(day - center)) %>%
+  filter(dist <= span) %>% 
+  mutate(weight =  dnorm(dist, 0, span/2.54))%>%
+  mutate(weight = weight/max(weight))
+
+span <- 7
+fit <- with(polls_2008, ksmooth(day, margin, kernel="normal", x.points = day, bandwidth = span))
+bin_fit <- data.frame(x = fit$x, .fitted=fit$y)
+
+if(!file.exists(file.path(img_path,"kernel-animation.gif"))){
+  p <- tmp %>%
+    ggplot() +
+    geom_smooth(aes(day, margin, group = center, weight = weight, frame = center), method = "lm", formula=y~1, se=FALSE) +
+    geom_point(aes(day, margin), data = polls_2008, size = 3, alpha = .5, color = "grey") +
+    geom_point(aes(day, margin, size = weight, frame = center), show.legend = FALSE) +   
+    scale_size(range = c(0, 3)) +
+    geom_line(aes(x=x, y = .fitted, frame = x, cumulative = TRUE), data = bin_fit, color = "red")
+  
+    gganimate(p, filename = file.path(img_path,"kernel-animation.gif"), interval= .1)
+} 
+if(knitr::is_html_output()){
+  knitr::include_graphics(file.path(img_path,"kernel-animation.gif"))
+} else{
+  centers <- quantile(tmp$center, seq(1,6)/6)
+  tmp_bin_fit <- crossing(center=centers,bin_fit) %>%
+    group_by(center) %>%
+    filter(x <= center) %>%
+    ungroup()
+        
+  tmp %>% filter(center %in% centers) %>%
+    ggplot() +
+    geom_smooth(aes(day, margin), method = "lm", formula=y~1, se = FALSE) +
+    geom_point(aes(day, margin, size = weight), data = polls_2008, size = 3, alpha = .5, color = "grey") +
+    geom_point(aes(day, margin)) +
+    geom_line(aes(x=x, y = .fitted), data = tmp_bin_fit, color = "red") + 
+    facet_wrap(~center, nrow = 2)
+}
+```
+
 <img src="ml/img/kernel-animation.gif" width="70%" style="display: block; margin: auto;" />
 -->
 <p>The final code and resulting plot for the normal kerenl look like this:</p>
-<div class="sourceCode" id="cb1035"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1035-1"><a href="smoothing.html#cb1035-1"></a>span &lt;-<span class="st"> </span><span class="dv">7</span></span>
-<span id="cb1035-2"><a href="smoothing.html#cb1035-2"></a>fit &lt;-<span class="st"> </span><span class="kw">with</span>(polls_<span class="dv">2008</span>, </span>
-<span id="cb1035-3"><a href="smoothing.html#cb1035-3"></a>            <span class="kw">ksmooth</span>(day, margin, <span class="dt">kernel =</span> <span class="st">&quot;normal&quot;</span>, <span class="dt">bandwidth =</span> span))</span>
-<span id="cb1035-4"><a href="smoothing.html#cb1035-4"></a></span>
-<span id="cb1035-5"><a href="smoothing.html#cb1035-5"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">smooth =</span> fit<span class="op">$</span>y) <span class="op">%&gt;%</span></span>
-<span id="cb1035-6"><a href="smoothing.html#cb1035-6"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
-<span id="cb1035-7"><a href="smoothing.html#cb1035-7"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb1035-8"><a href="smoothing.html#cb1035-8"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(day, smooth), <span class="dt">color=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1254-1"><a href="smoothing.html#cb1254-1"></a>span &lt;-<span class="st"> </span><span class="dv">7</span></span>
+<span id="cb1254-2"><a href="smoothing.html#cb1254-2"></a>fit &lt;-<span class="st"> </span><span class="kw">with</span>(polls_<span class="dv">2008</span>, </span>
+<span id="cb1254-3"><a href="smoothing.html#cb1254-3"></a>            <span class="kw">ksmooth</span>(day, margin, <span class="dt">kernel =</span> <span class="st">&quot;normal&quot;</span>, <span class="dt">bandwidth =</span> span))</span>
+<span id="cb1254-4"><a href="smoothing.html#cb1254-4"></a></span>
+<span id="cb1254-5"><a href="smoothing.html#cb1254-5"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">smooth =</span> fit<span class="op">$</span>y) <span class="op">%&gt;%</span></span>
+<span id="cb1254-6"><a href="smoothing.html#cb1254-6"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
+<span id="cb1254-7"><a href="smoothing.html#cb1254-7"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb1254-8"><a href="smoothing.html#cb1254-8"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(day, smooth), <span class="dt">color=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/final-ksmooth-normal-kernel-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>Notice that the final estimate now looks smoother.</p>
 <p>There are several functions in R that implement bin smoothers. One example is <code>ksmooth</code>, shown above. In practice, however, we typically prefer methods that use slightly more complex models than fitting a constant. The final result above, for example, is still somewhat wiggly in parts we don’t expect it to be (between -125 and -75, for example). Methods such as <code>loess</code>, which we explain next, improve on this.</p>
@@ -986,24 +1108,123 @@ With this animation, we see that points on the edge get less weight (the size of
 E[Y_i | X_i = x_i ] = \beta_0 + \beta_1 (x_i-x_0) \mbox{   if   }  |x_i - x_0| \leq 21
 \]</span></p>
 <p>For every point <span class="math inline">\(x_0\)</span>, loess defines a window and fits a line within that window. Here is an example showing the fits for <span class="math inline">\(x_0=-125\)</span> and <span class="math inline">\(x_0 = -55\)</span>:</p>
-<pre><code>#&gt; `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1255-1"><a href="smoothing.html#cb1255-1"></a>span &lt;-<span class="st"> </span><span class="dv">21</span><span class="op">/</span><span class="kw">diff</span>(<span class="kw">range</span>(polls_<span class="dv">2008</span><span class="op">$</span>day))</span>
+<span id="cb1255-2"><a href="smoothing.html#cb1255-2"></a></span>
+<span id="cb1255-3"><a href="smoothing.html#cb1255-3"></a>tmp &lt;-<span class="st"> </span>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span></span>
+<span id="cb1255-4"><a href="smoothing.html#cb1255-4"></a><span class="st">  </span><span class="kw">crossing</span>(<span class="dt">center =</span> polls_<span class="dv">2008</span><span class="op">$</span>day) <span class="op">%&gt;%</span></span>
+<span id="cb1255-5"><a href="smoothing.html#cb1255-5"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">dist =</span> <span class="kw">abs</span>(day <span class="op">-</span><span class="st"> </span>center)) <span class="op">%&gt;%</span></span>
+<span id="cb1255-6"><a href="smoothing.html#cb1255-6"></a><span class="st">  </span><span class="kw">filter</span>(<span class="kw">rank</span>(dist) <span class="op">/</span><span class="st"> </span><span class="kw">n</span>() <span class="op">&lt;=</span><span class="st"> </span>span) <span class="op">%&gt;%</span></span>
+<span id="cb1255-7"><a href="smoothing.html#cb1255-7"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">weight =</span> (<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>(dist <span class="op">/</span><span class="st"> </span><span class="kw">max</span>(dist)) <span class="op">^</span><span class="st"> </span><span class="dv">3</span>) <span class="op">^</span><span class="st"> </span><span class="dv">3</span>)</span>
+<span id="cb1255-8"><a href="smoothing.html#cb1255-8"></a></span>
+<span id="cb1255-9"><a href="smoothing.html#cb1255-9"></a>tmp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1255-10"><a href="smoothing.html#cb1255-10"></a><span class="st">  </span><span class="kw">filter</span>(center <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">125</span>, <span class="dv">-55</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb1255-11"><a href="smoothing.html#cb1255-11"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span><span class="st">   </span></span>
+<span id="cb1255-12"><a href="smoothing.html#cb1255-12"></a><span class="st">  </span><span class="kw">scale_size</span>(<span class="dt">range =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">3</span>)) <span class="op">+</span></span>
+<span id="cb1255-13"><a href="smoothing.html#cb1255-13"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="kw">aes</span>(<span class="dt">group =</span> center, <span class="dt">weight =</span> weight), </span>
+<span id="cb1255-14"><a href="smoothing.html#cb1255-14"></a>              <span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb1255-15"><a href="smoothing.html#cb1255-15"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> polls_<span class="dv">2008</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span></span>
+<span id="cb1255-16"><a href="smoothing.html#cb1255-16"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">size =</span> weight)) <span class="op">+</span></span>
+<span id="cb1255-17"><a href="smoothing.html#cb1255-17"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>center)</span>
+<span id="cb1255-18"><a href="smoothing.html#cb1255-18"></a><span class="co">#&gt; `geom_smooth()` using formula &#39;y ~ x&#39;</span></span></code></pre></div>
 <p><img src="book_files/figure-html/loess-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The fitted value at <span class="math inline">\(x_0\)</span> becomes our estimate <span class="math inline">\(\hat{f}(x_0)\)</span>. Below we show the procedure happening as we move from the -155 up to 0.</p>
+<div class="sourceCode" id="cb1256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1256-1"><a href="smoothing.html#cb1256-1"></a><span class="kw">library</span>(broom)</span>
+<span id="cb1256-2"><a href="smoothing.html#cb1256-2"></a>fit &lt;-<span class="st"> </span><span class="kw">loess</span>(margin <span class="op">~</span><span class="st"> </span>day, <span class="dt">degree=</span><span class="dv">1</span>, <span class="dt">span =</span> span, <span class="dt">data=</span>polls_<span class="dv">2008</span>)</span>
+<span id="cb1256-3"><a href="smoothing.html#cb1256-3"></a>loess_fit &lt;-<span class="st"> </span><span class="kw">augment</span>(fit)</span>
+<span id="cb1256-4"><a href="smoothing.html#cb1256-4"></a></span>
+<span id="cb1256-5"><a href="smoothing.html#cb1256-5"></a><span class="co"># if(!file.exists(file.path(img_path,&quot;loess-animation.gif&quot;))){</span></span>
+<span id="cb1256-6"><a href="smoothing.html#cb1256-6"></a><span class="co">#   p &lt;- ggplot(tmp, aes(day, margin)) +</span></span>
+<span id="cb1256-7"><a href="smoothing.html#cb1256-7"></a><span class="co">#     scale_size(range = c(0, 3)) +</span></span>
+<span id="cb1256-8"><a href="smoothing.html#cb1256-8"></a><span class="co">#     geom_smooth(aes(group = center, frame = center, weight = weight), method = &quot;lm&quot;, se = FALSE) +</span></span>
+<span id="cb1256-9"><a href="smoothing.html#cb1256-9"></a><span class="co">#     geom_point(data = polls_2008, size = 3, alpha = .5, color = &quot;grey&quot;) +</span></span>
+<span id="cb1256-10"><a href="smoothing.html#cb1256-10"></a><span class="co">#     geom_point(aes(size = weight, frame = center)) +</span></span>
+<span id="cb1256-11"><a href="smoothing.html#cb1256-11"></a><span class="co">#     geom_line(aes(x=day, y = .fitted, frame = day, cumulative = TRUE), </span></span>
+<span id="cb1256-12"><a href="smoothing.html#cb1256-12"></a><span class="co">#               data = loess_fit, color = &quot;red&quot;)</span></span>
+<span id="cb1256-13"><a href="smoothing.html#cb1256-13"></a><span class="co"># </span></span>
+<span id="cb1256-14"><a href="smoothing.html#cb1256-14"></a><span class="co">#   gganimate(p, filename = file.path(img_path,&quot;loess-animation.gif&quot;), interval= .1)</span></span>
+<span id="cb1256-15"><a href="smoothing.html#cb1256-15"></a><span class="co"># }</span></span>
+<span id="cb1256-16"><a href="smoothing.html#cb1256-16"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()){</span>
+<span id="cb1256-17"><a href="smoothing.html#cb1256-17"></a>  knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">file.path</span>(img_path,<span class="st">&quot;loess-animation.gif&quot;</span>))</span>
+<span id="cb1256-18"><a href="smoothing.html#cb1256-18"></a>} <span class="cf">else</span>{</span>
+<span id="cb1256-19"><a href="smoothing.html#cb1256-19"></a>  centers &lt;-<span class="st"> </span><span class="kw">quantile</span>(tmp<span class="op">$</span>center, <span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">6</span>)<span class="op">/</span><span class="dv">6</span>)</span>
+<span id="cb1256-20"><a href="smoothing.html#cb1256-20"></a>  tmp_loess_fit &lt;-<span class="st"> </span><span class="kw">crossing</span>(<span class="dt">center=</span>centers, loess_fit) <span class="op">%&gt;%</span></span>
+<span id="cb1256-21"><a href="smoothing.html#cb1256-21"></a><span class="st">    </span><span class="kw">group_by</span>(center) <span class="op">%&gt;%</span></span>
+<span id="cb1256-22"><a href="smoothing.html#cb1256-22"></a><span class="st">    </span><span class="kw">filter</span>(day <span class="op">&lt;=</span><span class="st"> </span>center) <span class="op">%&gt;%</span></span>
+<span id="cb1256-23"><a href="smoothing.html#cb1256-23"></a><span class="st">    </span><span class="kw">ungroup</span>()</span>
+<span id="cb1256-24"><a href="smoothing.html#cb1256-24"></a>        </span>
+<span id="cb1256-25"><a href="smoothing.html#cb1256-25"></a>  tmp <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(center <span class="op">%in%</span><span class="st"> </span>centers) <span class="op">%&gt;%</span></span>
+<span id="cb1256-26"><a href="smoothing.html#cb1256-26"></a><span class="st">    </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb1256-27"><a href="smoothing.html#cb1256-27"></a><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="kw">aes</span>(day, margin), <span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb1256-28"><a href="smoothing.html#cb1256-28"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(day, margin, <span class="dt">size =</span> weight), <span class="dt">data =</span> polls_<span class="dv">2008</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span></span>
+<span id="cb1256-29"><a href="smoothing.html#cb1256-29"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
+<span id="cb1256-30"><a href="smoothing.html#cb1256-30"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>day, <span class="dt">y =</span> .fitted), <span class="dt">data =</span> tmp_loess_fit, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span></span>
+<span id="cb1256-31"><a href="smoothing.html#cb1256-31"></a><span class="st">    </span><span class="kw">facet_wrap</span>(<span class="op">~</span>center, <span class="dt">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb1256-32"><a href="smoothing.html#cb1256-32"></a>}</span></code></pre></div>
 <p><img src="ml/img/loess-animation.gif" width="70%" style="display: block; margin: auto;" /></p>
 <p>The final result is a smoother fit than the bin smoother since we use larger sample sizes to estimate our local parameters:</p>
-<div class="sourceCode" id="cb1037"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1037-1"><a href="smoothing.html#cb1037-1"></a>total_days &lt;-<span class="st"> </span><span class="kw">diff</span>(<span class="kw">range</span>(polls_<span class="dv">2008</span><span class="op">$</span>day))</span>
-<span id="cb1037-2"><a href="smoothing.html#cb1037-2"></a>span &lt;-<span class="st"> </span><span class="dv">21</span><span class="op">/</span>total_days</span>
-<span id="cb1037-3"><a href="smoothing.html#cb1037-3"></a></span>
-<span id="cb1037-4"><a href="smoothing.html#cb1037-4"></a>fit &lt;-<span class="st"> </span><span class="kw">loess</span>(margin <span class="op">~</span><span class="st"> </span>day, <span class="dt">degree=</span><span class="dv">1</span>, <span class="dt">span =</span> span, <span class="dt">data=</span>polls_<span class="dv">2008</span>)</span>
-<span id="cb1037-5"><a href="smoothing.html#cb1037-5"></a></span>
-<span id="cb1037-6"><a href="smoothing.html#cb1037-6"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">smooth =</span> fit<span class="op">$</span>fitted) <span class="op">%&gt;%</span></span>
-<span id="cb1037-7"><a href="smoothing.html#cb1037-7"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
-<span id="cb1037-8"><a href="smoothing.html#cb1037-8"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span></span>
-<span id="cb1037-9"><a href="smoothing.html#cb1037-9"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(day, smooth), <span class="dt">color=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1257-1"><a href="smoothing.html#cb1257-1"></a>total_days &lt;-<span class="st"> </span><span class="kw">diff</span>(<span class="kw">range</span>(polls_<span class="dv">2008</span><span class="op">$</span>day))</span>
+<span id="cb1257-2"><a href="smoothing.html#cb1257-2"></a>span &lt;-<span class="st"> </span><span class="dv">21</span><span class="op">/</span>total_days</span>
+<span id="cb1257-3"><a href="smoothing.html#cb1257-3"></a></span>
+<span id="cb1257-4"><a href="smoothing.html#cb1257-4"></a>fit &lt;-<span class="st"> </span><span class="kw">loess</span>(margin <span class="op">~</span><span class="st"> </span>day, <span class="dt">degree=</span><span class="dv">1</span>, <span class="dt">span =</span> span, <span class="dt">data=</span>polls_<span class="dv">2008</span>)</span>
+<span id="cb1257-5"><a href="smoothing.html#cb1257-5"></a></span>
+<span id="cb1257-6"><a href="smoothing.html#cb1257-6"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">smooth =</span> fit<span class="op">$</span>fitted) <span class="op">%&gt;%</span></span>
+<span id="cb1257-7"><a href="smoothing.html#cb1257-7"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
+<span id="cb1257-8"><a href="smoothing.html#cb1257-8"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span></span>
+<span id="cb1257-9"><a href="smoothing.html#cb1257-9"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(day, smooth), <span class="dt">color=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/final-loess-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>Different spans give us different estimates. We can see how different window sizes lead to different estimates:</p>
-<p><img src="ml/img/loess-multi-span-animation.gif" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb1258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1258-1"><a href="smoothing.html#cb1258-1"></a>spans &lt;-<span class="st"> </span><span class="kw">c</span>(.<span class="dv">66</span>, <span class="fl">0.25</span>, <span class="fl">0.15</span>, <span class="fl">0.10</span>)</span>
+<span id="cb1258-2"><a href="smoothing.html#cb1258-2"></a></span>
+<span id="cb1258-3"><a href="smoothing.html#cb1258-3"></a>fits &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">span =</span> spans) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1258-4"><a href="smoothing.html#cb1258-4"></a><span class="st">  </span><span class="kw">group_by</span>(span) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1258-5"><a href="smoothing.html#cb1258-5"></a><span class="st">  </span><span class="kw">do</span>(broom<span class="op">::</span><span class="kw">augment</span>(<span class="kw">loess</span>(margin <span class="op">~</span><span class="st"> </span>day, <span class="dt">degree=</span><span class="dv">1</span>, <span class="dt">span =</span> .<span class="op">$</span>span, <span class="dt">data=</span>polls_<span class="dv">2008</span>)))</span>
+<span id="cb1258-6"><a href="smoothing.html#cb1258-6"></a></span>
+<span id="cb1258-7"><a href="smoothing.html#cb1258-7"></a>tmp &lt;-<span class="st"> </span>fits <span class="op">%&gt;%</span></span>
+<span id="cb1258-8"><a href="smoothing.html#cb1258-8"></a><span class="st">  </span><span class="kw">crossing</span>(<span class="dt">center =</span> polls_<span class="dv">2008</span><span class="op">$</span>day) <span class="op">%&gt;%</span></span>
+<span id="cb1258-9"><a href="smoothing.html#cb1258-9"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">dist =</span> <span class="kw">abs</span>(day <span class="op">-</span><span class="st"> </span>center)) <span class="op">%&gt;%</span></span>
+<span id="cb1258-10"><a href="smoothing.html#cb1258-10"></a><span class="st">  </span><span class="kw">filter</span>(<span class="kw">rank</span>(dist) <span class="op">/</span><span class="st"> </span><span class="kw">n</span>() <span class="op">&lt;=</span><span class="st"> </span>span) <span class="op">%&gt;%</span></span>
+<span id="cb1258-11"><a href="smoothing.html#cb1258-11"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">weight =</span> (<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>(dist <span class="op">/</span><span class="st"> </span><span class="kw">max</span>(dist)) <span class="op">^</span><span class="st"> </span><span class="dv">3</span>) <span class="op">^</span><span class="st"> </span><span class="dv">3</span>)</span>
+<span id="cb1258-12"><a href="smoothing.html#cb1258-12"></a></span>
+<span id="cb1258-13"><a href="smoothing.html#cb1258-13"></a><span class="co"># if(!file.exists(file.path(img_path, &quot;loess-multi-span-animation.gif&quot;))){</span></span>
+<span id="cb1258-14"><a href="smoothing.html#cb1258-14"></a><span class="co">#   p &lt;- ggplot(tmp, aes(day, margin)) +</span></span>
+<span id="cb1258-15"><a href="smoothing.html#cb1258-15"></a><span class="co">#     scale_size(range = c(0, 2)) +</span></span>
+<span id="cb1258-16"><a href="smoothing.html#cb1258-16"></a><span class="co">#     geom_smooth(aes(group = center, frame = center, weight = weight), method = &quot;lm&quot;, se = FALSE) +</span></span>
+<span id="cb1258-17"><a href="smoothing.html#cb1258-17"></a><span class="co">#     geom_point(data = polls_2008, size = 2, alpha = .5, color = &quot;grey&quot;) +</span></span>
+<span id="cb1258-18"><a href="smoothing.html#cb1258-18"></a><span class="co">#     geom_line(aes(x=day, y = .fitted, frame = day, cumulative = TRUE), </span></span>
+<span id="cb1258-19"><a href="smoothing.html#cb1258-19"></a><span class="co">#               data = fits, color = &quot;red&quot;) +</span></span>
+<span id="cb1258-20"><a href="smoothing.html#cb1258-20"></a><span class="co">#     geom_point(aes(size = weight, frame = center)) +</span></span>
+<span id="cb1258-21"><a href="smoothing.html#cb1258-21"></a><span class="co">#     facet_wrap(~span)</span></span>
+<span id="cb1258-22"><a href="smoothing.html#cb1258-22"></a><span class="co">#   </span></span>
+<span id="cb1258-23"><a href="smoothing.html#cb1258-23"></a><span class="co">#   gganimate(p, filename = file.path(img_path, &quot;loess-multi-span-animation.gif&quot;), interval= .1)</span></span>
+<span id="cb1258-24"><a href="smoothing.html#cb1258-24"></a><span class="co"># }</span></span>
+<span id="cb1258-25"><a href="smoothing.html#cb1258-25"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()){</span>
+<span id="cb1258-26"><a href="smoothing.html#cb1258-26"></a>  knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">file.path</span>(img_path,<span class="st">&quot;loess-multi-span-animation.gif&quot;</span>))</span>
+<span id="cb1258-27"><a href="smoothing.html#cb1258-27"></a>} <span class="cf">else</span>{</span>
+<span id="cb1258-28"><a href="smoothing.html#cb1258-28"></a>  centers &lt;-<span class="st"> </span><span class="kw">quantile</span>(tmp<span class="op">$</span>center, <span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">3</span>)<span class="op">/</span><span class="dv">3</span>)</span>
+<span id="cb1258-29"><a href="smoothing.html#cb1258-29"></a>  tmp_fits &lt;-<span class="st"> </span><span class="kw">crossing</span>(<span class="dt">center=</span>centers, fits) <span class="op">%&gt;%</span></span>
+<span id="cb1258-30"><a href="smoothing.html#cb1258-30"></a><span class="st">    </span><span class="kw">group_by</span>(center) <span class="op">%&gt;%</span></span>
+<span id="cb1258-31"><a href="smoothing.html#cb1258-31"></a><span class="st">    </span><span class="kw">filter</span>(day <span class="op">&lt;=</span><span class="st"> </span>center) <span class="op">%&gt;%</span></span>
+<span id="cb1258-32"><a href="smoothing.html#cb1258-32"></a><span class="st">    </span><span class="kw">ungroup</span>()</span>
+<span id="cb1258-33"><a href="smoothing.html#cb1258-33"></a>        </span>
+<span id="cb1258-34"><a href="smoothing.html#cb1258-34"></a>  tmp <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(center <span class="op">%in%</span><span class="st"> </span>centers) <span class="op">%&gt;%</span></span>
+<span id="cb1258-35"><a href="smoothing.html#cb1258-35"></a><span class="st">    </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb1258-36"><a href="smoothing.html#cb1258-36"></a><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="kw">aes</span>(day, margin), <span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb1258-37"><a href="smoothing.html#cb1258-37"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(day, margin, <span class="dt">size =</span> weight), <span class="dt">data =</span> polls_<span class="dv">2008</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span></span>
+<span id="cb1258-38"><a href="smoothing.html#cb1258-38"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
+<span id="cb1258-39"><a href="smoothing.html#cb1258-39"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>day, <span class="dt">y =</span> .fitted), <span class="dt">data =</span> tmp_fits, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span></span>
+<span id="cb1258-40"><a href="smoothing.html#cb1258-40"></a><span class="st">    </span><span class="kw">facet_grid</span>(span <span class="op">~</span><span class="st"> </span>center)</span>
+<span id="cb1258-41"><a href="smoothing.html#cb1258-41"></a>}</span></code></pre></div>
 <p>Here are the final estimates:</p>
+<div class="sourceCode" id="cb1259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1259-1"><a href="smoothing.html#cb1259-1"></a>spans &lt;-<span class="st"> </span><span class="kw">c</span>(.<span class="dv">66</span>, <span class="fl">0.25</span>, <span class="fl">0.15</span>, <span class="fl">0.10</span>)</span>
+<span id="cb1259-2"><a href="smoothing.html#cb1259-2"></a></span>
+<span id="cb1259-3"><a href="smoothing.html#cb1259-3"></a>fits &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">span =</span> spans) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1259-4"><a href="smoothing.html#cb1259-4"></a><span class="st">  </span><span class="kw">group_by</span>(span) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1259-5"><a href="smoothing.html#cb1259-5"></a><span class="st">  </span><span class="kw">do</span>(broom<span class="op">::</span><span class="kw">augment</span>(<span class="kw">loess</span>(margin <span class="op">~</span><span class="st"> </span>day, <span class="dt">degree=</span><span class="dv">1</span>, <span class="dt">span =</span> .<span class="op">$</span>span, <span class="dt">data=</span>polls_<span class="dv">2008</span>)))</span>
+<span id="cb1259-6"><a href="smoothing.html#cb1259-6"></a></span>
+<span id="cb1259-7"><a href="smoothing.html#cb1259-7"></a>tmp <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
+<span id="cb1259-8"><a href="smoothing.html#cb1259-8"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">2</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span></span>
+<span id="cb1259-9"><a href="smoothing.html#cb1259-9"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(day, .fitted), <span class="dt">data =</span> fits, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span></span>
+<span id="cb1259-10"><a href="smoothing.html#cb1259-10"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>span)</span></code></pre></div>
 <p><img src="book_files/figure-html/loess-final-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>There are three other differences between <code>loess</code> and the typical bin smoother.</p>
 <p>1. Rather than keeping the bin size the same, <code>loess</code> keeps the number of points used in the local fit the same. This number is controlled via the <code>span</code> argument, which expects a proportion. For example, if <code>N</code> is the number of data points and <code>span=0.5</code>, then for a given <span class="math inline">\(x\)</span>, <code>loess</code> will use the <code>0.5 * N</code> closest points to <span class="math inline">\(x\)</span> for the fit.</p>
@@ -1020,6 +1241,22 @@ W(u)= \left( 1  - |u|^3\right)^3 \mbox{ if } |u| \leq 1 \mbox{ and } W(u) = 0 \m
 w_0(x_i) = W\left(\frac{x_i - x_0}{h}\right)
 \]</span></p>
 <p>This kernel differs from the Gaussian kernel in that more points get values closer to the max:</p>
+<div class="sourceCode" id="cb1260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1260-1"><a href="smoothing.html#cb1260-1"></a>x_<span class="dv">0</span> &lt;-<span class="st"> </span><span class="dv">-125</span></span>
+<span id="cb1260-2"><a href="smoothing.html#cb1260-2"></a></span>
+<span id="cb1260-3"><a href="smoothing.html#cb1260-3"></a>tmp &lt;-<span class="st"> </span><span class="kw">with</span>(<span class="kw">data.frame</span>(<span class="dt">day =</span> <span class="kw">seq</span>(<span class="kw">min</span>(polls_<span class="dv">2008</span><span class="op">$</span>day), <span class="kw">max</span>(polls_<span class="dv">2008</span><span class="op">$</span>day), <span class="fl">.25</span>)), </span>
+<span id="cb1260-4"><a href="smoothing.html#cb1260-4"></a>                       <span class="kw">ksmooth</span>(day, <span class="dv">1</span><span class="op">*</span><span class="kw">I</span>(day <span class="op">==</span><span class="st"> </span>x_<span class="dv">0</span>), <span class="dt">kernel =</span> <span class="st">&quot;normal&quot;</span>, <span class="dt">x.points =</span> day, <span class="dt">bandwidth =</span> <span class="dv">7</span>))</span>
+<span id="cb1260-5"><a href="smoothing.html#cb1260-5"></a>p1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> tmp<span class="op">$</span>x, <span class="dt">w_0 =</span> tmp<span class="op">$</span>y) <span class="op">%&gt;%</span></span>
+<span id="cb1260-6"><a href="smoothing.html#cb1260-6"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">w_0 =</span> w_<span class="dv">0</span><span class="op">/</span><span class="kw">sum</span>(w_<span class="dv">0</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb1260-7"><a href="smoothing.html#cb1260-7"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x, w_<span class="dv">0</span>)) <span class="op">+</span></span>
+<span id="cb1260-8"><a href="smoothing.html#cb1260-8"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb1260-9"><a href="smoothing.html#cb1260-9"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Normal&quot;</span>)</span>
+<span id="cb1260-10"><a href="smoothing.html#cb1260-10"></a></span>
+<span id="cb1260-11"><a href="smoothing.html#cb1260-11"></a>p2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">seq</span>(<span class="kw">min</span>(polls_<span class="dv">2008</span><span class="op">$</span>day), <span class="kw">max</span>(polls_<span class="dv">2008</span><span class="op">$</span>day), <span class="dt">length.out =</span> <span class="dv">100</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb1260-12"><a href="smoothing.html#cb1260-12"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">w_0 =</span> (<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>(<span class="kw">abs</span>(x<span class="op">-</span>x_<span class="dv">0</span>)<span class="op">/</span><span class="dv">21</span>)<span class="op">^</span><span class="dv">3</span>)<span class="op">^</span><span class="dv">3</span><span class="op">*</span><span class="kw">I</span>(<span class="kw">abs</span>(x<span class="op">-</span>x_<span class="dv">0</span>)<span class="op">&lt;=</span><span class="dv">21</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb1260-13"><a href="smoothing.html#cb1260-13"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x, w_<span class="dv">0</span>)) <span class="op">+</span></span>
+<span id="cb1260-14"><a href="smoothing.html#cb1260-14"></a><span class="st">  </span><span class="kw">geom_line</span>()  <span class="op">+</span></span>
+<span id="cb1260-15"><a href="smoothing.html#cb1260-15"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Tri-weight&quot;</span>)</span>
+<span id="cb1260-16"><a href="smoothing.html#cb1260-16"></a>gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(p1, p2, <span class="dt">ncol =</span> <span class="dv">2</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/triweight-kernel-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>3. <code>loess</code> has the option of fitting the local model <em>robustly</em>. An iterative algorithm is implemented in which, after fitting a model in one iteration, outliers are detected and down-weighted for the next iteration. To use this option, we use the argument <code>family="symmetric"</code>.</p>
 <div id="fitting-parabolas" class="section level3">
@@ -1029,33 +1266,33 @@ w_0(x_i) = W\left(\frac{x_i - x_0}{h}\right)
 E[Y_i | X_i = x_i ] = \beta_0 + \beta_1 (x_i-x_0) + \beta_2 (x_i-x_0)^2 \mbox{   if   }  |x_i - x_0| \leq h
 \]</span></p>
 <p>This is actually the default procedure of the function <code>loess</code>. You may have noticed that when we showed the code for using loess, we set <code>degree = 1</code>. This tells loess to fit polynomials of degree 1, a fancy name for lines. If you read the help page for loess, you will see that the argument <code>degree</code> defaults to 2. By default, loess fits parabolas not lines. Here is a comparison of the fitting lines (red dashed) and fitting parabolas (orange solid):</p>
-<div class="sourceCode" id="cb1038"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1038-1"><a href="smoothing.html#cb1038-1"></a>total_days &lt;-<span class="st"> </span><span class="kw">diff</span>(<span class="kw">range</span>(polls_<span class="dv">2008</span><span class="op">$</span>day))</span>
-<span id="cb1038-2"><a href="smoothing.html#cb1038-2"></a>span &lt;-<span class="st"> </span><span class="dv">28</span><span class="op">/</span>total_days</span>
-<span id="cb1038-3"><a href="smoothing.html#cb1038-3"></a>fit_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">loess</span>(margin <span class="op">~</span><span class="st"> </span>day, <span class="dt">degree=</span><span class="dv">1</span>, <span class="dt">span =</span> span, <span class="dt">data=</span>polls_<span class="dv">2008</span>)</span>
-<span id="cb1038-4"><a href="smoothing.html#cb1038-4"></a></span>
-<span id="cb1038-5"><a href="smoothing.html#cb1038-5"></a>fit_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">loess</span>(margin <span class="op">~</span><span class="st"> </span>day, <span class="dt">span =</span> span, <span class="dt">data=</span>polls_<span class="dv">2008</span>)</span>
-<span id="cb1038-6"><a href="smoothing.html#cb1038-6"></a></span>
-<span id="cb1038-7"><a href="smoothing.html#cb1038-7"></a></span>
-<span id="cb1038-8"><a href="smoothing.html#cb1038-8"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">smooth_1 =</span> fit_<span class="dv">1</span><span class="op">$</span>fitted, <span class="dt">smooth_2 =</span> fit_<span class="dv">2</span><span class="op">$</span>fitted) <span class="op">%&gt;%</span></span>
-<span id="cb1038-9"><a href="smoothing.html#cb1038-9"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
-<span id="cb1038-10"><a href="smoothing.html#cb1038-10"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span></span>
-<span id="cb1038-11"><a href="smoothing.html#cb1038-11"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(day, smooth_<span class="dv">1</span>), <span class="dt">color=</span><span class="st">&quot;red&quot;</span>, <span class="dt">lty =</span> <span class="dv">2</span>) <span class="op">+</span></span>
-<span id="cb1038-12"><a href="smoothing.html#cb1038-12"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(day, smooth_<span class="dv">2</span>), <span class="dt">color=</span><span class="st">&quot;orange&quot;</span>, <span class="dt">lty =</span> <span class="dv">1</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb1261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1261-1"><a href="smoothing.html#cb1261-1"></a>total_days &lt;-<span class="st"> </span><span class="kw">diff</span>(<span class="kw">range</span>(polls_<span class="dv">2008</span><span class="op">$</span>day))</span>
+<span id="cb1261-2"><a href="smoothing.html#cb1261-2"></a>span &lt;-<span class="st"> </span><span class="dv">28</span><span class="op">/</span>total_days</span>
+<span id="cb1261-3"><a href="smoothing.html#cb1261-3"></a>fit_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">loess</span>(margin <span class="op">~</span><span class="st"> </span>day, <span class="dt">degree=</span><span class="dv">1</span>, <span class="dt">span =</span> span, <span class="dt">data=</span>polls_<span class="dv">2008</span>)</span>
+<span id="cb1261-4"><a href="smoothing.html#cb1261-4"></a></span>
+<span id="cb1261-5"><a href="smoothing.html#cb1261-5"></a>fit_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">loess</span>(margin <span class="op">~</span><span class="st"> </span>day, <span class="dt">span =</span> span, <span class="dt">data=</span>polls_<span class="dv">2008</span>)</span>
+<span id="cb1261-6"><a href="smoothing.html#cb1261-6"></a></span>
+<span id="cb1261-7"><a href="smoothing.html#cb1261-7"></a></span>
+<span id="cb1261-8"><a href="smoothing.html#cb1261-8"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">smooth_1 =</span> fit_<span class="dv">1</span><span class="op">$</span>fitted, <span class="dt">smooth_2 =</span> fit_<span class="dv">2</span><span class="op">$</span>fitted) <span class="op">%&gt;%</span></span>
+<span id="cb1261-9"><a href="smoothing.html#cb1261-9"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
+<span id="cb1261-10"><a href="smoothing.html#cb1261-10"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span></span>
+<span id="cb1261-11"><a href="smoothing.html#cb1261-11"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(day, smooth_<span class="dv">1</span>), <span class="dt">color=</span><span class="st">&quot;red&quot;</span>, <span class="dt">lty =</span> <span class="dv">2</span>) <span class="op">+</span></span>
+<span id="cb1261-12"><a href="smoothing.html#cb1261-12"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(day, smooth_<span class="dv">2</span>), <span class="dt">color=</span><span class="st">&quot;orange&quot;</span>, <span class="dt">lty =</span> <span class="dv">1</span>) </span></code></pre></div>
 <p><img src="book_files/figure-html/polls-2008-parabola-line-loess-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The <code>degree = 2</code> gives us more wiggly results. We actually prefer <code>degree = 1</code> as it is less prone to this kind of noise.</p>
 </div>
 <div id="beware-of-default-smoothing-parameters" class="section level3">
 <h3><span class="header-section-number">28.3.2</span> Beware of default smoothing parameters</h3>
 <p><code>ggplot</code> uses loess in its <code>geom_smooth</code> function:</p>
-<div class="sourceCode" id="cb1039"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1039-1"><a href="smoothing.html#cb1039-1"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
-<span id="cb1039-2"><a href="smoothing.html#cb1039-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
-<span id="cb1039-3"><a href="smoothing.html#cb1039-3"></a><span class="st">  </span><span class="kw">geom_smooth</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1262-1"><a href="smoothing.html#cb1262-1"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
+<span id="cb1262-2"><a href="smoothing.html#cb1262-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb1262-3"><a href="smoothing.html#cb1262-3"></a><span class="st">  </span><span class="kw">geom_smooth</span>()</span></code></pre></div>
 <p><img src="book_files/figure-html/ggplot-loess-default-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>But be careful with default parameters as they are rarely optimal.
 However, you can conveniently change them:</p>
-<div class="sourceCode" id="cb1040"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1040-1"><a href="smoothing.html#cb1040-1"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
-<span id="cb1040-2"><a href="smoothing.html#cb1040-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
-<span id="cb1040-3"><a href="smoothing.html#cb1040-3"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">span =</span> <span class="fl">0.15</span>, <span class="dt">method.args =</span> <span class="kw">list</span>(<span class="dt">degree=</span><span class="dv">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb1263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1263-1"><a href="smoothing.html#cb1263-1"></a>polls_<span class="dv">2008</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, margin)) <span class="op">+</span></span>
+<span id="cb1263-2"><a href="smoothing.html#cb1263-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb1263-3"><a href="smoothing.html#cb1263-3"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">span =</span> <span class="fl">0.15</span>, <span class="dt">method.args =</span> <span class="kw">list</span>(<span class="dt">degree=</span><span class="dv">1</span>))</span></code></pre></div>
 <p><img src="book_files/figure-html/ggplot-loess-degree-1-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
@@ -1070,48 +1307,48 @@ with <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_
 <div id="exercises-47" class="section level2">
 <h2><span class="header-section-number">28.5</span> Exercises</h2>
 <p>1. In the wrangling part of this book, we used the code below to obtain mortality counts for Puerto Rico for 2015-2018.</p>
-<div class="sourceCode" id="cb1041"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1041-1"><a href="smoothing.html#cb1041-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb1041-2"><a href="smoothing.html#cb1041-2"></a><span class="kw">library</span>(purrr)</span>
-<span id="cb1041-3"><a href="smoothing.html#cb1041-3"></a><span class="kw">library</span>(pdftools)</span>
-<span id="cb1041-4"><a href="smoothing.html#cb1041-4"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb1041-5"><a href="smoothing.html#cb1041-5"></a></span>
-<span id="cb1041-6"><a href="smoothing.html#cb1041-6"></a>fn &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;RD-Mortality-Report_2015-18-180531.pdf&quot;</span>,</span>
-<span id="cb1041-7"><a href="smoothing.html#cb1041-7"></a>                  <span class="dt">package=</span><span class="st">&quot;dslabs&quot;</span>)</span>
-<span id="cb1041-8"><a href="smoothing.html#cb1041-8"></a>dat &lt;-<span class="st"> </span><span class="kw">map_df</span>(<span class="kw">str_split</span>(<span class="kw">pdf_text</span>(fn), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>), <span class="cf">function</span>(s){</span>
-<span id="cb1041-9"><a href="smoothing.html#cb1041-9"></a>  s &lt;-<span class="st"> </span><span class="kw">str_trim</span>(s)</span>
-<span id="cb1041-10"><a href="smoothing.html#cb1041-10"></a>  header_index &lt;-<span class="st"> </span><span class="kw">str_which</span>(s, <span class="st">&quot;2015&quot;</span>)[<span class="dv">1</span>]</span>
-<span id="cb1041-11"><a href="smoothing.html#cb1041-11"></a>  tmp &lt;-<span class="st"> </span><span class="kw">str_split</span>(s[header_index], <span class="st">&quot;</span><span class="ch">\\</span><span class="st">s+&quot;</span>, <span class="dt">simplify =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb1041-12"><a href="smoothing.html#cb1041-12"></a>  month &lt;-<span class="st"> </span>tmp[<span class="dv">1</span>]</span>
-<span id="cb1041-13"><a href="smoothing.html#cb1041-13"></a>  header &lt;-<span class="st"> </span>tmp[<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb1041-14"><a href="smoothing.html#cb1041-14"></a>  tail_index  &lt;-<span class="st"> </span><span class="kw">str_which</span>(s, <span class="st">&quot;Total&quot;</span>)</span>
-<span id="cb1041-15"><a href="smoothing.html#cb1041-15"></a>  n &lt;-<span class="st"> </span><span class="kw">str_count</span>(s, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">d+&quot;</span>)</span>
-<span id="cb1041-16"><a href="smoothing.html#cb1041-16"></a>  out &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span>header_index, <span class="kw">which</span>(n <span class="op">==</span><span class="st"> </span><span class="dv">1</span>), </span>
-<span id="cb1041-17"><a href="smoothing.html#cb1041-17"></a>           <span class="kw">which</span>(n <span class="op">&gt;=</span><span class="st"> </span><span class="dv">28</span>), tail_index<span class="op">:</span><span class="kw">length</span>(s))</span>
-<span id="cb1041-18"><a href="smoothing.html#cb1041-18"></a>  s[<span class="op">-</span>out] <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">str_remove_all</span>(<span class="st">&quot;[^</span><span class="ch">\\</span><span class="st">d</span><span class="ch">\\</span><span class="st">s]&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_trim</span>() <span class="op">%&gt;%</span></span>
-<span id="cb1041-19"><a href="smoothing.html#cb1041-19"></a><span class="st">    </span><span class="kw">str_split_fixed</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">s+&quot;</span>, <span class="dt">n =</span> <span class="dv">6</span>) <span class="op">%&gt;%</span><span class="st"> </span>.[,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb1041-20"><a href="smoothing.html#cb1041-20"></a><span class="st">    </span><span class="kw">setNames</span>(<span class="kw">c</span>(<span class="st">&quot;day&quot;</span>, header)) <span class="op">%&gt;%</span></span>
-<span id="cb1041-21"><a href="smoothing.html#cb1041-21"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">month =</span> month, <span class="dt">day =</span> <span class="kw">as.numeric</span>(day)) <span class="op">%&gt;%</span></span>
-<span id="cb1041-22"><a href="smoothing.html#cb1041-22"></a><span class="st">    </span><span class="kw">gather</span>(year, deaths, <span class="op">-</span><span class="kw">c</span>(day, month)) <span class="op">%&gt;%</span></span>
-<span id="cb1041-23"><a href="smoothing.html#cb1041-23"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">deaths =</span> <span class="kw">as.numeric</span>(deaths))</span>
-<span id="cb1041-24"><a href="smoothing.html#cb1041-24"></a>}) <span class="op">%&gt;%</span></span>
-<span id="cb1041-25"><a href="smoothing.html#cb1041-25"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">month =</span> <span class="kw">recode</span>(month, </span>
-<span id="cb1041-26"><a href="smoothing.html#cb1041-26"></a>                        <span class="st">&quot;JAN&quot;</span> =<span class="st"> </span><span class="dv">1</span>, <span class="st">&quot;FEB&quot;</span> =<span class="st"> </span><span class="dv">2</span>, <span class="st">&quot;MAR&quot;</span> =<span class="st"> </span><span class="dv">3</span>, </span>
-<span id="cb1041-27"><a href="smoothing.html#cb1041-27"></a>                        <span class="st">&quot;APR&quot;</span> =<span class="st"> </span><span class="dv">4</span>, <span class="st">&quot;MAY&quot;</span> =<span class="st"> </span><span class="dv">5</span>, <span class="st">&quot;JUN&quot;</span> =<span class="st"> </span><span class="dv">6</span>, </span>
-<span id="cb1041-28"><a href="smoothing.html#cb1041-28"></a>                        <span class="st">&quot;JUL&quot;</span> =<span class="st"> </span><span class="dv">7</span>, <span class="st">&quot;AGO&quot;</span> =<span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;SEP&quot;</span> =<span class="st"> </span><span class="dv">9</span>, </span>
-<span id="cb1041-29"><a href="smoothing.html#cb1041-29"></a>                        <span class="st">&quot;OCT&quot;</span> =<span class="st"> </span><span class="dv">10</span>, <span class="st">&quot;NOV&quot;</span> =<span class="st"> </span><span class="dv">11</span>, <span class="st">&quot;DEC&quot;</span> =<span class="st"> </span><span class="dv">12</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb1041-30"><a href="smoothing.html#cb1041-30"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">date =</span> <span class="kw">make_date</span>(year, month, day)) <span class="op">%&gt;%</span></span>
-<span id="cb1041-31"><a href="smoothing.html#cb1041-31"></a><span class="st">  </span><span class="kw">filter</span>(date <span class="op">&lt;=</span><span class="st"> &quot;2018-05-01&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1264-1"><a href="smoothing.html#cb1264-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1264-2"><a href="smoothing.html#cb1264-2"></a><span class="kw">library</span>(purrr)</span>
+<span id="cb1264-3"><a href="smoothing.html#cb1264-3"></a><span class="kw">library</span>(pdftools)</span>
+<span id="cb1264-4"><a href="smoothing.html#cb1264-4"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb1264-5"><a href="smoothing.html#cb1264-5"></a></span>
+<span id="cb1264-6"><a href="smoothing.html#cb1264-6"></a>fn &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;RD-Mortality-Report_2015-18-180531.pdf&quot;</span>,</span>
+<span id="cb1264-7"><a href="smoothing.html#cb1264-7"></a>                  <span class="dt">package=</span><span class="st">&quot;dslabs&quot;</span>)</span>
+<span id="cb1264-8"><a href="smoothing.html#cb1264-8"></a>dat &lt;-<span class="st"> </span><span class="kw">map_df</span>(<span class="kw">str_split</span>(<span class="kw">pdf_text</span>(fn), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>), <span class="cf">function</span>(s){</span>
+<span id="cb1264-9"><a href="smoothing.html#cb1264-9"></a>  s &lt;-<span class="st"> </span><span class="kw">str_trim</span>(s)</span>
+<span id="cb1264-10"><a href="smoothing.html#cb1264-10"></a>  header_index &lt;-<span class="st"> </span><span class="kw">str_which</span>(s, <span class="st">&quot;2015&quot;</span>)[<span class="dv">1</span>]</span>
+<span id="cb1264-11"><a href="smoothing.html#cb1264-11"></a>  tmp &lt;-<span class="st"> </span><span class="kw">str_split</span>(s[header_index], <span class="st">&quot;</span><span class="ch">\\</span><span class="st">s+&quot;</span>, <span class="dt">simplify =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb1264-12"><a href="smoothing.html#cb1264-12"></a>  month &lt;-<span class="st"> </span>tmp[<span class="dv">1</span>]</span>
+<span id="cb1264-13"><a href="smoothing.html#cb1264-13"></a>  header &lt;-<span class="st"> </span>tmp[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb1264-14"><a href="smoothing.html#cb1264-14"></a>  tail_index  &lt;-<span class="st"> </span><span class="kw">str_which</span>(s, <span class="st">&quot;Total&quot;</span>)</span>
+<span id="cb1264-15"><a href="smoothing.html#cb1264-15"></a>  n &lt;-<span class="st"> </span><span class="kw">str_count</span>(s, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">d+&quot;</span>)</span>
+<span id="cb1264-16"><a href="smoothing.html#cb1264-16"></a>  out &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span>header_index, <span class="kw">which</span>(n <span class="op">==</span><span class="st"> </span><span class="dv">1</span>), </span>
+<span id="cb1264-17"><a href="smoothing.html#cb1264-17"></a>           <span class="kw">which</span>(n <span class="op">&gt;=</span><span class="st"> </span><span class="dv">28</span>), tail_index<span class="op">:</span><span class="kw">length</span>(s))</span>
+<span id="cb1264-18"><a href="smoothing.html#cb1264-18"></a>  s[<span class="op">-</span>out] <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">str_remove_all</span>(<span class="st">&quot;[^</span><span class="ch">\\</span><span class="st">d</span><span class="ch">\\</span><span class="st">s]&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_trim</span>() <span class="op">%&gt;%</span></span>
+<span id="cb1264-19"><a href="smoothing.html#cb1264-19"></a><span class="st">    </span><span class="kw">str_split_fixed</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">s+&quot;</span>, <span class="dt">n =</span> <span class="dv">6</span>) <span class="op">%&gt;%</span><span class="st"> </span>.[,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>] <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1264-20"><a href="smoothing.html#cb1264-20"></a><span class="st">    </span><span class="kw">setNames</span>(<span class="kw">c</span>(<span class="st">&quot;day&quot;</span>, header)) <span class="op">%&gt;%</span></span>
+<span id="cb1264-21"><a href="smoothing.html#cb1264-21"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">month =</span> month, <span class="dt">day =</span> <span class="kw">as.numeric</span>(day)) <span class="op">%&gt;%</span></span>
+<span id="cb1264-22"><a href="smoothing.html#cb1264-22"></a><span class="st">    </span><span class="kw">gather</span>(year, deaths, <span class="op">-</span><span class="kw">c</span>(day, month)) <span class="op">%&gt;%</span></span>
+<span id="cb1264-23"><a href="smoothing.html#cb1264-23"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">deaths =</span> <span class="kw">as.numeric</span>(deaths))</span>
+<span id="cb1264-24"><a href="smoothing.html#cb1264-24"></a>}) <span class="op">%&gt;%</span></span>
+<span id="cb1264-25"><a href="smoothing.html#cb1264-25"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">month =</span> <span class="kw">recode</span>(month, </span>
+<span id="cb1264-26"><a href="smoothing.html#cb1264-26"></a>                        <span class="st">&quot;JAN&quot;</span> =<span class="st"> </span><span class="dv">1</span>, <span class="st">&quot;FEB&quot;</span> =<span class="st"> </span><span class="dv">2</span>, <span class="st">&quot;MAR&quot;</span> =<span class="st"> </span><span class="dv">3</span>, </span>
+<span id="cb1264-27"><a href="smoothing.html#cb1264-27"></a>                        <span class="st">&quot;APR&quot;</span> =<span class="st"> </span><span class="dv">4</span>, <span class="st">&quot;MAY&quot;</span> =<span class="st"> </span><span class="dv">5</span>, <span class="st">&quot;JUN&quot;</span> =<span class="st"> </span><span class="dv">6</span>, </span>
+<span id="cb1264-28"><a href="smoothing.html#cb1264-28"></a>                        <span class="st">&quot;JUL&quot;</span> =<span class="st"> </span><span class="dv">7</span>, <span class="st">&quot;AGO&quot;</span> =<span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;SEP&quot;</span> =<span class="st"> </span><span class="dv">9</span>, </span>
+<span id="cb1264-29"><a href="smoothing.html#cb1264-29"></a>                        <span class="st">&quot;OCT&quot;</span> =<span class="st"> </span><span class="dv">10</span>, <span class="st">&quot;NOV&quot;</span> =<span class="st"> </span><span class="dv">11</span>, <span class="st">&quot;DEC&quot;</span> =<span class="st"> </span><span class="dv">12</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb1264-30"><a href="smoothing.html#cb1264-30"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">date =</span> <span class="kw">make_date</span>(year, month, day)) <span class="op">%&gt;%</span></span>
+<span id="cb1264-31"><a href="smoothing.html#cb1264-31"></a><span class="st">  </span><span class="kw">filter</span>(date <span class="op">&lt;=</span><span class="st"> &quot;2018-05-01&quot;</span>)</span></code></pre></div>
 <p>Use the <code>loess</code> function to obtain a smooth estimate of the expected number of deaths as a function of date. Plot this resulting smooth function. Make the span about two months long.</p>
 <p>2. Plot the smooth estimates against day of the year, all on the same plot but with different colors.</p>
 <p>3. Suppose we want to predict 2s and 7s in our <code>mnist_27</code> dataset with just the second covariate. Can we do this? On first inspection it appears the data does not have much predictive power. In fact, if we fit a regular logistic regression, the coefficient for <code>x_2</code> is not significant!</p>
-<div class="sourceCode" id="cb1042"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1042-1"><a href="smoothing.html#cb1042-1"></a><span class="kw">library</span>(broom)</span>
-<span id="cb1042-2"><a href="smoothing.html#cb1042-2"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb1042-3"><a href="smoothing.html#cb1042-3"></a><span class="kw">data</span>(<span class="st">&quot;mnist_27&quot;</span>)</span>
-<span id="cb1042-4"><a href="smoothing.html#cb1042-4"></a>mnist_<span class="dv">27</span><span class="op">$</span>train <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb1042-5"><a href="smoothing.html#cb1042-5"></a><span class="st">  </span><span class="kw">glm</span>(y <span class="op">~</span><span class="st"> </span>x_<span class="dv">2</span>, <span class="dt">family =</span> <span class="st">&quot;binomial&quot;</span>, <span class="dt">data =</span> .) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb1042-6"><a href="smoothing.html#cb1042-6"></a><span class="st">  </span><span class="kw">tidy</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1265-1"><a href="smoothing.html#cb1265-1"></a><span class="kw">library</span>(broom)</span>
+<span id="cb1265-2"><a href="smoothing.html#cb1265-2"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb1265-3"><a href="smoothing.html#cb1265-3"></a><span class="kw">data</span>(<span class="st">&quot;mnist_27&quot;</span>)</span>
+<span id="cb1265-4"><a href="smoothing.html#cb1265-4"></a>mnist_<span class="dv">27</span><span class="op">$</span>train <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1265-5"><a href="smoothing.html#cb1265-5"></a><span class="st">  </span><span class="kw">glm</span>(y <span class="op">~</span><span class="st"> </span>x_<span class="dv">2</span>, <span class="dt">family =</span> <span class="st">&quot;binomial&quot;</span>, <span class="dt">data =</span> .) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1265-6"><a href="smoothing.html#cb1265-6"></a><span class="st">  </span><span class="kw">tidy</span>()</span></code></pre></div>
 <p>Plotting a scatterplot here is not useful since <code>y</code> is binary:</p>
-<div class="sourceCode" id="cb1043"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1043-1"><a href="smoothing.html#cb1043-1"></a><span class="kw">qplot</span>(x_<span class="dv">2</span>, y, <span class="dt">data =</span> mnist_<span class="dv">27</span><span class="op">$</span>train)</span></code></pre></div>
+<div class="sourceCode" id="cb1266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1266-1"><a href="smoothing.html#cb1266-1"></a><span class="kw">qplot</span>(x_<span class="dv">2</span>, y, <span class="dt">data =</span> mnist_<span class="dv">27</span><span class="op">$</span>train)</span></code></pre></div>
 <p>Fit a loess line to the data above and plot the results. Notice that there is predictive power, except the conditional probability is not linear.</p>
 
 </div>

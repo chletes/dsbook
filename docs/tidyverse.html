@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 The tidyverse | Introduction to Data Science</title>
   <meta name="description" content="This book introduces concepts and skills that can help you tackle real-world data analysis challenges. It covers concepts from probability, statistical inference, linear regression and machine learning and helps you develop skills such as R programming, data wrangling with dplyr, data visualization with ggplot2, file organization with UNIX/Linux shell, version control with GitHub, and reproducible document preparation with R markdown." />
-  <meta name="generator" content="bookdown 0.20.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 The tidyverse | Introduction to Data Science" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Rafael A. Irizarry" />
 
 
-<meta name="date" content="2020-11-16" />
+<meta name="date" content="2020-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,7 +51,10 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -305,7 +308,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.15" data-path="ggplot2.html"><a href="ggplot2.html#exercises-15"><i class="fa fa-check"></i><b>7.15</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>8</b> Visualizing data distributions</a><ul>
-<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a></li>
+<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="distributions.html"><a href="distributions.html#key-points"><i class="fa fa-check"></i><b>8.1.1</b> Key points</a></li>
+</ul></li>
 <li class="chapter" data-level="8.2" data-path="distributions.html"><a href="distributions.html#case-study-describing-student-heights"><i class="fa fa-check"></i><b>8.2</b> Case study: describing student heights</a></li>
 <li class="chapter" data-level="8.3" data-path="distributions.html"><a href="distributions.html#distribution-function"><i class="fa fa-check"></i><b>8.3</b> Distribution function</a></li>
 <li class="chapter" data-level="8.4" data-path="distributions.html"><a href="distributions.html#cdf-intro"><i class="fa fa-check"></i><b>8.4</b> Cumulative distribution functions</a></li>
@@ -806,78 +811,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="part"><span><b>VI Productivity Tools</b></span></li>
 <li class="chapter" data-level="35" data-path="introduction-to-productivity-tools.html"><a href="introduction-to-productivity-tools.html"><i class="fa fa-check"></i><b>35</b> Introduction to productivity tools</a></li>
-<li class="chapter" data-level="36" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html"><i class="fa fa-check"></i><b>36</b> Installing R and RStudio</a><ul>
-<li class="chapter" data-level="36.1" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-r"><i class="fa fa-check"></i><b>36.1</b> Installing R</a></li>
-<li class="chapter" data-level="36.2" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-rstudio"><i class="fa fa-check"></i><b>36.2</b> Installing RStudio</a></li>
+<li class="chapter" data-level="36" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>36</b> Accessing the terminal and installing Git</a><ul>
+<li class="chapter" data-level="36.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>36.1</b> Accessing the terminal on a Mac</a></li>
+<li class="chapter" data-level="36.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>36.2</b> Installing Git on the Mac</a></li>
+<li class="chapter" data-level="36.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>36.3</b> Installing Git and Git Bash on Windows</a></li>
+<li class="chapter" data-level="36.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>36.4</b> Accessing the terminal on Windows</a></li>
 </ul></li>
-<li class="chapter" data-level="37" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>37</b> Accessing the terminal and installing Git</a><ul>
-<li class="chapter" data-level="37.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>37.1</b> Accessing the terminal on a Mac</a></li>
-<li class="chapter" data-level="37.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>37.2</b> Installing Git on the Mac</a></li>
-<li class="chapter" data-level="37.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>37.3</b> Installing Git and Git Bash on Windows</a></li>
-<li class="chapter" data-level="37.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>37.4</b> Accessing the terminal on Windows</a></li>
+<li class="chapter" data-level="37" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>37</b> Organizing with Unix</a><ul>
+<li class="chapter" data-level="37.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>37.1</b> Naming convention</a></li>
+<li class="chapter" data-level="37.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>37.2</b> The terminal</a></li>
+<li class="chapter" data-level="37.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>37.3</b> The filesystem</a><ul>
+<li class="chapter" data-level="37.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>37.3.1</b> Directories and subdirectories</a></li>
+<li class="chapter" data-level="37.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>37.3.2</b> The home directory</a></li>
+<li class="chapter" data-level="37.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>37.3.3</b> Working directory</a></li>
+<li class="chapter" data-level="37.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>37.3.4</b> Paths</a></li>
 </ul></li>
-<li class="chapter" data-level="38" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>38</b> Organizing with Unix</a><ul>
-<li class="chapter" data-level="38.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>38.1</b> Naming convention</a></li>
-<li class="chapter" data-level="38.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>38.2</b> The terminal</a></li>
-<li class="chapter" data-level="38.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>38.3</b> The filesystem</a><ul>
-<li class="chapter" data-level="38.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>38.3.1</b> Directories and subdirectories</a></li>
-<li class="chapter" data-level="38.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>38.3.2</b> The home directory</a></li>
-<li class="chapter" data-level="38.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>38.3.3</b> Working directory</a></li>
-<li class="chapter" data-level="38.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>38.3.4</b> Paths</a></li>
+<li class="chapter" data-level="37.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>37.4</b> Unix commands</a><ul>
+<li class="chapter" data-level="37.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>37.4.1</b> <code>ls</code>: Listing directory content</a></li>
+<li class="chapter" data-level="37.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>37.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
+<li class="chapter" data-level="37.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>37.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
 </ul></li>
-<li class="chapter" data-level="38.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>38.4</b> Unix commands</a><ul>
-<li class="chapter" data-level="38.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>38.4.1</b> <code>ls</code>: Listing directory content</a></li>
-<li class="chapter" data-level="38.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>38.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
-<li class="chapter" data-level="38.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>38.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
+<li class="chapter" data-level="37.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>37.5</b> Some examples</a></li>
+<li class="chapter" data-level="37.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>37.6</b> More Unix commands</a><ul>
+<li class="chapter" data-level="37.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>37.6.1</b> <code>mv</code>: moving files</a></li>
+<li class="chapter" data-level="37.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>37.6.2</b> <code>cp</code>: copying files</a></li>
+<li class="chapter" data-level="37.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>37.6.3</b> <code>rm</code>: removing files</a></li>
+<li class="chapter" data-level="37.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>37.6.4</b> <code>less</code>: looking at a file</a></li>
 </ul></li>
-<li class="chapter" data-level="38.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>38.5</b> Some examples</a></li>
-<li class="chapter" data-level="38.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>38.6</b> More Unix commands</a><ul>
-<li class="chapter" data-level="38.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>38.6.1</b> <code>mv</code>: moving files</a></li>
-<li class="chapter" data-level="38.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>38.6.2</b> <code>cp</code>: copying files</a></li>
-<li class="chapter" data-level="38.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>38.6.3</b> <code>rm</code>: removing files</a></li>
-<li class="chapter" data-level="38.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>38.6.4</b> <code>less</code>: looking at a file</a></li>
-</ul></li>
-<li class="chapter" data-level="38.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>38.7</b> Preparing for a data science project</a></li>
-<li class="chapter" data-level="38.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>38.8</b> Advanced Unix</a><ul>
-<li class="chapter" data-level="38.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>38.8.1</b> Arguments</a></li>
-<li class="chapter" data-level="38.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>38.8.2</b> Getting help</a></li>
-<li class="chapter" data-level="38.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>38.8.3</b> Pipes</a></li>
-<li class="chapter" data-level="38.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>38.8.4</b> Wild cards</a></li>
-<li class="chapter" data-level="38.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>38.8.5</b> Environment variables</a></li>
-<li class="chapter" data-level="38.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>38.8.6</b> Shells</a></li>
-<li class="chapter" data-level="38.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>38.8.7</b> Executables</a></li>
-<li class="chapter" data-level="38.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>38.8.8</b> Permissions and file types</a></li>
-<li class="chapter" data-level="38.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>38.8.9</b> Commands you should learn</a></li>
-<li class="chapter" data-level="38.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>38.8.10</b> File manipulation in R</a></li>
+<li class="chapter" data-level="37.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>37.7</b> Preparing for a data science project</a></li>
+<li class="chapter" data-level="37.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>37.8</b> Advanced Unix</a><ul>
+<li class="chapter" data-level="37.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>37.8.1</b> Arguments</a></li>
+<li class="chapter" data-level="37.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>37.8.2</b> Getting help</a></li>
+<li class="chapter" data-level="37.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>37.8.3</b> Pipes</a></li>
+<li class="chapter" data-level="37.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>37.8.4</b> Wild cards</a></li>
+<li class="chapter" data-level="37.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>37.8.5</b> Environment variables</a></li>
+<li class="chapter" data-level="37.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>37.8.6</b> Shells</a></li>
+<li class="chapter" data-level="37.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>37.8.7</b> Executables</a></li>
+<li class="chapter" data-level="37.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>37.8.8</b> Permissions and file types</a></li>
+<li class="chapter" data-level="37.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>37.8.9</b> Commands you should learn</a></li>
+<li class="chapter" data-level="37.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>37.8.10</b> File manipulation in R</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="39" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>39</b> Git and GitHub</a><ul>
-<li class="chapter" data-level="39.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>39.1</b> Why use Git and GitHub?</a></li>
-<li class="chapter" data-level="39.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>39.2</b> GitHub accounts</a></li>
-<li class="chapter" data-level="39.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>39.3</b> GitHub repositories</a></li>
-<li class="chapter" data-level="39.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>39.4</b> Overview of Git</a><ul>
-<li class="chapter" data-level="39.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>39.4.1</b> Clone</a></li>
+<li class="chapter" data-level="38" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>38</b> Git and GitHub</a><ul>
+<li class="chapter" data-level="38.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>38.1</b> Why use Git and GitHub?</a></li>
+<li class="chapter" data-level="38.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>38.2</b> GitHub accounts</a></li>
+<li class="chapter" data-level="38.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>38.3</b> GitHub repositories</a></li>
+<li class="chapter" data-level="38.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>38.4</b> Overview of Git</a><ul>
+<li class="chapter" data-level="38.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>38.4.1</b> Clone</a></li>
 </ul></li>
-<li class="chapter" data-level="39.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>39.5</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="39.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>39.6</b> Using Git and GitHub in RStudio</a></li>
+<li class="chapter" data-level="38.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>38.5</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="38.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>38.6</b> Using Git and GitHub in RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="40" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>40</b> Reproducible projects with RStudio and R markdown</a><ul>
-<li class="chapter" data-level="40.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>40.1</b> RStudio projects</a></li>
-<li class="chapter" data-level="40.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>40.2</b> R markdown</a><ul>
-<li class="chapter" data-level="40.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>40.2.1</b> The header</a></li>
-<li class="chapter" data-level="40.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>40.2.2</b> R code chunks</a></li>
-<li class="chapter" data-level="40.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>40.2.3</b> Global options</a></li>
-<li class="chapter" data-level="40.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>40.2.4</b> knitR</a></li>
-<li class="chapter" data-level="40.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>40.2.5</b> More on R markdown</a></li>
+<li class="chapter" data-level="39" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>39</b> Reproducible projects with RStudio and R markdown</a><ul>
+<li class="chapter" data-level="39.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>39.1</b> RStudio projects</a></li>
+<li class="chapter" data-level="39.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>39.2</b> R markdown</a><ul>
+<li class="chapter" data-level="39.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>39.2.1</b> The header</a></li>
+<li class="chapter" data-level="39.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>39.2.2</b> R code chunks</a></li>
+<li class="chapter" data-level="39.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>39.2.3</b> Global options</a></li>
+<li class="chapter" data-level="39.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>39.2.4</b> knitR</a></li>
+<li class="chapter" data-level="39.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>39.2.5</b> More on R markdown</a></li>
 </ul></li>
-<li class="chapter" data-level="40.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>40.3</b> Organizing a data science project</a><ul>
-<li class="chapter" data-level="40.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>40.3.1</b> Create directories in Unix</a></li>
-<li class="chapter" data-level="40.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>40.3.2</b> Create an RStudio project</a></li>
-<li class="chapter" data-level="40.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>40.3.3</b> Edit some R scripts</a></li>
-<li class="chapter" data-level="40.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>40.3.4</b> Create some more directories using Unix</a></li>
-<li class="chapter" data-level="40.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>40.3.5</b> Add a README file</a></li>
-<li class="chapter" data-level="40.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>40.3.6</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="40.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>40.3.7</b> Add, commit, and push files using RStudio</a></li>
+<li class="chapter" data-level="39.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>39.3</b> Organizing a data science project</a><ul>
+<li class="chapter" data-level="39.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>39.3.1</b> Create directories in Unix</a></li>
+<li class="chapter" data-level="39.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>39.3.2</b> Create an RStudio project</a></li>
+<li class="chapter" data-level="39.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>39.3.3</b> Edit some R scripts</a></li>
+<li class="chapter" data-level="39.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>39.3.4</b> Create some more directories using Unix</a></li>
+<li class="chapter" data-level="39.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>39.3.5</b> Add a README file</a></li>
+<li class="chapter" data-level="39.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>39.3.6</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="39.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>39.3.7</b> Add, commit, and push files using RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -904,31 +905,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 4</span> The tidyverse</h1>
 <p>Up to now we have been manipulating vectors by reordering and subsetting them through indexing. However, once we start more advanced analyses, the preferred unit for data storage is not the vector but the data frame. In this chapter we learn to work directly with data frames, which greatly facilitate the organization of information. We will be using data frames for the majority of this book. We will focus on a specific data format referred to as <em>tidy</em> and on specific collection of packages that are particularly helpful for working with <em>tidy</em> data referred to as the <em>tidyverse</em>.</p>
 <p>We can load all the tidyverse packages at once by installing and loading the <strong>tidyverse</strong> package:</p>
-<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="tidyverse.html#cb156-1"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="tidyverse.html#cb215-1"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
 <p>We will learn how to implement the tidyverse approach throughout the book, but before delving into the details, in this chapter we introduce some of the most widely used tidyverse functionality, starting with the <strong>dplyr</strong> package for manipulating data frames and the <strong>purrr</strong> package for working with functions. Note that the tidyverse also includes a graphing package, <strong>ggplot2</strong>, which we introduce later in Chapter <a href="ggplot2.html#ggplot2">7</a> in the Data Visualization part of the book; the <strong>readr</strong> package discussed in Chapter <a href="importing-data.html#importing-data">5</a>; and many others. In this chapter, we first introduce the concept of <em>tidy data</em> and then demonstrate how we use the tidyverse to work with data frames in this format.</p>
 <div id="tidy-data" class="section level2">
 <h2><span class="header-section-number">4.1</span> Tidy data</h2>
 <p>We say that a data table is in <em>tidy</em> format if each row represents one observation and columns represent the different variables available for each of these observations. The <code>murders</code> dataset is an example of a tidy data frame.</p>
-<pre><code>#&gt;        state abb region population total
-#&gt; 1    Alabama  AL  South    4779736   135
-#&gt; 2     Alaska  AK   West     710231    19
-#&gt; 3    Arizona  AZ   West    6392017   232
-#&gt; 4   Arkansas  AR  South    2915918    93
-#&gt; 5 California  CA   West   37253956  1257
-#&gt; 6   Colorado  CO   West    5029196    65</code></pre>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="tidyverse.html#cb216-1"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb216-2"><a href="tidyverse.html#cb216-2"></a><span class="kw">data</span>(murders)</span>
+<span id="cb216-3"><a href="tidyverse.html#cb216-3"></a><span class="kw">head</span>(murders)</span></code></pre></div>
 <p>Each row represent a state with each of the five columns providing a different variable related to these states: name, abbreviation, region, population, and total murders.</p>
 <p>To see how the same information can be provided in different formats, consider the following example:</p>
-<pre><code>#&gt;       country year fertility
-#&gt; 1     Germany 1960      2.41
-#&gt; 2 South Korea 1960      6.16
-#&gt; 3     Germany 1961      2.44
-#&gt; 4 South Korea 1961      5.99
-#&gt; 5     Germany 1962      2.47
-#&gt; 6 South Korea 1962      5.79</code></pre>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="tidyverse.html#cb217-1"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb217-2"><a href="tidyverse.html#cb217-2"></a><span class="kw">data</span>(<span class="st">&quot;gapminder&quot;</span>)</span>
+<span id="cb217-3"><a href="tidyverse.html#cb217-3"></a>tidy_data &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb217-4"><a href="tidyverse.html#cb217-4"></a><span class="st">  </span><span class="kw">filter</span>(country <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;South Korea&quot;</span>, <span class="st">&quot;Germany&quot;</span>) <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(fertility)) <span class="op">%&gt;%</span></span>
+<span id="cb217-5"><a href="tidyverse.html#cb217-5"></a><span class="st">  </span><span class="kw">select</span>(country, year, fertility)</span>
+<span id="cb217-6"><a href="tidyverse.html#cb217-6"></a><span class="kw">head</span>(tidy_data, <span class="dv">6</span>)</span></code></pre></div>
 <p>This tidy dataset provides fertility rates for two countries across the years. This is a tidy dataset because each row presents one observation with the three variables being country, year, and fertility rate. However, this dataset originally came in another format and was reshaped for the <strong>dslabs</strong> package. Originally, the data was in the following format:</p>
-<pre><code>#&gt;       country 1960 1961 1962
-#&gt; 1     Germany 2.41 2.44 2.47
-#&gt; 2 South Korea 6.16 5.99 5.79</code></pre>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="tidyverse.html#cb218-1"></a>path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package=</span><span class="st">&quot;dslabs&quot;</span>)</span>
+<span id="cb218-2"><a href="tidyverse.html#cb218-2"></a>filename &lt;-<span class="st"> </span><span class="kw">file.path</span>(path, <span class="st">&quot;fertility-two-countries-example.csv&quot;</span>)</span>
+<span id="cb218-3"><a href="tidyverse.html#cb218-3"></a>wide_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(filename)</span>
+<span id="cb218-4"><a href="tidyverse.html#cb218-4"></a><span class="kw">select</span>(wide_data, country, <span class="st">`</span><span class="dt">1960</span><span class="st">`</span><span class="op">:</span><span class="st">`</span><span class="dt">1962</span><span class="st">`</span>) <span class="op">%&gt;%</span><span class="st"> </span>as.data.frame</span></code></pre></div>
 <p>The same information is provided, but there are two important differences in the format: 1) each row includes several observations and 2) one of the variables, year, is stored in the header. For the tidyverse packages to be optimally used, data need to be reshaped into <code>tidy</code> format, which you will learn to do in the Data Wrangling part of the book. Until then, we will use example datasets that are already in tidy format.</p>
 <p>Although not immediately obvious, as you go through the book you will start to appreciate the advantages of working in a framework in which functions use tidy formats for both inputs and outputs. You will see how this permits the data analyst to focus on more important aspects of the analysis rather than the format of the data.</p>
 </div>
@@ -971,74 +968,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="adding-a-column-with-mutate" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> Adding a column with <code>mutate</code></h3>
 <p>We want all the necessary information for our analysis to be included in the data table. So the first task is to add the murder rates to our murders data frame. The function <code>mutate</code> takes the data frame as a first argument and the name and values of the variable as a second argument using the convention <code>name = values</code>. So, to add murder rates, we use:</p>
-<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="tidyverse.html#cb160-1"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb160-2"><a href="tidyverse.html#cb160-2"></a><span class="kw">data</span>(<span class="st">&quot;murders&quot;</span>)</span>
-<span id="cb160-3"><a href="tidyverse.html#cb160-3"></a>murders &lt;-<span class="st"> </span><span class="kw">mutate</span>(murders, <span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="tidyverse.html#cb219-1"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb219-2"><a href="tidyverse.html#cb219-2"></a><span class="kw">data</span>(<span class="st">&quot;murders&quot;</span>)</span>
+<span id="cb219-3"><a href="tidyverse.html#cb219-3"></a>murders &lt;-<span class="st"> </span><span class="kw">mutate</span>(murders, <span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span></code></pre></div>
 <p>Notice that here we used <code>total</code> and <code>population</code> inside the function, which are objects that are <strong>not</strong> defined in our workspace. But why don’t we get an error?</p>
 <p>This is one of <strong>dplyr</strong>’s main features. Functions in this package, such as <code>mutate</code>, know to look for variables in the data frame provided in the first argument. In the call to mutate above, <code>total</code> will have the values in <code>murders$total</code>. This approach makes the code much more readable.</p>
 <p>We can see that the new column is added:</p>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="tidyverse.html#cb161-1"></a><span class="kw">head</span>(murders)</span>
-<span id="cb161-2"><a href="tidyverse.html#cb161-2"></a><span class="co">#&gt;        state abb region population total rate</span></span>
-<span id="cb161-3"><a href="tidyverse.html#cb161-3"></a><span class="co">#&gt; 1    Alabama  AL  South    4779736   135 2.82</span></span>
-<span id="cb161-4"><a href="tidyverse.html#cb161-4"></a><span class="co">#&gt; 2     Alaska  AK   West     710231    19 2.68</span></span>
-<span id="cb161-5"><a href="tidyverse.html#cb161-5"></a><span class="co">#&gt; 3    Arizona  AZ   West    6392017   232 3.63</span></span>
-<span id="cb161-6"><a href="tidyverse.html#cb161-6"></a><span class="co">#&gt; 4   Arkansas  AR  South    2915918    93 3.19</span></span>
-<span id="cb161-7"><a href="tidyverse.html#cb161-7"></a><span class="co">#&gt; 5 California  CA   West   37253956  1257 3.37</span></span>
-<span id="cb161-8"><a href="tidyverse.html#cb161-8"></a><span class="co">#&gt; 6   Colorado  CO   West    5029196    65 1.29</span></span></code></pre></div>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="tidyverse.html#cb220-1"></a><span class="kw">head</span>(murders)</span></code></pre></div>
 <p>Although we have overwritten the original <code>murders</code> object, this does not change the object that loaded with <code>data(murders)</code>. If we load the <code>murders</code> data again, the original will overwrite our mutated version.</p>
 </div>
 <div id="subsetting-with-filter" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Subsetting with <code>filter</code></h3>
 <p>Now suppose that we want to filter the data table to only show the entries for which the murder rate is lower than 0.71. To do this we use the <code>filter</code> function, which takes the data table as the first argument and then the conditional statement as the second. Like <code>mutate</code>, we can use the unquoted variable names from <code>murders</code> inside the function and it will know we mean the columns and not objects in the workspace.</p>
-<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="tidyverse.html#cb162-1"></a><span class="kw">filter</span>(murders, rate <span class="op">&lt;=</span><span class="st"> </span><span class="fl">0.71</span>)</span>
-<span id="cb162-2"><a href="tidyverse.html#cb162-2"></a><span class="co">#&gt;           state abb        region population total  rate</span></span>
-<span id="cb162-3"><a href="tidyverse.html#cb162-3"></a><span class="co">#&gt; 1        Hawaii  HI          West    1360301     7 0.515</span></span>
-<span id="cb162-4"><a href="tidyverse.html#cb162-4"></a><span class="co">#&gt; 2          Iowa  IA North Central    3046355    21 0.689</span></span>
-<span id="cb162-5"><a href="tidyverse.html#cb162-5"></a><span class="co">#&gt; 3 New Hampshire  NH     Northeast    1316470     5 0.380</span></span>
-<span id="cb162-6"><a href="tidyverse.html#cb162-6"></a><span class="co">#&gt; 4  North Dakota  ND North Central     672591     4 0.595</span></span>
-<span id="cb162-7"><a href="tidyverse.html#cb162-7"></a><span class="co">#&gt; 5       Vermont  VT     Northeast     625741     2 0.320</span></span></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="tidyverse.html#cb221-1"></a><span class="kw">filter</span>(murders, rate <span class="op">&lt;=</span><span class="st"> </span><span class="fl">0.71</span>)</span></code></pre></div>
 </div>
 <div id="selecting-columns-with-select" class="section level3">
 <h3><span class="header-section-number">4.3.3</span> Selecting columns with <code>select</code></h3>
 <p>Although our data table only has six columns, some data tables include hundreds. If we want to view just a few, we can use the <strong>dplyr</strong> <code>select</code> function. In the code below we select three columns, assign this to a new object and then filter the new object:</p>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="tidyverse.html#cb163-1"></a>new_table &lt;-<span class="st"> </span><span class="kw">select</span>(murders, state, region, rate)</span>
-<span id="cb163-2"><a href="tidyverse.html#cb163-2"></a><span class="kw">filter</span>(new_table, rate <span class="op">&lt;=</span><span class="st"> </span><span class="fl">0.71</span>)</span>
-<span id="cb163-3"><a href="tidyverse.html#cb163-3"></a><span class="co">#&gt;           state        region  rate</span></span>
-<span id="cb163-4"><a href="tidyverse.html#cb163-4"></a><span class="co">#&gt; 1        Hawaii          West 0.515</span></span>
-<span id="cb163-5"><a href="tidyverse.html#cb163-5"></a><span class="co">#&gt; 2          Iowa North Central 0.689</span></span>
-<span id="cb163-6"><a href="tidyverse.html#cb163-6"></a><span class="co">#&gt; 3 New Hampshire     Northeast 0.380</span></span>
-<span id="cb163-7"><a href="tidyverse.html#cb163-7"></a><span class="co">#&gt; 4  North Dakota North Central 0.595</span></span>
-<span id="cb163-8"><a href="tidyverse.html#cb163-8"></a><span class="co">#&gt; 5       Vermont     Northeast 0.320</span></span></code></pre></div>
-<p>In the call to <code>select</code>, the first argument <code>murders</code> is an object, but <code>state</code>, <code>region</code>, and <code>rate</code> are variable names.</p>
+<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="tidyverse.html#cb222-1"></a>new_table &lt;-<span class="st"> </span><span class="kw">select</span>(murders, state, region, rate)</span>
+<span id="cb222-2"><a href="tidyverse.html#cb222-2"></a><span class="kw">filter</span>(new_table, rate <span class="op">&lt;=</span><span class="st"> </span><span class="fl">0.71</span>)</span></code></pre></div>
+<p>In the call to <code>select</code>, the first argument <code>murders</code> is an object, but <code>state</code>, <code>region</code>, and <code>rate</code> are variable names from that table.</p>
 </div>
 </div>
 <div id="exercises-9" class="section level2">
 <h2><span class="header-section-number">4.4</span> Exercises</h2>
 <p>1. Load the <strong>dplyr</strong> package and the murders dataset.</p>
-<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="tidyverse.html#cb164-1"></a><span class="kw">library</span>(dplyr)</span>
-<span id="cb164-2"><a href="tidyverse.html#cb164-2"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb164-3"><a href="tidyverse.html#cb164-3"></a><span class="kw">data</span>(murders)</span></code></pre></div>
-<p>You can add columns using the <strong>dplyr</strong> function <code>mutate</code>. This function is aware of the column names and inside the function you can call them unquoted:</p>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="tidyverse.html#cb165-1"></a>murders &lt;-<span class="st"> </span><span class="kw">mutate</span>(murders, <span class="dt">population_in_millions =</span> population <span class="op">/</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>)</span></code></pre></div>
-<p>We can write <code>population</code> rather than <code>murders$population</code>. The function <code>mutate</code> knows we are grabbing columns from <code>murders</code>.</p>
-<p>Use the function <code>mutate</code> to add a murders column named <code>rate</code> with the per 100,000 murder rate as in the example code above. Make sure you redefine <code>murders</code> as done in the example code above ( murders &lt;- [your code]) so we can keep using this variable.</p>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="tidyverse.html#cb223-1"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb223-2"><a href="tidyverse.html#cb223-2"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb223-3"><a href="tidyverse.html#cb223-3"></a><span class="kw">data</span>(murders)</span></code></pre></div>
+<p>You can add columns using the <strong>dplyr</strong> function <code>mutate</code>.</p>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="tidyverse.html#cb224-1"></a>murders &lt;-<span class="st"> </span><span class="kw">mutate</span>(murders, <span class="dt">population_in_millions =</span> population <span class="op">/</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>)</span></code></pre></div>
+<p>Use the function <code>mutate</code> to add a murders column named <code>rate</code> with the per 100,000 murder rate as in the example code above.</p>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="tidyverse.html#cb225-1"></a>murders &lt;-<span class="st"> </span><span class="kw">mutate</span>(murders, <span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span></code></pre></div>
 <p>2. If <code>rank(x)</code> gives you the ranks of <code>x</code> from lowest to highest, <code>rank(-x)</code> gives you the ranks from highest to lowest. Use the function <code>mutate</code> to add a column <code>rank</code> containing the rank, from highest to lowest murder rate. Make sure you redefine <code>murders</code> so we can keep using this variable.</p>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="tidyverse.html#cb226-1"></a>murders &lt;-<span class="st"> </span><span class="kw">mutate</span>(murders, <span class="dt">rank =</span> <span class="kw">rank</span>(<span class="op">-</span>murders<span class="op">$</span>rate))</span></code></pre></div>
 <p>3. With <strong>dplyr</strong>, we can use <code>select</code> to show only certain columns. For example, with this code we would only show the states and population sizes:</p>
-<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="tidyverse.html#cb166-1"></a><span class="kw">select</span>(murders, state, population) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="tidyverse.html#cb227-1"></a><span class="kw">select</span>(murders, state, population) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
 <p>Use <code>select</code> to show the state names and abbreviations in <code>murders</code>. Do not redefine <code>murders</code>, just show the results.</p>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="tidyverse.html#cb228-1"></a><span class="kw">select</span>(murders, state, abb)</span></code></pre></div>
 <p>4. The <strong>dplyr</strong> function <code>filter</code> is used to choose specific rows of the data frame to keep. Unlike <code>select</code> which is for columns, <code>filter</code> is for rows. For example, you can show just the New York row like this:</p>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="tidyverse.html#cb167-1"></a><span class="kw">filter</span>(murders, state <span class="op">==</span><span class="st"> &quot;New York&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="tidyverse.html#cb229-1"></a><span class="kw">filter</span>(murders, state <span class="op">==</span><span class="st"> &quot;New York&quot;</span>)</span></code></pre></div>
 <p>You can use other logical vectors to filter rows.</p>
-<p>Use <code>filter</code> to show the top 5 states with the highest murder rates. After we add murder rate and rank, do not change the murders dataset, just show the result. Remember that you can filter based on the <code>rank</code> column.</p>
+<p>Use <code>filter</code> to show the top 5 states with the highest murder rates.</p>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="tidyverse.html#cb230-1"></a><span class="kw">filter</span>(murders, rank <span class="op">&lt;=</span><span class="st"> </span><span class="dv">5</span>)</span></code></pre></div>
 <p>5. We can remove rows using the <code>!=</code> operator. For example, to remove Florida, we would do this:</p>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="tidyverse.html#cb168-1"></a>no_florida &lt;-<span class="st"> </span><span class="kw">filter</span>(murders, state <span class="op">!=</span><span class="st"> &quot;Florida&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="tidyverse.html#cb231-1"></a>no_florida &lt;-<span class="st"> </span><span class="kw">filter</span>(murders, state <span class="op">!=</span><span class="st"> &quot;Florida&quot;</span>)</span></code></pre></div>
 <p>Create a new data frame called <code>no_south</code> that removes states from the South region. How many states are in this category? You can use the function <code>nrow</code> for this.</p>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="tidyverse.html#cb232-1"></a>no_south &lt;-<span class="st"> </span><span class="kw">filter</span>(murders, region <span class="op">!=</span><span class="st"> &quot;South&quot;</span>)</span></code></pre></div>
 <p>6. We can also use <code>%in%</code> to filter with <strong>dplyr</strong>. You can therefore see the data from New York and Texas like this:</p>
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="tidyverse.html#cb169-1"></a><span class="kw">filter</span>(murders, state <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;New York&quot;</span>, <span class="st">&quot;Texas&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="tidyverse.html#cb233-1"></a><span class="kw">filter</span>(murders, state <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;New York&quot;</span>, <span class="st">&quot;Texas&quot;</span>))</span></code></pre></div>
 <p>Create a new data frame called <code>murders_nw</code> with only the states from the Northeast and the West. How many states are in this category?</p>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="tidyverse.html#cb234-1"></a>murders_nw &lt;-<span class="st"> </span><span class="kw">filter</span>(murders, region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Northeast&quot;</span>, <span class="st">&quot;West&quot;</span>))</span>
+<span id="cb234-2"><a href="tidyverse.html#cb234-2"></a><span class="kw">nrow</span>(murders_nw)</span>
+<span id="cb234-3"><a href="tidyverse.html#cb234-3"></a><span class="co">#&gt; [1] 22</span></span></code></pre></div>
 <p>7. Suppose you want to live in the Northeast or West <strong>and</strong> want the murder rate to be less than 1. We want to see the data for the states satisfying these options. Note that you can use logical operators with <code>filter</code>. Here is an example in which we filter to keep only small states in the Northeast region.</p>
-<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="tidyverse.html#cb170-1"></a><span class="kw">filter</span>(murders, population <span class="op">&lt;</span><span class="st"> </span><span class="dv">5000000</span> <span class="op">&amp;</span><span class="st"> </span>region <span class="op">==</span><span class="st"> &quot;Northeast&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="tidyverse.html#cb235-1"></a><span class="kw">filter</span>(murders, population <span class="op">&lt;</span><span class="st"> </span><span class="dv">5000000</span> <span class="op">&amp;</span><span class="st"> </span>region <span class="op">==</span><span class="st"> &quot;Northeast&quot;</span>)</span></code></pre></div>
 <p>Make sure <code>murders</code> has been defined with <code>rate</code> and <code>rank</code> and still has all states. Create a table called <code>my_states</code> that contains rows for states satisfying both the conditions: it is in the Northeast or West and the murder rate is less than 1. Use <code>select</code> to show only the state name, the rate, and the rank.</p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="tidyverse.html#cb236-1"></a>my_states &lt;-<span class="st"> </span><span class="kw">filter</span>(murders, region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Northeast&quot;</span>, <span class="st">&quot;West&quot;</span>) <span class="op">&amp;</span><span class="st"> </span>rate <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>)</span>
+<span id="cb236-2"><a href="tidyverse.html#cb236-2"></a>my_states</span></code></pre></div>
 </div>
 <div id="the-pipe" class="section level2">
 <h2><span class="header-section-number">4.5</span> The pipe: <code>%&gt;%</code></h2>
@@ -1048,211 +1035,158 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \rightarrow \mbox{ select }
 \rightarrow \mbox{ filter } \]</span></p>
 <p>For such an operation, we can use the pipe <code>%&gt;%</code>. The code looks like this:</p>
-<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="tidyverse.html#cb171-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(state, region, rate) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(rate <span class="op">&lt;=</span><span class="st"> </span><span class="fl">0.71</span>)</span>
-<span id="cb171-2"><a href="tidyverse.html#cb171-2"></a><span class="co">#&gt;           state        region  rate</span></span>
-<span id="cb171-3"><a href="tidyverse.html#cb171-3"></a><span class="co">#&gt; 1        Hawaii          West 0.515</span></span>
-<span id="cb171-4"><a href="tidyverse.html#cb171-4"></a><span class="co">#&gt; 2          Iowa North Central 0.689</span></span>
-<span id="cb171-5"><a href="tidyverse.html#cb171-5"></a><span class="co">#&gt; 3 New Hampshire     Northeast 0.380</span></span>
-<span id="cb171-6"><a href="tidyverse.html#cb171-6"></a><span class="co">#&gt; 4  North Dakota North Central 0.595</span></span>
-<span id="cb171-7"><a href="tidyverse.html#cb171-7"></a><span class="co">#&gt; 5       Vermont     Northeast 0.320</span></span></code></pre></div>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="tidyverse.html#cb237-1"></a>murders &lt;-<span class="st"> </span><span class="kw">mutate</span>(murders, <span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
+<span id="cb237-2"><a href="tidyverse.html#cb237-2"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(state, region, rate) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(rate <span class="op">&lt;=</span><span class="st"> </span><span class="fl">0.71</span>)</span></code></pre></div>
 <p>This line of code is equivalent to the two lines of code above. What is going on here?</p>
 <p>In general, the pipe <em>sends</em> the result of the left side of the pipe to be the first argument of the function on the right side of the pipe. Here is a very simple example:</p>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="tidyverse.html#cb172-1"></a><span class="dv">16</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">sqrt</span>()</span>
-<span id="cb172-2"><a href="tidyverse.html#cb172-2"></a><span class="co">#&gt; [1] 4</span></span></code></pre></div>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="tidyverse.html#cb238-1"></a><span class="dv">16</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">sqrt</span>()</span>
+<span id="cb238-2"><a href="tidyverse.html#cb238-2"></a><span class="co">#&gt; [1] 4</span></span></code></pre></div>
 <p>We can continue to pipe values along:</p>
-<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="tidyverse.html#cb173-1"></a><span class="dv">16</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">sqrt</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">log2</span>()</span>
-<span id="cb173-2"><a href="tidyverse.html#cb173-2"></a><span class="co">#&gt; [1] 2</span></span></code></pre></div>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="tidyverse.html#cb239-1"></a><span class="dv">16</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">sqrt</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">log2</span>()</span>
+<span id="cb239-2"><a href="tidyverse.html#cb239-2"></a><span class="co">#&gt; [1] 2</span></span></code></pre></div>
 <p>The above statement is equivalent to <code>log2(sqrt(16))</code>.</p>
 <p>Remember that the pipe sends values to the first argument, so we can define other arguments as if the first argument is already defined:</p>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="tidyverse.html#cb174-1"></a><span class="dv">16</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">sqrt</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">log</span>(<span class="dt">base =</span> <span class="dv">2</span>)</span>
-<span id="cb174-2"><a href="tidyverse.html#cb174-2"></a><span class="co">#&gt; [1] 2</span></span></code></pre></div>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="tidyverse.html#cb240-1"></a><span class="dv">16</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">sqrt</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">log</span>(<span class="dt">base =</span> <span class="dv">2</span>)</span>
+<span id="cb240-2"><a href="tidyverse.html#cb240-2"></a><span class="co">#&gt; [1] 2</span></span></code></pre></div>
 <p>Therefore, when using the pipe with data frames and <strong>dplyr</strong>, we no longer need to specify the required first argument since the <strong>dplyr</strong> functions we have described all take the data as the first argument. In the code we wrote:</p>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="tidyverse.html#cb175-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(state, region, rate) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(rate <span class="op">&lt;=</span><span class="st"> </span><span class="fl">0.71</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="tidyverse.html#cb241-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(state, region, rate) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(rate <span class="op">&lt;=</span><span class="st"> </span><span class="fl">0.71</span>)</span></code></pre></div>
 <p><code>murders</code> is the first argument of the <code>select</code> function, and the new data frame (formerly <code>new_table</code>) is the first argument of the <code>filter</code> function.</p>
 <p>Note that the pipe works well with functions where the first argument is the input data. Functions in <strong>tidyverse</strong> packages like <strong>dplyr</strong> have this format and can be used easily with the pipe.</p>
 </div>
 <div id="exercises-10" class="section level2">
 <h2><span class="header-section-number">4.6</span> Exercises</h2>
 <p>1. The pipe <code>%&gt;%</code> can be used to perform operations sequentially without having to define intermediate objects. Start by redefining murder to include rate and rank.</p>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="tidyverse.html#cb176-1"></a>murders &lt;-<span class="st"> </span><span class="kw">mutate</span>(murders, <span class="dt">rate =</span>  total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>, </span>
-<span id="cb176-2"><a href="tidyverse.html#cb176-2"></a>                  <span class="dt">rank =</span> <span class="kw">rank</span>(<span class="op">-</span>rate))</span></code></pre></div>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="tidyverse.html#cb242-1"></a>murders &lt;-<span class="st"> </span><span class="kw">mutate</span>(murders, <span class="dt">rate =</span>  total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>, </span>
+<span id="cb242-2"><a href="tidyverse.html#cb242-2"></a>                  <span class="dt">rank =</span> <span class="kw">rank</span>(<span class="op">-</span>rate))</span></code></pre></div>
 <p>In the solution to the previous exercise, we did the following:</p>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="tidyverse.html#cb177-1"></a>my_states &lt;-<span class="st"> </span><span class="kw">filter</span>(murders, region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Northeast&quot;</span>, <span class="st">&quot;West&quot;</span>) <span class="op">&amp;</span><span class="st"> </span></span>
-<span id="cb177-2"><a href="tidyverse.html#cb177-2"></a><span class="st">                      </span>rate <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>)</span>
-<span id="cb177-3"><a href="tidyverse.html#cb177-3"></a></span>
-<span id="cb177-4"><a href="tidyverse.html#cb177-4"></a><span class="kw">select</span>(my_states, state, rate, rank)</span></code></pre></div>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="tidyverse.html#cb243-1"></a>my_states &lt;-<span class="st"> </span><span class="kw">filter</span>(murders, region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Northeast&quot;</span>, <span class="st">&quot;West&quot;</span>) <span class="op">&amp;</span><span class="st"> </span></span>
+<span id="cb243-2"><a href="tidyverse.html#cb243-2"></a><span class="st">                      </span>rate <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>)</span>
+<span id="cb243-3"><a href="tidyverse.html#cb243-3"></a></span>
+<span id="cb243-4"><a href="tidyverse.html#cb243-4"></a><span class="kw">select</span>(my_states, state, rate, rank)</span></code></pre></div>
 <p>The pipe <code>%&gt;%</code> permits us to perform both operations sequentially without having to define an intermediate variable <code>my_states</code>. We therefore could have mutated and selected in the same line like this:</p>
-<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="tidyverse.html#cb178-1"></a><span class="kw">mutate</span>(murders, <span class="dt">rate =</span>  total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>, </span>
-<span id="cb178-2"><a href="tidyverse.html#cb178-2"></a>       <span class="dt">rank =</span> <span class="kw">rank</span>(<span class="op">-</span>rate)) <span class="op">%&gt;%</span></span>
-<span id="cb178-3"><a href="tidyverse.html#cb178-3"></a><span class="st">  </span><span class="kw">select</span>(state, rate, rank)</span></code></pre></div>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="tidyverse.html#cb244-1"></a><span class="kw">mutate</span>(murders, <span class="dt">rate =</span>  total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>, </span>
+<span id="cb244-2"><a href="tidyverse.html#cb244-2"></a>       <span class="dt">rank =</span> <span class="kw">rank</span>(<span class="op">-</span>rate)) <span class="op">%&gt;%</span></span>
+<span id="cb244-3"><a href="tidyverse.html#cb244-3"></a><span class="st">  </span><span class="kw">select</span>(state, rate, rank) </span></code></pre></div>
 <p>Notice that <code>select</code> no longer has a data frame as the first argument. The first argument is assumed to be the result of the operation conducted right before the <code>%&gt;%</code>.</p>
 <p>Repeat the previous exercise, but now instead of creating a new object, show the result and only include the state, rate, and rank columns. Use a pipe <code>%&gt;%</code> to do this in just one line.</p>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="tidyverse.html#cb245-1"></a><span class="kw">mutate</span>(murders, <span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>, <span class="dt">rank =</span> <span class="kw">rank</span> (<span class="op">-</span>rate)) <span class="op">%&gt;%</span></span>
+<span id="cb245-2"><a href="tidyverse.html#cb245-2"></a><span class="st">  </span><span class="kw">filter</span>(region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Northeast&quot;</span>, <span class="st">&quot;West&quot;</span>) <span class="op">&amp;</span><span class="st"> </span>rate <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb245-3"><a href="tidyverse.html#cb245-3"></a><span class="st">  </span><span class="kw">select</span>(state, rate, rank)</span></code></pre></div>
 <p>2. Reset <code>murders</code> to the original table by using <code>data(murders)</code>. Use a pipe to create a new data frame called <code>my_states</code> that considers only states in the Northeast or West which have a murder rate lower than 1, and contains only the state, rate and rank columns. The pipe should also have four components separated by three <code>%&gt;%</code>. The code should look something like this:</p>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="tidyverse.html#cb179-1"></a>my_states &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
-<span id="cb179-2"><a href="tidyverse.html#cb179-2"></a><span class="st">  </span>mutate SOMETHING <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb179-3"><a href="tidyverse.html#cb179-3"></a><span class="st">  </span>filter SOMETHING <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb179-4"><a href="tidyverse.html#cb179-4"></a><span class="st">  </span>select SOMETHING</span></code></pre></div>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="tidyverse.html#cb246-1"></a>my_states &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb246-2"><a href="tidyverse.html#cb246-2"></a><span class="st">  </span>mutate SOMETHING <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb246-3"><a href="tidyverse.html#cb246-3"></a><span class="st">  </span>filter SOMETHING <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb246-4"><a href="tidyverse.html#cb246-4"></a><span class="st">  </span>select SOMETHING</span></code></pre></div>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="tidyverse.html#cb247-1"></a><span class="kw">data</span>(murders)</span>
+<span id="cb247-2"><a href="tidyverse.html#cb247-2"></a>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb247-3"><a href="tidyverse.html#cb247-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>, <span class="dt">rank =</span> <span class="kw">rank</span>(<span class="op">-</span>rate)) <span class="op">%&gt;%</span></span>
+<span id="cb247-4"><a href="tidyverse.html#cb247-4"></a><span class="st">  </span><span class="kw">filter</span>(region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Notheast&quot;</span>, <span class="st">&quot;West&quot;</span>) <span class="op">&amp;</span><span class="st"> </span>rate <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb247-5"><a href="tidyverse.html#cb247-5"></a><span class="st">  </span><span class="kw">select</span>(state, rate, rank)</span></code></pre></div>
 </div>
 <div id="summarizing-data" class="section level2">
 <h2><span class="header-section-number">4.7</span> Summarizing data</h2>
 <p>An important part of exploratory data analysis is summarizing data. The average and standard deviation are two examples of widely used summary statistics. More informative summaries can often be achieved by first splitting data into groups. In this section, we cover two new <strong>dplyr</strong> verbs that make these computations easier: <code>summarize</code> and <code>group_by</code>. We learn to access resulting values using the <code>pull</code> function.</p>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="tidyverse.html#cb248-1"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
 <div id="summarize" class="section level3">
 <h3><span class="header-section-number">4.7.1</span> <code>summarize</code></h3>
 <p>The <code>summarize</code> function in <strong>dplyr</strong> provides a way to compute summary statistics with intuitive and readable code. We start with a simple example based on heights. The <code>heights</code> dataset includes heights and sex reported by students in an in-class survey.</p>
-<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="tidyverse.html#cb180-1"></a><span class="kw">library</span>(dplyr)</span>
-<span id="cb180-2"><a href="tidyverse.html#cb180-2"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb180-3"><a href="tidyverse.html#cb180-3"></a><span class="kw">data</span>(heights)</span></code></pre></div>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="tidyverse.html#cb249-1"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb249-2"><a href="tidyverse.html#cb249-2"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb249-3"><a href="tidyverse.html#cb249-3"></a><span class="kw">data</span>(heights)</span></code></pre></div>
 <p>The following code computes the average and standard deviation for females:</p>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="tidyverse.html#cb181-1"></a>s &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb181-2"><a href="tidyverse.html#cb181-2"></a><span class="st">  </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Female&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb181-3"><a href="tidyverse.html#cb181-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(height), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(height))</span>
-<span id="cb181-4"><a href="tidyverse.html#cb181-4"></a>s</span>
-<span id="cb181-5"><a href="tidyverse.html#cb181-5"></a><span class="co">#&gt;   average standard_deviation</span></span>
-<span id="cb181-6"><a href="tidyverse.html#cb181-6"></a><span class="co">#&gt; 1    64.9               3.76</span></span></code></pre></div>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="tidyverse.html#cb250-1"></a>s &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb250-2"><a href="tidyverse.html#cb250-2"></a><span class="st">  </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Female&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb250-3"><a href="tidyverse.html#cb250-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(height), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(height))</span>
+<span id="cb250-4"><a href="tidyverse.html#cb250-4"></a>s</span></code></pre></div>
 <p>This takes our original data table as input, filters it to keep only females, and then produces a new summarized table with just the average and the standard deviation of heights. We get to choose the names of the columns of the resulting table. For example, above we decided to use <code>average</code> and <code>standard_deviation</code>, but we could have used other names just the same.</p>
 <p>Because the resulting table stored in <code>s</code> is a data frame, we can access the components with the accessor <code>$</code>:</p>
-<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="tidyverse.html#cb182-1"></a>s<span class="op">$</span>average</span>
-<span id="cb182-2"><a href="tidyverse.html#cb182-2"></a><span class="co">#&gt; [1] 64.9</span></span>
-<span id="cb182-3"><a href="tidyverse.html#cb182-3"></a>s<span class="op">$</span>standard_deviation</span>
-<span id="cb182-4"><a href="tidyverse.html#cb182-4"></a><span class="co">#&gt; [1] 3.76</span></span></code></pre></div>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="tidyverse.html#cb251-1"></a>s<span class="op">$</span>average</span>
+<span id="cb251-2"><a href="tidyverse.html#cb251-2"></a><span class="co">#&gt; [1] 64.9</span></span>
+<span id="cb251-3"><a href="tidyverse.html#cb251-3"></a>s<span class="op">$</span>standard_deviation</span>
+<span id="cb251-4"><a href="tidyverse.html#cb251-4"></a><span class="co">#&gt; [1] 3.76</span></span></code></pre></div>
 <p>As with most other <strong>dplyr</strong> functions, <code>summarize</code> is aware of the variable names and we can use them directly. So when inside the call to the <code>summarize</code> function we write <code>mean(height)</code>, the function is accessing the column with the name “height” and then computing the average of the resulting numeric vector. We can compute any other summary that operates on vectors and returns a single value. For example, we can add the median, minimum, and maximum heights like this:</p>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="tidyverse.html#cb183-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb183-2"><a href="tidyverse.html#cb183-2"></a><span class="st">  </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Female&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb183-3"><a href="tidyverse.html#cb183-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">median =</span> <span class="kw">median</span>(height), <span class="dt">minimum =</span> <span class="kw">min</span>(height), </span>
-<span id="cb183-4"><a href="tidyverse.html#cb183-4"></a>            <span class="dt">maximum =</span> <span class="kw">max</span>(height))</span>
-<span id="cb183-5"><a href="tidyverse.html#cb183-5"></a><span class="co">#&gt;   median minimum maximum</span></span>
-<span id="cb183-6"><a href="tidyverse.html#cb183-6"></a><span class="co">#&gt; 1     65      51      79</span></span></code></pre></div>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="tidyverse.html#cb252-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb252-2"><a href="tidyverse.html#cb252-2"></a><span class="st">  </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Female&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb252-3"><a href="tidyverse.html#cb252-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">median =</span> <span class="kw">median</span>(height), <span class="dt">minimum =</span> <span class="kw">min</span>(height), </span>
+<span id="cb252-4"><a href="tidyverse.html#cb252-4"></a>            <span class="dt">maximum =</span> <span class="kw">max</span>(height))</span></code></pre></div>
 <p>We can obtain these three values with just one line using the <code>quantile</code> function: for example, <code>quantile(x, c(0,0.5,1))</code> returns the min (0th percentile), median (50th percentile), and max (100th percentile) of the vector <code>x</code>. However, if we attempt to use a function like this that returns two or more values inside <code>summarize</code>:</p>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="tidyverse.html#cb184-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb184-2"><a href="tidyverse.html#cb184-2"></a><span class="st">  </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Female&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb184-3"><a href="tidyverse.html#cb184-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">range =</span> <span class="kw">quantile</span>(height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="tidyverse.html#cb253-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb253-2"><a href="tidyverse.html#cb253-2"></a><span class="st">  </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Female&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb253-3"><a href="tidyverse.html#cb253-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">range =</span> <span class="kw">quantile</span>(height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)))</span></code></pre></div>
 <p>we will receive an error: <code>Error: expecting result of length one, got : 2</code>. With the function <code>summarize</code>, we can only call functions that return a single value. In Section <a href="tidyverse.html#do">4.12</a>, we will learn how to deal with functions that return more than one value.</p>
 <p>For another example of how we can use the <code>summarize</code> function, let’s compute the average murder rate for the United States. Remember our data table includes total murders and population size for each state and we have already used <strong>dplyr</strong> to add a murder rate column:</p>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="tidyverse.html#cb185-1"></a>murders &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">rate =</span> total<span class="op">/</span>population<span class="op">*</span><span class="dv">100000</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="tidyverse.html#cb254-1"></a>murders &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">rate =</span> total<span class="op">/</span>population<span class="op">*</span><span class="dv">100000</span>)</span></code></pre></div>
 <p>Remember that the US murder rate is <strong>not</strong> the average of the state murder rates:</p>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="tidyverse.html#cb186-1"></a><span class="kw">summarize</span>(murders, <span class="kw">mean</span>(rate))</span>
-<span id="cb186-2"><a href="tidyverse.html#cb186-2"></a><span class="co">#&gt;   mean(rate)</span></span>
-<span id="cb186-3"><a href="tidyverse.html#cb186-3"></a><span class="co">#&gt; 1       2.78</span></span></code></pre></div>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="tidyverse.html#cb255-1"></a><span class="kw">summarize</span>(murders, <span class="kw">mean</span>(rate))</span></code></pre></div>
 <p>This is because in the computation above the small states are given the same weight as the large ones. The US murder rate is the total number of murders in the US divided by the total US population. So the correct computation is:</p>
-<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="tidyverse.html#cb187-1"></a>us_murder_rate &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
-<span id="cb187-2"><a href="tidyverse.html#cb187-2"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population) <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
-<span id="cb187-3"><a href="tidyverse.html#cb187-3"></a>us_murder_rate</span>
-<span id="cb187-4"><a href="tidyverse.html#cb187-4"></a><span class="co">#&gt;   rate</span></span>
-<span id="cb187-5"><a href="tidyverse.html#cb187-5"></a><span class="co">#&gt; 1 3.03</span></span></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="tidyverse.html#cb256-1"></a>us_murder_rate &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb256-2"><a href="tidyverse.html#cb256-2"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population) <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
+<span id="cb256-3"><a href="tidyverse.html#cb256-3"></a>us_murder_rate</span></code></pre></div>
 <p>This computation counts larger states proportionally to their size which results in a larger value.</p>
 </div>
 <div id="pull" class="section level3">
 <h3><span class="header-section-number">4.7.2</span> <code>pull</code></h3>
 <p>The <code>us_murder_rate</code> object defined above represents just one number. Yet we are storing it in a data frame:</p>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="tidyverse.html#cb188-1"></a><span class="kw">class</span>(us_murder_rate)</span>
-<span id="cb188-2"><a href="tidyverse.html#cb188-2"></a><span class="co">#&gt; [1] &quot;data.frame&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="tidyverse.html#cb257-1"></a><span class="kw">class</span>(us_murder_rate)</span>
+<span id="cb257-2"><a href="tidyverse.html#cb257-2"></a><span class="co">#&gt; [1] &quot;data.frame&quot;</span></span></code></pre></div>
 <p>since, as most <strong>dplyr</strong> functions, <code>summarize</code> always returns a data frame.</p>
 <p>This might be problematic if we want to use this result with functions that require a numeric value. Here we show a useful trick for accessing values stored in data when using pipes: when a data object is piped that object and its columns can be accessed using the <code>pull</code> function. To understand what we mean take a look at this line of code:</p>
-<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="tidyverse.html#cb189-1"></a>us_murder_rate <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pull</span>(rate)</span>
-<span id="cb189-2"><a href="tidyverse.html#cb189-2"></a><span class="co">#&gt; [1] 3.03</span></span></code></pre></div>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="tidyverse.html#cb258-1"></a>us_murder_rate <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pull</span>(rate)</span>
+<span id="cb258-2"><a href="tidyverse.html#cb258-2"></a><span class="co">#&gt; [1] 3.03</span></span></code></pre></div>
 <p>This returns the value in the <code>rate</code> column of <code>us_murder_rate</code> making it equivalent to <code>us_murder_rate$rate</code>.</p>
 <p>To get a number from the original data table with one line of code we can type:</p>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="tidyverse.html#cb190-1"></a>us_murder_rate &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb190-2"><a href="tidyverse.html#cb190-2"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population) <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>) <span class="op">%&gt;%</span></span>
-<span id="cb190-3"><a href="tidyverse.html#cb190-3"></a><span class="st">  </span><span class="kw">pull</span>(rate)</span>
-<span id="cb190-4"><a href="tidyverse.html#cb190-4"></a></span>
-<span id="cb190-5"><a href="tidyverse.html#cb190-5"></a>us_murder_rate</span>
-<span id="cb190-6"><a href="tidyverse.html#cb190-6"></a><span class="co">#&gt; [1] 3.03</span></span></code></pre></div>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="tidyverse.html#cb259-1"></a>us_murder_rate &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb259-2"><a href="tidyverse.html#cb259-2"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population) <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>) <span class="op">%&gt;%</span></span>
+<span id="cb259-3"><a href="tidyverse.html#cb259-3"></a><span class="st">  </span><span class="kw">pull</span>(rate)</span>
+<span id="cb259-4"><a href="tidyverse.html#cb259-4"></a></span>
+<span id="cb259-5"><a href="tidyverse.html#cb259-5"></a>us_murder_rate</span>
+<span id="cb259-6"><a href="tidyverse.html#cb259-6"></a><span class="co">#&gt; [1] 3.03</span></span></code></pre></div>
 <p>which is now a numeric:</p>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="tidyverse.html#cb191-1"></a><span class="kw">class</span>(us_murder_rate)</span>
-<span id="cb191-2"><a href="tidyverse.html#cb191-2"></a><span class="co">#&gt; [1] &quot;numeric&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="tidyverse.html#cb260-1"></a><span class="kw">class</span>(us_murder_rate)</span>
+<span id="cb260-2"><a href="tidyverse.html#cb260-2"></a><span class="co">#&gt; [1] &quot;numeric&quot;</span></span></code></pre></div>
 </div>
 <div id="group-by" class="section level3">
 <h3><span class="header-section-number">4.7.3</span> Group then summarize with <code>group_by</code></h3>
 <p>A common operation in data exploration is to first split data into groups and then compute summaries for each group. For example, we may want to compute the average and standard deviation for men’s and women’s heights separately. The <code>group_by</code> function helps us do this.</p>
 <p>If we type this:</p>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="tidyverse.html#cb192-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(sex)</span>
-<span id="cb192-2"><a href="tidyverse.html#cb192-2"></a><span class="co">#&gt; # A tibble: 1,050 x 2</span></span>
-<span id="cb192-3"><a href="tidyverse.html#cb192-3"></a><span class="co">#&gt; # Groups:   sex [2]</span></span>
-<span id="cb192-4"><a href="tidyverse.html#cb192-4"></a><span class="co">#&gt;   sex   height</span></span>
-<span id="cb192-5"><a href="tidyverse.html#cb192-5"></a><span class="co">#&gt;   &lt;fct&gt;  &lt;dbl&gt;</span></span>
-<span id="cb192-6"><a href="tidyverse.html#cb192-6"></a><span class="co">#&gt; 1 Male      75</span></span>
-<span id="cb192-7"><a href="tidyverse.html#cb192-7"></a><span class="co">#&gt; 2 Male      70</span></span>
-<span id="cb192-8"><a href="tidyverse.html#cb192-8"></a><span class="co">#&gt; 3 Male      68</span></span>
-<span id="cb192-9"><a href="tidyverse.html#cb192-9"></a><span class="co">#&gt; 4 Male      74</span></span>
-<span id="cb192-10"><a href="tidyverse.html#cb192-10"></a><span class="co">#&gt; 5 Male      61</span></span>
-<span id="cb192-11"><a href="tidyverse.html#cb192-11"></a><span class="co">#&gt; # … with 1,045 more rows</span></span></code></pre></div>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="tidyverse.html#cb261-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(sex)</span></code></pre></div>
 <p>The result does not look very different from <code>heights</code>, except we see <code>Groups: sex [2]</code> when we print the object. Although not immediately obvious from its appearance, this is now a special data frame called a <em>grouped data frame</em>, and <strong>dplyr</strong> functions, in particular <code>summarize</code>, will behave differently when acting on this object. Conceptually, you can think of this table as many tables, with the same columns but not necessarily the same number of rows, stacked together in one object. When we summarize the data after grouping, this is what happens:</p>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="tidyverse.html#cb193-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb193-2"><a href="tidyverse.html#cb193-2"></a><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></span>
-<span id="cb193-3"><a href="tidyverse.html#cb193-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(height), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(height))</span>
-<span id="cb193-4"><a href="tidyverse.html#cb193-4"></a><span class="co">#&gt; `summarise()` ungrouping output (override with `.groups` argument)</span></span>
-<span id="cb193-5"><a href="tidyverse.html#cb193-5"></a><span class="co">#&gt; # A tibble: 2 x 3</span></span>
-<span id="cb193-6"><a href="tidyverse.html#cb193-6"></a><span class="co">#&gt;   sex    average standard_deviation</span></span>
-<span id="cb193-7"><a href="tidyverse.html#cb193-7"></a><span class="co">#&gt;   &lt;fct&gt;    &lt;dbl&gt;              &lt;dbl&gt;</span></span>
-<span id="cb193-8"><a href="tidyverse.html#cb193-8"></a><span class="co">#&gt; 1 Female    64.9               3.76</span></span>
-<span id="cb193-9"><a href="tidyverse.html#cb193-9"></a><span class="co">#&gt; 2 Male      69.3               3.61</span></span></code></pre></div>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="tidyverse.html#cb262-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb262-2"><a href="tidyverse.html#cb262-2"></a><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></span>
+<span id="cb262-3"><a href="tidyverse.html#cb262-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(height), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(height))</span>
+<span id="cb262-4"><a href="tidyverse.html#cb262-4"></a><span class="co">#&gt; `summarise()` ungrouping output (override with `.groups` argument)</span></span></code></pre></div>
 <p>The <code>summarize</code> function applies the summarization to each group separately.</p>
 <p>For another example, let’s compute the median murder rate in the four regions of the country:</p>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="tidyverse.html#cb194-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb194-2"><a href="tidyverse.html#cb194-2"></a><span class="st">  </span><span class="kw">group_by</span>(region) <span class="op">%&gt;%</span></span>
-<span id="cb194-3"><a href="tidyverse.html#cb194-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">median_rate =</span> <span class="kw">median</span>(rate))</span>
-<span id="cb194-4"><a href="tidyverse.html#cb194-4"></a><span class="co">#&gt; `summarise()` ungrouping output (override with `.groups` argument)</span></span>
-<span id="cb194-5"><a href="tidyverse.html#cb194-5"></a><span class="co">#&gt; # A tibble: 4 x 2</span></span>
-<span id="cb194-6"><a href="tidyverse.html#cb194-6"></a><span class="co">#&gt;   region        median_rate</span></span>
-<span id="cb194-7"><a href="tidyverse.html#cb194-7"></a><span class="co">#&gt;   &lt;fct&gt;               &lt;dbl&gt;</span></span>
-<span id="cb194-8"><a href="tidyverse.html#cb194-8"></a><span class="co">#&gt; 1 Northeast            1.80</span></span>
-<span id="cb194-9"><a href="tidyverse.html#cb194-9"></a><span class="co">#&gt; 2 South                3.40</span></span>
-<span id="cb194-10"><a href="tidyverse.html#cb194-10"></a><span class="co">#&gt; 3 North Central        1.97</span></span>
-<span id="cb194-11"><a href="tidyverse.html#cb194-11"></a><span class="co">#&gt; 4 West                 1.29</span></span></code></pre></div>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="tidyverse.html#cb263-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb263-2"><a href="tidyverse.html#cb263-2"></a><span class="st">  </span><span class="kw">group_by</span>(region) <span class="op">%&gt;%</span></span>
+<span id="cb263-3"><a href="tidyverse.html#cb263-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">median_rate =</span> <span class="kw">median</span>(rate))</span>
+<span id="cb263-4"><a href="tidyverse.html#cb263-4"></a><span class="co">#&gt; `summarise()` ungrouping output (override with `.groups` argument)</span></span></code></pre></div>
 </div>
 </div>
 <div id="sorting-data-frames" class="section level2">
 <h2><span class="header-section-number">4.8</span> Sorting data frames</h2>
 <p>When examining a dataset, it is often convenient to sort the table by the different columns. We know about the <code>order</code> and <code>sort</code> function, but for ordering entire tables, the <strong>dplyr</strong> function <code>arrange</code> is useful. For example, here we order the states by population size:</p>
-<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="tidyverse.html#cb195-1"></a>murders <span class="op">%&gt;%</span></span>
-<span id="cb195-2"><a href="tidyverse.html#cb195-2"></a><span class="st">  </span><span class="kw">arrange</span>(population) <span class="op">%&gt;%</span></span>
-<span id="cb195-3"><a href="tidyverse.html#cb195-3"></a><span class="st">  </span><span class="kw">head</span>()</span>
-<span id="cb195-4"><a href="tidyverse.html#cb195-4"></a><span class="co">#&gt;                  state abb        region population total   rate</span></span>
-<span id="cb195-5"><a href="tidyverse.html#cb195-5"></a><span class="co">#&gt; 1              Wyoming  WY          West     563626     5  0.887</span></span>
-<span id="cb195-6"><a href="tidyverse.html#cb195-6"></a><span class="co">#&gt; 2 District of Columbia  DC         South     601723    99 16.453</span></span>
-<span id="cb195-7"><a href="tidyverse.html#cb195-7"></a><span class="co">#&gt; 3              Vermont  VT     Northeast     625741     2  0.320</span></span>
-<span id="cb195-8"><a href="tidyverse.html#cb195-8"></a><span class="co">#&gt; 4         North Dakota  ND North Central     672591     4  0.595</span></span>
-<span id="cb195-9"><a href="tidyverse.html#cb195-9"></a><span class="co">#&gt; 5               Alaska  AK          West     710231    19  2.675</span></span>
-<span id="cb195-10"><a href="tidyverse.html#cb195-10"></a><span class="co">#&gt; 6         South Dakota  SD North Central     814180     8  0.983</span></span></code></pre></div>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="tidyverse.html#cb264-1"></a>murders <span class="op">%&gt;%</span></span>
+<span id="cb264-2"><a href="tidyverse.html#cb264-2"></a><span class="st">  </span><span class="kw">arrange</span>(population) <span class="op">%&gt;%</span></span>
+<span id="cb264-3"><a href="tidyverse.html#cb264-3"></a><span class="st">  </span><span class="kw">head</span>()</span></code></pre></div>
 <p>With <code>arrange</code> we get to decide which column to sort by. To see the states by murder rate, from lowest to highest, we arrange by <code>rate</code> instead:</p>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="tidyverse.html#cb196-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb196-2"><a href="tidyverse.html#cb196-2"></a><span class="st">  </span><span class="kw">arrange</span>(rate) <span class="op">%&gt;%</span></span>
-<span id="cb196-3"><a href="tidyverse.html#cb196-3"></a><span class="st">  </span><span class="kw">head</span>()</span>
-<span id="cb196-4"><a href="tidyverse.html#cb196-4"></a><span class="co">#&gt;           state abb        region population total  rate</span></span>
-<span id="cb196-5"><a href="tidyverse.html#cb196-5"></a><span class="co">#&gt; 1       Vermont  VT     Northeast     625741     2 0.320</span></span>
-<span id="cb196-6"><a href="tidyverse.html#cb196-6"></a><span class="co">#&gt; 2 New Hampshire  NH     Northeast    1316470     5 0.380</span></span>
-<span id="cb196-7"><a href="tidyverse.html#cb196-7"></a><span class="co">#&gt; 3        Hawaii  HI          West    1360301     7 0.515</span></span>
-<span id="cb196-8"><a href="tidyverse.html#cb196-8"></a><span class="co">#&gt; 4  North Dakota  ND North Central     672591     4 0.595</span></span>
-<span id="cb196-9"><a href="tidyverse.html#cb196-9"></a><span class="co">#&gt; 5          Iowa  IA North Central    3046355    21 0.689</span></span>
-<span id="cb196-10"><a href="tidyverse.html#cb196-10"></a><span class="co">#&gt; 6         Idaho  ID          West    1567582    12 0.766</span></span></code></pre></div>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="tidyverse.html#cb265-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb265-2"><a href="tidyverse.html#cb265-2"></a><span class="st">  </span><span class="kw">arrange</span>(rate) <span class="op">%&gt;%</span></span>
+<span id="cb265-3"><a href="tidyverse.html#cb265-3"></a><span class="st">  </span><span class="kw">head</span>()</span></code></pre></div>
 <p>Note that the default behavior is to order in ascending order. In <strong>dplyr</strong>, the function <code>desc</code> transforms a vector so that it is in descending order. To sort the table in descending order, we can type:</p>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="tidyverse.html#cb197-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb197-2"><a href="tidyverse.html#cb197-2"></a><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(rate)) </span></code></pre></div>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="tidyverse.html#cb266-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb266-2"><a href="tidyverse.html#cb266-2"></a><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(rate)) </span></code></pre></div>
 <div id="nested-sorting" class="section level3">
 <h3><span class="header-section-number">4.8.1</span> Nested sorting</h3>
 <p>If we are ordering by a column with ties, we can use a second column to break the tie. Similarly, a third column can be used to break ties between first and second and so on. Here we order by <code>region</code>, then within region we order by murder rate:</p>
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="tidyverse.html#cb198-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb198-2"><a href="tidyverse.html#cb198-2"></a><span class="st">  </span><span class="kw">arrange</span>(region, rate) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb198-3"><a href="tidyverse.html#cb198-3"></a><span class="st">  </span><span class="kw">head</span>()</span>
-<span id="cb198-4"><a href="tidyverse.html#cb198-4"></a><span class="co">#&gt;           state abb    region population total  rate</span></span>
-<span id="cb198-5"><a href="tidyverse.html#cb198-5"></a><span class="co">#&gt; 1       Vermont  VT Northeast     625741     2 0.320</span></span>
-<span id="cb198-6"><a href="tidyverse.html#cb198-6"></a><span class="co">#&gt; 2 New Hampshire  NH Northeast    1316470     5 0.380</span></span>
-<span id="cb198-7"><a href="tidyverse.html#cb198-7"></a><span class="co">#&gt; 3         Maine  ME Northeast    1328361    11 0.828</span></span>
-<span id="cb198-8"><a href="tidyverse.html#cb198-8"></a><span class="co">#&gt; 4  Rhode Island  RI Northeast    1052567    16 1.520</span></span>
-<span id="cb198-9"><a href="tidyverse.html#cb198-9"></a><span class="co">#&gt; 5 Massachusetts  MA Northeast    6547629   118 1.802</span></span>
-<span id="cb198-10"><a href="tidyverse.html#cb198-10"></a><span class="co">#&gt; 6      New York  NY Northeast   19378102   517 2.668</span></span></code></pre></div>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="tidyverse.html#cb267-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb267-2"><a href="tidyverse.html#cb267-2"></a><span class="st">  </span><span class="kw">arrange</span>(region, rate) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb267-3"><a href="tidyverse.html#cb267-3"></a><span class="st">  </span><span class="kw">head</span>()</span></code></pre></div>
 </div>
 <div id="the-top-n" class="section level3">
 <h3><span class="header-section-number">4.8.2</span> The top <span class="math inline">\(n\)</span></h3>
 <p>In the code above, we have used the function <code>head</code> to avoid having the page fill up with the entire dataset. If we want to see a larger proportion, we can use the <code>top_n</code> function. This function takes a data frame as it’s first argument, the number of rows to show in the second, and the variable to filter by in the third. Here is an example of how to see the top 5 rows:</p>
-<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="tidyverse.html#cb199-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">top_n</span>(<span class="dv">5</span>, rate)</span>
-<span id="cb199-2"><a href="tidyverse.html#cb199-2"></a><span class="co">#&gt;                  state abb        region population total  rate</span></span>
-<span id="cb199-3"><a href="tidyverse.html#cb199-3"></a><span class="co">#&gt; 1 District of Columbia  DC         South     601723    99 16.45</span></span>
-<span id="cb199-4"><a href="tidyverse.html#cb199-4"></a><span class="co">#&gt; 2            Louisiana  LA         South    4533372   351  7.74</span></span>
-<span id="cb199-5"><a href="tidyverse.html#cb199-5"></a><span class="co">#&gt; 3             Maryland  MD         South    5773552   293  5.07</span></span>
-<span id="cb199-6"><a href="tidyverse.html#cb199-6"></a><span class="co">#&gt; 4             Missouri  MO North Central    5988927   321  5.36</span></span>
-<span id="cb199-7"><a href="tidyverse.html#cb199-7"></a><span class="co">#&gt; 5       South Carolina  SC         South    4625364   207  4.48</span></span></code></pre></div>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="tidyverse.html#cb268-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">top_n</span>(<span class="dv">5</span>, rate)</span></code></pre></div>
 <p>Note that rows are not sorted by <code>rate</code>, only filtered. If we want to sort, we need to use <code>arrange</code>.
 Note that if the third argument is left blank, <code>top_n</code> filters by the last column.</p>
 </div>
@@ -1260,20 +1194,20 @@ Note that if the third argument is left blank, <code>top_n</code> filters by the
 <div id="exercises-11" class="section level2">
 <h2><span class="header-section-number">4.9</span> Exercises</h2>
 <p>For these exercises, we will be using the data from the survey collected by the United States National Center for Health Statistics (NCHS). This center has conducted a series of health and nutrition surveys since the 1960’s. Starting in 1999, about 5,000 individuals of all ages have been interviewed every year and they complete the health examination component of the survey. Part of the data is made available via the <strong>NHANES</strong> package. Once you install the <strong>NHANES</strong> package, you can load the data like this:</p>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="tidyverse.html#cb200-1"></a><span class="kw">library</span>(NHANES)</span>
-<span id="cb200-2"><a href="tidyverse.html#cb200-2"></a><span class="kw">data</span>(NHANES)</span></code></pre></div>
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="tidyverse.html#cb269-1"></a><span class="kw">library</span>(NHANES)</span>
+<span id="cb269-2"><a href="tidyverse.html#cb269-2"></a><span class="kw">data</span>(NHANES)</span></code></pre></div>
 <p>The <strong>NHANES</strong> data has many missing values. The <code>mean</code> and <code>sd</code> functions in R will return <code>NA</code> if any of the entries of the input vector is an <code>NA</code>. Here is an example:</p>
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="tidyverse.html#cb201-1"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb201-2"><a href="tidyverse.html#cb201-2"></a><span class="kw">data</span>(na_example)</span>
-<span id="cb201-3"><a href="tidyverse.html#cb201-3"></a><span class="kw">mean</span>(na_example)</span>
-<span id="cb201-4"><a href="tidyverse.html#cb201-4"></a><span class="co">#&gt; [1] NA</span></span>
-<span id="cb201-5"><a href="tidyverse.html#cb201-5"></a><span class="kw">sd</span>(na_example)</span>
-<span id="cb201-6"><a href="tidyverse.html#cb201-6"></a><span class="co">#&gt; [1] NA</span></span></code></pre></div>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="tidyverse.html#cb270-1"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb270-2"><a href="tidyverse.html#cb270-2"></a><span class="kw">data</span>(na_example)</span>
+<span id="cb270-3"><a href="tidyverse.html#cb270-3"></a><span class="kw">mean</span>(na_example)</span>
+<span id="cb270-4"><a href="tidyverse.html#cb270-4"></a><span class="co">#&gt; [1] NA</span></span>
+<span id="cb270-5"><a href="tidyverse.html#cb270-5"></a><span class="kw">sd</span>(na_example)</span>
+<span id="cb270-6"><a href="tidyverse.html#cb270-6"></a><span class="co">#&gt; [1] NA</span></span></code></pre></div>
 <p>To ignore the <code>NA</code>s we can use the <code>na.rm</code> argument:</p>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="tidyverse.html#cb202-1"></a><span class="kw">mean</span>(na_example, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb202-2"><a href="tidyverse.html#cb202-2"></a><span class="co">#&gt; [1] 2.3</span></span>
-<span id="cb202-3"><a href="tidyverse.html#cb202-3"></a><span class="kw">sd</span>(na_example, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb202-4"><a href="tidyverse.html#cb202-4"></a><span class="co">#&gt; [1] 1.22</span></span></code></pre></div>
+<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="tidyverse.html#cb271-1"></a><span class="kw">mean</span>(na_example, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb271-2"><a href="tidyverse.html#cb271-2"></a><span class="co">#&gt; [1] 2.3</span></span>
+<span id="cb271-3"><a href="tidyverse.html#cb271-3"></a><span class="kw">sd</span>(na_example, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb271-4"><a href="tidyverse.html#cb271-4"></a><span class="co">#&gt; [1] 1.22</span></span></code></pre></div>
 <p>Let’s now explore the NHANES data.</p>
 <p>1. We will provide some basic facts about blood pressure. First let’s select a group to set the standard. We will use 20-to-29-year-old females. <code>AgeDecade</code> is a categorical variable with these ages. Note that the category is coded like " 20-29", with a space in front! What is the average and standard deviation of systolic blood pressure as saved in the <code>BPSysAve</code> variable? Save it to a variable called <code>ref</code>.</p>
 <p>Hint: Use <code>filter</code> and <code>summarize</code> and use the <code>na.rm = TRUE</code> argument when computing the average and standard deviation. You can also filter the NA values using <code>filter</code>.</p>
@@ -1287,20 +1221,10 @@ Note that if the third argument is left blank, <code>top_n</code> filters by the
 <div id="tibbles" class="section level2">
 <h2><span class="header-section-number">4.10</span> Tibbles</h2>
 <p>Tidy data must be stored in data frames. We introduced the data frame in Section <a href="r-basics.html#data-frames">2.4.1</a> and have been using the <code>murders</code> data frame throughout the book. In Section <a href="tidyverse.html#group-by">4.7.3</a> we introduced the <code>group_by</code> function, which permits stratifying data before computing summary statistics. But where is the group information stored in the data frame?</p>
-<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="tidyverse.html#cb203-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(region)</span>
-<span id="cb203-2"><a href="tidyverse.html#cb203-2"></a><span class="co">#&gt; # A tibble: 51 x 6</span></span>
-<span id="cb203-3"><a href="tidyverse.html#cb203-3"></a><span class="co">#&gt; # Groups:   region [4]</span></span>
-<span id="cb203-4"><a href="tidyverse.html#cb203-4"></a><span class="co">#&gt;   state      abb   region population total  rate</span></span>
-<span id="cb203-5"><a href="tidyverse.html#cb203-5"></a><span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt; &lt;fct&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span id="cb203-6"><a href="tidyverse.html#cb203-6"></a><span class="co">#&gt; 1 Alabama    AL    South     4779736   135  2.82</span></span>
-<span id="cb203-7"><a href="tidyverse.html#cb203-7"></a><span class="co">#&gt; 2 Alaska     AK    West       710231    19  2.68</span></span>
-<span id="cb203-8"><a href="tidyverse.html#cb203-8"></a><span class="co">#&gt; 3 Arizona    AZ    West      6392017   232  3.63</span></span>
-<span id="cb203-9"><a href="tidyverse.html#cb203-9"></a><span class="co">#&gt; 4 Arkansas   AR    South     2915918    93  3.19</span></span>
-<span id="cb203-10"><a href="tidyverse.html#cb203-10"></a><span class="co">#&gt; 5 California CA    West     37253956  1257  3.37</span></span>
-<span id="cb203-11"><a href="tidyverse.html#cb203-11"></a><span class="co">#&gt; # … with 46 more rows</span></span></code></pre></div>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="tidyverse.html#cb272-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(region)</span></code></pre></div>
 <p>Notice that there are no columns with this information. But, if you look closely at the output above, you see the line <code>A tibble</code> followd by dimensions. We can learn the class of the returned object using:</p>
-<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="tidyverse.html#cb204-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(region) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">class</span>()</span>
-<span id="cb204-2"><a href="tidyverse.html#cb204-2"></a><span class="co">#&gt; [1] &quot;grouped_df&quot; &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="tidyverse.html#cb273-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(region) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">class</span>()</span>
+<span id="cb273-2"><a href="tidyverse.html#cb273-2"></a><span class="co">#&gt; [1] &quot;grouped_df&quot; &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</span></span></code></pre></div>
 <p>The <code>tbl</code>, pronounced tibble, is a special kind of data frame. The functions <code>group_by</code> and <code>summarize</code> always return this type of data frame. The <code>group_by</code> function returns a special kind of <code>tbl</code>, the <code>grouped_df</code>. We will say more about these later. For consistency, the <strong>dplyr</strong> manipulation verbs (<code>select</code>, <code>filter</code>, <code>mutate</code>, and <code>arrange</code>) preserve the class of the input: if they receive a regular data frame they return a regular data frame, while if they receive a tibble they return a tibble. But tibbles are the preferred format in the tidyverse and as a result tidyverse functions that produce a data frame from scratch return a tibble. For example, in Chapter <a href="importing-data.html#importing-data">5</a> we will see that tidyverse functions used to import data create tibbles.</p>
 <p>Tibbles are very similar to data frames. In fact, you can think of them as a modern version of data frames. Nonetheless there are three important differences which we describe next.</p>
 <div id="tibbles-display-better" class="section level3">
@@ -1310,33 +1234,26 @@ Note that if the third argument is left blank, <code>top_n</code> filters by the
 <div id="subsets-of-tibbles-are-tibbles" class="section level3">
 <h3><span class="header-section-number">4.10.2</span> Subsets of tibbles are tibbles</h3>
 <p>If you subset the columns of a data frame, you may get back an object that is not a data frame, such as a vector or scalar. For example:</p>
-<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="tidyverse.html#cb205-1"></a><span class="kw">class</span>(murders[,<span class="dv">4</span>])</span>
-<span id="cb205-2"><a href="tidyverse.html#cb205-2"></a><span class="co">#&gt; [1] &quot;numeric&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="tidyverse.html#cb274-1"></a><span class="kw">class</span>(murders[,<span class="dv">4</span>])</span>
+<span id="cb274-2"><a href="tidyverse.html#cb274-2"></a><span class="co">#&gt; [1] &quot;numeric&quot;</span></span></code></pre></div>
 <p>is not a data frame. With tibbles this does not happen:</p>
-<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="tidyverse.html#cb206-1"></a><span class="kw">class</span>(<span class="kw">as_tibble</span>(murders)[,<span class="dv">4</span>])</span>
-<span id="cb206-2"><a href="tidyverse.html#cb206-2"></a><span class="co">#&gt; [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="tidyverse.html#cb275-1"></a><span class="kw">class</span>(<span class="kw">as_tibble</span>(murders)[,<span class="dv">4</span>])</span>
+<span id="cb275-2"><a href="tidyverse.html#cb275-2"></a><span class="co">#&gt; [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</span></span></code></pre></div>
 <p>This is useful in the tidyverse since functions require data frames as input.</p>
 <p>With tibbles, if you want to access the vector that defines a column, and not get back a data frame, you need to use the accessor <code>$</code>:</p>
-<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="tidyverse.html#cb207-1"></a><span class="kw">class</span>(<span class="kw">as_tibble</span>(murders)<span class="op">$</span>population)</span>
-<span id="cb207-2"><a href="tidyverse.html#cb207-2"></a><span class="co">#&gt; [1] &quot;numeric&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="tidyverse.html#cb276-1"></a><span class="kw">class</span>(<span class="kw">as_tibble</span>(murders)<span class="op">$</span>population)</span>
+<span id="cb276-2"><a href="tidyverse.html#cb276-2"></a><span class="co">#&gt; [1] &quot;numeric&quot;</span></span></code></pre></div>
 <p>A related feature is that tibbles will give you a warning if you try to access a column that does not exist. If we accidentally write <code>Population</code> instead of <code>population</code> this:</p>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="tidyverse.html#cb208-1"></a>murders<span class="op">$</span>Population</span>
-<span id="cb208-2"><a href="tidyverse.html#cb208-2"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
+<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="tidyverse.html#cb277-1"></a>murders<span class="op">$</span>Population</span>
+<span id="cb277-2"><a href="tidyverse.html#cb277-2"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
 <p>returns a <code>NULL</code> with no warning, which can make it harder to debug. In contrast, if we try this with a tibble we get an informative warning:</p>
-<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="tidyverse.html#cb209-1"></a><span class="kw">as_tibble</span>(murders)<span class="op">$</span>Population</span>
-<span id="cb209-2"><a href="tidyverse.html#cb209-2"></a><span class="co">#&gt; Warning: Unknown or uninitialised column: `Population`.</span></span>
-<span id="cb209-3"><a href="tidyverse.html#cb209-3"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
+<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="tidyverse.html#cb278-1"></a><span class="kw">as_tibble</span>(murders)<span class="op">$</span>Population</span>
+<span id="cb278-2"><a href="tidyverse.html#cb278-2"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
 </div>
 <div id="tibbles-can-have-complex-entries" class="section level3">
 <h3><span class="header-section-number">4.10.3</span> Tibbles can have complex entries</h3>
 <p>While data frame columns need to be vectors of numbers, strings, or logical values, tibbles can have more complex objects, such as lists or functions. Also, we can create tibbles with functions:</p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="tidyverse.html#cb210-1"></a><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">func =</span> <span class="kw">c</span>(mean, median, sd))</span>
-<span id="cb210-2"><a href="tidyverse.html#cb210-2"></a><span class="co">#&gt; # A tibble: 3 x 2</span></span>
-<span id="cb210-3"><a href="tidyverse.html#cb210-3"></a><span class="co">#&gt;      id func  </span></span>
-<span id="cb210-4"><a href="tidyverse.html#cb210-4"></a><span class="co">#&gt;   &lt;dbl&gt; &lt;list&gt;</span></span>
-<span id="cb210-5"><a href="tidyverse.html#cb210-5"></a><span class="co">#&gt; 1     1 &lt;fn&gt;  </span></span>
-<span id="cb210-6"><a href="tidyverse.html#cb210-6"></a><span class="co">#&gt; 2     2 &lt;fn&gt;  </span></span>
-<span id="cb210-7"><a href="tidyverse.html#cb210-7"></a><span class="co">#&gt; 3     3 &lt;fn&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="tidyverse.html#cb279-1"></a><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">func =</span> <span class="kw">c</span>(mean, median, sd))</span></code></pre></div>
 </div>
 <div id="tibbles-can-be-grouped" class="section level3">
 <h3><span class="header-section-number">4.10.4</span> Tibbles can be grouped</h3>
@@ -1345,110 +1262,106 @@ Note that if the third argument is left blank, <code>top_n</code> filters by the
 <div id="create-a-tibble-using-tibble-instead-of-data.frame" class="section level3">
 <h3><span class="header-section-number">4.10.5</span> Create a tibble using <code>tibble</code> instead of <code>data.frame</code></h3>
 <p>It is sometimes useful for us to create our own data frames. To create a data frame in the tibble format, you can do this by using the <code>tibble</code> function.</p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="tidyverse.html#cb211-1"></a>grades &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Jean&quot;</span>, <span class="st">&quot;Yao&quot;</span>), </span>
-<span id="cb211-2"><a href="tidyverse.html#cb211-2"></a>                     <span class="dt">exam_1 =</span> <span class="kw">c</span>(<span class="dv">95</span>, <span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">85</span>), </span>
-<span id="cb211-3"><a href="tidyverse.html#cb211-3"></a>                     <span class="dt">exam_2 =</span> <span class="kw">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">85</span>, <span class="dv">90</span>))</span></code></pre></div>
-<p>Note that base R (without packages loaded) has a function with a very similar name, <code>data.frame</code>, that can be used to create a regular data frame rather than a tibble.</p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="tidyverse.html#cb212-1"></a>grades &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Jean&quot;</span>, <span class="st">&quot;Yao&quot;</span>), </span>
-<span id="cb212-2"><a href="tidyverse.html#cb212-2"></a>                     <span class="dt">exam_1 =</span> <span class="kw">c</span>(<span class="dv">95</span>, <span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">85</span>), </span>
-<span id="cb212-3"><a href="tidyverse.html#cb212-3"></a>                     <span class="dt">exam_2 =</span> <span class="kw">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">85</span>, <span class="dv">90</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="tidyverse.html#cb280-1"></a>grades &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Jean&quot;</span>, <span class="st">&quot;Yao&quot;</span>), </span>
+<span id="cb280-2"><a href="tidyverse.html#cb280-2"></a>                     <span class="dt">exam_1 =</span> <span class="kw">c</span>(<span class="dv">95</span>, <span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">85</span>), </span>
+<span id="cb280-3"><a href="tidyverse.html#cb280-3"></a>                     <span class="dt">exam_2 =</span> <span class="kw">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">85</span>, <span class="dv">90</span>))</span></code></pre></div>
+<p>Note that base R (without packages loaded) has a function with a very similar name, <code>data.frame</code>, that can be used to create a regular data frame rather than a tibble. One other important difference is that by default <code>data.frame</code> coerces characters into factors without providing a warning or message:</p>
+<div class="sourceCode" id="cb281"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb281-1"><a href="tidyverse.html#cb281-1"></a><span class="kw">class</span>(grades<span class="op">$</span>names)</span>
+<span id="cb281-2"><a href="tidyverse.html#cb281-2"></a><span class="co">#&gt; [1] &quot;character&quot;</span></span></code></pre></div>
+<p>To avoid this, we use the rather cumbersome argument <code>stringsAsFactors</code>:</p>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="tidyverse.html#cb282-1"></a>grades &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Jean&quot;</span>, <span class="st">&quot;Yao&quot;</span>), </span>
+<span id="cb282-2"><a href="tidyverse.html#cb282-2"></a>                     <span class="dt">exam_1 =</span> <span class="kw">c</span>(<span class="dv">95</span>, <span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">85</span>), </span>
+<span id="cb282-3"><a href="tidyverse.html#cb282-3"></a>                     <span class="dt">exam_2 =</span> <span class="kw">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">85</span>, <span class="dv">90</span>),</span>
+<span id="cb282-4"><a href="tidyverse.html#cb282-4"></a>                     <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb282-5"><a href="tidyverse.html#cb282-5"></a><span class="kw">class</span>(grades<span class="op">$</span>names)</span>
+<span id="cb282-6"><a href="tidyverse.html#cb282-6"></a><span class="co">#&gt; [1] &quot;character&quot;</span></span></code></pre></div>
 <p>To convert a regular data frame to a tibble, you can use the <code>as_tibble</code> function.</p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="tidyverse.html#cb213-1"></a><span class="kw">as_tibble</span>(grades) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">class</span>()</span>
-<span id="cb213-2"><a href="tidyverse.html#cb213-2"></a><span class="co">#&gt; [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb283-1"><a href="tidyverse.html#cb283-1"></a><span class="kw">as_tibble</span>(grades) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">class</span>()</span>
+<span id="cb283-2"><a href="tidyverse.html#cb283-2"></a><span class="co">#&gt; [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</span></span></code></pre></div>
 </div>
 </div>
 <div id="the-dot-operator" class="section level2">
 <h2><span class="header-section-number">4.11</span> The dot operator</h2>
 <p>One of the advantages of using the pipe <code>%&gt;%</code> is that we do not have to keep naming new objects as we manipulate the data frame. As a quick reminder, if we want to compute the median murder rate for states in the southern states, instead of typing:</p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="tidyverse.html#cb214-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">filter</span>(murders, region <span class="op">==</span><span class="st"> &quot;South&quot;</span>)</span>
-<span id="cb214-2"><a href="tidyverse.html#cb214-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">mutate</span>(tab_<span class="dv">1</span>, <span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">5</span>)</span>
-<span id="cb214-3"><a href="tidyverse.html#cb214-3"></a>rates &lt;-<span class="st"> </span>tab_<span class="dv">2</span><span class="op">$</span>rate</span>
-<span id="cb214-4"><a href="tidyverse.html#cb214-4"></a><span class="kw">median</span>(rates)</span>
-<span id="cb214-5"><a href="tidyverse.html#cb214-5"></a><span class="co">#&gt; [1] 3.4</span></span></code></pre></div>
+<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="tidyverse.html#cb284-1"></a>tab_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">filter</span>(murders, region <span class="op">==</span><span class="st"> &quot;South&quot;</span>)</span>
+<span id="cb284-2"><a href="tidyverse.html#cb284-2"></a>tab_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">mutate</span>(tab_<span class="dv">1</span>, <span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">5</span>)</span>
+<span id="cb284-3"><a href="tidyverse.html#cb284-3"></a>rates &lt;-<span class="st"> </span>tab_<span class="dv">2</span><span class="op">$</span>rate</span>
+<span id="cb284-4"><a href="tidyverse.html#cb284-4"></a><span class="kw">median</span>(rates)</span>
+<span id="cb284-5"><a href="tidyverse.html#cb284-5"></a><span class="co">#&gt; [1] 3.4</span></span></code></pre></div>
 <p>We can avoid defining any new intermediate objects by instead typing:</p>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="tidyverse.html#cb215-1"></a><span class="kw">filter</span>(murders, region <span class="op">==</span><span class="st"> &quot;South&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb215-2"><a href="tidyverse.html#cb215-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb215-3"><a href="tidyverse.html#cb215-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">median =</span> <span class="kw">median</span>(rate)) <span class="op">%&gt;%</span></span>
-<span id="cb215-4"><a href="tidyverse.html#cb215-4"></a><span class="st">  </span><span class="kw">pull</span>(median)</span>
-<span id="cb215-5"><a href="tidyverse.html#cb215-5"></a><span class="co">#&gt; [1] 3.4</span></span></code></pre></div>
+<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="tidyverse.html#cb285-1"></a><span class="kw">filter</span>(murders, region <span class="op">==</span><span class="st"> &quot;South&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb285-2"><a href="tidyverse.html#cb285-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb285-3"><a href="tidyverse.html#cb285-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">median =</span> <span class="kw">median</span>(rate)) <span class="op">%&gt;%</span></span>
+<span id="cb285-4"><a href="tidyverse.html#cb285-4"></a><span class="st">  </span><span class="kw">pull</span>(median)</span>
+<span id="cb285-5"><a href="tidyverse.html#cb285-5"></a><span class="co">#&gt; [1] 3.4</span></span></code></pre></div>
 <p>We can do this because each of these functions takes a data frame as the first argument. But what if we want to access a component of the data frame. For example, what if the <code>pull</code> function was not available and we wanted to access <code>tab_2$rate</code>? What data frame name would we use? The answer is the dot operator.</p>
 <p>For example to access the rate vector without the <code>pull</code> function we could use</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="tidyverse.html#cb216-1"></a>rates &lt;-<span class="st">   </span><span class="kw">filter</span>(murders, region <span class="op">==</span><span class="st"> &quot;South&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb216-2"><a href="tidyverse.html#cb216-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb216-3"><a href="tidyverse.html#cb216-3"></a><span class="st">  </span>.<span class="op">$</span>rate</span>
-<span id="cb216-4"><a href="tidyverse.html#cb216-4"></a><span class="kw">median</span>(rates)</span>
-<span id="cb216-5"><a href="tidyverse.html#cb216-5"></a><span class="co">#&gt; [1] 3.4</span></span></code></pre></div>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="tidyverse.html#cb286-1"></a>rates &lt;-<span class="st">   </span><span class="kw">filter</span>(murders, region <span class="op">==</span><span class="st"> &quot;South&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb286-2"><a href="tidyverse.html#cb286-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rate =</span> total <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb286-3"><a href="tidyverse.html#cb286-3"></a><span class="st">  </span>.<span class="op">$</span>rate</span>
+<span id="cb286-4"><a href="tidyverse.html#cb286-4"></a><span class="kw">median</span>(rates)</span>
+<span id="cb286-5"><a href="tidyverse.html#cb286-5"></a><span class="co">#&gt; [1] 3.4</span></span></code></pre></div>
 <p>In the next section, we will see other instances in which using the <code>.</code> is useful.</p>
 </div>
 <div id="do" class="section level2">
 <h2><span class="header-section-number">4.12</span> <code>do</code></h2>
 <p>The tidyverse functions know how to interpret grouped tibbles. Furthermore, to facilitate stringing commands through the pipe <code>%&gt;%</code>, tidyverse functions consistently return data frames, since this assures that the output of a function is accepted as the input of another. But most R functions do not recognize grouped tibbles nor do they return data frames. The <code>quantile</code> function is an example we described in Section <a href="tidyverse.html#summarize">4.7.1</a>. The <code>do</code> function serves as a bridge between R functions such as <code>quantile</code> and the tidyverse. The <code>do</code> function understands grouped tibbles and always returns a data frame.</p>
 <p>In Section <a href="tidyverse.html#summarize">4.7.1</a>, we noted that if we attempt to use <code>quantile</code> to obtain the min, median and max in one call, we will receive an error: <code>Error: expecting result of length one, got : 2</code>.</p>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="tidyverse.html#cb217-1"></a><span class="kw">data</span>(heights)</span>
-<span id="cb217-2"><a href="tidyverse.html#cb217-2"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb217-3"><a href="tidyverse.html#cb217-3"></a><span class="st">  </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Female&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb217-4"><a href="tidyverse.html#cb217-4"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">range =</span> <span class="kw">quantile</span>(height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="tidyverse.html#cb287-1"></a><span class="kw">data</span>(heights)</span>
+<span id="cb287-2"><a href="tidyverse.html#cb287-2"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb287-3"><a href="tidyverse.html#cb287-3"></a><span class="st">  </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Female&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb287-4"><a href="tidyverse.html#cb287-4"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">range =</span> <span class="kw">quantile</span>(height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)))</span></code></pre></div>
 <p>We can use the <code>do</code> function to fix this.</p>
 <p>First we have to write a function that fits into the tidyverse approach: that is, it receives a data frame and returns a data frame.</p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="tidyverse.html#cb218-1"></a>my_summary &lt;-<span class="st"> </span><span class="cf">function</span>(dat){</span>
-<span id="cb218-2"><a href="tidyverse.html#cb218-2"></a>  x &lt;-<span class="st"> </span><span class="kw">quantile</span>(dat<span class="op">$</span>height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>))</span>
-<span id="cb218-3"><a href="tidyverse.html#cb218-3"></a>  <span class="kw">tibble</span>(<span class="dt">min =</span> x[<span class="dv">1</span>], <span class="dt">median =</span> x[<span class="dv">2</span>], <span class="dt">max =</span> x[<span class="dv">3</span>])</span>
-<span id="cb218-4"><a href="tidyverse.html#cb218-4"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="tidyverse.html#cb288-1"></a>my_summary &lt;-<span class="st"> </span><span class="cf">function</span>(dat){</span>
+<span id="cb288-2"><a href="tidyverse.html#cb288-2"></a>  x &lt;-<span class="st"> </span><span class="kw">quantile</span>(dat<span class="op">$</span>height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>))</span>
+<span id="cb288-3"><a href="tidyverse.html#cb288-3"></a>  <span class="kw">tibble</span>(<span class="dt">min =</span> x[<span class="dv">1</span>], <span class="dt">median =</span> x[<span class="dv">2</span>], <span class="dt">max =</span> x[<span class="dv">3</span>])</span>
+<span id="cb288-4"><a href="tidyverse.html#cb288-4"></a>}</span></code></pre></div>
 <p>We can now apply the function to the heights dataset to obtain the summaries:</p>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="tidyverse.html#cb219-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb219-2"><a href="tidyverse.html#cb219-2"></a><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb219-3"><a href="tidyverse.html#cb219-3"></a><span class="st">  </span>my_summary</span>
-<span id="cb219-4"><a href="tidyverse.html#cb219-4"></a><span class="co">#&gt; # A tibble: 1 x 3</span></span>
-<span id="cb219-5"><a href="tidyverse.html#cb219-5"></a><span class="co">#&gt;     min median   max</span></span>
-<span id="cb219-6"><a href="tidyverse.html#cb219-6"></a><span class="co">#&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span id="cb219-7"><a href="tidyverse.html#cb219-7"></a><span class="co">#&gt; 1    50   68.5  82.7</span></span></code></pre></div>
+<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="tidyverse.html#cb289-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb289-2"><a href="tidyverse.html#cb289-2"></a><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb289-3"><a href="tidyverse.html#cb289-3"></a><span class="st">  </span>my_summary</span></code></pre></div>
 <p>But this is not what we want. We want a summary for each sex and the code returned just one summary. This is because <code>my_summary</code> is not part of the tidyverse and does not know how to handled grouped tibbles. <code>do</code> makes this connection:</p>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="tidyverse.html#cb220-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb220-2"><a href="tidyverse.html#cb220-2"></a><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb220-3"><a href="tidyverse.html#cb220-3"></a><span class="st">  </span><span class="kw">do</span>(<span class="kw">my_summary</span>(.))</span>
-<span id="cb220-4"><a href="tidyverse.html#cb220-4"></a><span class="co">#&gt; # A tibble: 2 x 4</span></span>
-<span id="cb220-5"><a href="tidyverse.html#cb220-5"></a><span class="co">#&gt; # Groups:   sex [2]</span></span>
-<span id="cb220-6"><a href="tidyverse.html#cb220-6"></a><span class="co">#&gt;   sex      min median   max</span></span>
-<span id="cb220-7"><a href="tidyverse.html#cb220-7"></a><span class="co">#&gt;   &lt;fct&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span id="cb220-8"><a href="tidyverse.html#cb220-8"></a><span class="co">#&gt; 1 Female    51   65.0  79  </span></span>
-<span id="cb220-9"><a href="tidyverse.html#cb220-9"></a><span class="co">#&gt; 2 Male      50   69    82.7</span></span></code></pre></div>
+<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="tidyverse.html#cb290-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb290-2"><a href="tidyverse.html#cb290-2"></a><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb290-3"><a href="tidyverse.html#cb290-3"></a><span class="st">  </span><span class="kw">do</span>(<span class="kw">my_summary</span>(.))</span></code></pre></div>
 <p>Note that here we need to use the dot operator. The tibble created by <code>group_by</code> is piped to <code>do</code>. Within the call to <code>do</code>, the name of this tibble is <code>.</code> and we want to send it to <code>my_summary</code>. If you do not use the dot, then <code>my_summary</code> has <em>no argument</em> and returns an error telling us that <code>argument "dat"</code> is missing. You can see the error by typing:</p>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="tidyverse.html#cb221-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb221-2"><a href="tidyverse.html#cb221-2"></a><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb221-3"><a href="tidyverse.html#cb221-3"></a><span class="st">  </span><span class="kw">do</span>(<span class="kw">my_summary</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="tidyverse.html#cb291-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb291-2"><a href="tidyverse.html#cb291-2"></a><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb291-3"><a href="tidyverse.html#cb291-3"></a><span class="st">  </span><span class="kw">do</span>(<span class="kw">my_summary</span>())</span></code></pre></div>
 <p>If you do not use the parenthesis, then the function is not executed and instead <code>do</code> tries to return the function. This gives an error because <code>do</code> must always return a data frame. You can see the error by typing:</p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="tidyverse.html#cb222-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb222-2"><a href="tidyverse.html#cb222-2"></a><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb222-3"><a href="tidyverse.html#cb222-3"></a><span class="st">  </span><span class="kw">do</span>(my_summary)</span></code></pre></div>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="tidyverse.html#cb292-1"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb292-2"><a href="tidyverse.html#cb292-2"></a><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb292-3"><a href="tidyverse.html#cb292-3"></a><span class="st">  </span><span class="kw">do</span>(my_summary)</span></code></pre></div>
 </div>
 <div id="the-purrr-package" class="section level2">
 <h2><span class="header-section-number">4.13</span> The <strong>purrr</strong> package</h2>
 <p>In Section <a href="programming-basics.html#vectorization">3.5</a> we learned about the <code>sapply</code> function, which permitted us to apply the same function to each element of a vector. We constructed a function and used <code>sapply</code> to compute the sum of the first <code>n</code> integers for several values of <code>n</code> like this:</p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="tidyverse.html#cb223-1"></a>compute_s_n &lt;-<span class="st"> </span><span class="cf">function</span>(n){</span>
-<span id="cb223-2"><a href="tidyverse.html#cb223-2"></a>  x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span>n</span>
-<span id="cb223-3"><a href="tidyverse.html#cb223-3"></a>  <span class="kw">sum</span>(x)</span>
-<span id="cb223-4"><a href="tidyverse.html#cb223-4"></a>}</span>
-<span id="cb223-5"><a href="tidyverse.html#cb223-5"></a>n &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">25</span></span>
-<span id="cb223-6"><a href="tidyverse.html#cb223-6"></a>s_n &lt;-<span class="st"> </span><span class="kw">sapply</span>(n, compute_s_n)</span></code></pre></div>
+<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="tidyverse.html#cb293-1"></a>compute_s_n &lt;-<span class="st"> </span><span class="cf">function</span>(n){</span>
+<span id="cb293-2"><a href="tidyverse.html#cb293-2"></a>  x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span>n</span>
+<span id="cb293-3"><a href="tidyverse.html#cb293-3"></a>  <span class="kw">sum</span>(x)</span>
+<span id="cb293-4"><a href="tidyverse.html#cb293-4"></a>}</span>
+<span id="cb293-5"><a href="tidyverse.html#cb293-5"></a>n &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">25</span></span>
+<span id="cb293-6"><a href="tidyverse.html#cb293-6"></a>s_n &lt;-<span class="st"> </span><span class="kw">sapply</span>(n, compute_s_n)</span></code></pre></div>
 <p>This type of operation, applying the same function or procedure to elements of an object, is quite common in data analysis. The <strong>purrr</strong> package includes functions similar to <code>sapply</code> but that better interact with other tidyverse functions. The main advantage is that we can better control the output type of functions. In contrast, <code>sapply</code> can return several different object types; for example, we might expect a numeric result from a line of code, but <code>sapply</code> might convert our result to character under some circumstances. <strong>purrr</strong> functions will never do this: they will return objects of a specified type or return an error if this is not possible.</p>
 <p>The first <strong>purrr</strong> function we will learn is <code>map</code>, which works very similar to <code>sapply</code> but always, without exception, returns a list:</p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="tidyverse.html#cb224-1"></a><span class="kw">library</span>(purrr)</span>
-<span id="cb224-2"><a href="tidyverse.html#cb224-2"></a>s_n &lt;-<span class="st"> </span><span class="kw">map</span>(n, compute_s_n)</span>
-<span id="cb224-3"><a href="tidyverse.html#cb224-3"></a><span class="kw">class</span>(s_n)</span>
-<span id="cb224-4"><a href="tidyverse.html#cb224-4"></a><span class="co">#&gt; [1] &quot;list&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="tidyverse.html#cb294-1"></a><span class="kw">library</span>(purrr)</span>
+<span id="cb294-2"><a href="tidyverse.html#cb294-2"></a>s_n &lt;-<span class="st"> </span><span class="kw">map</span>(n, compute_s_n)</span>
+<span id="cb294-3"><a href="tidyverse.html#cb294-3"></a><span class="kw">class</span>(s_n)</span>
+<span id="cb294-4"><a href="tidyverse.html#cb294-4"></a><span class="co">#&gt; [1] &quot;list&quot;</span></span></code></pre></div>
 <p>If we want a numeric vector, we can instead use <code>map_dbl</code> which always returns a vector of numeric values.</p>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="tidyverse.html#cb225-1"></a>s_n &lt;-<span class="st"> </span><span class="kw">map_dbl</span>(n, compute_s_n)</span>
-<span id="cb225-2"><a href="tidyverse.html#cb225-2"></a><span class="kw">class</span>(s_n)</span>
-<span id="cb225-3"><a href="tidyverse.html#cb225-3"></a><span class="co">#&gt; [1] &quot;numeric&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="tidyverse.html#cb295-1"></a>s_n &lt;-<span class="st"> </span><span class="kw">map_dbl</span>(n, compute_s_n)</span>
+<span id="cb295-2"><a href="tidyverse.html#cb295-2"></a><span class="kw">class</span>(s_n)</span>
+<span id="cb295-3"><a href="tidyverse.html#cb295-3"></a><span class="co">#&gt; [1] &quot;numeric&quot;</span></span></code></pre></div>
 <p>This produces the same results as the <code>sapply</code> call shown above.</p>
 <p>A particularly useful <strong>purrr</strong> function for interacting with the rest of the tidyverse is <code>map_df</code>, which always returns a tibble data frame. However, the function being called needs to return a vector or a list with names. For this reason, the following code would result in a <code>Argument 1 must have names</code> error:</p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="tidyverse.html#cb226-1"></a>s_n &lt;-<span class="st"> </span><span class="kw">map_df</span>(n, compute_s_n)</span></code></pre></div>
+<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="tidyverse.html#cb296-1"></a>s_n &lt;-<span class="st"> </span><span class="kw">map_df</span>(n, compute_s_n)</span></code></pre></div>
 <p>We need to change the function to make this work:</p>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="tidyverse.html#cb227-1"></a>compute_s_n &lt;-<span class="st"> </span><span class="cf">function</span>(n){</span>
-<span id="cb227-2"><a href="tidyverse.html#cb227-2"></a>  x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span>n</span>
-<span id="cb227-3"><a href="tidyverse.html#cb227-3"></a>  <span class="kw">tibble</span>(<span class="dt">sum =</span> <span class="kw">sum</span>(x))</span>
-<span id="cb227-4"><a href="tidyverse.html#cb227-4"></a>}</span>
-<span id="cb227-5"><a href="tidyverse.html#cb227-5"></a>s_n &lt;-<span class="st"> </span><span class="kw">map_df</span>(n, compute_s_n)</span></code></pre></div>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="tidyverse.html#cb297-1"></a>compute_s_n &lt;-<span class="st"> </span><span class="cf">function</span>(n){</span>
+<span id="cb297-2"><a href="tidyverse.html#cb297-2"></a>  x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span>n</span>
+<span id="cb297-3"><a href="tidyverse.html#cb297-3"></a>  <span class="kw">tibble</span>(<span class="dt">sum =</span> <span class="kw">sum</span>(x))</span>
+<span id="cb297-4"><a href="tidyverse.html#cb297-4"></a>}</span>
+<span id="cb297-5"><a href="tidyverse.html#cb297-5"></a>s_n &lt;-<span class="st"> </span><span class="kw">map_df</span>(n, compute_s_n)</span></code></pre></div>
 <p>The <strong>purrr</strong> package provides much more functionality not covered here. For more details you can consult <a href="https://jennybc.github.io/purrr-tutorial/">this online resource</a>.</p>
 </div>
 <div id="tidyverse-conditionals" class="section level2">
@@ -1457,35 +1370,28 @@ Note that if the third argument is left blank, <code>top_n</code> filters by the
 <div id="case_when" class="section level3">
 <h3><span class="header-section-number">4.14.1</span> <code>case_when</code></h3>
 <p>The <code>case_when</code> function is useful for vectorizing conditional statements. It is similar to <code>ifelse</code> but can output any number of values, as opposed to just <code>TRUE</code> or <code>FALSE</code>. Here is an example splitting numbers into negative, positive, and 0:</p>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="tidyverse.html#cb228-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>, <span class="dv">-1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb228-2"><a href="tidyverse.html#cb228-2"></a><span class="kw">case_when</span>(x <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">~</span><span class="st"> &quot;Negative&quot;</span>, </span>
-<span id="cb228-3"><a href="tidyverse.html#cb228-3"></a>          x <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">~</span><span class="st"> &quot;Positive&quot;</span>, </span>
-<span id="cb228-4"><a href="tidyverse.html#cb228-4"></a>          <span class="ot">TRUE</span>  <span class="op">~</span><span class="st"> &quot;Zero&quot;</span>)</span>
-<span id="cb228-5"><a href="tidyverse.html#cb228-5"></a><span class="co">#&gt; [1] &quot;Negative&quot; &quot;Negative&quot; &quot;Zero&quot;     &quot;Positive&quot; &quot;Positive&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="tidyverse.html#cb298-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>, <span class="dv">-1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb298-2"><a href="tidyverse.html#cb298-2"></a><span class="kw">case_when</span>(x <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">~</span><span class="st"> &quot;Negative&quot;</span>, </span>
+<span id="cb298-3"><a href="tidyverse.html#cb298-3"></a>          x <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">~</span><span class="st"> &quot;Positive&quot;</span>, </span>
+<span id="cb298-4"><a href="tidyverse.html#cb298-4"></a>          <span class="ot">TRUE</span>  <span class="op">~</span><span class="st"> &quot;Zero&quot;</span>)</span>
+<span id="cb298-5"><a href="tidyverse.html#cb298-5"></a><span class="co">#&gt; [1] &quot;Negative&quot; &quot;Negative&quot; &quot;Zero&quot;     &quot;Positive&quot; &quot;Positive&quot;</span></span></code></pre></div>
 <p>A common use for this function is to define categorical variables based on existing variables. For example, suppose we want to compare the murder rates in four groups of states: <em>New England</em>, <em>West Coast</em>, <em>South</em>, and <em>other</em>. For each state, we need to ask if it is in New England, if it is not we ask if it is in the West Coast, if not we ask if it is in the South, and if not we assign <em>other</em>. Here is how we use <code>case_when</code> to do this:</p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="tidyverse.html#cb229-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb229-2"><a href="tidyverse.html#cb229-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">case_when</span>(</span>
-<span id="cb229-3"><a href="tidyverse.html#cb229-3"></a>    abb <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ME&quot;</span>, <span class="st">&quot;NH&quot;</span>, <span class="st">&quot;VT&quot;</span>, <span class="st">&quot;MA&quot;</span>, <span class="st">&quot;RI&quot;</span>, <span class="st">&quot;CT&quot;</span>) <span class="op">~</span><span class="st"> &quot;New England&quot;</span>,</span>
-<span id="cb229-4"><a href="tidyverse.html#cb229-4"></a>    abb <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;WA&quot;</span>, <span class="st">&quot;OR&quot;</span>, <span class="st">&quot;CA&quot;</span>) <span class="op">~</span><span class="st"> &quot;West Coast&quot;</span>,</span>
-<span id="cb229-5"><a href="tidyverse.html#cb229-5"></a>    region <span class="op">==</span><span class="st"> &quot;South&quot;</span> <span class="op">~</span><span class="st"> &quot;South&quot;</span>,</span>
-<span id="cb229-6"><a href="tidyverse.html#cb229-6"></a>    <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> &quot;Other&quot;</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb229-7"><a href="tidyverse.html#cb229-7"></a><span class="st">  </span><span class="kw">group_by</span>(group) <span class="op">%&gt;%</span></span>
-<span id="cb229-8"><a href="tidyverse.html#cb229-8"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population) <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">5</span>) </span>
-<span id="cb229-9"><a href="tidyverse.html#cb229-9"></a><span class="co">#&gt; `summarise()` ungrouping output (override with `.groups` argument)</span></span>
-<span id="cb229-10"><a href="tidyverse.html#cb229-10"></a><span class="co">#&gt; # A tibble: 4 x 2</span></span>
-<span id="cb229-11"><a href="tidyverse.html#cb229-11"></a><span class="co">#&gt;   group        rate</span></span>
-<span id="cb229-12"><a href="tidyverse.html#cb229-12"></a><span class="co">#&gt;   &lt;chr&gt;       &lt;dbl&gt;</span></span>
-<span id="cb229-13"><a href="tidyverse.html#cb229-13"></a><span class="co">#&gt; 1 New England  1.72</span></span>
-<span id="cb229-14"><a href="tidyverse.html#cb229-14"></a><span class="co">#&gt; 2 Other        2.71</span></span>
-<span id="cb229-15"><a href="tidyverse.html#cb229-15"></a><span class="co">#&gt; 3 South        3.63</span></span>
-<span id="cb229-16"><a href="tidyverse.html#cb229-16"></a><span class="co">#&gt; 4 West Coast   2.90</span></span></code></pre></div>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="tidyverse.html#cb299-1"></a>murders <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb299-2"><a href="tidyverse.html#cb299-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">case_when</span>(</span>
+<span id="cb299-3"><a href="tidyverse.html#cb299-3"></a>    abb <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ME&quot;</span>, <span class="st">&quot;NH&quot;</span>, <span class="st">&quot;VT&quot;</span>, <span class="st">&quot;MA&quot;</span>, <span class="st">&quot;RI&quot;</span>, <span class="st">&quot;CT&quot;</span>) <span class="op">~</span><span class="st"> &quot;New England&quot;</span>,</span>
+<span id="cb299-4"><a href="tidyverse.html#cb299-4"></a>    abb <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;WA&quot;</span>, <span class="st">&quot;OR&quot;</span>, <span class="st">&quot;CA&quot;</span>) <span class="op">~</span><span class="st"> &quot;West Coast&quot;</span>,</span>
+<span id="cb299-5"><a href="tidyverse.html#cb299-5"></a>    region <span class="op">==</span><span class="st"> &quot;South&quot;</span> <span class="op">~</span><span class="st"> &quot;South&quot;</span>,</span>
+<span id="cb299-6"><a href="tidyverse.html#cb299-6"></a>    <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> &quot;Other&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb299-7"><a href="tidyverse.html#cb299-7"></a><span class="st">  </span><span class="kw">group_by</span>(group) <span class="op">%&gt;%</span></span>
+<span id="cb299-8"><a href="tidyverse.html#cb299-8"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population) <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">5</span>) </span>
+<span id="cb299-9"><a href="tidyverse.html#cb299-9"></a><span class="co">#&gt; `summarise()` ungrouping output (override with `.groups` argument)</span></span></code></pre></div>
 </div>
 <div id="between" class="section level3">
 <h3><span class="header-section-number">4.14.2</span> <code>between</code></h3>
 <p>A common operation in data analysis is to determine if a value falls inside an interval. We can check this using conditionals. For example, to check if the elements of a vector <code>x</code> are between <code>a</code> and <code>b</code> we can type</p>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="tidyverse.html#cb230-1"></a>x <span class="op">&gt;=</span><span class="st"> </span>a <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;=</span><span class="st"> </span>b</span></code></pre></div>
+<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="tidyverse.html#cb300-1"></a>x <span class="op">&gt;=</span><span class="st"> </span>a <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;=</span><span class="st"> </span>b</span></code></pre></div>
 <p>However, this can become cumbersome, especially within the tidyverse approach. The <code>between</code> function performs the same operation.</p>
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="tidyverse.html#cb231-1"></a><span class="kw">between</span>(x, a, b)</span></code></pre></div>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="tidyverse.html#cb301-1"></a><span class="kw">between</span>(x, a, b)</span></code></pre></div>
 </div>
 </div>
 <div id="exercises-12" class="section level2">
@@ -1500,7 +1406,7 @@ Note that if the third argument is left blank, <code>top_n</code> filters by the
 <p>2. Use <code>as_tibble</code> to convert the <code>murders</code> data table into a tibble and save it in an object called <code>murders_tibble</code>.</p>
 <p>3. Use the <code>group_by</code> function to convert <code>murders</code> into a tibble that is grouped by region.</p>
 <p>4. Write tidyverse code that is equivalent to this code:</p>
-<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="tidyverse.html#cb232-1"></a><span class="kw">exp</span>(<span class="kw">mean</span>(<span class="kw">log</span>(murders<span class="op">$</span>population)))</span></code></pre></div>
+<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="tidyverse.html#cb302-1"></a><span class="kw">exp</span>(<span class="kw">mean</span>(<span class="kw">log</span>(murders<span class="op">$</span>population)))</span></code></pre></div>
 <p>Write it using the pipe so that each function is called without arguments. Use the dot operator to access the population. Hint: The code should start with <code>murders %&gt;%</code>.</p>
 <p>5. Use the <code>map_df</code> to create a data frame with three columns named <code>n</code>, <code>s_n</code>, and <code>s_n_2</code>. The first column should contain the numbers 1 through 100. The second and third columns should each contain the sum of 1 through <span class="math inline">\(n\)</span> with <span class="math inline">\(n\)</span> the row number.</p>
 

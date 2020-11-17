@@ -1,6 +1,6 @@
 # (PART) Machine Learning {-}
 ```{r, echo=FALSE}
-img_path <- "ml/img/"
+img_path <- "ml/img"
 ```
 
 # Introduction to machine learning
@@ -75,7 +75,7 @@ Notice that these terms vary among courses, text books, and other publications. 
 
 Let's consider the zip code reader example. The first step in handling mail received in the post office is sorting letters by zip code:
 
-```{r, echo=FALSE, out.width="40%"}
+```{r, eval=FALSE, out.width="40%"}
 knitr::include_graphics(file.path(img_path,"how-to-write-a-address-on-an-envelope-how-to-write-the-address-on-an-envelope-write-address-on-envelope-india-finishedenvelope-x69070.png"))
 ```
 

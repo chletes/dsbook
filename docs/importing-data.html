@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Importing data | Introduction to Data Science</title>
   <meta name="description" content="This book introduces concepts and skills that can help you tackle real-world data analysis challenges. It covers concepts from probability, statistical inference, linear regression and machine learning and helps you develop skills such as R programming, data wrangling with dplyr, data visualization with ggplot2, file organization with UNIX/Linux shell, version control with GitHub, and reproducible document preparation with R markdown." />
-  <meta name="generator" content="bookdown 0.20.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Importing data | Introduction to Data Science" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Rafael A. Irizarry" />
 
 
-<meta name="date" content="2020-11-16" />
+<meta name="date" content="2020-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,7 +51,10 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -305,7 +308,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.15" data-path="ggplot2.html"><a href="ggplot2.html#exercises-15"><i class="fa fa-check"></i><b>7.15</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>8</b> Visualizing data distributions</a><ul>
-<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a></li>
+<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="distributions.html"><a href="distributions.html#key-points"><i class="fa fa-check"></i><b>8.1.1</b> Key points</a></li>
+</ul></li>
 <li class="chapter" data-level="8.2" data-path="distributions.html"><a href="distributions.html#case-study-describing-student-heights"><i class="fa fa-check"></i><b>8.2</b> Case study: describing student heights</a></li>
 <li class="chapter" data-level="8.3" data-path="distributions.html"><a href="distributions.html#distribution-function"><i class="fa fa-check"></i><b>8.3</b> Distribution function</a></li>
 <li class="chapter" data-level="8.4" data-path="distributions.html"><a href="distributions.html#cdf-intro"><i class="fa fa-check"></i><b>8.4</b> Cumulative distribution functions</a></li>
@@ -806,78 +811,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="part"><span><b>VI Productivity Tools</b></span></li>
 <li class="chapter" data-level="35" data-path="introduction-to-productivity-tools.html"><a href="introduction-to-productivity-tools.html"><i class="fa fa-check"></i><b>35</b> Introduction to productivity tools</a></li>
-<li class="chapter" data-level="36" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html"><i class="fa fa-check"></i><b>36</b> Installing R and RStudio</a><ul>
-<li class="chapter" data-level="36.1" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-r"><i class="fa fa-check"></i><b>36.1</b> Installing R</a></li>
-<li class="chapter" data-level="36.2" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-rstudio"><i class="fa fa-check"></i><b>36.2</b> Installing RStudio</a></li>
+<li class="chapter" data-level="36" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>36</b> Accessing the terminal and installing Git</a><ul>
+<li class="chapter" data-level="36.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>36.1</b> Accessing the terminal on a Mac</a></li>
+<li class="chapter" data-level="36.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>36.2</b> Installing Git on the Mac</a></li>
+<li class="chapter" data-level="36.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>36.3</b> Installing Git and Git Bash on Windows</a></li>
+<li class="chapter" data-level="36.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>36.4</b> Accessing the terminal on Windows</a></li>
 </ul></li>
-<li class="chapter" data-level="37" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>37</b> Accessing the terminal and installing Git</a><ul>
-<li class="chapter" data-level="37.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>37.1</b> Accessing the terminal on a Mac</a></li>
-<li class="chapter" data-level="37.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>37.2</b> Installing Git on the Mac</a></li>
-<li class="chapter" data-level="37.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>37.3</b> Installing Git and Git Bash on Windows</a></li>
-<li class="chapter" data-level="37.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>37.4</b> Accessing the terminal on Windows</a></li>
+<li class="chapter" data-level="37" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>37</b> Organizing with Unix</a><ul>
+<li class="chapter" data-level="37.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>37.1</b> Naming convention</a></li>
+<li class="chapter" data-level="37.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>37.2</b> The terminal</a></li>
+<li class="chapter" data-level="37.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>37.3</b> The filesystem</a><ul>
+<li class="chapter" data-level="37.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>37.3.1</b> Directories and subdirectories</a></li>
+<li class="chapter" data-level="37.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>37.3.2</b> The home directory</a></li>
+<li class="chapter" data-level="37.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>37.3.3</b> Working directory</a></li>
+<li class="chapter" data-level="37.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>37.3.4</b> Paths</a></li>
 </ul></li>
-<li class="chapter" data-level="38" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>38</b> Organizing with Unix</a><ul>
-<li class="chapter" data-level="38.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>38.1</b> Naming convention</a></li>
-<li class="chapter" data-level="38.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>38.2</b> The terminal</a></li>
-<li class="chapter" data-level="38.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>38.3</b> The filesystem</a><ul>
-<li class="chapter" data-level="38.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>38.3.1</b> Directories and subdirectories</a></li>
-<li class="chapter" data-level="38.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>38.3.2</b> The home directory</a></li>
-<li class="chapter" data-level="38.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>38.3.3</b> Working directory</a></li>
-<li class="chapter" data-level="38.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>38.3.4</b> Paths</a></li>
+<li class="chapter" data-level="37.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>37.4</b> Unix commands</a><ul>
+<li class="chapter" data-level="37.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>37.4.1</b> <code>ls</code>: Listing directory content</a></li>
+<li class="chapter" data-level="37.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>37.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
+<li class="chapter" data-level="37.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>37.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
 </ul></li>
-<li class="chapter" data-level="38.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>38.4</b> Unix commands</a><ul>
-<li class="chapter" data-level="38.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>38.4.1</b> <code>ls</code>: Listing directory content</a></li>
-<li class="chapter" data-level="38.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>38.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
-<li class="chapter" data-level="38.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>38.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
+<li class="chapter" data-level="37.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>37.5</b> Some examples</a></li>
+<li class="chapter" data-level="37.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>37.6</b> More Unix commands</a><ul>
+<li class="chapter" data-level="37.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>37.6.1</b> <code>mv</code>: moving files</a></li>
+<li class="chapter" data-level="37.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>37.6.2</b> <code>cp</code>: copying files</a></li>
+<li class="chapter" data-level="37.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>37.6.3</b> <code>rm</code>: removing files</a></li>
+<li class="chapter" data-level="37.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>37.6.4</b> <code>less</code>: looking at a file</a></li>
 </ul></li>
-<li class="chapter" data-level="38.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>38.5</b> Some examples</a></li>
-<li class="chapter" data-level="38.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>38.6</b> More Unix commands</a><ul>
-<li class="chapter" data-level="38.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>38.6.1</b> <code>mv</code>: moving files</a></li>
-<li class="chapter" data-level="38.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>38.6.2</b> <code>cp</code>: copying files</a></li>
-<li class="chapter" data-level="38.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>38.6.3</b> <code>rm</code>: removing files</a></li>
-<li class="chapter" data-level="38.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>38.6.4</b> <code>less</code>: looking at a file</a></li>
-</ul></li>
-<li class="chapter" data-level="38.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>38.7</b> Preparing for a data science project</a></li>
-<li class="chapter" data-level="38.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>38.8</b> Advanced Unix</a><ul>
-<li class="chapter" data-level="38.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>38.8.1</b> Arguments</a></li>
-<li class="chapter" data-level="38.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>38.8.2</b> Getting help</a></li>
-<li class="chapter" data-level="38.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>38.8.3</b> Pipes</a></li>
-<li class="chapter" data-level="38.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>38.8.4</b> Wild cards</a></li>
-<li class="chapter" data-level="38.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>38.8.5</b> Environment variables</a></li>
-<li class="chapter" data-level="38.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>38.8.6</b> Shells</a></li>
-<li class="chapter" data-level="38.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>38.8.7</b> Executables</a></li>
-<li class="chapter" data-level="38.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>38.8.8</b> Permissions and file types</a></li>
-<li class="chapter" data-level="38.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>38.8.9</b> Commands you should learn</a></li>
-<li class="chapter" data-level="38.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>38.8.10</b> File manipulation in R</a></li>
+<li class="chapter" data-level="37.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>37.7</b> Preparing for a data science project</a></li>
+<li class="chapter" data-level="37.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>37.8</b> Advanced Unix</a><ul>
+<li class="chapter" data-level="37.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>37.8.1</b> Arguments</a></li>
+<li class="chapter" data-level="37.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>37.8.2</b> Getting help</a></li>
+<li class="chapter" data-level="37.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>37.8.3</b> Pipes</a></li>
+<li class="chapter" data-level="37.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>37.8.4</b> Wild cards</a></li>
+<li class="chapter" data-level="37.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>37.8.5</b> Environment variables</a></li>
+<li class="chapter" data-level="37.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>37.8.6</b> Shells</a></li>
+<li class="chapter" data-level="37.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>37.8.7</b> Executables</a></li>
+<li class="chapter" data-level="37.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>37.8.8</b> Permissions and file types</a></li>
+<li class="chapter" data-level="37.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>37.8.9</b> Commands you should learn</a></li>
+<li class="chapter" data-level="37.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>37.8.10</b> File manipulation in R</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="39" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>39</b> Git and GitHub</a><ul>
-<li class="chapter" data-level="39.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>39.1</b> Why use Git and GitHub?</a></li>
-<li class="chapter" data-level="39.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>39.2</b> GitHub accounts</a></li>
-<li class="chapter" data-level="39.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>39.3</b> GitHub repositories</a></li>
-<li class="chapter" data-level="39.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>39.4</b> Overview of Git</a><ul>
-<li class="chapter" data-level="39.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>39.4.1</b> Clone</a></li>
+<li class="chapter" data-level="38" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>38</b> Git and GitHub</a><ul>
+<li class="chapter" data-level="38.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>38.1</b> Why use Git and GitHub?</a></li>
+<li class="chapter" data-level="38.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>38.2</b> GitHub accounts</a></li>
+<li class="chapter" data-level="38.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>38.3</b> GitHub repositories</a></li>
+<li class="chapter" data-level="38.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>38.4</b> Overview of Git</a><ul>
+<li class="chapter" data-level="38.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>38.4.1</b> Clone</a></li>
 </ul></li>
-<li class="chapter" data-level="39.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>39.5</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="39.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>39.6</b> Using Git and GitHub in RStudio</a></li>
+<li class="chapter" data-level="38.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>38.5</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="38.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>38.6</b> Using Git and GitHub in RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="40" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>40</b> Reproducible projects with RStudio and R markdown</a><ul>
-<li class="chapter" data-level="40.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>40.1</b> RStudio projects</a></li>
-<li class="chapter" data-level="40.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>40.2</b> R markdown</a><ul>
-<li class="chapter" data-level="40.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>40.2.1</b> The header</a></li>
-<li class="chapter" data-level="40.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>40.2.2</b> R code chunks</a></li>
-<li class="chapter" data-level="40.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>40.2.3</b> Global options</a></li>
-<li class="chapter" data-level="40.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>40.2.4</b> knitR</a></li>
-<li class="chapter" data-level="40.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>40.2.5</b> More on R markdown</a></li>
+<li class="chapter" data-level="39" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>39</b> Reproducible projects with RStudio and R markdown</a><ul>
+<li class="chapter" data-level="39.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>39.1</b> RStudio projects</a></li>
+<li class="chapter" data-level="39.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>39.2</b> R markdown</a><ul>
+<li class="chapter" data-level="39.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>39.2.1</b> The header</a></li>
+<li class="chapter" data-level="39.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>39.2.2</b> R code chunks</a></li>
+<li class="chapter" data-level="39.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>39.2.3</b> Global options</a></li>
+<li class="chapter" data-level="39.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>39.2.4</b> knitR</a></li>
+<li class="chapter" data-level="39.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>39.2.5</b> More on R markdown</a></li>
 </ul></li>
-<li class="chapter" data-level="40.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>40.3</b> Organizing a data science project</a><ul>
-<li class="chapter" data-level="40.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>40.3.1</b> Create directories in Unix</a></li>
-<li class="chapter" data-level="40.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>40.3.2</b> Create an RStudio project</a></li>
-<li class="chapter" data-level="40.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>40.3.3</b> Edit some R scripts</a></li>
-<li class="chapter" data-level="40.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>40.3.4</b> Create some more directories using Unix</a></li>
-<li class="chapter" data-level="40.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>40.3.5</b> Add a README file</a></li>
-<li class="chapter" data-level="40.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>40.3.6</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="40.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>40.3.7</b> Add, commit, and push files using RStudio</a></li>
+<li class="chapter" data-level="39.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>39.3</b> Organizing a data science project</a><ul>
+<li class="chapter" data-level="39.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>39.3.1</b> Create directories in Unix</a></li>
+<li class="chapter" data-level="39.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>39.3.2</b> Create an RStudio project</a></li>
+<li class="chapter" data-level="39.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>39.3.3</b> Edit some R scripts</a></li>
+<li class="chapter" data-level="39.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>39.3.4</b> Create some more directories using Unix</a></li>
+<li class="chapter" data-level="39.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>39.3.5</b> Add a README file</a></li>
+<li class="chapter" data-level="39.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>39.3.6</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="39.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>39.3.7</b> Add, commit, and push files using RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -913,29 +914,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The first step when importing data from a spreadsheet is to locate the file containing the data. Although we do not recommend it, you can use an approach similar to what you do to open files in Microsoft Excel by clicking on the RStudio “File” menu, clicking “Import Dataset”, then clicking through folders until you find the file. We want to be able to write code rather than use the point-and-click approach. The keys and concepts we need to learn to do this are described in detail in the Productivity Tools part of this book. Here we provide an overview of the very basics.</p>
 <p>The main challenge in this first step is that we need to let the R functions doing the importing know where to look for the file containing the data. The simplest way to do this is to have a copy of the file in the folder in which the importing functions look by default. Once we do this, all we have to supply to the importing function is the filename.</p>
 <p>A spreadsheet containing the US murders data is included as part of the <strong>dslabs</strong> package. Finding this file is not straightforward, but the following lines of code copy the file to the folder in which R looks in by default. We explain how these lines work below.</p>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="importing-data.html#cb233-1"></a>filename &lt;-<span class="st"> &quot;murders.csv&quot;</span></span>
-<span id="cb233-2"><a href="importing-data.html#cb233-2"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>) </span>
-<span id="cb233-3"><a href="importing-data.html#cb233-3"></a>fullpath &lt;-<span class="st"> </span><span class="kw">file.path</span>(dir, filename)</span>
-<span id="cb233-4"><a href="importing-data.html#cb233-4"></a><span class="kw">file.copy</span>(fullpath, <span class="st">&quot;murders.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="importing-data.html#cb303-1"></a>filename &lt;-<span class="st"> &quot;murders.csv&quot;</span></span>
+<span id="cb303-2"><a href="importing-data.html#cb303-2"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>) </span>
+<span id="cb303-3"><a href="importing-data.html#cb303-3"></a>fullpath &lt;-<span class="st"> </span><span class="kw">file.path</span>(dir, filename)</span>
+<span id="cb303-4"><a href="importing-data.html#cb303-4"></a><span class="kw">file.copy</span>(fullpath, <span class="st">&quot;murders.csv&quot;</span>)</span></code></pre></div>
 <p>This code does not read the data into R, it just copies a file. But once the file is copied, we can import the data with a simple line of code. Here we use the <code>read_csv</code> function from the <strong>readr</strong> package, which is part of the tidyverse.</p>
-<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="importing-data.html#cb234-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb234-2"><a href="importing-data.html#cb234-2"></a>dat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(filename)</span></code></pre></div>
-<p>The data is imported and stored in <code>dat</code>. The rest of this section defines some important concepts and provides an overview of how we write code that tells R how to find the files we want to import. Chapter <a href="unix.html#unix">38</a> provides more details on this topic.</p>
+<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="importing-data.html#cb304-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb304-2"><a href="importing-data.html#cb304-2"></a>dat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(filename)</span></code></pre></div>
+<p>The data is imported and stored in <code>dat</code>. The rest of this section defines some important concepts and provides an overview of how we write code that tells R how to find the files we want to import. Chapter <a href="unix.html#unix">37</a> provides more details on this topic.</p>
 <div id="the-filesystem" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> The filesystem</h3>
 <p>You can think of your computer’s filesystem as a series of nested folders, each containing other folders and files. Data scientists refer to folders as <em>directories</em>. We refer to the folder that contains all other folders as the <em>root directory</em>. We refer to the directory in which we are currently located as the <em>working directory</em>. The working directory therefore changes as you move through folders: think of it as your current location.</p>
 </div>
 <div id="relative-and-full-paths" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> Relative and full paths</h3>
-<p>The <em>path</em> of a file is a list of directory names that can be thought of as instructions on what folders to click on, and in what order, to find the file. If these instructions are for finding the file from the root directory we refer to it as the <em>full path</em>. If the instructions are for finding the file starting in the working directory we refer to it as a <em>relative path</em>. Section <a href="unix.html#filesystem">38.3</a> provides more details on this topic.</p>
+<p>The <em>path</em> of a file is a list of directory names that can be thought of as instructions on what folders to click on, and in what order, to find the file. If these instructions are for finding the file from the root directory we refer to it as the <em>full path</em>. If the instructions are for finding the file starting in the working directory we refer to it as a <em>relative path</em>. Section <a href="unix.html#filesystem">37.3</a> provides more details on this topic.</p>
 <p>To see an example of a full path on your system type the following:</p>
-<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="importing-data.html#cb235-1"></a><span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="importing-data.html#cb305-1"></a><span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>)</span></code></pre></div>
 <p>The strings separated by slashes are the directory names. The first slash represents the root directory and we know this is a full path because it starts with a slash. If the first directory name appears without a slash in front, then the path is assumed to be relative. We can use the function <code>list.files</code> to see examples of relative paths.</p>
-<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="importing-data.html#cb236-1"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>)</span>
-<span id="cb236-2"><a href="importing-data.html#cb236-2"></a><span class="kw">list.files</span>(<span class="dt">path =</span> dir)</span>
-<span id="cb236-3"><a href="importing-data.html#cb236-3"></a><span class="co">#&gt;  [1] &quot;data&quot;        &quot;DESCRIPTION&quot; &quot;extdata&quot;     &quot;help&quot;       </span></span>
-<span id="cb236-4"><a href="importing-data.html#cb236-4"></a><span class="co">#&gt;  [5] &quot;html&quot;        &quot;INDEX&quot;       &quot;Meta&quot;        &quot;NAMESPACE&quot;  </span></span>
-<span id="cb236-5"><a href="importing-data.html#cb236-5"></a><span class="co">#&gt;  [9] &quot;R&quot;           &quot;script&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="importing-data.html#cb306-1"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>)</span>
+<span id="cb306-2"><a href="importing-data.html#cb306-2"></a><span class="kw">list.files</span>(<span class="dt">path =</span> dir)</span>
+<span id="cb306-3"><a href="importing-data.html#cb306-3"></a><span class="co">#&gt;  [1] &quot;data&quot;        &quot;DESCRIPTION&quot; &quot;extdata&quot;     &quot;help&quot;       </span></span>
+<span id="cb306-4"><a href="importing-data.html#cb306-4"></a><span class="co">#&gt;  [5] &quot;html&quot;        &quot;INDEX&quot;       &quot;Meta&quot;        &quot;NAMESPACE&quot;  </span></span>
+<span id="cb306-5"><a href="importing-data.html#cb306-5"></a><span class="co">#&gt;  [9] &quot;R&quot;           &quot;script&quot;</span></span></code></pre></div>
 <p>These relative paths give us the location of the files or directories if we start in the directory with the full path. For example, the full path to the <code>help</code> directory in the example above is <code>/Library/Frameworks/R.framework/Versions/3.5/Resources/library/dslabs/help</code>.</p>
 <p><strong>Note</strong>: You will probably not make much use of the <code>system.file</code> function in your day-to-day data analysis work. We introduce it in this section because it facilitates the sharing of spreadsheets by including them in the <strong>dslabs</strong> package. You will rarely have the luxury of data being included in packages you already have installed. However, you will frequently need to navigate full and relative paths and import spreadsheet formatted data.</p>
 </div>
@@ -943,46 +944,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">5.1.3</span> The working directory</h3>
 <p>We highly recommend only writing relative paths in your code. The reason is that full paths are unique to your computer and you want your code to be portable.
 You can get the full path of your working directory without writing out explicitly by using the <code>getwd</code> function.</p>
-<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="importing-data.html#cb237-1"></a>wd &lt;-<span class="st"> </span><span class="kw">getwd</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="importing-data.html#cb307-1"></a>wd &lt;-<span class="st"> </span><span class="kw">getwd</span>()</span></code></pre></div>
 <p>If you need to change your working directory, you can use the function <code>setwd</code> or you can change it through RStudio by clicking on “Session”.</p>
 </div>
 <div id="generating-path-names" class="section level3">
 <h3><span class="header-section-number">5.1.4</span> Generating path names</h3>
 <p>Another example of obtaining a full path without writing out explicitly was given above when we created the object <code>fullpath</code> like this:</p>
-<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="importing-data.html#cb238-1"></a>filename &lt;-<span class="st"> &quot;murders.csv&quot;</span></span>
-<span id="cb238-2"><a href="importing-data.html#cb238-2"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>) </span>
-<span id="cb238-3"><a href="importing-data.html#cb238-3"></a>fullpath &lt;-<span class="st"> </span><span class="kw">file.path</span>(dir, filename)</span></code></pre></div>
+<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="importing-data.html#cb308-1"></a>filename &lt;-<span class="st"> &quot;murders.csv&quot;</span></span>
+<span id="cb308-2"><a href="importing-data.html#cb308-2"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>) </span>
+<span id="cb308-3"><a href="importing-data.html#cb308-3"></a>fullpath &lt;-<span class="st"> </span><span class="kw">file.path</span>(dir, filename)</span></code></pre></div>
 <p>The function <code>system.file</code> provides the full path of the folder containing all the files and directories relevant to the package specified by the <code>package</code> argument. By exploring the directories in <code>dir</code> we find that the <code>extdata</code> contains the file we want:</p>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="importing-data.html#cb239-1"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>) </span>
-<span id="cb239-2"><a href="importing-data.html#cb239-2"></a>filename <span class="op">%in%</span><span class="st"> </span><span class="kw">list.files</span>(<span class="kw">file.path</span>(dir, <span class="st">&quot;extdata&quot;</span>)) </span>
-<span id="cb239-3"><a href="importing-data.html#cb239-3"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb309-1"><a href="importing-data.html#cb309-1"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>) </span>
+<span id="cb309-2"><a href="importing-data.html#cb309-2"></a>filename <span class="op">%in%</span><span class="st"> </span><span class="kw">list.files</span>(<span class="kw">file.path</span>(dir, <span class="st">&quot;extdata&quot;</span>)) </span>
+<span id="cb309-3"><a href="importing-data.html#cb309-3"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 <p>The <code>system.file</code> function permits us to provide a subdirectory as a first argument, so we can obtain the fullpath of the <code>extdata</code> directory like this:</p>
-<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="importing-data.html#cb240-1"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb310-1"><a href="importing-data.html#cb310-1"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>) </span></code></pre></div>
 <p>The function <code>file.path</code> is used to combine directory names to produce the full path of the file we want to import.</p>
-<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="importing-data.html#cb241-1"></a>fullpath &lt;-<span class="st"> </span><span class="kw">file.path</span>(dir, filename)</span></code></pre></div>
+<div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb311-1"><a href="importing-data.html#cb311-1"></a>fullpath &lt;-<span class="st"> </span><span class="kw">file.path</span>(dir, filename)</span></code></pre></div>
 </div>
 <div id="copying-files-using-paths" class="section level3">
 <h3><span class="header-section-number">5.1.5</span> Copying files using paths</h3>
 <p>The final line of code we used to copy the file into our home directory used<br />
 the function <code>file.copy</code>. This function takes two arguments: the file to copy and the name to give it in the new directory.</p>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="importing-data.html#cb242-1"></a><span class="kw">file.copy</span>(fullpath, <span class="st">&quot;murders.csv&quot;</span>)</span>
-<span id="cb242-2"><a href="importing-data.html#cb242-2"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="importing-data.html#cb312-1"></a><span class="kw">file.copy</span>(fullpath, <span class="st">&quot;murders.csv&quot;</span>)</span>
+<span id="cb312-2"><a href="importing-data.html#cb312-2"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 <p>If a file is copied successfully, the <code>file.copy</code> function returns <code>TRUE</code>. Note that we are giving the file the same name, <code>murders.csv</code>, but we could have named it anything. Also note that by not starting the string with a slash, R assumes this is a relative path and copies the file to the working directory.</p>
 <p>You should be able to see the file in your working directory and can check by using:</p>
-<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="importing-data.html#cb243-1"></a><span class="kw">list.files</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb313-1"><a href="importing-data.html#cb313-1"></a><span class="kw">list.files</span>()</span></code></pre></div>
 </div>
 </div>
 <div id="the-readr-and-readxl-packages" class="section level2">
 <h2><span class="header-section-number">5.2</span> The readr and readxl packages</h2>
 <p>In this section we introduce the main tidyverse data importing functions. We will use the <code>murders.csv</code> file provided by the <strong>dslabs</strong> package as an example. To simplify the illustration we will copy the file to our working directory using the following code:</p>
-<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="importing-data.html#cb244-1"></a>filename &lt;-<span class="st"> &quot;murders.csv&quot;</span></span>
-<span id="cb244-2"><a href="importing-data.html#cb244-2"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>) </span>
-<span id="cb244-3"><a href="importing-data.html#cb244-3"></a>fullpath &lt;-<span class="st"> </span><span class="kw">file.path</span>(dir, filename)</span>
-<span id="cb244-4"><a href="importing-data.html#cb244-4"></a><span class="kw">file.copy</span>(fullpath, <span class="st">&quot;murders.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="importing-data.html#cb314-1"></a>filename &lt;-<span class="st"> &quot;murders.csv&quot;</span></span>
+<span id="cb314-2"><a href="importing-data.html#cb314-2"></a>dir &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>) </span>
+<span id="cb314-3"><a href="importing-data.html#cb314-3"></a>fullpath &lt;-<span class="st"> </span><span class="kw">file.path</span>(dir, filename)</span>
+<span id="cb314-4"><a href="importing-data.html#cb314-4"></a><span class="kw">file.copy</span>(fullpath, <span class="st">&quot;murders.csv&quot;</span>)</span></code></pre></div>
 <div id="readr" class="section level3">
 <h3><span class="header-section-number">5.2.1</span> readr</h3>
 <p>The <strong>readr</strong> library includes functions for reading data stored in text file spreadsheets into R. <strong>readr</strong> is part of the <strong>tidyverse</strong> package, or you can load it directly:</p>
-<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="importing-data.html#cb245-1"></a><span class="kw">library</span>(readr)</span></code></pre></div>
+<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="importing-data.html#cb315-1"></a><span class="kw">library</span>(readr)</span></code></pre></div>
 <p>The following functions are available to read-in spreadsheets:</p>
 <table>
 <thead>
@@ -1021,30 +1022,31 @@ the function <code>file.copy</code>. This function takes two arguments: the file
 </tbody>
 </table>
 <p>Although the suffix usually tells us what type of file it is, there is no guarantee that these always match. We can open the file to take a look or use the function <code>read_lines</code> to look at a few lines:</p>
-<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="importing-data.html#cb246-1"></a><span class="kw">read_lines</span>(<span class="st">&quot;murders.csv&quot;</span>, <span class="dt">n_max =</span> <span class="dv">3</span>)</span>
-<span id="cb246-2"><a href="importing-data.html#cb246-2"></a><span class="co">#&gt; [1] &quot;state,abb,region,population,total&quot;</span></span>
-<span id="cb246-3"><a href="importing-data.html#cb246-3"></a><span class="co">#&gt; [2] &quot;Alabama,AL,South,4779736,135&quot;     </span></span>
-<span id="cb246-4"><a href="importing-data.html#cb246-4"></a><span class="co">#&gt; [3] &quot;Alaska,AK,West,710231,19&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb316-1"><a href="importing-data.html#cb316-1"></a><span class="kw">read_lines</span>(<span class="st">&quot;murders.csv&quot;</span>, <span class="dt">n_max =</span> <span class="dv">3</span>)</span>
+<span id="cb316-2"><a href="importing-data.html#cb316-2"></a><span class="co">#&gt; [1] &quot;state,abb,region,population,total&quot;</span></span>
+<span id="cb316-3"><a href="importing-data.html#cb316-3"></a><span class="co">#&gt; [2] &quot;Alabama,AL,South,4779736,135&quot;     </span></span>
+<span id="cb316-4"><a href="importing-data.html#cb316-4"></a><span class="co">#&gt; [3] &quot;Alaska,AK,West,710231,19&quot;</span></span></code></pre></div>
 <p>This also shows that there is a header. Now we are ready to read-in the data into R. From the .csv suffix and the peek at the file, we know to use <code>read_csv</code>:</p>
-<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="importing-data.html#cb247-1"></a>dat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(filename)</span>
-<span id="cb247-2"><a href="importing-data.html#cb247-2"></a><span class="co">#&gt; Parsed with column specification:</span></span>
-<span id="cb247-3"><a href="importing-data.html#cb247-3"></a><span class="co">#&gt; cols(</span></span>
-<span id="cb247-4"><a href="importing-data.html#cb247-4"></a><span class="co">#&gt;   state = col_character(),</span></span>
-<span id="cb247-5"><a href="importing-data.html#cb247-5"></a><span class="co">#&gt;   abb = col_character(),</span></span>
-<span id="cb247-6"><a href="importing-data.html#cb247-6"></a><span class="co">#&gt;   region = col_character(),</span></span>
-<span id="cb247-7"><a href="importing-data.html#cb247-7"></a><span class="co">#&gt;   population = col_double(),</span></span>
-<span id="cb247-8"><a href="importing-data.html#cb247-8"></a><span class="co">#&gt;   total = col_double()</span></span>
-<span id="cb247-9"><a href="importing-data.html#cb247-9"></a><span class="co">#&gt; )</span></span></code></pre></div>
+<div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb317-1"><a href="importing-data.html#cb317-1"></a>dat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(filename)</span>
+<span id="cb317-2"><a href="importing-data.html#cb317-2"></a><span class="co">#&gt; </span></span>
+<span id="cb317-3"><a href="importing-data.html#cb317-3"></a><span class="co">#&gt; ── Column specification ────────────────────────────────────────────────</span></span>
+<span id="cb317-4"><a href="importing-data.html#cb317-4"></a><span class="co">#&gt; cols(</span></span>
+<span id="cb317-5"><a href="importing-data.html#cb317-5"></a><span class="co">#&gt;   state = col_character(),</span></span>
+<span id="cb317-6"><a href="importing-data.html#cb317-6"></a><span class="co">#&gt;   abb = col_character(),</span></span>
+<span id="cb317-7"><a href="importing-data.html#cb317-7"></a><span class="co">#&gt;   region = col_character(),</span></span>
+<span id="cb317-8"><a href="importing-data.html#cb317-8"></a><span class="co">#&gt;   population = col_double(),</span></span>
+<span id="cb317-9"><a href="importing-data.html#cb317-9"></a><span class="co">#&gt;   total = col_double()</span></span>
+<span id="cb317-10"><a href="importing-data.html#cb317-10"></a><span class="co">#&gt; )</span></span></code></pre></div>
 <p>Note that we receive a message letting us know what data types were used for each column.
 Also note that <code>dat</code> is a <code>tibble</code>, not just a data frame. This is because <code>read_csv</code> is a <strong>tidyverse</strong> parser. We can confirm that the data has in fact been read-in with:</p>
-<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="importing-data.html#cb248-1"></a><span class="kw">View</span>(dat)</span></code></pre></div>
+<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb318-1"><a href="importing-data.html#cb318-1"></a><span class="kw">View</span>(dat)</span></code></pre></div>
 <p>Finally, note that we can also use the full path for the file:</p>
-<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="importing-data.html#cb249-1"></a>dat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(fullpath)</span></code></pre></div>
+<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb319-1"><a href="importing-data.html#cb319-1"></a>dat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(fullpath)</span></code></pre></div>
 </div>
 <div id="readxl" class="section level3">
 <h3><span class="header-section-number">5.2.2</span> readxl</h3>
 <p>You can load the <strong>readxl</strong> package using</p>
-<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="importing-data.html#cb250-1"></a><span class="kw">library</span>(readxl)</span></code></pre></div>
+<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb320-1"><a href="importing-data.html#cb320-1"></a><span class="kw">library</span>(readxl)</span></code></pre></div>
 <p>The package provides functions to read-in Microsoft Excel formats:</p>
 <table>
 <thead>
@@ -1078,44 +1080,46 @@ Also note that <code>dat</code> is a <code>tibble</code>, not just a data frame.
 <div id="exercises-13" class="section level2">
 <h2><span class="header-section-number">5.3</span> Exercises</h2>
 <p>1. Use the <code>read_csv</code> function to read each of the files that the following code saves in the <code>files</code> object:</p>
-<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="importing-data.html#cb251-1"></a>path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>)</span>
-<span id="cb251-2"><a href="importing-data.html#cb251-2"></a>files &lt;-<span class="st"> </span><span class="kw">list.files</span>(path)</span>
-<span id="cb251-3"><a href="importing-data.html#cb251-3"></a>files</span></code></pre></div>
+<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb321-1"><a href="importing-data.html#cb321-1"></a>path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>)</span>
+<span id="cb321-2"><a href="importing-data.html#cb321-2"></a>files &lt;-<span class="st"> </span><span class="kw">list.files</span>(path)</span>
+<span id="cb321-3"><a href="importing-data.html#cb321-3"></a>files</span></code></pre></div>
 <p>2. Note that the last one, the <code>olive</code> file, gives us a warning. This is because the first line of the file is missing the header for the first column.</p>
 <p>Read the help file for <code>read_csv</code> to figure out how to read in the file without reading this header. If you skip the header, you should not get this warning. Save the result to an object called <code>dat</code>.</p>
 <p>3. A problem with the previous approach is that we don’t know what the columns represent. Type:</p>
-<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="importing-data.html#cb252-1"></a><span class="kw">names</span>(dat)</span></code></pre></div>
+<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb322-1"><a href="importing-data.html#cb322-1"></a><span class="kw">names</span>(dat)</span></code></pre></div>
 <p>to see that the names are not informative.</p>
 <p>Use the <code>readLines</code> function to read in just the first line (we later learn how to extract values from the output).</p>
 </div>
 <div id="downloading-files" class="section level2">
 <h2><span class="header-section-number">5.4</span> Downloading files</h2>
 <p>Another common place for data to reside is on the internet. When these data are in files, we can download them and then import them or even read them directly from the web. For example, we note that because our <strong>dslabs</strong> package is on GitHub, the file we downloaded with the package has a url:</p>
-<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="importing-data.html#cb253-1"></a>url &lt;-<span class="st"> &quot;https://raw.githubusercontent.com/rafalab/dslabs/master/inst/</span></span>
-<span id="cb253-2"><a href="importing-data.html#cb253-2"></a><span class="st">extdata/murders.csv&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb323-1"><a href="importing-data.html#cb323-1"></a>url &lt;-<span class="st"> </span></span>
+<span id="cb323-2"><a href="importing-data.html#cb323-2"></a><span class="st">  &quot;https://raw.githubusercontent.com/rafalab/dslabs/master/inst/extdata/murders.csv&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb324-1"><a href="importing-data.html#cb324-1"></a>url &lt;-<span class="st"> &quot;https://raw.githubusercontent.com/rafalab/dslabs/master/inst/</span></span>
+<span id="cb324-2"><a href="importing-data.html#cb324-2"></a><span class="st">extdata/murders.csv&quot;</span></span></code></pre></div>
 <p>The <code>read_csv</code> file can read these files directly:</p>
-<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="importing-data.html#cb254-1"></a>dat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)</span></code></pre></div>
+<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="importing-data.html#cb325-1"></a>dat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)</span></code></pre></div>
 <p>If you want to have a local copy of the file, you can use the <code>download.file</code> function:</p>
-<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="importing-data.html#cb255-1"></a><span class="kw">download.file</span>(url, <span class="st">&quot;murders.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb326-1"><a href="importing-data.html#cb326-1"></a><span class="kw">download.file</span>(url, <span class="st">&quot;murders.csv&quot;</span>)</span></code></pre></div>
 <p>This will download the file and save it on your system with the name <code>murders.csv</code>. You can use any name here, not necessarily <code>murders.csv</code>. Note that when using <code>download.file</code> you should be careful as <strong>it will overwrite existing files without warning</strong>.</p>
 <p>Two functions that are sometimes useful when downloading data from the internet are <code>tempdir</code> and <code>tempfile</code>. The first creates a directory with a random name that is very likely to be unique. Similarly, <code>tempfile</code> creates a character string, not a file, that is likely to be a unique filename. So you can run a command like this which erases the temporary file once it imports the data:</p>
-<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="importing-data.html#cb256-1"></a>tmp_filename &lt;-<span class="st"> </span><span class="kw">tempfile</span>()</span>
-<span id="cb256-2"><a href="importing-data.html#cb256-2"></a><span class="kw">download.file</span>(url, tmp_filename)</span>
-<span id="cb256-3"><a href="importing-data.html#cb256-3"></a>dat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(tmp_filename)</span>
-<span id="cb256-4"><a href="importing-data.html#cb256-4"></a><span class="kw">file.remove</span>(tmp_filename)</span></code></pre></div>
+<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="importing-data.html#cb327-1"></a>tmp_filename &lt;-<span class="st"> </span><span class="kw">tempfile</span>()</span>
+<span id="cb327-2"><a href="importing-data.html#cb327-2"></a><span class="kw">download.file</span>(url, tmp_filename)</span>
+<span id="cb327-3"><a href="importing-data.html#cb327-3"></a>dat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(tmp_filename)</span>
+<span id="cb327-4"><a href="importing-data.html#cb327-4"></a><span class="kw">file.remove</span>(tmp_filename)</span></code></pre></div>
 </div>
 <div id="r-base-importing-functions" class="section level2">
 <h2><span class="header-section-number">5.5</span> R-base importing functions</h2>
 <p>R-base also provides import functions. These have similar names to those in the <strong>tidyverse</strong>, for example <code>read.table</code>, <code>read.csv</code> and <code>read.delim</code>. You can obtain an data frame like <code>dat</code> using:</p>
-<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="importing-data.html#cb257-1"></a>dat2 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(filename)</span></code></pre></div>
+<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="importing-data.html#cb328-1"></a>dat2 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(filename)</span></code></pre></div>
 <p>An often useful R-base importing function is <code>scan</code>, as it provides much flexibility. When reading in spreadsheets many things can go wrong. The file might have a multiline header, be missing cells, or it might use an unexpected encoding<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a>. We recommend you read this post about common issues found here: <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/</a>.</p>
 <p>With experience you will learn how to deal with different challenges. Carefully reading the help files for the functions discussed here will be useful. With scan you can read-in each cell of a file. Here is an example:</p>
-<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="importing-data.html#cb258-1"></a>path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>)</span>
-<span id="cb258-2"><a href="importing-data.html#cb258-2"></a>filename &lt;-<span class="st"> &quot;murders.csv&quot;</span></span>
-<span id="cb258-3"><a href="importing-data.html#cb258-3"></a>x &lt;-<span class="st"> </span><span class="kw">scan</span>(<span class="kw">file.path</span>(path, filename), <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="dt">what =</span> <span class="st">&quot;c&quot;</span>)</span>
-<span id="cb258-4"><a href="importing-data.html#cb258-4"></a>x[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</span>
-<span id="cb258-5"><a href="importing-data.html#cb258-5"></a><span class="co">#&gt;  [1] &quot;state&quot;      &quot;abb&quot;        &quot;region&quot;     &quot;population&quot; &quot;total&quot;     </span></span>
-<span id="cb258-6"><a href="importing-data.html#cb258-6"></a><span class="co">#&gt;  [6] &quot;Alabama&quot;    &quot;AL&quot;         &quot;South&quot;      &quot;4779736&quot;    &quot;135&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="importing-data.html#cb329-1"></a>path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;dslabs&quot;</span>)</span>
+<span id="cb329-2"><a href="importing-data.html#cb329-2"></a>filename &lt;-<span class="st"> &quot;murders.csv&quot;</span></span>
+<span id="cb329-3"><a href="importing-data.html#cb329-3"></a>x &lt;-<span class="st"> </span><span class="kw">scan</span>(<span class="kw">file.path</span>(path, filename), <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="dt">what =</span> <span class="st">&quot;c&quot;</span>)</span>
+<span id="cb329-4"><a href="importing-data.html#cb329-4"></a>x[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]</span>
+<span id="cb329-5"><a href="importing-data.html#cb329-5"></a><span class="co">#&gt;  [1] &quot;state&quot;      &quot;abb&quot;        &quot;region&quot;     &quot;population&quot; &quot;total&quot;     </span></span>
+<span id="cb329-6"><a href="importing-data.html#cb329-6"></a><span class="co">#&gt;  [6] &quot;Alabama&quot;    &quot;AL&quot;         &quot;South&quot;      &quot;4779736&quot;    &quot;135&quot;</span></span></code></pre></div>
 <p>Note that the tidyverse provides <code>read_lines</code>, a similarly useful function.</p>
 </div>
 <div id="text-versus-binary-files" class="section level2">
@@ -1152,6 +1156,7 @@ we summarize the recommendations made in paper by Karl Broman and Kara Woo<a hre
 <div id="exercises-14" class="section level2">
 <h2><span class="header-section-number">5.9</span> Exercises</h2>
 <p>1. Pick a measurement you can take on a regular basis. For example, your daily weight or how long it takes you to run 5 miles. Keep a spreadsheet that includes the date, the hour, the measurement, and any other informative variable you think is worth keeping. Do this for 2 weeks. Then make a plot.</p>
+<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb330-1"><a href="importing-data.html#cb330-1"></a>tmp &lt;-<span class="st"> </span><span class="kw">file.remove</span>(<span class="st">&quot;murders.csv&quot;</span>)</span></code></pre></div>
 
 </div>
 </div>

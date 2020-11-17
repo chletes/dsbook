@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 13 Probability | Introduction to Data Science</title>
   <meta name="description" content="This book introduces concepts and skills that can help you tackle real-world data analysis challenges. It covers concepts from probability, statistical inference, linear regression and machine learning and helps you develop skills such as R programming, data wrangling with dplyr, data visualization with ggplot2, file organization with UNIX/Linux shell, version control with GitHub, and reproducible document preparation with R markdown." />
-  <meta name="generator" content="bookdown 0.20.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 13 Probability | Introduction to Data Science" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Rafael A. Irizarry" />
 
 
-<meta name="date" content="2020-11-16" />
+<meta name="date" content="2020-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,7 +51,10 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -305,7 +308,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.15" data-path="ggplot2.html"><a href="ggplot2.html#exercises-15"><i class="fa fa-check"></i><b>7.15</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>8</b> Visualizing data distributions</a><ul>
-<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a></li>
+<li class="chapter" data-level="8.1" data-path="distributions.html"><a href="distributions.html#variable-types"><i class="fa fa-check"></i><b>8.1</b> Variable types</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="distributions.html"><a href="distributions.html#key-points"><i class="fa fa-check"></i><b>8.1.1</b> Key points</a></li>
+</ul></li>
 <li class="chapter" data-level="8.2" data-path="distributions.html"><a href="distributions.html#case-study-describing-student-heights"><i class="fa fa-check"></i><b>8.2</b> Case study: describing student heights</a></li>
 <li class="chapter" data-level="8.3" data-path="distributions.html"><a href="distributions.html#distribution-function"><i class="fa fa-check"></i><b>8.3</b> Distribution function</a></li>
 <li class="chapter" data-level="8.4" data-path="distributions.html"><a href="distributions.html#cdf-intro"><i class="fa fa-check"></i><b>8.4</b> Cumulative distribution functions</a></li>
@@ -806,78 +811,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="part"><span><b>VI Productivity Tools</b></span></li>
 <li class="chapter" data-level="35" data-path="introduction-to-productivity-tools.html"><a href="introduction-to-productivity-tools.html"><i class="fa fa-check"></i><b>35</b> Introduction to productivity tools</a></li>
-<li class="chapter" data-level="36" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html"><i class="fa fa-check"></i><b>36</b> Installing R and RStudio</a><ul>
-<li class="chapter" data-level="36.1" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-r"><i class="fa fa-check"></i><b>36.1</b> Installing R</a></li>
-<li class="chapter" data-level="36.2" data-path="installing-r-rstudio.html"><a href="installing-r-rstudio.html#installing-rstudio"><i class="fa fa-check"></i><b>36.2</b> Installing RStudio</a></li>
+<li class="chapter" data-level="36" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>36</b> Accessing the terminal and installing Git</a><ul>
+<li class="chapter" data-level="36.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>36.1</b> Accessing the terminal on a Mac</a></li>
+<li class="chapter" data-level="36.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>36.2</b> Installing Git on the Mac</a></li>
+<li class="chapter" data-level="36.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>36.3</b> Installing Git and Git Bash on Windows</a></li>
+<li class="chapter" data-level="36.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>36.4</b> Accessing the terminal on Windows</a></li>
 </ul></li>
-<li class="chapter" data-level="37" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html"><i class="fa fa-check"></i><b>37</b> Accessing the terminal and installing Git</a><ul>
-<li class="chapter" data-level="37.1" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-mac"><i class="fa fa-check"></i><b>37.1</b> Accessing the terminal on a Mac</a></li>
-<li class="chapter" data-level="37.2" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-on-the-mac"><i class="fa fa-check"></i><b>37.2</b> Installing Git on the Mac</a></li>
-<li class="chapter" data-level="37.3" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#installing-git-and-git-bash-on-windows"><i class="fa fa-check"></i><b>37.3</b> Installing Git and Git Bash on Windows</a></li>
-<li class="chapter" data-level="37.4" data-path="accessing-the-terminal-and-installing-git.html"><a href="accessing-the-terminal-and-installing-git.html#terminal-on-windows"><i class="fa fa-check"></i><b>37.4</b> Accessing the terminal on Windows</a></li>
+<li class="chapter" data-level="37" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>37</b> Organizing with Unix</a><ul>
+<li class="chapter" data-level="37.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>37.1</b> Naming convention</a></li>
+<li class="chapter" data-level="37.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>37.2</b> The terminal</a></li>
+<li class="chapter" data-level="37.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>37.3</b> The filesystem</a><ul>
+<li class="chapter" data-level="37.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>37.3.1</b> Directories and subdirectories</a></li>
+<li class="chapter" data-level="37.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>37.3.2</b> The home directory</a></li>
+<li class="chapter" data-level="37.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>37.3.3</b> Working directory</a></li>
+<li class="chapter" data-level="37.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>37.3.4</b> Paths</a></li>
 </ul></li>
-<li class="chapter" data-level="38" data-path="unix.html"><a href="unix.html"><i class="fa fa-check"></i><b>38</b> Organizing with Unix</a><ul>
-<li class="chapter" data-level="38.1" data-path="unix.html"><a href="unix.html#naming-convention"><i class="fa fa-check"></i><b>38.1</b> Naming convention</a></li>
-<li class="chapter" data-level="38.2" data-path="unix.html"><a href="unix.html#the-terminal"><i class="fa fa-check"></i><b>38.2</b> The terminal</a></li>
-<li class="chapter" data-level="38.3" data-path="unix.html"><a href="unix.html#filesystem"><i class="fa fa-check"></i><b>38.3</b> The filesystem</a><ul>
-<li class="chapter" data-level="38.3.1" data-path="unix.html"><a href="unix.html#directories-and-subdirectories"><i class="fa fa-check"></i><b>38.3.1</b> Directories and subdirectories</a></li>
-<li class="chapter" data-level="38.3.2" data-path="unix.html"><a href="unix.html#the-home-directory"><i class="fa fa-check"></i><b>38.3.2</b> The home directory</a></li>
-<li class="chapter" data-level="38.3.3" data-path="unix.html"><a href="unix.html#working-directory"><i class="fa fa-check"></i><b>38.3.3</b> Working directory</a></li>
-<li class="chapter" data-level="38.3.4" data-path="unix.html"><a href="unix.html#paths"><i class="fa fa-check"></i><b>38.3.4</b> Paths</a></li>
+<li class="chapter" data-level="37.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>37.4</b> Unix commands</a><ul>
+<li class="chapter" data-level="37.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>37.4.1</b> <code>ls</code>: Listing directory content</a></li>
+<li class="chapter" data-level="37.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>37.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
+<li class="chapter" data-level="37.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>37.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
 </ul></li>
-<li class="chapter" data-level="38.4" data-path="unix.html"><a href="unix.html#unix-commands"><i class="fa fa-check"></i><b>38.4</b> Unix commands</a><ul>
-<li class="chapter" data-level="38.4.1" data-path="unix.html"><a href="unix.html#ls-listing-directory-content"><i class="fa fa-check"></i><b>38.4.1</b> <code>ls</code>: Listing directory content</a></li>
-<li class="chapter" data-level="38.4.2" data-path="unix.html"><a href="unix.html#mkdir-and-rmdir-make-and-remove-a-directory"><i class="fa fa-check"></i><b>38.4.2</b> <code>mkdir</code> and <code>rmdir</code>: make and remove a directory</a></li>
-<li class="chapter" data-level="38.4.3" data-path="unix.html"><a href="unix.html#cd-navigating-the-filesystem-by-changing-directories"><i class="fa fa-check"></i><b>38.4.3</b> <code>cd</code>: navigating the filesystem by changing directories</a></li>
+<li class="chapter" data-level="37.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>37.5</b> Some examples</a></li>
+<li class="chapter" data-level="37.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>37.6</b> More Unix commands</a><ul>
+<li class="chapter" data-level="37.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>37.6.1</b> <code>mv</code>: moving files</a></li>
+<li class="chapter" data-level="37.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>37.6.2</b> <code>cp</code>: copying files</a></li>
+<li class="chapter" data-level="37.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>37.6.3</b> <code>rm</code>: removing files</a></li>
+<li class="chapter" data-level="37.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>37.6.4</b> <code>less</code>: looking at a file</a></li>
 </ul></li>
-<li class="chapter" data-level="38.5" data-path="unix.html"><a href="unix.html#some-examples"><i class="fa fa-check"></i><b>38.5</b> Some examples</a></li>
-<li class="chapter" data-level="38.6" data-path="unix.html"><a href="unix.html#more-unix-commands"><i class="fa fa-check"></i><b>38.6</b> More Unix commands</a><ul>
-<li class="chapter" data-level="38.6.1" data-path="unix.html"><a href="unix.html#mv-moving-files"><i class="fa fa-check"></i><b>38.6.1</b> <code>mv</code>: moving files</a></li>
-<li class="chapter" data-level="38.6.2" data-path="unix.html"><a href="unix.html#cp-copying-files"><i class="fa fa-check"></i><b>38.6.2</b> <code>cp</code>: copying files</a></li>
-<li class="chapter" data-level="38.6.3" data-path="unix.html"><a href="unix.html#rm-removing-files"><i class="fa fa-check"></i><b>38.6.3</b> <code>rm</code>: removing files</a></li>
-<li class="chapter" data-level="38.6.4" data-path="unix.html"><a href="unix.html#less-looking-at-a-file"><i class="fa fa-check"></i><b>38.6.4</b> <code>less</code>: looking at a file</a></li>
-</ul></li>
-<li class="chapter" data-level="38.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>38.7</b> Preparing for a data science project</a></li>
-<li class="chapter" data-level="38.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>38.8</b> Advanced Unix</a><ul>
-<li class="chapter" data-level="38.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>38.8.1</b> Arguments</a></li>
-<li class="chapter" data-level="38.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>38.8.2</b> Getting help</a></li>
-<li class="chapter" data-level="38.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>38.8.3</b> Pipes</a></li>
-<li class="chapter" data-level="38.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>38.8.4</b> Wild cards</a></li>
-<li class="chapter" data-level="38.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>38.8.5</b> Environment variables</a></li>
-<li class="chapter" data-level="38.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>38.8.6</b> Shells</a></li>
-<li class="chapter" data-level="38.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>38.8.7</b> Executables</a></li>
-<li class="chapter" data-level="38.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>38.8.8</b> Permissions and file types</a></li>
-<li class="chapter" data-level="38.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>38.8.9</b> Commands you should learn</a></li>
-<li class="chapter" data-level="38.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>38.8.10</b> File manipulation in R</a></li>
+<li class="chapter" data-level="37.7" data-path="unix.html"><a href="unix.html#prep-project"><i class="fa fa-check"></i><b>37.7</b> Preparing for a data science project</a></li>
+<li class="chapter" data-level="37.8" data-path="unix.html"><a href="unix.html#advanced-unix"><i class="fa fa-check"></i><b>37.8</b> Advanced Unix</a><ul>
+<li class="chapter" data-level="37.8.1" data-path="unix.html"><a href="unix.html#arguments"><i class="fa fa-check"></i><b>37.8.1</b> Arguments</a></li>
+<li class="chapter" data-level="37.8.2" data-path="unix.html"><a href="unix.html#getting-help"><i class="fa fa-check"></i><b>37.8.2</b> Getting help</a></li>
+<li class="chapter" data-level="37.8.3" data-path="unix.html"><a href="unix.html#pipes"><i class="fa fa-check"></i><b>37.8.3</b> Pipes</a></li>
+<li class="chapter" data-level="37.8.4" data-path="unix.html"><a href="unix.html#wild-cards"><i class="fa fa-check"></i><b>37.8.4</b> Wild cards</a></li>
+<li class="chapter" data-level="37.8.5" data-path="unix.html"><a href="unix.html#environment-variables"><i class="fa fa-check"></i><b>37.8.5</b> Environment variables</a></li>
+<li class="chapter" data-level="37.8.6" data-path="unix.html"><a href="unix.html#shells"><i class="fa fa-check"></i><b>37.8.6</b> Shells</a></li>
+<li class="chapter" data-level="37.8.7" data-path="unix.html"><a href="unix.html#executables"><i class="fa fa-check"></i><b>37.8.7</b> Executables</a></li>
+<li class="chapter" data-level="37.8.8" data-path="unix.html"><a href="unix.html#permissions-and-file-types"><i class="fa fa-check"></i><b>37.8.8</b> Permissions and file types</a></li>
+<li class="chapter" data-level="37.8.9" data-path="unix.html"><a href="unix.html#commands-you-should-learn"><i class="fa fa-check"></i><b>37.8.9</b> Commands you should learn</a></li>
+<li class="chapter" data-level="37.8.10" data-path="unix.html"><a href="unix.html#file-manipulation-in-r"><i class="fa fa-check"></i><b>37.8.10</b> File manipulation in R</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="39" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>39</b> Git and GitHub</a><ul>
-<li class="chapter" data-level="39.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>39.1</b> Why use Git and GitHub?</a></li>
-<li class="chapter" data-level="39.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>39.2</b> GitHub accounts</a></li>
-<li class="chapter" data-level="39.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>39.3</b> GitHub repositories</a></li>
-<li class="chapter" data-level="39.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>39.4</b> Overview of Git</a><ul>
-<li class="chapter" data-level="39.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>39.4.1</b> Clone</a></li>
+<li class="chapter" data-level="38" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>38</b> Git and GitHub</a><ul>
+<li class="chapter" data-level="38.1" data-path="git.html"><a href="git.html#why-use-git-and-github"><i class="fa fa-check"></i><b>38.1</b> Why use Git and GitHub?</a></li>
+<li class="chapter" data-level="38.2" data-path="git.html"><a href="git.html#github-accounts"><i class="fa fa-check"></i><b>38.2</b> GitHub accounts</a></li>
+<li class="chapter" data-level="38.3" data-path="git.html"><a href="git.html#github-repos"><i class="fa fa-check"></i><b>38.3</b> GitHub repositories</a></li>
+<li class="chapter" data-level="38.4" data-path="git.html"><a href="git.html#git-overview"><i class="fa fa-check"></i><b>38.4</b> Overview of Git</a><ul>
+<li class="chapter" data-level="38.4.1" data-path="git.html"><a href="git.html#clone"><i class="fa fa-check"></i><b>38.4.1</b> Clone</a></li>
 </ul></li>
-<li class="chapter" data-level="39.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>39.5</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="39.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>39.6</b> Using Git and GitHub in RStudio</a></li>
+<li class="chapter" data-level="38.5" data-path="git.html"><a href="git.html#init"><i class="fa fa-check"></i><b>38.5</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="38.6" data-path="git.html"><a href="git.html#rstudio-git"><i class="fa fa-check"></i><b>38.6</b> Using Git and GitHub in RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="40" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>40</b> Reproducible projects with RStudio and R markdown</a><ul>
-<li class="chapter" data-level="40.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>40.1</b> RStudio projects</a></li>
-<li class="chapter" data-level="40.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>40.2</b> R markdown</a><ul>
-<li class="chapter" data-level="40.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>40.2.1</b> The header</a></li>
-<li class="chapter" data-level="40.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>40.2.2</b> R code chunks</a></li>
-<li class="chapter" data-level="40.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>40.2.3</b> Global options</a></li>
-<li class="chapter" data-level="40.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>40.2.4</b> knitR</a></li>
-<li class="chapter" data-level="40.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>40.2.5</b> More on R markdown</a></li>
+<li class="chapter" data-level="39" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html"><i class="fa fa-check"></i><b>39</b> Reproducible projects with RStudio and R markdown</a><ul>
+<li class="chapter" data-level="39.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#rstudio-projects"><i class="fa fa-check"></i><b>39.1</b> RStudio projects</a></li>
+<li class="chapter" data-level="39.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-markdown"><i class="fa fa-check"></i><b>39.2</b> R markdown</a><ul>
+<li class="chapter" data-level="39.2.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#the-header"><i class="fa fa-check"></i><b>39.2.1</b> The header</a></li>
+<li class="chapter" data-level="39.2.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#r-code-chunks"><i class="fa fa-check"></i><b>39.2.2</b> R code chunks</a></li>
+<li class="chapter" data-level="39.2.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#global-options"><i class="fa fa-check"></i><b>39.2.3</b> Global options</a></li>
+<li class="chapter" data-level="39.2.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#knitr"><i class="fa fa-check"></i><b>39.2.4</b> knitR</a></li>
+<li class="chapter" data-level="39.2.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#more-on-r-markdown"><i class="fa fa-check"></i><b>39.2.5</b> More on R markdown</a></li>
 </ul></li>
-<li class="chapter" data-level="40.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>40.3</b> Organizing a data science project</a><ul>
-<li class="chapter" data-level="40.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>40.3.1</b> Create directories in Unix</a></li>
-<li class="chapter" data-level="40.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>40.3.2</b> Create an RStudio project</a></li>
-<li class="chapter" data-level="40.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>40.3.3</b> Edit some R scripts</a></li>
-<li class="chapter" data-level="40.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>40.3.4</b> Create some more directories using Unix</a></li>
-<li class="chapter" data-level="40.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>40.3.5</b> Add a README file</a></li>
-<li class="chapter" data-level="40.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>40.3.6</b> Initializing a Git directory</a></li>
-<li class="chapter" data-level="40.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>40.3.7</b> Add, commit, and push files using RStudio</a></li>
+<li class="chapter" data-level="39.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#organizing"><i class="fa fa-check"></i><b>39.3</b> Organizing a data science project</a><ul>
+<li class="chapter" data-level="39.3.1" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-directories-in-unix"><i class="fa fa-check"></i><b>39.3.1</b> Create directories in Unix</a></li>
+<li class="chapter" data-level="39.3.2" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-an-rstudio-project"><i class="fa fa-check"></i><b>39.3.2</b> Create an RStudio project</a></li>
+<li class="chapter" data-level="39.3.3" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#edit-some-r-scripts"><i class="fa fa-check"></i><b>39.3.3</b> Edit some R scripts</a></li>
+<li class="chapter" data-level="39.3.4" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#create-some-more-directories-using-unix"><i class="fa fa-check"></i><b>39.3.4</b> Create some more directories using Unix</a></li>
+<li class="chapter" data-level="39.3.5" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-a-readme-file"><i class="fa fa-check"></i><b>39.3.5</b> Add a README file</a></li>
+<li class="chapter" data-level="39.3.6" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#initializing-a-git-directory"><i class="fa fa-check"></i><b>39.3.6</b> Initializing a Git directory</a></li>
+<li class="chapter" data-level="39.3.7" data-path="reproducible-projects-with-rstudio-and-r-markdown.html"><a href="reproducible-projects-with-rstudio-and-r-markdown.html#add-commit-and-push-files-using-rstudio"><i class="fa fa-check"></i><b>39.3.7</b> Add, commit, and push files using RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -954,58 +955,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">13.2</span> Monte Carlo simulations for categorical data</h2>
 <p>Computers provide a way to actually perform the simple random experiment described above: pick a bead at random from a bag that contains three blue beads and two red ones. Random number generators permit us to mimic the process of picking at random.</p>
 <p>An example is the <code>sample</code> function in R. We demonstrate its use in the code below. First, we use the function <code>rep</code> to generate the urn:</p>
-<div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb435-1"><a href="probability.html#cb435-1"></a>beads &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="dt">times =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))</span>
-<span id="cb435-2"><a href="probability.html#cb435-2"></a>beads</span>
-<span id="cb435-3"><a href="probability.html#cb435-3"></a><span class="co">#&gt; [1] &quot;red&quot;  &quot;red&quot;  &quot;blue&quot; &quot;blue&quot; &quot;blue&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb590"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb590-1"><a href="probability.html#cb590-1"></a>beads &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="dt">times =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))</span>
+<span id="cb590-2"><a href="probability.html#cb590-2"></a>beads</span>
+<span id="cb590-3"><a href="probability.html#cb590-3"></a><span class="co">#&gt; [1] &quot;red&quot;  &quot;red&quot;  &quot;blue&quot; &quot;blue&quot; &quot;blue&quot;</span></span></code></pre></div>
 <p>and then use <code>sample</code> to pick a bead at random:</p>
-<div class="sourceCode" id="cb436"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb436-1"><a href="probability.html#cb436-1"></a><span class="kw">sample</span>(beads, <span class="dv">1</span>)</span>
-<span id="cb436-2"><a href="probability.html#cb436-2"></a><span class="co">#&gt; [1] &quot;blue&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb591"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb591-1"><a href="probability.html#cb591-1"></a><span class="kw">sample</span>(beads, <span class="dv">1</span>)</span>
+<span id="cb591-2"><a href="probability.html#cb591-2"></a><span class="co">#&gt; [1] &quot;blue&quot;</span></span></code></pre></div>
 <p>This line of code produces one random outcome. We want to repeat this experiment an infinite number of times, but it is impossible to repeat forever. Instead, we repeat the experiment a large enough number of times to make the results practically equivalent to repeating forever. <strong>This is an example of a <em>Monte Carlo</em> simulation</strong>.</p>
 <p>Much of what mathematical and theoretical statisticians study, which we do not cover in this book, relates to providing rigorous definitions of “practically equivalent” as well as studying how close a large number of experiments gets us to what happens in the limit. Later in this section, we provide a practical approach to deciding what is “large enough”.</p>
 <p>To perform our first Monte Carlo simulation, we use the <code>replicate</code> function, which permits us to repeat the same task any number of times. Here, we repeat the random event <span class="math inline">\(B =\)</span> 10,000 times:</p>
-<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb437-1"><a href="probability.html#cb437-1"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb437-2"><a href="probability.html#cb437-2"></a>events &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">sample</span>(beads, <span class="dv">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb592"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb592-1"><a href="probability.html#cb592-1"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb592-2"><a href="probability.html#cb592-2"></a>events &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">sample</span>(beads, <span class="dv">1</span>))</span></code></pre></div>
 <p>We can now see if our definition actually is in agreement with this Monte Carlo simulation approximation. We can use <code>table</code> to see the distribution:</p>
-<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb438-1"><a href="probability.html#cb438-1"></a>tab &lt;-<span class="st"> </span><span class="kw">table</span>(events)</span>
-<span id="cb438-2"><a href="probability.html#cb438-2"></a>tab</span>
-<span id="cb438-3"><a href="probability.html#cb438-3"></a><span class="co">#&gt; events</span></span>
-<span id="cb438-4"><a href="probability.html#cb438-4"></a><span class="co">#&gt; blue  red </span></span>
-<span id="cb438-5"><a href="probability.html#cb438-5"></a><span class="co">#&gt; 5999 4001</span></span></code></pre></div>
+<div class="sourceCode" id="cb593"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb593-1"><a href="probability.html#cb593-1"></a>tab &lt;-<span class="st"> </span><span class="kw">table</span>(events)</span>
+<span id="cb593-2"><a href="probability.html#cb593-2"></a>tab</span>
+<span id="cb593-3"><a href="probability.html#cb593-3"></a><span class="co">#&gt; events</span></span>
+<span id="cb593-4"><a href="probability.html#cb593-4"></a><span class="co">#&gt; blue  red </span></span>
+<span id="cb593-5"><a href="probability.html#cb593-5"></a><span class="co">#&gt; 5954 4046</span></span></code></pre></div>
 <p>and <code>prop.table</code> gives us the proportions:</p>
-<div class="sourceCode" id="cb439"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb439-1"><a href="probability.html#cb439-1"></a><span class="kw">prop.table</span>(tab)</span>
-<span id="cb439-2"><a href="probability.html#cb439-2"></a><span class="co">#&gt; events</span></span>
-<span id="cb439-3"><a href="probability.html#cb439-3"></a><span class="co">#&gt; blue  red </span></span>
-<span id="cb439-4"><a href="probability.html#cb439-4"></a><span class="co">#&gt;  0.6  0.4</span></span></code></pre></div>
+<div class="sourceCode" id="cb594"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb594-1"><a href="probability.html#cb594-1"></a><span class="kw">prop.table</span>(tab)</span>
+<span id="cb594-2"><a href="probability.html#cb594-2"></a><span class="co">#&gt; events</span></span>
+<span id="cb594-3"><a href="probability.html#cb594-3"></a><span class="co">#&gt;  blue   red </span></span>
+<span id="cb594-4"><a href="probability.html#cb594-4"></a><span class="co">#&gt; 0.595 0.405</span></span></code></pre></div>
 <p>The numbers above are the estimated probabilities provided by this Monte Carlo simulation. Statistical theory, not covered here, tells us that as <span class="math inline">\(B\)</span> gets larger, the estimates get closer to 3/5=.6 and 2/5=.4.</p>
 <p>Although this is a simple and not very useful example, we will use Monte Carlo simulations to estimate probabilities in cases in which it is harder to compute the exact ones. Before delving into more complex examples, we use simple ones to demonstrate the computing tools available in R.</p>
 <div id="setting-the-random-seed" class="section level3">
 <h3><span class="header-section-number">13.2.1</span> Setting the random seed</h3>
 <p>Before we continue, we will briefly explain the following important line of code:</p>
-<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb440-1"><a href="probability.html#cb440-1"></a><span class="kw">set.seed</span>(<span class="dv">1986</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb595"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb595-1"><a href="probability.html#cb595-1"></a><span class="kw">set.seed</span>(<span class="dv">1986</span>) </span></code></pre></div>
 <p>Throughout this book, we use random number generators. This implies that many of the results presented can actually change by chance, which then suggests that a frozen version of the book may show a different result than what you obtain when you try to code as shown in the book. This is actually fine since the results are random and change from time to time. However, if you want to ensure that results are exactly the same every time you run them, you can set R’s random number generation seed to a specific number. Above we set it to 1986. We want to avoid using the same seed everytime. A popular way to pick the seed is the year - month - day. For example, we picked 1986 on December 20, 2018: <span class="math inline">\(2018 - 12 - 20 = 1986\)</span>.</p>
 <p>You can learn more about setting the seed by looking at the documentation:</p>
-<div class="sourceCode" id="cb441"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb441-1"><a href="probability.html#cb441-1"></a>?set.seed</span></code></pre></div>
+<div class="sourceCode" id="cb596"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb596-1"><a href="probability.html#cb596-1"></a>?set.seed</span></code></pre></div>
 <p>In the exercises, we may ask you to set the seed to assure that the results you obtain are exactly what we expect them to be.</p>
 </div>
 <div id="with-and-without-replacement" class="section level3">
 <h3><span class="header-section-number">13.2.2</span> With and without replacement</h3>
 <p>The function <code>sample</code> has an argument that permits us to pick more than one element from the urn. However, by default, this selection occurs <em>without replacement</em>: after a bead is selected, it is not put back in the bag. Notice what happens when we ask to randomly select five beads:</p>
-<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb442-1"><a href="probability.html#cb442-1"></a><span class="kw">sample</span>(beads, <span class="dv">5</span>)</span>
-<span id="cb442-2"><a href="probability.html#cb442-2"></a><span class="co">#&gt; [1] &quot;red&quot;  &quot;blue&quot; &quot;blue&quot; &quot;blue&quot; &quot;red&quot;</span></span>
-<span id="cb442-3"><a href="probability.html#cb442-3"></a><span class="kw">sample</span>(beads, <span class="dv">5</span>)</span>
-<span id="cb442-4"><a href="probability.html#cb442-4"></a><span class="co">#&gt; [1] &quot;red&quot;  &quot;red&quot;  &quot;blue&quot; &quot;blue&quot; &quot;blue&quot;</span></span>
-<span id="cb442-5"><a href="probability.html#cb442-5"></a><span class="kw">sample</span>(beads, <span class="dv">5</span>)</span>
-<span id="cb442-6"><a href="probability.html#cb442-6"></a><span class="co">#&gt; [1] &quot;blue&quot; &quot;red&quot;  &quot;blue&quot; &quot;red&quot;  &quot;blue&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb597"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb597-1"><a href="probability.html#cb597-1"></a><span class="kw">sample</span>(beads, <span class="dv">5</span>)</span>
+<span id="cb597-2"><a href="probability.html#cb597-2"></a><span class="co">#&gt; [1] &quot;red&quot;  &quot;blue&quot; &quot;blue&quot; &quot;blue&quot; &quot;red&quot;</span></span>
+<span id="cb597-3"><a href="probability.html#cb597-3"></a><span class="kw">sample</span>(beads, <span class="dv">5</span>)</span>
+<span id="cb597-4"><a href="probability.html#cb597-4"></a><span class="co">#&gt; [1] &quot;red&quot;  &quot;red&quot;  &quot;blue&quot; &quot;blue&quot; &quot;blue&quot;</span></span>
+<span id="cb597-5"><a href="probability.html#cb597-5"></a><span class="kw">sample</span>(beads, <span class="dv">5</span>)</span>
+<span id="cb597-6"><a href="probability.html#cb597-6"></a><span class="co">#&gt; [1] &quot;blue&quot; &quot;red&quot;  &quot;blue&quot; &quot;red&quot;  &quot;blue&quot;</span></span></code></pre></div>
 <p>This results in rearrangements that always have three blue and two red beads. If we ask that six beads be selected, we get an error:</p>
-<div class="sourceCode" id="cb443"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb443-1"><a href="probability.html#cb443-1"></a><span class="kw">sample</span>(beads, <span class="dv">6</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb598"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb598-1"><a href="probability.html#cb598-1"></a><span class="kw">sample</span>(beads, <span class="dv">6</span>)</span></code></pre></div>
 <p><code>Error in sample.int(length(x), size, replace, prob) :    cannot take a sample larger than the population when 'replace = FALSE'</code></p>
 <p>However, the <code>sample</code> function can be used directly, without the use of <code>replicate</code>, to repeat the same experiment of picking 1 out of the 5 beads, continually, under the same conditions. To do this, we sample <em>with replacement</em>: return the bead back to the urn after selecting it.
 We can tell <code>sample</code> to do this by changing the <code>replace</code> argument, which defaults to <code>FALSE</code>, to <code>replace = TRUE</code>:</p>
-<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="probability.html#cb444-1"></a>events &lt;-<span class="st"> </span><span class="kw">sample</span>(beads, B, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb444-2"><a href="probability.html#cb444-2"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(events))</span>
-<span id="cb444-3"><a href="probability.html#cb444-3"></a><span class="co">#&gt; events</span></span>
-<span id="cb444-4"><a href="probability.html#cb444-4"></a><span class="co">#&gt;  blue   red </span></span>
-<span id="cb444-5"><a href="probability.html#cb444-5"></a><span class="co">#&gt; 0.602 0.398</span></span></code></pre></div>
+<div class="sourceCode" id="cb599"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb599-1"><a href="probability.html#cb599-1"></a>events &lt;-<span class="st"> </span><span class="kw">sample</span>(beads, B, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb599-2"><a href="probability.html#cb599-2"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(events))</span>
+<span id="cb599-3"><a href="probability.html#cb599-3"></a><span class="co">#&gt; events</span></span>
+<span id="cb599-4"><a href="probability.html#cb599-4"></a><span class="co">#&gt;  blue   red </span></span>
+<span id="cb599-5"><a href="probability.html#cb599-5"></a><span class="co">#&gt; 0.602 0.398</span></span></code></pre></div>
 <p>Not surprisingly, we get results very similar to those previously obtained with <code>replicate</code>.</p>
 </div>
 </div>
@@ -1014,10 +1015,10 @@ We can tell <code>sample</code> to do this by changing the <code>replace</code> 
 <p>We say two events are independent if the outcome of one does not affect the other. The classic example is coin tosses. Every time we toss a fair coin, the probability of seeing heads is 1/2 regardless of what previous tosses have revealed. The same is true when we pick beads from an urn with replacement. In the example above, the probability of red is 0.40 regardless of previous draws.</p>
 <p>Many examples of events that are not independent come from card games. When we deal the first card, the probability of getting a King is 1/13 since there are thirteen possibilities: Ace, Deuce, Three, <span class="math inline">\(\dots\)</span>, Ten, Jack, Queen, King, and Ace. Now if we deal a King for the first card, and don’t replace it into the deck, the probabilities of a second card being a King is less because there are only three Kings left: the probability is 3 out of 51. These events are therefore <strong>not independent</strong>: the first outcome affected the next one.</p>
 <p>To see an extreme case of non-independent events, consider our example of drawing five beads at random <strong>without</strong> replacement:</p>
-<div class="sourceCode" id="cb445"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb445-1"><a href="probability.html#cb445-1"></a>x &lt;-<span class="st"> </span><span class="kw">sample</span>(beads, <span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb600"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb600-1"><a href="probability.html#cb600-1"></a>x &lt;-<span class="st"> </span><span class="kw">sample</span>(beads, <span class="dv">5</span>)</span></code></pre></div>
 <p>If you have to guess the color of the first bead, you will predict blue since blue has a 60% chance. But if I show you the result of the last four outcomes:</p>
-<div class="sourceCode" id="cb446"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb446-1"><a href="probability.html#cb446-1"></a>x[<span class="dv">2</span><span class="op">:</span><span class="dv">5</span>]</span>
-<span id="cb446-2"><a href="probability.html#cb446-2"></a><span class="co">#&gt; [1] &quot;blue&quot; &quot;blue&quot; &quot;blue&quot; &quot;red&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb601"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb601-1"><a href="probability.html#cb601-1"></a>x[<span class="dv">2</span><span class="op">:</span><span class="dv">5</span>]</span>
+<span id="cb601-2"><a href="probability.html#cb601-2"></a><span class="co">#&gt; [1] &quot;blue&quot; &quot;blue&quot; &quot;blue&quot; &quot;red&quot;</span></span></code></pre></div>
 <p>would you still guess blue? Of course not. Now you know that the probability of red is 1 since the only bead left is red. The events are not independent, so the probabilities change.</p>
 </div>
 <div id="conditional-probabilities" class="section level2">
@@ -1070,6 +1071,14 @@ Let’s use Blackjack as an example. In Blackjack, you are assigned two random c
 \mbox{Pr}(A \mbox{ or } B) = \mbox{Pr}(A) + \mbox{Pr}(B) - \mbox{Pr}(A \mbox{ and } B)
 \]</span></p>
 <p>This rule is intuitive: think of a Venn diagram. If we simply add the probabilities, we count the intersection twice so we need to substract one instance.</p>
+<div class="sourceCode" id="cb602"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb602-1"><a href="probability.html#cb602-1"></a><span class="kw">library</span>(VennDiagram)</span>
+<span id="cb602-2"><a href="probability.html#cb602-2"></a>rafalib<span class="op">::</span><span class="kw">mypar</span>()</span>
+<span id="cb602-3"><a href="probability.html#cb602-3"></a><span class="kw">grid.newpage</span>()</span>
+<span id="cb602-4"><a href="probability.html#cb602-4"></a>tmp &lt;-<span class="st"> </span><span class="kw">draw.pairwise.venn</span>(<span class="dv">22</span>, <span class="dv">20</span>, <span class="dv">11</span>, <span class="dt">category =</span> <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>), </span>
+<span id="cb602-5"><a href="probability.html#cb602-5"></a>                   <span class="dt">lty =</span> <span class="kw">rep</span>(<span class="st">&quot;blank&quot;</span>, <span class="dv">2</span>), </span>
+<span id="cb602-6"><a href="probability.html#cb602-6"></a>                   <span class="dt">fill =</span> <span class="kw">c</span>(<span class="st">&quot;light blue&quot;</span>, <span class="st">&quot;pink&quot;</span>), </span>
+<span id="cb602-7"><a href="probability.html#cb602-7"></a>                   <span class="dt">alpha =</span> <span class="kw">rep</span>(<span class="fl">0.5</span>, <span class="dv">2</span>),  </span>
+<span id="cb602-8"><a href="probability.html#cb602-8"></a>                   <span class="dt">cat.dist =</span> <span class="kw">rep</span>(<span class="fl">0.025</span>, <span class="dv">2</span>), <span class="dt">cex=</span><span class="dv">0</span>, <span class="dt">cat.cex =</span> <span class="kw">rep</span>(<span class="fl">2.5</span>,<span class="dv">2</span>))</span></code></pre></div>
 <p><img src="book_files/figure-html/venn-diagram-addition-rule-1.png" width="35%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
@@ -1078,121 +1087,114 @@ Let’s use Blackjack as an example. In Blackjack, you are assigned two random c
 <p>In our very first example, we imagined an urn with five beads. As a reminder, to compute the probability distribution of one draw, we simply listed out all the possibilities. There were 5 and so then, for each event, we counted how many of these possibilities were associated with the event. The resulting probability of choosing a blue bead is 3/5 because out of the five possible outcomes, three were blue.</p>
 <p>For more complicated cases, the computations are not as straightforward. For instance, what is the probability that if I draw five cards without replacement, I get all cards of the same suit, what is known as a “flush” in poker? In a discrete probability course you learn theory on how to make these computations. Here we focus on how to use R code to compute the answers.</p>
 <p>First, let’s construct a deck of cards. For this, we will use the <code>expand.grid</code> and <code>paste</code> functions. We use <code>paste</code> to create strings by joining smaller strings. To do this, we take the number and suit of a card and create the card name like this:</p>
-<div class="sourceCode" id="cb447"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb447-1"><a href="probability.html#cb447-1"></a>number &lt;-<span class="st"> &quot;Three&quot;</span></span>
-<span id="cb447-2"><a href="probability.html#cb447-2"></a>suit &lt;-<span class="st"> &quot;Hearts&quot;</span></span>
-<span id="cb447-3"><a href="probability.html#cb447-3"></a><span class="kw">paste</span>(number, suit)</span>
-<span id="cb447-4"><a href="probability.html#cb447-4"></a><span class="co">#&gt; [1] &quot;Three Hearts&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb603"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb603-1"><a href="probability.html#cb603-1"></a>number &lt;-<span class="st"> &quot;Three&quot;</span></span>
+<span id="cb603-2"><a href="probability.html#cb603-2"></a>suit &lt;-<span class="st"> &quot;Hearts&quot;</span></span>
+<span id="cb603-3"><a href="probability.html#cb603-3"></a><span class="kw">paste</span>(number, suit)</span>
+<span id="cb603-4"><a href="probability.html#cb603-4"></a><span class="co">#&gt; [1] &quot;Three Hearts&quot;</span></span></code></pre></div>
 <p><code>paste</code> also works on pairs of vectors performing the operation element-wise:</p>
-<div class="sourceCode" id="cb448"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb448-1"><a href="probability.html#cb448-1"></a><span class="kw">paste</span>(letters[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="kw">as.character</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>))</span>
-<span id="cb448-2"><a href="probability.html#cb448-2"></a><span class="co">#&gt; [1] &quot;a 1&quot; &quot;b 2&quot; &quot;c 3&quot; &quot;d 4&quot; &quot;e 5&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb604"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb604-1"><a href="probability.html#cb604-1"></a><span class="kw">paste</span>(letters[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="kw">as.character</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>))</span>
+<span id="cb604-2"><a href="probability.html#cb604-2"></a><span class="co">#&gt; [1] &quot;a 1&quot; &quot;b 2&quot; &quot;c 3&quot; &quot;d 4&quot; &quot;e 5&quot;</span></span></code></pre></div>
 <p>The function <code>expand.grid</code> gives us all the combinations of entries of two vectors. For example, if you have blue and black pants and white, grey, and plaid shirts, all your combinations are:</p>
-<div class="sourceCode" id="cb449"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb449-1"><a href="probability.html#cb449-1"></a><span class="kw">expand.grid</span>(<span class="dt">pants =</span> <span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;black&quot;</span>), <span class="dt">shirt =</span> <span class="kw">c</span>(<span class="st">&quot;white&quot;</span>, <span class="st">&quot;grey&quot;</span>, <span class="st">&quot;plaid&quot;</span>))</span>
-<span id="cb449-2"><a href="probability.html#cb449-2"></a><span class="co">#&gt;   pants shirt</span></span>
-<span id="cb449-3"><a href="probability.html#cb449-3"></a><span class="co">#&gt; 1  blue white</span></span>
-<span id="cb449-4"><a href="probability.html#cb449-4"></a><span class="co">#&gt; 2 black white</span></span>
-<span id="cb449-5"><a href="probability.html#cb449-5"></a><span class="co">#&gt; 3  blue  grey</span></span>
-<span id="cb449-6"><a href="probability.html#cb449-6"></a><span class="co">#&gt; 4 black  grey</span></span>
-<span id="cb449-7"><a href="probability.html#cb449-7"></a><span class="co">#&gt; 5  blue plaid</span></span>
-<span id="cb449-8"><a href="probability.html#cb449-8"></a><span class="co">#&gt; 6 black plaid</span></span></code></pre></div>
+<div class="sourceCode" id="cb605"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb605-1"><a href="probability.html#cb605-1"></a><span class="kw">expand.grid</span>(<span class="dt">pants =</span> <span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;black&quot;</span>), <span class="dt">shirt =</span> <span class="kw">c</span>(<span class="st">&quot;white&quot;</span>, <span class="st">&quot;grey&quot;</span>, <span class="st">&quot;plaid&quot;</span>))</span></code></pre></div>
 <p>Here is how we generate a deck of cards:</p>
-<div class="sourceCode" id="cb450"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb450-1"><a href="probability.html#cb450-1"></a>suits &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Diamonds&quot;</span>, <span class="st">&quot;Clubs&quot;</span>, <span class="st">&quot;Hearts&quot;</span>, <span class="st">&quot;Spades&quot;</span>)</span>
-<span id="cb450-2"><a href="probability.html#cb450-2"></a>numbers &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Ace&quot;</span>, <span class="st">&quot;Deuce&quot;</span>, <span class="st">&quot;Three&quot;</span>, <span class="st">&quot;Four&quot;</span>, <span class="st">&quot;Five&quot;</span>, <span class="st">&quot;Six&quot;</span>, <span class="st">&quot;Seven&quot;</span>, </span>
-<span id="cb450-3"><a href="probability.html#cb450-3"></a>             <span class="st">&quot;Eight&quot;</span>, <span class="st">&quot;Nine&quot;</span>, <span class="st">&quot;Ten&quot;</span>, <span class="st">&quot;Jack&quot;</span>, <span class="st">&quot;Queen&quot;</span>, <span class="st">&quot;King&quot;</span>)</span>
-<span id="cb450-4"><a href="probability.html#cb450-4"></a>deck &lt;-<span class="st"> </span><span class="kw">expand.grid</span>(<span class="dt">number=</span>numbers, <span class="dt">suit=</span>suits)</span>
-<span id="cb450-5"><a href="probability.html#cb450-5"></a>deck &lt;-<span class="st"> </span><span class="kw">paste</span>(deck<span class="op">$</span>number, deck<span class="op">$</span>suit)</span></code></pre></div>
+<div class="sourceCode" id="cb606"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb606-1"><a href="probability.html#cb606-1"></a>suits &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Diamonds&quot;</span>, <span class="st">&quot;Clubs&quot;</span>, <span class="st">&quot;Hearts&quot;</span>, <span class="st">&quot;Spades&quot;</span>)</span>
+<span id="cb606-2"><a href="probability.html#cb606-2"></a>numbers &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Ace&quot;</span>, <span class="st">&quot;Deuce&quot;</span>, <span class="st">&quot;Three&quot;</span>, <span class="st">&quot;Four&quot;</span>, <span class="st">&quot;Five&quot;</span>, <span class="st">&quot;Six&quot;</span>, <span class="st">&quot;Seven&quot;</span>, </span>
+<span id="cb606-3"><a href="probability.html#cb606-3"></a>             <span class="st">&quot;Eight&quot;</span>, <span class="st">&quot;Nine&quot;</span>, <span class="st">&quot;Ten&quot;</span>, <span class="st">&quot;Jack&quot;</span>, <span class="st">&quot;Queen&quot;</span>, <span class="st">&quot;King&quot;</span>)</span>
+<span id="cb606-4"><a href="probability.html#cb606-4"></a>deck &lt;-<span class="st"> </span><span class="kw">expand.grid</span>(<span class="dt">number=</span>numbers, <span class="dt">suit=</span>suits)</span>
+<span id="cb606-5"><a href="probability.html#cb606-5"></a>deck &lt;-<span class="st"> </span><span class="kw">paste</span>(deck<span class="op">$</span>number, deck<span class="op">$</span>suit)</span></code></pre></div>
 <p>With the deck constructed, we can double check that the probability of a King in the first card is 1/13 by computing the proportion of possible outcomes that satisfy our condition:</p>
-<div class="sourceCode" id="cb451"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb451-1"><a href="probability.html#cb451-1"></a>kings &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;King&quot;</span>, suits)</span>
-<span id="cb451-2"><a href="probability.html#cb451-2"></a><span class="kw">mean</span>(deck <span class="op">%in%</span><span class="st"> </span>kings)</span>
-<span id="cb451-3"><a href="probability.html#cb451-3"></a><span class="co">#&gt; [1] 0.0769</span></span></code></pre></div>
+<div class="sourceCode" id="cb607"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb607-1"><a href="probability.html#cb607-1"></a>kings &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;King&quot;</span>, suits)</span>
+<span id="cb607-2"><a href="probability.html#cb607-2"></a><span class="kw">mean</span>(deck <span class="op">%in%</span><span class="st"> </span>kings)</span>
+<span id="cb607-3"><a href="probability.html#cb607-3"></a><span class="co">#&gt; [1] 0.0769</span></span></code></pre></div>
 <p>Now, how about the conditional probability of the second card being a King given that the first was a King? Earlier, we deduced that if one King is already out of the deck and there are 51 left, then this probability is 3/51. Let’s confirm by listing out all possible outcomes.</p>
 <p>To do this, we can use the <code>permutations</code> function from the <strong>gtools</strong> package. For any list of size <code>n</code>, this function computes all the different combinations we can get when we select <code>r</code> items. Here are all the ways we can choose two numbers from a list consisting of <code>1,2,3</code>:</p>
-<div class="sourceCode" id="cb452"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb452-1"><a href="probability.html#cb452-1"></a><span class="kw">library</span>(gtools)</span>
-<span id="cb452-2"><a href="probability.html#cb452-2"></a><span class="kw">permutations</span>(<span class="dv">3</span>, <span class="dv">2</span>)</span>
-<span id="cb452-3"><a href="probability.html#cb452-3"></a><span class="co">#&gt;      [,1] [,2]</span></span>
-<span id="cb452-4"><a href="probability.html#cb452-4"></a><span class="co">#&gt; [1,]    1    2</span></span>
-<span id="cb452-5"><a href="probability.html#cb452-5"></a><span class="co">#&gt; [2,]    1    3</span></span>
-<span id="cb452-6"><a href="probability.html#cb452-6"></a><span class="co">#&gt; [3,]    2    1</span></span>
-<span id="cb452-7"><a href="probability.html#cb452-7"></a><span class="co">#&gt; [4,]    2    3</span></span>
-<span id="cb452-8"><a href="probability.html#cb452-8"></a><span class="co">#&gt; [5,]    3    1</span></span>
-<span id="cb452-9"><a href="probability.html#cb452-9"></a><span class="co">#&gt; [6,]    3    2</span></span></code></pre></div>
+<div class="sourceCode" id="cb608"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb608-1"><a href="probability.html#cb608-1"></a><span class="kw">library</span>(gtools)</span>
+<span id="cb608-2"><a href="probability.html#cb608-2"></a><span class="kw">permutations</span>(<span class="dv">3</span>, <span class="dv">2</span>)</span>
+<span id="cb608-3"><a href="probability.html#cb608-3"></a><span class="co">#&gt;      [,1] [,2]</span></span>
+<span id="cb608-4"><a href="probability.html#cb608-4"></a><span class="co">#&gt; [1,]    1    2</span></span>
+<span id="cb608-5"><a href="probability.html#cb608-5"></a><span class="co">#&gt; [2,]    1    3</span></span>
+<span id="cb608-6"><a href="probability.html#cb608-6"></a><span class="co">#&gt; [3,]    2    1</span></span>
+<span id="cb608-7"><a href="probability.html#cb608-7"></a><span class="co">#&gt; [4,]    2    3</span></span>
+<span id="cb608-8"><a href="probability.html#cb608-8"></a><span class="co">#&gt; [5,]    3    1</span></span>
+<span id="cb608-9"><a href="probability.html#cb608-9"></a><span class="co">#&gt; [6,]    3    2</span></span></code></pre></div>
 <p>Notice that the order matters here: 3,1 is different than 1,3. Also, note that (1,1), (2,2), and (3,3) do not appear because once we pick a number, it can’t appear again.</p>
 <p>Optionally, we can add a vector. If you want to see five random seven digit phone numbers out of all possible phone numbers (without repeats), you can type:</p>
-<div class="sourceCode" id="cb453"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb453-1"><a href="probability.html#cb453-1"></a>all_phone_numbers &lt;-<span class="st"> </span><span class="kw">permutations</span>(<span class="dv">10</span>, <span class="dv">7</span>, <span class="dt">v =</span> <span class="dv">0</span><span class="op">:</span><span class="dv">9</span>)</span>
-<span id="cb453-2"><a href="probability.html#cb453-2"></a>n &lt;-<span class="st"> </span><span class="kw">nrow</span>(all_phone_numbers)</span>
-<span id="cb453-3"><a href="probability.html#cb453-3"></a>index &lt;-<span class="st"> </span><span class="kw">sample</span>(n, <span class="dv">5</span>)</span>
-<span id="cb453-4"><a href="probability.html#cb453-4"></a>all_phone_numbers[index,]</span>
-<span id="cb453-5"><a href="probability.html#cb453-5"></a><span class="co">#&gt;      [,1] [,2] [,3] [,4] [,5] [,6] [,7]</span></span>
-<span id="cb453-6"><a href="probability.html#cb453-6"></a><span class="co">#&gt; [1,]    1    3    8    0    6    7    5</span></span>
-<span id="cb453-7"><a href="probability.html#cb453-7"></a><span class="co">#&gt; [2,]    2    9    1    6    4    8    0</span></span>
-<span id="cb453-8"><a href="probability.html#cb453-8"></a><span class="co">#&gt; [3,]    5    1    6    0    9    8    2</span></span>
-<span id="cb453-9"><a href="probability.html#cb453-9"></a><span class="co">#&gt; [4,]    7    4    6    0    2    8    1</span></span>
-<span id="cb453-10"><a href="probability.html#cb453-10"></a><span class="co">#&gt; [5,]    4    6    5    9    2    8    0</span></span></code></pre></div>
+<div class="sourceCode" id="cb609"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb609-1"><a href="probability.html#cb609-1"></a>all_phone_numbers &lt;-<span class="st"> </span><span class="kw">permutations</span>(<span class="dv">10</span>, <span class="dv">7</span>, <span class="dt">v =</span> <span class="dv">0</span><span class="op">:</span><span class="dv">9</span>)</span>
+<span id="cb609-2"><a href="probability.html#cb609-2"></a>n &lt;-<span class="st"> </span><span class="kw">nrow</span>(all_phone_numbers)</span>
+<span id="cb609-3"><a href="probability.html#cb609-3"></a>index &lt;-<span class="st"> </span><span class="kw">sample</span>(n, <span class="dv">5</span>)</span>
+<span id="cb609-4"><a href="probability.html#cb609-4"></a>all_phone_numbers[index,]</span>
+<span id="cb609-5"><a href="probability.html#cb609-5"></a><span class="co">#&gt;      [,1] [,2] [,3] [,4] [,5] [,6] [,7]</span></span>
+<span id="cb609-6"><a href="probability.html#cb609-6"></a><span class="co">#&gt; [1,]    1    3    8    0    6    7    5</span></span>
+<span id="cb609-7"><a href="probability.html#cb609-7"></a><span class="co">#&gt; [2,]    2    9    1    6    4    8    0</span></span>
+<span id="cb609-8"><a href="probability.html#cb609-8"></a><span class="co">#&gt; [3,]    5    1    6    0    9    8    2</span></span>
+<span id="cb609-9"><a href="probability.html#cb609-9"></a><span class="co">#&gt; [4,]    7    4    6    0    2    8    1</span></span>
+<span id="cb609-10"><a href="probability.html#cb609-10"></a><span class="co">#&gt; [5,]    4    6    5    9    2    8    0</span></span></code></pre></div>
 <p>Instead of using the numbers 1 through 10, the default, it uses what we provided through <code>v</code>: the digits 0 through 9.</p>
 <p>To compute all possible ways we can choose two cards when the order matters, we type:</p>
-<div class="sourceCode" id="cb454"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb454-1"><a href="probability.html#cb454-1"></a>hands &lt;-<span class="st"> </span><span class="kw">permutations</span>(<span class="dv">52</span>, <span class="dv">2</span>, <span class="dt">v =</span> deck)</span></code></pre></div>
+<div class="sourceCode" id="cb610"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb610-1"><a href="probability.html#cb610-1"></a>hands &lt;-<span class="st"> </span><span class="kw">permutations</span>(<span class="dv">52</span>, <span class="dv">2</span>, <span class="dt">v =</span> deck)</span></code></pre></div>
 <p>This is a matrix with two columns and 2652 rows. With a matrix we can get the first and second cards like this:</p>
-<div class="sourceCode" id="cb455"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb455-1"><a href="probability.html#cb455-1"></a>first_card &lt;-<span class="st"> </span>hands[,<span class="dv">1</span>]</span>
-<span id="cb455-2"><a href="probability.html#cb455-2"></a>second_card &lt;-<span class="st"> </span>hands[,<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb611"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb611-1"><a href="probability.html#cb611-1"></a>first_card &lt;-<span class="st"> </span>hands[,<span class="dv">1</span>]</span>
+<span id="cb611-2"><a href="probability.html#cb611-2"></a>second_card &lt;-<span class="st"> </span>hands[,<span class="dv">2</span>]</span></code></pre></div>
 <p>Now the cases for which the first hand was a King can be computed like this:</p>
-<div class="sourceCode" id="cb456"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb456-1"><a href="probability.html#cb456-1"></a>kings &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;King&quot;</span>, suits)</span>
-<span id="cb456-2"><a href="probability.html#cb456-2"></a><span class="kw">sum</span>(first_card <span class="op">%in%</span><span class="st"> </span>kings)</span>
-<span id="cb456-3"><a href="probability.html#cb456-3"></a><span class="co">#&gt; [1] 204</span></span></code></pre></div>
+<div class="sourceCode" id="cb612"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb612-1"><a href="probability.html#cb612-1"></a>kings &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;King&quot;</span>, suits)</span>
+<span id="cb612-2"><a href="probability.html#cb612-2"></a><span class="kw">sum</span>(first_card <span class="op">%in%</span><span class="st"> </span>kings)</span>
+<span id="cb612-3"><a href="probability.html#cb612-3"></a><span class="co">#&gt; [1] 204</span></span></code></pre></div>
 <p>To get the conditional probability, we compute what fraction of these have a King in the second card:</p>
-<div class="sourceCode" id="cb457"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb457-1"><a href="probability.html#cb457-1"></a><span class="kw">sum</span>(first_card<span class="op">%in%</span>kings <span class="op">&amp;</span><span class="st"> </span>second_card<span class="op">%in%</span>kings) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(first_card<span class="op">%in%</span>kings)</span>
-<span id="cb457-2"><a href="probability.html#cb457-2"></a><span class="co">#&gt; [1] 0.0588</span></span></code></pre></div>
+<div class="sourceCode" id="cb613"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb613-1"><a href="probability.html#cb613-1"></a><span class="kw">sum</span>(first_card<span class="op">%in%</span>kings <span class="op">&amp;</span><span class="st"> </span>second_card<span class="op">%in%</span>kings) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(first_card<span class="op">%in%</span>kings)</span>
+<span id="cb613-2"><a href="probability.html#cb613-2"></a><span class="co">#&gt; [1] 0.0588</span></span></code></pre></div>
 <p>which is exactly 3/51, as we had already deduced. Notice that the code above is equivalent to:</p>
-<div class="sourceCode" id="cb458"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb458-1"><a href="probability.html#cb458-1"></a><span class="kw">mean</span>(first_card<span class="op">%in%</span>kings <span class="op">&amp;</span><span class="st"> </span>second_card<span class="op">%in%</span>kings) <span class="op">/</span><span class="st"> </span><span class="kw">mean</span>(first_card<span class="op">%in%</span>kings)</span>
-<span id="cb458-2"><a href="probability.html#cb458-2"></a><span class="co">#&gt; [1] 0.0588</span></span></code></pre></div>
+<div class="sourceCode" id="cb614"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb614-1"><a href="probability.html#cb614-1"></a><span class="kw">mean</span>(first_card<span class="op">%in%</span>kings <span class="op">&amp;</span><span class="st"> </span>second_card<span class="op">%in%</span>kings) <span class="op">/</span><span class="st"> </span><span class="kw">mean</span>(first_card<span class="op">%in%</span>kings)</span>
+<span id="cb614-2"><a href="probability.html#cb614-2"></a><span class="co">#&gt; [1] 0.0588</span></span></code></pre></div>
 <p>which uses <code>mean</code> instead of <code>sum</code> and is an R version of:</p>
 <p><span class="math display">\[
 \frac{\mbox{Pr}(A \mbox{ and } B)}{ \mbox{Pr}(A)}
 \]</span></p>
 <p>How about if the order doesn’t matter? For example, in Blackjack if you get an Ace and a face card in the first draw, it is called a <em>Natural 21</em> and you win automatically. If we wanted to compute the probability of this happening, we would enumerate the <em>combinations</em>, not the permutations, since the order does not matter.</p>
-<div class="sourceCode" id="cb459"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb459-1"><a href="probability.html#cb459-1"></a><span class="kw">combinations</span>(<span class="dv">3</span>,<span class="dv">2</span>)</span>
-<span id="cb459-2"><a href="probability.html#cb459-2"></a><span class="co">#&gt;      [,1] [,2]</span></span>
-<span id="cb459-3"><a href="probability.html#cb459-3"></a><span class="co">#&gt; [1,]    1    2</span></span>
-<span id="cb459-4"><a href="probability.html#cb459-4"></a><span class="co">#&gt; [2,]    1    3</span></span>
-<span id="cb459-5"><a href="probability.html#cb459-5"></a><span class="co">#&gt; [3,]    2    3</span></span></code></pre></div>
+<div class="sourceCode" id="cb615"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb615-1"><a href="probability.html#cb615-1"></a><span class="kw">combinations</span>(<span class="dv">3</span>,<span class="dv">2</span>)</span>
+<span id="cb615-2"><a href="probability.html#cb615-2"></a><span class="co">#&gt;      [,1] [,2]</span></span>
+<span id="cb615-3"><a href="probability.html#cb615-3"></a><span class="co">#&gt; [1,]    1    2</span></span>
+<span id="cb615-4"><a href="probability.html#cb615-4"></a><span class="co">#&gt; [2,]    1    3</span></span>
+<span id="cb615-5"><a href="probability.html#cb615-5"></a><span class="co">#&gt; [3,]    2    3</span></span></code></pre></div>
 <p>In the second line, the outcome does not include (2,1) because (1,2) already was enumerated. The same applies to (3,1) and (3,2).</p>
 <p>So to compute the probability of a <em>Natural 21</em> in Blackjack, we can do this:</p>
-<div class="sourceCode" id="cb460"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb460-1"><a href="probability.html#cb460-1"></a>aces &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;Ace&quot;</span>, suits)</span>
-<span id="cb460-2"><a href="probability.html#cb460-2"></a></span>
-<span id="cb460-3"><a href="probability.html#cb460-3"></a>facecard &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;King&quot;</span>, <span class="st">&quot;Queen&quot;</span>, <span class="st">&quot;Jack&quot;</span>, <span class="st">&quot;Ten&quot;</span>)</span>
-<span id="cb460-4"><a href="probability.html#cb460-4"></a>facecard &lt;-<span class="st"> </span><span class="kw">expand.grid</span>(<span class="dt">number =</span> facecard, <span class="dt">suit =</span> suits)</span>
-<span id="cb460-5"><a href="probability.html#cb460-5"></a>facecard &lt;-<span class="st"> </span><span class="kw">paste</span>(facecard<span class="op">$</span>number, facecard<span class="op">$</span>suit)</span>
-<span id="cb460-6"><a href="probability.html#cb460-6"></a></span>
-<span id="cb460-7"><a href="probability.html#cb460-7"></a>hands &lt;-<span class="st"> </span><span class="kw">combinations</span>(<span class="dv">52</span>, <span class="dv">2</span>, <span class="dt">v =</span> deck)</span>
-<span id="cb460-8"><a href="probability.html#cb460-8"></a><span class="kw">mean</span>(hands[,<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hands[,<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>facecard)</span>
-<span id="cb460-9"><a href="probability.html#cb460-9"></a><span class="co">#&gt; [1] 0.0483</span></span></code></pre></div>
+<div class="sourceCode" id="cb616"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb616-1"><a href="probability.html#cb616-1"></a>aces &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;Ace&quot;</span>, suits)</span>
+<span id="cb616-2"><a href="probability.html#cb616-2"></a></span>
+<span id="cb616-3"><a href="probability.html#cb616-3"></a>facecard &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;King&quot;</span>, <span class="st">&quot;Queen&quot;</span>, <span class="st">&quot;Jack&quot;</span>, <span class="st">&quot;Ten&quot;</span>)</span>
+<span id="cb616-4"><a href="probability.html#cb616-4"></a>facecard &lt;-<span class="st"> </span><span class="kw">expand.grid</span>(<span class="dt">number =</span> facecard, <span class="dt">suit =</span> suits)</span>
+<span id="cb616-5"><a href="probability.html#cb616-5"></a>facecard &lt;-<span class="st"> </span><span class="kw">paste</span>(facecard<span class="op">$</span>number, facecard<span class="op">$</span>suit)</span>
+<span id="cb616-6"><a href="probability.html#cb616-6"></a></span>
+<span id="cb616-7"><a href="probability.html#cb616-7"></a>hands &lt;-<span class="st"> </span><span class="kw">combinations</span>(<span class="dv">52</span>, <span class="dv">2</span>, <span class="dt">v =</span> deck)</span>
+<span id="cb616-8"><a href="probability.html#cb616-8"></a><span class="kw">mean</span>(hands[,<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hands[,<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>facecard)</span>
+<span id="cb616-9"><a href="probability.html#cb616-9"></a><span class="co">#&gt; [1] 0.0483</span></span></code></pre></div>
 <p>In the last line, we assume the Ace comes first. This is only because we know the way <code>combination</code> enumerates possibilities and it will list this case first. But to be safe, we could have written this and produced the same answer:</p>
-<div class="sourceCode" id="cb461"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb461-1"><a href="probability.html#cb461-1"></a><span class="kw">mean</span>((hands[,<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hands[,<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>facecard) <span class="op">|</span></span>
-<span id="cb461-2"><a href="probability.html#cb461-2"></a><span class="st">       </span>(hands[,<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hands[,<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>facecard))</span>
-<span id="cb461-3"><a href="probability.html#cb461-3"></a><span class="co">#&gt; [1] 0.0483</span></span></code></pre></div>
+<div class="sourceCode" id="cb617"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb617-1"><a href="probability.html#cb617-1"></a><span class="kw">mean</span>((hands[,<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hands[,<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>facecard) <span class="op">|</span></span>
+<span id="cb617-2"><a href="probability.html#cb617-2"></a><span class="st">       </span>(hands[,<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hands[,<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>facecard))</span>
+<span id="cb617-3"><a href="probability.html#cb617-3"></a><span class="co">#&gt; [1] 0.0483</span></span></code></pre></div>
 <div id="monte-carlo-example" class="section level3">
 <h3><span class="header-section-number">13.6.1</span> Monte Carlo example</h3>
 <p>Instead of using <code>combinations</code> to deduce the exact probability of a Natural 21, we can use a Monte Carlo to estimate this probability. In this case, we draw two cards over and over and keep track of how many 21s we get. We can use the function sample to draw two cards without replacements:</p>
-<div class="sourceCode" id="cb462"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb462-1"><a href="probability.html#cb462-1"></a>hand &lt;-<span class="st"> </span><span class="kw">sample</span>(deck, <span class="dv">2</span>)</span>
-<span id="cb462-2"><a href="probability.html#cb462-2"></a>hand</span>
-<span id="cb462-3"><a href="probability.html#cb462-3"></a><span class="co">#&gt; [1] &quot;Queen Clubs&quot;  &quot;Seven Spades&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb618"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb618-1"><a href="probability.html#cb618-1"></a>hand &lt;-<span class="st"> </span><span class="kw">sample</span>(deck, <span class="dv">2</span>)</span>
+<span id="cb618-2"><a href="probability.html#cb618-2"></a>hand</span>
+<span id="cb618-3"><a href="probability.html#cb618-3"></a><span class="co">#&gt; [1] &quot;Queen Clubs&quot;  &quot;Seven Spades&quot;</span></span></code></pre></div>
 <p>And then check if one card is an Ace and the other a face card or a 10. Going forward, we include 10 when we say <em>face card</em>. Now we need to check both possibilities:</p>
-<div class="sourceCode" id="cb463"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb463-1"><a href="probability.html#cb463-1"></a>(hands[<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hands[<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>facecard) <span class="op">|</span><span class="st"> </span></span>
-<span id="cb463-2"><a href="probability.html#cb463-2"></a><span class="st">  </span>(hands[<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hands[<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>facecard)</span>
-<span id="cb463-3"><a href="probability.html#cb463-3"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb619"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb619-1"><a href="probability.html#cb619-1"></a>(hands[<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hands[<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>facecard) <span class="op">|</span><span class="st"> </span></span>
+<span id="cb619-2"><a href="probability.html#cb619-2"></a><span class="st">  </span>(hands[<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hands[<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>facecard)</span>
+<span id="cb619-3"><a href="probability.html#cb619-3"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
 <p>If we repeat this 10,000 times, we get a very good approximation of the probability of a Natural 21.</p>
 <p>Let’s start by writing a function that draws a hand and returns TRUE if we get a 21. The function does not need any arguments because it uses objects defined in the global environment.</p>
-<div class="sourceCode" id="cb464"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb464-1"><a href="probability.html#cb464-1"></a>blackjack &lt;-<span class="st"> </span><span class="cf">function</span>(){</span>
-<span id="cb464-2"><a href="probability.html#cb464-2"></a>   hand &lt;-<span class="st"> </span><span class="kw">sample</span>(deck, <span class="dv">2</span>)</span>
-<span id="cb464-3"><a href="probability.html#cb464-3"></a>  (hand[<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hand[<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>facecard) <span class="op">|</span><span class="st"> </span></span>
-<span id="cb464-4"><a href="probability.html#cb464-4"></a><span class="st">    </span>(hand[<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hand[<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>facecard)</span>
-<span id="cb464-5"><a href="probability.html#cb464-5"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb620"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb620-1"><a href="probability.html#cb620-1"></a>blackjack &lt;-<span class="st"> </span><span class="cf">function</span>(){</span>
+<span id="cb620-2"><a href="probability.html#cb620-2"></a>   hand &lt;-<span class="st"> </span><span class="kw">sample</span>(deck, <span class="dv">2</span>)</span>
+<span id="cb620-3"><a href="probability.html#cb620-3"></a>  (hand[<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hand[<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>facecard) <span class="op">|</span><span class="st"> </span></span>
+<span id="cb620-4"><a href="probability.html#cb620-4"></a><span class="st">    </span>(hand[<span class="dv">2</span>] <span class="op">%in%</span><span class="st"> </span>aces <span class="op">&amp;</span><span class="st"> </span>hand[<span class="dv">1</span>] <span class="op">%in%</span><span class="st"> </span>facecard)</span>
+<span id="cb620-5"><a href="probability.html#cb620-5"></a>}</span></code></pre></div>
 <p>Here we do have to check both possibilities: Ace first or Ace second because we are not using the <code>combinations</code> function. The function returns <code>TRUE</code> if we get a 21 and <code>FALSE</code> otherwise:</p>
-<div class="sourceCode" id="cb465"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb465-1"><a href="probability.html#cb465-1"></a><span class="kw">blackjack</span>()</span>
-<span id="cb465-2"><a href="probability.html#cb465-2"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb621"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb621-1"><a href="probability.html#cb621-1"></a><span class="kw">blackjack</span>()</span>
+<span id="cb621-2"><a href="probability.html#cb621-2"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
 <p>Now we can play this game, say, 10,000 times:</p>
-<div class="sourceCode" id="cb466"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb466-1"><a href="probability.html#cb466-1"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb466-2"><a href="probability.html#cb466-2"></a>results &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">blackjack</span>())</span>
-<span id="cb466-3"><a href="probability.html#cb466-3"></a><span class="kw">mean</span>(results)</span>
-<span id="cb466-4"><a href="probability.html#cb466-4"></a><span class="co">#&gt; [1] 0.0475</span></span></code></pre></div>
+<div class="sourceCode" id="cb622"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb622-1"><a href="probability.html#cb622-1"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb622-2"><a href="probability.html#cb622-2"></a>results &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">blackjack</span>())</span>
+<span id="cb622-3"><a href="probability.html#cb622-3"></a><span class="kw">mean</span>(results)</span>
+<span id="cb622-4"><a href="probability.html#cb622-4"></a><span class="co">#&gt; [1] 0.0475</span></span></code></pre></div>
 </div>
 </div>
 <div id="examples" class="section level2">
@@ -1203,25 +1205,25 @@ Let’s use Blackjack as an example. In Blackjack, you are assigned two random c
 <p>In the 1970s, there was a game show called “Let’s Make a Deal” and Monty Hall was the host. At some point in the game, contestants were asked to pick one of three doors. Behind one door there was a prize. The other doors had a goat behind them to show the contestant they had lost. After the contestant picked a door, before revealing whether the chosen door contained a prize, Monty Hall would open one of the two remaining doors and show the contestant there was no prize behind that door. Then he would ask “Do you want to switch doors?” What would you do?</p>
 <p>We can use probability to show that if you stick with the original door choice, your chances of winning a prize remain 1 in 3. However, if you switch to the other door, your chances of winning double to 2 in 3! This seems counterintuitive. Many people incorrectly think both chances are 1 in 2 since you are choosing between 2 options. You can watch a detailed mathematical explanation on Khan Academy<a href="#fn48" class="footnote-ref" id="fnref48"><sup>48</sup></a> or read one on Wikipedia<a href="#fn49" class="footnote-ref" id="fnref49"><sup>49</sup></a>. Below we use a Monte Carlo simulation to see which strategy is better. Note that this code is written longer than it should be for pedagogical purposes.</p>
 <p>Let’s start with the stick strategy:</p>
-<div class="sourceCode" id="cb467"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb467-1"><a href="probability.html#cb467-1"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb467-2"><a href="probability.html#cb467-2"></a>monty_hall &lt;-<span class="st"> </span><span class="cf">function</span>(strategy){</span>
-<span id="cb467-3"><a href="probability.html#cb467-3"></a>  doors &lt;-<span class="st"> </span><span class="kw">as.character</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span>
-<span id="cb467-4"><a href="probability.html#cb467-4"></a>  prize &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;car&quot;</span>, <span class="st">&quot;goat&quot;</span>, <span class="st">&quot;goat&quot;</span>))</span>
-<span id="cb467-5"><a href="probability.html#cb467-5"></a>  prize_door &lt;-<span class="st"> </span>doors[prize <span class="op">==</span><span class="st"> &quot;car&quot;</span>]</span>
-<span id="cb467-6"><a href="probability.html#cb467-6"></a>  my_pick  &lt;-<span class="st"> </span><span class="kw">sample</span>(doors, <span class="dv">1</span>)</span>
-<span id="cb467-7"><a href="probability.html#cb467-7"></a>  show &lt;-<span class="st"> </span><span class="kw">sample</span>(doors[<span class="op">!</span>doors <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(my_pick, prize_door)],<span class="dv">1</span>)</span>
-<span id="cb467-8"><a href="probability.html#cb467-8"></a>  stick &lt;-<span class="st"> </span>my_pick</span>
-<span id="cb467-9"><a href="probability.html#cb467-9"></a>  stick <span class="op">==</span><span class="st"> </span>prize_door</span>
-<span id="cb467-10"><a href="probability.html#cb467-10"></a>  <span class="cf">switch</span> &lt;-<span class="st"> </span>doors[<span class="op">!</span>doors<span class="op">%in%</span><span class="kw">c</span>(my_pick, show)]</span>
-<span id="cb467-11"><a href="probability.html#cb467-11"></a>  choice &lt;-<span class="st"> </span><span class="kw">ifelse</span>(strategy <span class="op">==</span><span class="st"> &quot;stick&quot;</span>, stick, <span class="cf">switch</span>)</span>
-<span id="cb467-12"><a href="probability.html#cb467-12"></a>  choice <span class="op">==</span><span class="st"> </span>prize_door</span>
-<span id="cb467-13"><a href="probability.html#cb467-13"></a>}</span>
-<span id="cb467-14"><a href="probability.html#cb467-14"></a>stick &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">monty_hall</span>(<span class="st">&quot;stick&quot;</span>))</span>
-<span id="cb467-15"><a href="probability.html#cb467-15"></a><span class="kw">mean</span>(stick)</span>
-<span id="cb467-16"><a href="probability.html#cb467-16"></a><span class="co">#&gt; [1] 0.342</span></span>
-<span id="cb467-17"><a href="probability.html#cb467-17"></a><span class="cf">switch</span> &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">monty_hall</span>(<span class="st">&quot;switch&quot;</span>))</span>
-<span id="cb467-18"><a href="probability.html#cb467-18"></a><span class="kw">mean</span>(<span class="cf">switch</span>)</span>
-<span id="cb467-19"><a href="probability.html#cb467-19"></a><span class="co">#&gt; [1] 0.668</span></span></code></pre></div>
+<div class="sourceCode" id="cb623"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb623-1"><a href="probability.html#cb623-1"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb623-2"><a href="probability.html#cb623-2"></a>monty_hall &lt;-<span class="st"> </span><span class="cf">function</span>(strategy){</span>
+<span id="cb623-3"><a href="probability.html#cb623-3"></a>  doors &lt;-<span class="st"> </span><span class="kw">as.character</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span>
+<span id="cb623-4"><a href="probability.html#cb623-4"></a>  prize &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;car&quot;</span>, <span class="st">&quot;goat&quot;</span>, <span class="st">&quot;goat&quot;</span>))</span>
+<span id="cb623-5"><a href="probability.html#cb623-5"></a>  prize_door &lt;-<span class="st"> </span>doors[prize <span class="op">==</span><span class="st"> &quot;car&quot;</span>]</span>
+<span id="cb623-6"><a href="probability.html#cb623-6"></a>  my_pick  &lt;-<span class="st"> </span><span class="kw">sample</span>(doors, <span class="dv">1</span>)</span>
+<span id="cb623-7"><a href="probability.html#cb623-7"></a>  show &lt;-<span class="st"> </span><span class="kw">sample</span>(doors[<span class="op">!</span>doors <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(my_pick, prize_door)],<span class="dv">1</span>)</span>
+<span id="cb623-8"><a href="probability.html#cb623-8"></a>  stick &lt;-<span class="st"> </span>my_pick</span>
+<span id="cb623-9"><a href="probability.html#cb623-9"></a>  stick <span class="op">==</span><span class="st"> </span>prize_door</span>
+<span id="cb623-10"><a href="probability.html#cb623-10"></a>  <span class="cf">switch</span> &lt;-<span class="st"> </span>doors[<span class="op">!</span>doors<span class="op">%in%</span><span class="kw">c</span>(my_pick, show)]</span>
+<span id="cb623-11"><a href="probability.html#cb623-11"></a>  choice &lt;-<span class="st"> </span><span class="kw">ifelse</span>(strategy <span class="op">==</span><span class="st"> &quot;stick&quot;</span>, stick, <span class="cf">switch</span>)</span>
+<span id="cb623-12"><a href="probability.html#cb623-12"></a>  choice <span class="op">==</span><span class="st"> </span>prize_door</span>
+<span id="cb623-13"><a href="probability.html#cb623-13"></a>}</span>
+<span id="cb623-14"><a href="probability.html#cb623-14"></a>stick &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">monty_hall</span>(<span class="st">&quot;stick&quot;</span>))</span>
+<span id="cb623-15"><a href="probability.html#cb623-15"></a><span class="kw">mean</span>(stick)</span>
+<span id="cb623-16"><a href="probability.html#cb623-16"></a><span class="co">#&gt; [1] 0.342</span></span>
+<span id="cb623-17"><a href="probability.html#cb623-17"></a><span class="cf">switch</span> &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">monty_hall</span>(<span class="st">&quot;switch&quot;</span>))</span>
+<span id="cb623-18"><a href="probability.html#cb623-18"></a><span class="kw">mean</span>(<span class="cf">switch</span>)</span>
+<span id="cb623-19"><a href="probability.html#cb623-19"></a><span class="co">#&gt; [1] 0.668</span></span></code></pre></div>
 <p>As we write the code, we note that the lines starting with <code>my_pick</code> and <code>show</code> have no influence on the last logical operation when we stick to our original choice anyway. From this we should realize that the chance is 1 in 3, what we began with. When we switch,
 the Monte Carlo estimate confirms the 2/3 calculation. This helps us gain some insight by showing that we are removing a door, <code>show</code>, that is definitely not a winner from our choices. We also see that unless we get it right when we first pick, you win: 1 - 1/3 = 2/3.</p>
 </div>
@@ -1229,39 +1231,39 @@ the Monte Carlo estimate confirms the 2/3 calculation. This helps us gain some i
 <h3><span class="header-section-number">13.7.2</span> Birthday problem</h3>
 <p>Suppose you are in a classroom with 50 people. If we assume this is a randomly selected group of 50 people, what is the chance that at least two people have the same birthday? Although it is somewhat advanced, we can deduce this mathematically. We will do this later. Here we use a Monte Carlo simulation. For simplicity, we assume nobody was born on February 29. This actually doesn’t change the answer much.</p>
 <p>First, note that birthdays can be represented as numbers between 1 and 365, so a sample of 50 birthdays can be obtained like this:</p>
-<div class="sourceCode" id="cb468"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb468-1"><a href="probability.html#cb468-1"></a>n &lt;-<span class="st"> </span><span class="dv">50</span></span>
-<span id="cb468-2"><a href="probability.html#cb468-2"></a>bdays &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">365</span>, n, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb624"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb624-1"><a href="probability.html#cb624-1"></a>n &lt;-<span class="st"> </span><span class="dv">50</span></span>
+<span id="cb624-2"><a href="probability.html#cb624-2"></a>bdays &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">365</span>, n, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <p>To check if in this particular set of 50 people we have at least two with the same birthday, we can use the function <code>duplicated</code>, which returns <code>TRUE</code> whenever an element of a vector is a duplicate. Here is an example:</p>
-<div class="sourceCode" id="cb469"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb469-1"><a href="probability.html#cb469-1"></a><span class="kw">duplicated</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">5</span>))</span>
-<span id="cb469-2"><a href="probability.html#cb469-2"></a><span class="co">#&gt; [1] FALSE FALSE FALSE  TRUE FALSE  TRUE FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb625"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb625-1"><a href="probability.html#cb625-1"></a><span class="kw">duplicated</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">5</span>))</span>
+<span id="cb625-2"><a href="probability.html#cb625-2"></a><span class="co">#&gt; [1] FALSE FALSE FALSE  TRUE FALSE  TRUE FALSE</span></span></code></pre></div>
 <p>The second time 1 and 3 appear, we get a <code>TRUE</code>. So to check if two birthdays were the same, we simply use the <code>any</code> and <code>duplicated</code> functions like this:</p>
-<div class="sourceCode" id="cb470"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb470-1"><a href="probability.html#cb470-1"></a><span class="kw">any</span>(<span class="kw">duplicated</span>(bdays))</span>
-<span id="cb470-2"><a href="probability.html#cb470-2"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb626"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb626-1"><a href="probability.html#cb626-1"></a><span class="kw">any</span>(<span class="kw">duplicated</span>(bdays))</span>
+<span id="cb626-2"><a href="probability.html#cb626-2"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 <p>In this case, we see that it did happen. At least two people had the same birthday.</p>
 <p>To estimate the probability of a shared birthday in the group, we repeat this experiment by sampling sets of 50 birthdays over and over:</p>
-<div class="sourceCode" id="cb471"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb471-1"><a href="probability.html#cb471-1"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb471-2"><a href="probability.html#cb471-2"></a>same_birthday &lt;-<span class="st"> </span><span class="cf">function</span>(n){</span>
-<span id="cb471-3"><a href="probability.html#cb471-3"></a>  bdays &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">365</span>, n, <span class="dt">replace=</span><span class="ot">TRUE</span>)</span>
-<span id="cb471-4"><a href="probability.html#cb471-4"></a>  <span class="kw">any</span>(<span class="kw">duplicated</span>(bdays))</span>
-<span id="cb471-5"><a href="probability.html#cb471-5"></a>}</span>
-<span id="cb471-6"><a href="probability.html#cb471-6"></a>results &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">same_birthday</span>(<span class="dv">50</span>))</span>
-<span id="cb471-7"><a href="probability.html#cb471-7"></a><span class="kw">mean</span>(results)</span>
-<span id="cb471-8"><a href="probability.html#cb471-8"></a><span class="co">#&gt; [1] 0.969</span></span></code></pre></div>
+<div class="sourceCode" id="cb627"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb627-1"><a href="probability.html#cb627-1"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb627-2"><a href="probability.html#cb627-2"></a>same_birthday &lt;-<span class="st"> </span><span class="cf">function</span>(n){</span>
+<span id="cb627-3"><a href="probability.html#cb627-3"></a>  bdays &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">365</span>, n, <span class="dt">replace=</span><span class="ot">TRUE</span>)</span>
+<span id="cb627-4"><a href="probability.html#cb627-4"></a>  <span class="kw">any</span>(<span class="kw">duplicated</span>(bdays))</span>
+<span id="cb627-5"><a href="probability.html#cb627-5"></a>}</span>
+<span id="cb627-6"><a href="probability.html#cb627-6"></a>results &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">same_birthday</span>(<span class="dv">50</span>))</span>
+<span id="cb627-7"><a href="probability.html#cb627-7"></a><span class="kw">mean</span>(results)</span>
+<span id="cb627-8"><a href="probability.html#cb627-8"></a><span class="co">#&gt; [1] 0.969</span></span></code></pre></div>
 <p>Were you expecting the probability to be this high?</p>
 <p>People tend to underestimate these probabilities. To get an intuition as to why it is so high, think about what happens when the group size is close to 365. At this stage, we run out of days and the probability is one.</p>
 <p>Say we want to use this knowledge to bet with friends about two people having the same birthday in a group of people. When are the chances larger than 50%? Larger than 75%?</p>
 <p>Let’s create a look-up table. We can quickly create a function to compute this for any group size:</p>
-<div class="sourceCode" id="cb472"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb472-1"><a href="probability.html#cb472-1"></a>compute_prob &lt;-<span class="st"> </span><span class="cf">function</span>(n, <span class="dt">B=</span><span class="dv">10000</span>){</span>
-<span id="cb472-2"><a href="probability.html#cb472-2"></a>  results &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">same_birthday</span>(n))</span>
-<span id="cb472-3"><a href="probability.html#cb472-3"></a>  <span class="kw">mean</span>(results)</span>
-<span id="cb472-4"><a href="probability.html#cb472-4"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb628"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb628-1"><a href="probability.html#cb628-1"></a>compute_prob &lt;-<span class="st"> </span><span class="cf">function</span>(n, <span class="dt">B=</span><span class="dv">10000</span>){</span>
+<span id="cb628-2"><a href="probability.html#cb628-2"></a>  results &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">same_birthday</span>(n))</span>
+<span id="cb628-3"><a href="probability.html#cb628-3"></a>  <span class="kw">mean</span>(results)</span>
+<span id="cb628-4"><a href="probability.html#cb628-4"></a>}</span></code></pre></div>
 <p>Using the function <code>sapply</code>, we can perform element-wise operations on any function:</p>
-<div class="sourceCode" id="cb473"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb473-1"><a href="probability.html#cb473-1"></a>n &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">60</span>)</span>
-<span id="cb473-2"><a href="probability.html#cb473-2"></a>prob &lt;-<span class="st"> </span><span class="kw">sapply</span>(n, compute_prob)</span></code></pre></div>
+<div class="sourceCode" id="cb629"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb629-1"><a href="probability.html#cb629-1"></a>n &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">60</span>)</span>
+<span id="cb629-2"><a href="probability.html#cb629-2"></a>prob &lt;-<span class="st"> </span><span class="kw">sapply</span>(n, compute_prob)</span></code></pre></div>
 <p>We can now make a plot of the estimated probabilities of two people having the same birthday in a group of size <span class="math inline">\(n\)</span>:</p>
-<div class="sourceCode" id="cb474"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb474-1"><a href="probability.html#cb474-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb474-2"><a href="probability.html#cb474-2"></a>prob &lt;-<span class="st"> </span><span class="kw">sapply</span>(n, compute_prob)</span>
-<span id="cb474-3"><a href="probability.html#cb474-3"></a><span class="kw">qplot</span>(n, prob)</span></code></pre></div>
+<div class="sourceCode" id="cb630"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb630-1"><a href="probability.html#cb630-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb630-2"><a href="probability.html#cb630-2"></a>prob &lt;-<span class="st"> </span><span class="kw">sapply</span>(n, compute_prob)</span>
+<span id="cb630-3"><a href="probability.html#cb630-3"></a><span class="kw">qplot</span>(n, prob)</span></code></pre></div>
 <p><img src="book_files/figure-html/birthday-problem-mc-probabilities-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>Now let’s compute the exact probabilities rather than use Monte Carlo approximations. Not only do we get the exact answer using math, but the computations are much faster since we don’t have to generate experiments.</p>
 <p>To make the math simpler, instead of computing the probability of it happening, we will compute the probability of it not happening. For this, we use the multiplication rule.</p>
@@ -1270,12 +1272,12 @@ the Monte Carlo estimate confirms the 2/3 calculation. This helps us gain some i
 1 \times \frac{364}{365}\times\frac{363}{365} \dots \frac{365-n + 1}{365}
 \]</span></p>
 <p>We can write a function that does this for any number:</p>
-<div class="sourceCode" id="cb475"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb475-1"><a href="probability.html#cb475-1"></a>exact_prob &lt;-<span class="st"> </span><span class="cf">function</span>(n){</span>
-<span id="cb475-2"><a href="probability.html#cb475-2"></a>  prob_unique &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">365</span>,<span class="dv">365</span><span class="op">-</span>n<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">365</span> </span>
-<span id="cb475-3"><a href="probability.html#cb475-3"></a>  <span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">prod</span>( prob_unique)</span>
-<span id="cb475-4"><a href="probability.html#cb475-4"></a>}</span>
-<span id="cb475-5"><a href="probability.html#cb475-5"></a>eprob &lt;-<span class="st"> </span><span class="kw">sapply</span>(n, exact_prob)</span>
-<span id="cb475-6"><a href="probability.html#cb475-6"></a><span class="kw">qplot</span>(n, prob) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(n, eprob), <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb631"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb631-1"><a href="probability.html#cb631-1"></a>exact_prob &lt;-<span class="st"> </span><span class="cf">function</span>(n){</span>
+<span id="cb631-2"><a href="probability.html#cb631-2"></a>  prob_unique &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">365</span>,<span class="dv">365</span><span class="op">-</span>n<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">365</span> </span>
+<span id="cb631-3"><a href="probability.html#cb631-3"></a>  <span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">prod</span>( prob_unique)</span>
+<span id="cb631-4"><a href="probability.html#cb631-4"></a>}</span>
+<span id="cb631-5"><a href="probability.html#cb631-5"></a>eprob &lt;-<span class="st"> </span><span class="kw">sapply</span>(n, exact_prob)</span>
+<span id="cb631-6"><a href="probability.html#cb631-6"></a><span class="kw">qplot</span>(n, prob) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(n, eprob), <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/birthday-problem-exact-probabilities-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>This plot shows that the Monte Carlo simulation provided a very good estimate of the exact probability. Had it not been possible to compute the exact probabilities, we would have still been able to accurately estimate the probabilities.</p>
 </div>
@@ -1285,13 +1287,13 @@ the Monte Carlo estimate confirms the 2/3 calculation. This helps us gain some i
 <p>The theory described here requires repeating experiments over and over forever. In practice we can’t do this.
 In the examples above, we used <span class="math inline">\(B=10,000\)</span> Monte Carlo experiments and it turned out that this provided accurate estimates. The larger this number, the more accurate the estimate becomes until the approximaton is so good that your computer can’t tell the difference. But in more complex calculations, 10,000 may not be nearly enough. Also, for some calculations, 10,000 experiments might not be computationally feasible. In practice, we won’t know what the answer is, so we won’t know if our Monte Carlo estimate is accurate. We know that the larger <span class="math inline">\(B\)</span>, the better the approximation. But how big do we need it to be? This is actually a challenging question and answering it often requires advanced theoretical statistics training.</p>
 <p>One practical approach we will describe here is to check for the stability of the estimate. The following is an example with the birthday problem for a group of 25 people.</p>
-<div class="sourceCode" id="cb476"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb476-1"><a href="probability.html#cb476-1"></a>B &lt;-<span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dt">len =</span> <span class="dv">100</span>)</span>
-<span id="cb476-2"><a href="probability.html#cb476-2"></a>compute_prob &lt;-<span class="st"> </span><span class="cf">function</span>(B, <span class="dt">n=</span><span class="dv">25</span>){</span>
-<span id="cb476-3"><a href="probability.html#cb476-3"></a>  same_day &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">same_birthday</span>(n))</span>
-<span id="cb476-4"><a href="probability.html#cb476-4"></a>  <span class="kw">mean</span>(same_day)</span>
-<span id="cb476-5"><a href="probability.html#cb476-5"></a>}</span>
-<span id="cb476-6"><a href="probability.html#cb476-6"></a>prob &lt;-<span class="st"> </span><span class="kw">sapply</span>(B, compute_prob)</span>
-<span id="cb476-7"><a href="probability.html#cb476-7"></a><span class="kw">qplot</span>(<span class="kw">log10</span>(B), prob, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb632"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb632-1"><a href="probability.html#cb632-1"></a>B &lt;-<span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dt">len =</span> <span class="dv">100</span>)</span>
+<span id="cb632-2"><a href="probability.html#cb632-2"></a>compute_prob &lt;-<span class="st"> </span><span class="cf">function</span>(B, <span class="dt">n=</span><span class="dv">25</span>){</span>
+<span id="cb632-3"><a href="probability.html#cb632-3"></a>  same_day &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, <span class="kw">same_birthday</span>(n))</span>
+<span id="cb632-4"><a href="probability.html#cb632-4"></a>  <span class="kw">mean</span>(same_day)</span>
+<span id="cb632-5"><a href="probability.html#cb632-5"></a>}</span>
+<span id="cb632-6"><a href="probability.html#cb632-6"></a>prob &lt;-<span class="st"> </span><span class="kw">sapply</span>(B, compute_prob)</span>
+<span id="cb632-7"><a href="probability.html#cb632-7"></a><span class="kw">qplot</span>(<span class="kw">log10</span>(B), prob, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/monte-carlo-convergence-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>In this plot, we can see that the values start to stabilize (that is, they vary less than .01) around 1000. Note that the exact probability, which we know in this case, is 0.569.</p>
 </div>
@@ -1312,29 +1314,29 @@ In the examples above, we used <span class="math inline">\(B=10,000\)</span> Mon
 <p>7. If you roll a 6-sided die six times, what is the probability of not seeing a 6?</p>
 <p>8. Two teams, say the Celtics and the Cavs, are playing a seven game series. The Cavs are a better team and have a 60% chance of winning each game. What is the probability that the Celtics win <strong>at least</strong> one game?</p>
 <p>9. Create a Monte Carlo simulation to confirm your answer to the previous problem. Use <code>B &lt;- 10000</code> simulations. Hint: use the following code to generate the results of the first four games:</p>
-<div class="sourceCode" id="cb477"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb477-1"><a href="probability.html#cb477-1"></a>celtic_wins &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dv">4</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="fl">0.6</span>, <span class="fl">0.4</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb633"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb633-1"><a href="probability.html#cb633-1"></a>celtic_wins &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dv">4</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="fl">0.6</span>, <span class="fl">0.4</span>))</span></code></pre></div>
 <p>The Celtics must win one of these 4 games.</p>
 <p>10. Two teams, say the Cavs and the Warriors, are playing a seven game championship series. The first to win four games, therefore, wins the series. The teams are equally good so they each have a 50-50 chance of winning each game. If the Cavs lose the first game, what is the probability that they win the series?</p>
 <p>11. Confirm the results of the previous question with a Monte Carlo simulation.</p>
 <p>12. Two teams, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, are playing a seven game series. Team <span class="math inline">\(A\)</span> is better than team <span class="math inline">\(B\)</span> and has a <span class="math inline">\(p&gt;0.5\)</span> chance of winning each game. Given a value <span class="math inline">\(p\)</span>, the probability of winning the series for the underdog team <span class="math inline">\(B\)</span> can be computed with the following function based on a Monte Carlo simulation:</p>
-<div class="sourceCode" id="cb478"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb478-1"><a href="probability.html#cb478-1"></a>prob_win &lt;-<span class="st"> </span><span class="cf">function</span>(p){</span>
-<span id="cb478-2"><a href="probability.html#cb478-2"></a>  B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb478-3"><a href="probability.html#cb478-3"></a>  result &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
-<span id="cb478-4"><a href="probability.html#cb478-4"></a>    b_win &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">0</span>), <span class="dv">7</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
-<span id="cb478-5"><a href="probability.html#cb478-5"></a>    <span class="kw">sum</span>(b_win)<span class="op">&gt;=</span><span class="dv">4</span></span>
-<span id="cb478-6"><a href="probability.html#cb478-6"></a>  })</span>
-<span id="cb478-7"><a href="probability.html#cb478-7"></a>  <span class="kw">mean</span>(result)</span>
-<span id="cb478-8"><a href="probability.html#cb478-8"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb634"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb634-1"><a href="probability.html#cb634-1"></a>prob_win &lt;-<span class="st"> </span><span class="cf">function</span>(p){</span>
+<span id="cb634-2"><a href="probability.html#cb634-2"></a>  B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb634-3"><a href="probability.html#cb634-3"></a>  result &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
+<span id="cb634-4"><a href="probability.html#cb634-4"></a>    b_win &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">0</span>), <span class="dv">7</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
+<span id="cb634-5"><a href="probability.html#cb634-5"></a>    <span class="kw">sum</span>(b_win)<span class="op">&gt;=</span><span class="dv">4</span></span>
+<span id="cb634-6"><a href="probability.html#cb634-6"></a>  })</span>
+<span id="cb634-7"><a href="probability.html#cb634-7"></a>  <span class="kw">mean</span>(result)</span>
+<span id="cb634-8"><a href="probability.html#cb634-8"></a>}</span></code></pre></div>
 <p>Use the function <code>sapply</code> to compute the probability, call it <code>Pr</code>, of winning for <code>p &lt;- seq(0.5, 0.95, 0.025)</code>. Then plot the result.</p>
 <p>13. Repeat the exercise above, but now keep the probability fixed at <code>p &lt;- 0.75</code> and compute the probability for different series lengths: best of 1 game, 3 games, 5 games,… Specifically, <code>N &lt;- seq(1, 25, 2)</code>. Hint: use this function:</p>
-<div class="sourceCode" id="cb479"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb479-1"><a href="probability.html#cb479-1"></a>prob_win &lt;-<span class="st"> </span><span class="cf">function</span>(N, <span class="dt">p=</span><span class="fl">0.75</span>){</span>
-<span id="cb479-2"><a href="probability.html#cb479-2"></a>  B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb479-3"><a href="probability.html#cb479-3"></a>  result &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
-<span id="cb479-4"><a href="probability.html#cb479-4"></a>    b_win &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">0</span>), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
-<span id="cb479-5"><a href="probability.html#cb479-5"></a>    <span class="kw">sum</span>(b_win)<span class="op">&gt;=</span>(N<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb479-6"><a href="probability.html#cb479-6"></a>  })</span>
-<span id="cb479-7"><a href="probability.html#cb479-7"></a>  <span class="kw">mean</span>(result)</span>
-<span id="cb479-8"><a href="probability.html#cb479-8"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb635"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb635-1"><a href="probability.html#cb635-1"></a>prob_win &lt;-<span class="st"> </span><span class="cf">function</span>(N, <span class="dt">p=</span><span class="fl">0.75</span>){</span>
+<span id="cb635-2"><a href="probability.html#cb635-2"></a>  B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb635-3"><a href="probability.html#cb635-3"></a>  result &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
+<span id="cb635-4"><a href="probability.html#cb635-4"></a>    b_win &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">0</span>), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
+<span id="cb635-5"><a href="probability.html#cb635-5"></a>    <span class="kw">sum</span>(b_win)<span class="op">&gt;=</span>(N<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb635-6"><a href="probability.html#cb635-6"></a>  })</span>
+<span id="cb635-7"><a href="probability.html#cb635-7"></a>  <span class="kw">mean</span>(result)</span>
+<span id="cb635-8"><a href="probability.html#cb635-8"></a>}</span></code></pre></div>
 
 </div>
 <div id="continuous-probability" class="section level2">
@@ -1342,55 +1344,57 @@ In the examples above, we used <span class="math inline">\(B=10,000\)</span> Mon
 <p>In Section <a href="distributions.html#cdf-intro">8.4</a>, we explained why when summarizing a list of numeric values, such as heights, it is not useful to construct a distribution that defines a proportion to each possible outcome. For example, if we measure every single person in a very large population of size <span class="math inline">\(n\)</span> with extremely high precision, since no two people are exactly the same height, we need to assign the proportion <span class="math inline">\(1/n\)</span> to each observed value and attain no useful summary at all. Similarly, when defining probability distributions, it is not useful to assign a very small probability to every single height.</p>
 <p>Just as when using distributions to summarize numeric data, it is much more practical to define a function that operates on intervals rather than single values. The standard way of doing this is using the <em>cumulative distribution function</em> (CDF).</p>
 <p>We described empirical cumulative distribution function (eCDF) in Section <a href="distributions.html#cdf-intro">8.4</a> as a basic summary of a list of numeric values. As an example, we earlier defined the height distribution for adult male students. Here, we define the vector <span class="math inline">\(x\)</span> to contain these heights:</p>
-<div class="sourceCode" id="cb480"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb480-1"><a href="probability.html#cb480-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb480-2"><a href="probability.html#cb480-2"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb480-3"><a href="probability.html#cb480-3"></a><span class="kw">data</span>(heights)</span>
-<span id="cb480-4"><a href="probability.html#cb480-4"></a>x &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pull</span>(height)</span></code></pre></div>
+<div class="sourceCode" id="cb636"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb636-1"><a href="probability.html#cb636-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb636-2"><a href="probability.html#cb636-2"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb636-3"><a href="probability.html#cb636-3"></a><span class="kw">data</span>(heights)</span>
+<span id="cb636-4"><a href="probability.html#cb636-4"></a>x &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pull</span>(height)</span></code></pre></div>
 <p>We defined the empirical distribution function as:</p>
-<div class="sourceCode" id="cb481"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb481-1"><a href="probability.html#cb481-1"></a>F &lt;-<span class="st"> </span><span class="cf">function</span>(a) <span class="kw">mean</span>(x<span class="op">&lt;=</span>a)</span></code></pre></div>
+<div class="sourceCode" id="cb637"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb637-1"><a href="probability.html#cb637-1"></a>F &lt;-<span class="st"> </span><span class="cf">function</span>(a) <span class="kw">mean</span>(x<span class="op">&lt;=</span>a)</span></code></pre></div>
 <p>which, for any value <code>a</code>, gives the proportion of values in the list <code>x</code> that are smaller or equal than <code>a</code>.</p>
 <p>Keep in mind that we have not yet introduced probability in the context of CDFs. Let’s do this by asking the following: if I pick one of the male students at random, what is the chance that he is taller than 70.5 inches? Because every student has the same chance of being picked, the answer to this is equivalent to the proportion of students that are taller than 70.5 inches. Using the CDF we obtain an answer by typing:</p>
-<div class="sourceCode" id="cb482"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb482-1"><a href="probability.html#cb482-1"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">F</span>(<span class="dv">70</span>)</span>
-<span id="cb482-2"><a href="probability.html#cb482-2"></a><span class="co">#&gt; [1] 0.377</span></span></code></pre></div>
+<div class="sourceCode" id="cb638"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb638-1"><a href="probability.html#cb638-1"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">F</span>(<span class="dv">70</span>)</span>
+<span id="cb638-2"><a href="probability.html#cb638-2"></a><span class="co">#&gt; [1] 0.377</span></span></code></pre></div>
 <p>Once a CDF is defined, we can use this to compute the probability of any subset. For instance, the probability of a student being between height <code>a</code> and height <code>b</code> is:</p>
-<div class="sourceCode" id="cb483"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb483-1"><a href="probability.html#cb483-1"></a><span class="kw">F</span>(b)<span class="op">-</span><span class="kw">F</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb639"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb639-1"><a href="probability.html#cb639-1"></a><span class="kw">F</span>(b)<span class="op">-</span><span class="kw">F</span>(a)</span></code></pre></div>
 <p>Because we can compute the probability for any possible event this way, the cumulative probability function defines the probability distribution for picking a height at random from our vector of heights <code>x</code>.</p>
 </div>
 <div id="theoretical-continuous-distributions" class="section level2">
 <h2><span class="header-section-number">13.11</span> Theoretical continuous distributions</h2>
 <p>In Section <a href="distributions.html#normal-distribution">8.8</a> we introduced the normal distribution as a useful approximation to many naturally occurring distributions, including that of height. The cumulative distribution for the normal distribution is defined by a mathematical formula which in R can be obtained with the function <code>pnorm</code>. We say that a random quantity is normally distributed with average <code>m</code> and standard deviation <code>s</code> if its probability distribution is defined by:</p>
-<div class="sourceCode" id="cb484"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb484-1"><a href="probability.html#cb484-1"></a><span class="kw">F</span>(a) =<span class="st"> </span><span class="kw">pnorm</span>(a, m, s)</span></code></pre></div>
+<div class="sourceCode" id="cb640"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb640-1"><a href="probability.html#cb640-1"></a><span class="kw">F</span>(a) =<span class="st"> </span><span class="kw">pnorm</span>(a, m, s)</span></code></pre></div>
 <p>This is useful because if we are willing to use the normal approximation for, say, height, we don’t need the entire dataset to answer questions such as: what is the probability that a randomly selected student is taller then 70 inches? We just need the average height and standard deviation:</p>
-<div class="sourceCode" id="cb485"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb485-1"><a href="probability.html#cb485-1"></a>m &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
-<span id="cb485-2"><a href="probability.html#cb485-2"></a>s &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
-<span id="cb485-3"><a href="probability.html#cb485-3"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">70.5</span>, m, s)</span>
-<span id="cb485-4"><a href="probability.html#cb485-4"></a><span class="co">#&gt; [1] 0.371</span></span></code></pre></div>
+<div class="sourceCode" id="cb641"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb641-1"><a href="probability.html#cb641-1"></a>m &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb641-2"><a href="probability.html#cb641-2"></a>s &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
+<span id="cb641-3"><a href="probability.html#cb641-3"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">70.5</span>, m, s)</span>
+<span id="cb641-4"><a href="probability.html#cb641-4"></a><span class="co">#&gt; [1] 0.371</span></span></code></pre></div>
 <div id="theoretical-distributions-as-approximations" class="section level3">
 <h3><span class="header-section-number">13.11.1</span> Theoretical distributions as approximations</h3>
 <p>The normal distribution is derived mathematically: we do not need data to define it. For practicing data scientists, almost everything we do involves data. Data is always, technically speaking, discrete. For example, we could consider our height data categorical with each specific height a unique category. The probability distribution is defined by the proportion of students reporting each height. Here is a plot of that probability distribution:</p>
+<div class="sourceCode" id="cb642"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb642-1"><a href="probability.html#cb642-1"></a>rafalib<span class="op">::</span><span class="kw">mypar</span>()</span>
+<span id="cb642-2"><a href="probability.html#cb642-2"></a><span class="kw">plot</span>(<span class="kw">prop.table</span>(<span class="kw">table</span>(x)), <span class="dt">xlab =</span> <span class="st">&quot;a = Height in inches&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Pr(X = a)&quot;</span>)</span></code></pre></div>
 <p><img src="book_files/figure-html/plot-of-height-frequencies-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>While most students rounded up their heights to the nearest inch, others reported values with more precision. One student reported his height to be 69.6850393700787, which is 177 centimeters. The probability assigned to this height is 0.001 or 1 in 812. The probability for 70 inches is much higher at 0.106, but does it really make sense to think of the probability of being exactly 70 inches as being different than 69.6850393700787? Clearly it is much more useful for data analytic purposes to treat this outcome as a continuous numeric variable, keeping in mind that very few people, or perhaps none, are exactly 70 inches, and that the reason we get more values at 70 is because people round to the nearest inch.</p>
 <p>With continuous distributions, the probability of a singular value is not even defined. For example, it does not make sense to ask what is the probability that a normally distributed value is 70. Instead, we define probabilities for intervals. We thus could ask what is the probability that someone is between 69.5 and 70.5.</p>
 <p>In cases like height, in which the data is rounded, the normal approximation is particularly useful if we deal with intervals that include exactly one round number. For example, the normal distribution is useful for approximating the proportion of students reporting values in intervals like the following three:</p>
-<div class="sourceCode" id="cb486"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb486-1"><a href="probability.html#cb486-1"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">68.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">67.5</span>)</span>
-<span id="cb486-2"><a href="probability.html#cb486-2"></a><span class="co">#&gt; [1] 0.115</span></span>
-<span id="cb486-3"><a href="probability.html#cb486-3"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">69.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">68.5</span>)</span>
-<span id="cb486-4"><a href="probability.html#cb486-4"></a><span class="co">#&gt; [1] 0.119</span></span>
-<span id="cb486-5"><a href="probability.html#cb486-5"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">70.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">69.5</span>)</span>
-<span id="cb486-6"><a href="probability.html#cb486-6"></a><span class="co">#&gt; [1] 0.122</span></span></code></pre></div>
+<div class="sourceCode" id="cb643"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb643-1"><a href="probability.html#cb643-1"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">68.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">67.5</span>)</span>
+<span id="cb643-2"><a href="probability.html#cb643-2"></a><span class="co">#&gt; [1] 0.115</span></span>
+<span id="cb643-3"><a href="probability.html#cb643-3"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">69.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">68.5</span>)</span>
+<span id="cb643-4"><a href="probability.html#cb643-4"></a><span class="co">#&gt; [1] 0.119</span></span>
+<span id="cb643-5"><a href="probability.html#cb643-5"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">70.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">69.5</span>)</span>
+<span id="cb643-6"><a href="probability.html#cb643-6"></a><span class="co">#&gt; [1] 0.122</span></span></code></pre></div>
 <p>Note how close we get with the normal approximation:</p>
-<div class="sourceCode" id="cb487"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb487-1"><a href="probability.html#cb487-1"></a><span class="kw">pnorm</span>(<span class="fl">68.5</span>, m, s) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">67.5</span>, m, s) </span>
-<span id="cb487-2"><a href="probability.html#cb487-2"></a><span class="co">#&gt; [1] 0.103</span></span>
-<span id="cb487-3"><a href="probability.html#cb487-3"></a><span class="kw">pnorm</span>(<span class="fl">69.5</span>, m, s) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">68.5</span>, m, s) </span>
-<span id="cb487-4"><a href="probability.html#cb487-4"></a><span class="co">#&gt; [1] 0.11</span></span>
-<span id="cb487-5"><a href="probability.html#cb487-5"></a><span class="kw">pnorm</span>(<span class="fl">70.5</span>, m, s) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">69.5</span>, m, s) </span>
-<span id="cb487-6"><a href="probability.html#cb487-6"></a><span class="co">#&gt; [1] 0.108</span></span></code></pre></div>
+<div class="sourceCode" id="cb644"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb644-1"><a href="probability.html#cb644-1"></a><span class="kw">pnorm</span>(<span class="fl">68.5</span>, m, s) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">67.5</span>, m, s) </span>
+<span id="cb644-2"><a href="probability.html#cb644-2"></a><span class="co">#&gt; [1] 0.103</span></span>
+<span id="cb644-3"><a href="probability.html#cb644-3"></a><span class="kw">pnorm</span>(<span class="fl">69.5</span>, m, s) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">68.5</span>, m, s) </span>
+<span id="cb644-4"><a href="probability.html#cb644-4"></a><span class="co">#&gt; [1] 0.11</span></span>
+<span id="cb644-5"><a href="probability.html#cb644-5"></a><span class="kw">pnorm</span>(<span class="fl">70.5</span>, m, s) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">69.5</span>, m, s) </span>
+<span id="cb644-6"><a href="probability.html#cb644-6"></a><span class="co">#&gt; [1] 0.108</span></span></code></pre></div>
 <p>However, the approximation is not as useful for other intervals. For instance, notice how the approximation breaks down when we try to estimate:</p>
-<div class="sourceCode" id="cb488"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb488-1"><a href="probability.html#cb488-1"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">70.9</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x<span class="op">&lt;=</span><span class="fl">70.1</span>)</span>
-<span id="cb488-2"><a href="probability.html#cb488-2"></a><span class="co">#&gt; [1] 0.0222</span></span></code></pre></div>
+<div class="sourceCode" id="cb645"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb645-1"><a href="probability.html#cb645-1"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">70.9</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x<span class="op">&lt;=</span><span class="fl">70.1</span>)</span>
+<span id="cb645-2"><a href="probability.html#cb645-2"></a><span class="co">#&gt; [1] 0.0222</span></span></code></pre></div>
 <p>with</p>
-<div class="sourceCode" id="cb489"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb489-1"><a href="probability.html#cb489-1"></a><span class="kw">pnorm</span>(<span class="fl">70.9</span>, m, s) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">70.1</span>, m, s)</span>
-<span id="cb489-2"><a href="probability.html#cb489-2"></a><span class="co">#&gt; [1] 0.0836</span></span></code></pre></div>
+<div class="sourceCode" id="cb646"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb646-1"><a href="probability.html#cb646-1"></a><span class="kw">pnorm</span>(<span class="fl">70.9</span>, m, s) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">70.1</span>, m, s)</span>
+<span id="cb646-2"><a href="probability.html#cb646-2"></a><span class="co">#&gt; [1] 0.0836</span></span></code></pre></div>
 <p>In general, we call this situation <em>discretization</em>. Although the true height distribution is continuous, the reported heights tend to be more common at discrete values, in this case, due to rounding. As long as we are aware of how to deal with this reality, the normal approximation can still be a very useful tool.</p>
 </div>
 <div id="the-probability-density" class="section level3">
@@ -1409,9 +1413,17 @@ F(a) = \mbox{Pr}(X\leq a) = \int_{-\infty}^a f(x)\, dx
 \]</span></p>
 <p>For those that know calculus, remember that the integral is related to a sum: it is the sum of bars with widths approximating 0. If you don’t know calculus, you can think of <span class="math inline">\(f(x)\)</span> as a curve for which the area under that curve up to the value <span class="math inline">\(a\)</span>, gives you the probability <span class="math inline">\(\mbox{Pr}(X\leq a)\)</span>.</p>
 <p>For example, to use the normal approximation to estimate the probability of someone being taller than 76 inches, we use:</p>
-<div class="sourceCode" id="cb490"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb490-1"><a href="probability.html#cb490-1"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">76</span>, m, s)</span>
-<span id="cb490-2"><a href="probability.html#cb490-2"></a><span class="co">#&gt; [1] 0.0321</span></span></code></pre></div>
+<div class="sourceCode" id="cb647"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb647-1"><a href="probability.html#cb647-1"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">76</span>, m, s)</span>
+<span id="cb647-2"><a href="probability.html#cb647-2"></a><span class="co">#&gt; [1] 0.0321</span></span></code></pre></div>
 <p>which mathematically is the grey area below:</p>
+<div class="sourceCode" id="cb648"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb648-1"><a href="probability.html#cb648-1"></a>dat &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">x =</span> <span class="kw">seq</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dt">length=</span><span class="dv">100</span>) <span class="op">*</span><span class="st"> </span>s <span class="op">+</span><span class="st"> </span>m,</span>
+<span id="cb648-2"><a href="probability.html#cb648-2"></a>              <span class="dt">y =</span> <span class="kw">dnorm</span>(x, m, s))</span>
+<span id="cb648-3"><a href="probability.html#cb648-3"></a></span>
+<span id="cb648-4"><a href="probability.html#cb648-4"></a>dat_ribbon &lt;-<span class="st"> </span><span class="kw">filter</span>(dat, x <span class="op">&gt;=</span><span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span>s <span class="op">+</span><span class="st"> </span>m)</span>
+<span id="cb648-5"><a href="probability.html#cb648-5"></a></span>
+<span id="cb648-6"><a href="probability.html#cb648-6"></a><span class="kw">ggplot</span>(dat, <span class="kw">aes</span>(x, y)) <span class="op">+</span></span>
+<span id="cb648-7"><a href="probability.html#cb648-7"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb648-8"><a href="probability.html#cb648-8"></a><span class="st">  </span><span class="kw">geom_ribbon</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> <span class="dv">0</span>, <span class="dt">ymax =</span> y), <span class="dt">data =</span> dat_ribbon)</span></code></pre></div>
 <p><img src="book_files/figure-html/intergrals-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The curve you see is the probability density for the normal distribution. In R, we get this using the function <code>dnorm</code>.</p>
 <p>Although it may not be immediately obvious why knowing about probability densities is useful, understanding this concept will be essential to those wanting to fit models to data for which predefined functions are not available.</p>
@@ -1420,23 +1432,28 @@ F(a) = \mbox{Pr}(X\leq a) = \int_{-\infty}^a f(x)\, dx
 <div id="monte-carlo-simulations-for-continuous-variables" class="section level2">
 <h2><span class="header-section-number">13.12</span> Monte Carlo simulations for continuous variables</h2>
 <p>R provides functions to generate normally distributed outcomes. Specifically, the <code>rnorm</code> function takes three arguments: size, average (defaults to 0), and standard deviation (defaults to 1) and produces random numbers. Here is an example of how we could generate data that looks like our reported heights:</p>
-<div class="sourceCode" id="cb491"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb491-1"><a href="probability.html#cb491-1"></a>n &lt;-<span class="st"> </span><span class="kw">length</span>(x)</span>
-<span id="cb491-2"><a href="probability.html#cb491-2"></a>m &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
-<span id="cb491-3"><a href="probability.html#cb491-3"></a>s &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
-<span id="cb491-4"><a href="probability.html#cb491-4"></a>simulated_heights &lt;-<span class="st"> </span><span class="kw">rnorm</span>(n, m, s)</span></code></pre></div>
+<div class="sourceCode" id="cb649"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb649-1"><a href="probability.html#cb649-1"></a>n &lt;-<span class="st"> </span><span class="kw">length</span>(x)</span>
+<span id="cb649-2"><a href="probability.html#cb649-2"></a>m &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb649-3"><a href="probability.html#cb649-3"></a>s &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
+<span id="cb649-4"><a href="probability.html#cb649-4"></a>simulated_heights &lt;-<span class="st"> </span><span class="kw">rnorm</span>(n, m, s)</span></code></pre></div>
 <p>Not surprisingly, the distribution looks normal:</p>
+<div class="sourceCode" id="cb650"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb650-1"><a href="probability.html#cb650-1"></a><span class="kw">data.frame</span>(<span class="dt">simulated_heights =</span> simulated_heights) <span class="op">%&gt;%</span></span>
+<span id="cb650-2"><a href="probability.html#cb650-2"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(simulated_heights)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb650-3"><a href="probability.html#cb650-3"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">binwidth =</span> <span class="dv">1</span>) </span></code></pre></div>
 <p><img src="book_files/figure-html/simulated-heights-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>This is one of the most useful functions in R as it will permit us to generate data that mimics natural events and answers questions related to what could happen by chance by running Monte Carlo simulations.</p>
 <p>If, for example, we pick 800 males at random, what is the distribution of the tallest person? How rare is a seven footer in a group of 800 males? The following Monte Carlo simulation helps us answer that question:</p>
-<div class="sourceCode" id="cb492"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb492-1"><a href="probability.html#cb492-1"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb492-2"><a href="probability.html#cb492-2"></a>tallest &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
-<span id="cb492-3"><a href="probability.html#cb492-3"></a>  simulated_data &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">800</span>, m, s)</span>
-<span id="cb492-4"><a href="probability.html#cb492-4"></a>  <span class="kw">max</span>(simulated_data)</span>
-<span id="cb492-5"><a href="probability.html#cb492-5"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb651"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb651-1"><a href="probability.html#cb651-1"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb651-2"><a href="probability.html#cb651-2"></a>tallest &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
+<span id="cb651-3"><a href="probability.html#cb651-3"></a>  simulated_data &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">800</span>, m, s)</span>
+<span id="cb651-4"><a href="probability.html#cb651-4"></a>  <span class="kw">max</span>(simulated_data)</span>
+<span id="cb651-5"><a href="probability.html#cb651-5"></a>})</span></code></pre></div>
 <p>Having a seven footer is quite rare:</p>
-<div class="sourceCode" id="cb493"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb493-1"><a href="probability.html#cb493-1"></a><span class="kw">mean</span>(tallest <span class="op">&gt;=</span><span class="st"> </span><span class="dv">7</span><span class="op">*</span><span class="dv">12</span>)</span>
-<span id="cb493-2"><a href="probability.html#cb493-2"></a><span class="co">#&gt; [1] 0.0179</span></span></code></pre></div>
+<div class="sourceCode" id="cb652"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb652-1"><a href="probability.html#cb652-1"></a><span class="kw">mean</span>(tallest <span class="op">&gt;=</span><span class="st"> </span><span class="dv">7</span><span class="op">*</span><span class="dv">12</span>)</span>
+<span id="cb652-2"><a href="probability.html#cb652-2"></a><span class="co">#&gt; [1] 0.019</span></span></code></pre></div>
 <p>Here is the resulting distribution:</p>
+<div class="sourceCode" id="cb653"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb653-1"><a href="probability.html#cb653-1"></a><span class="kw">data.frame</span>(<span class="dt">tallest =</span> tallest) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(tallest)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb653-2"><a href="probability.html#cb653-2"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">binwidth =</span> <span class="dv">1</span>) </span></code></pre></div>
 <p><img src="book_files/figure-html/simulated-tallest-height-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>Note that it does not look normal.</p>
 </div>
@@ -1444,8 +1461,8 @@ F(a) = \mbox{Pr}(X\leq a) = \int_{-\infty}^a f(x)\, dx
 <h2><span class="header-section-number">13.13</span> Continuous distributions</h2>
 <p>We introduced the normal distribution in Section <a href="distributions.html#normal-distribution">8.8</a> and used it as an example above.
 The normal distribution is not the only useful theoretical distribution. Other continuous distributions that we may encounter are the student-t, Chi-square, exponential, gamma, beta, and beta-binomial. R provides functions to compute the density, the quantiles, the cumulative distribution functions and to generate Monte Carlo simulations. R uses a convention that lets us remember the names, namely using the letters <code>d</code>, <code>q</code>, <code>p</code>, and <code>r</code> in front of a shorthand for the distribution. We have already seen the functions <code>dnorm</code>, <code>pnorm</code>, and <code>rnorm</code> for the normal distribution. The functions <code>qnorm</code> gives us the quantiles. We can therefore draw a distribution like this:</p>
-<div class="sourceCode" id="cb494"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb494-1"><a href="probability.html#cb494-1"></a>x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dt">length.out =</span> <span class="dv">100</span>)</span>
-<span id="cb494-2"><a href="probability.html#cb494-2"></a><span class="kw">qplot</span>(x, f, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>, <span class="dt">data =</span> <span class="kw">data.frame</span>(x, <span class="dt">f =</span> <span class="kw">dnorm</span>(x)))</span></code></pre></div>
+<div class="sourceCode" id="cb654"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb654-1"><a href="probability.html#cb654-1"></a>x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dt">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb654-2"><a href="probability.html#cb654-2"></a><span class="kw">qplot</span>(x, f, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>, <span class="dt">data =</span> <span class="kw">data.frame</span>(x, <span class="dt">f =</span> <span class="kw">dnorm</span>(x)))</span></code></pre></div>
 <p>For the student-t, described later in Section <a href="models.html#t-dist">16.10</a>, the shorthand <code>t</code> is used so the functions are <code>dt</code> for the density, <code>qt</code> for the quantiles, <code>pt</code> for the cumulative distribution function, and <code>rt</code> for Monte Carlo simulation.</p>
 </div>
 <div id="exercises-23" class="section level2">

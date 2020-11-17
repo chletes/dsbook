@@ -1,7 +1,7 @@
 # Smoothing
 
 ```{r, echo=FALSE}
-img_path <- "ml/img/"
+img_path <- "ml/img"
 ```
 
 Before continuing learning about machine learning algorithms, we introduce the important concept of _smoothing_. Smoothing is a very powerful technique used all across data analysis. Other names given to this technique are _curve fitting_ and _low pass filtering_. It is designed to detect trends in the presence of noisy data in cases in which the shape of the trend is unknown. The _smoothing_ name comes from the fact that to accomplish this feat, we assume that the trend is _smooth_, as in a smooth surface. In contrast, the noise, or deviation from the trend, is unpredictably wobbly:
@@ -90,25 +90,25 @@ tmp %>% filter(center %in% c(-125, -55)) %>%
 By computing this mean for every point, we form an estimate of the underlying curve $f(x)$. Below we show the procedure happening as we move from the -155 up to 0. At each value of $x_0$, we keep the estimate $\hat{f}(x_0)$ and move on to the next point:
 
 ```{r binsmoother-animation, warning=FALSE} 
-library(gganimate)
+# library(gganimate)
 span <- 7
 fit <- with(polls_2008, ksmooth(day, margin, kernel="box", x.points = day, bandwidth = span))
 bin_fit <- data.frame(x = fit$x, .fitted=fit$y)
   
-if(!file.exists(file.path(img_path,"binsmoother-animation.gif"))){
-  p <- tmp %>% 
-    ggplot() +
-    geom_smooth(aes(day, margin, group = center, frame = center), method = "lm", formula=y~1, se = FALSE) +
-    geom_point(aes(day, margin), data = polls_2008, size = 3, alpha = .5, color = "grey") +
-    geom_point(aes(day, margin, frame = center)) +
-    geom_line(aes(x=x, y = .fitted, frame = x, cumulative = TRUE), data = bin_fit, color = "red") + 
-    ggtitle("x0 = ")
-
-  gganimate(p, filename = file.path(img_path,"binsmoother-animation.gif"), interval= .1)
-}
-if(knitr::is_html_output()){
-  knitr::include_graphics(file.path(img_path,"binsmoother-animation.gif"))
-} else{
+# if(!file.exists(file.path(img_path,"binsmoother-animation.gif"))){
+#   p <- tmp %>% 
+#     ggplot() +
+#     geom_smooth(aes(day, margin, group = center, frame = center), method = "lm", formula=y~1, se = FALSE) +
+#     geom_point(aes(day, margin), data = polls_2008, size = 3, alpha = .5, color = "grey") +
+#     geom_point(aes(day, margin, frame = center)) +
+#     geom_line(aes(x=x, y = .fitted, frame = x, cumulative = TRUE), data = bin_fit, color = "red") + 
+#     ggtitle("x0 = ")
+# 
+#   gganimate(p, filename = file.path(img_path,"binsmoother-animation.gif"), interval= .1)
+# }
+# if(knitr::is_html_output()){
+#   knitr::include_graphics(file.path(img_path,"binsmooth-anim.gif"))
+# } else{
   centers <- quantile(tmp$center, seq(1,6)/6)
   tmp_bin_fit <- crossing(center=centers,bin_fit) %>%
     group_by(center) %>%
@@ -123,7 +123,7 @@ if(knitr::is_html_output()){
     geom_line(aes(x=x, y = .fitted), data = tmp_bin_fit, color = "red") + 
     ggtitle("x0 = ") +
     facet_wrap(~center, nrow = 2)
-}
+# }
 ```
 
 The final code and  resulting estimate look like this:
@@ -239,7 +239,7 @@ There are several functions in R that implement bin smoothers. One example is `k
 A limitation of the bin smoother approach just described is that we need small windows for the approximately constant assumptions to hold. As a result, we end up with a small number of data points to average and obtain imprecise estimates $\hat{f}(x)$. Here we describe how _local weighted regression_ (loess) permits us to consider larger window sizes. To do this, we will use a mathematical result, referred to as Taylor's theorem, which tells us that if you look closely enough at any smooth function $f(x)$, it will look like a line. To see why this makes sense, consider the curved edges gardeners make using straight-edged spades:
 
 ```{r, echo=FALSE}
-knitr::include_graphics(file.path(img_path, "garden.png"))
+ knitr::include_graphics("ml/img/garden.png")
 ```
 
 ("Downing Street garden path edge"^[https://www.flickr.com/photos/49707497@N06/7361631644] by Flckr user Number 10^[https://www.flickr.com/photos/number10gov/].  CC-BY 2.0 license^[https://creativecommons.org/licenses/by/2.0/].)
@@ -279,17 +279,17 @@ library(broom)
 fit <- loess(margin ~ day, degree=1, span = span, data=polls_2008)
 loess_fit <- augment(fit)
 
-if(!file.exists(file.path(img_path,"loess-animation.gif"))){
-  p <- ggplot(tmp, aes(day, margin)) +
-    scale_size(range = c(0, 3)) +
-    geom_smooth(aes(group = center, frame = center, weight = weight), method = "lm", se = FALSE) +
-    geom_point(data = polls_2008, size = 3, alpha = .5, color = "grey") +
-    geom_point(aes(size = weight, frame = center)) +
-    geom_line(aes(x=day, y = .fitted, frame = day, cumulative = TRUE), 
-              data = loess_fit, color = "red")
-
-  gganimate(p, filename = file.path(img_path,"loess-animation.gif"), interval= .1)
-}
+# if(!file.exists(file.path(img_path,"loess-animation.gif"))){
+#   p <- ggplot(tmp, aes(day, margin)) +
+#     scale_size(range = c(0, 3)) +
+#     geom_smooth(aes(group = center, frame = center, weight = weight), method = "lm", se = FALSE) +
+#     geom_point(data = polls_2008, size = 3, alpha = .5, color = "grey") +
+#     geom_point(aes(size = weight, frame = center)) +
+#     geom_line(aes(x=day, y = .fitted, frame = day, cumulative = TRUE), 
+#               data = loess_fit, color = "red")
+# 
+#   gganimate(p, filename = file.path(img_path,"loess-animation.gif"), interval= .1)
+# }
 if(knitr::is_html_output()){
   knitr::include_graphics(file.path(img_path,"loess-animation.gif"))
 } else{
@@ -325,7 +325,7 @@ polls_2008 %>% mutate(smooth = fit$fitted) %>%
 
 Different spans give us different estimates. We can see how different window sizes lead to different estimates:
 
-```{r loess-multi-span-animation, warning=FALSE} 
+```{r loess-multi-span-animation, eval=FALSE}
 spans <- c(.66, 0.25, 0.15, 0.10)
 
 fits <- tibble(span = spans) %>% 
@@ -338,18 +338,18 @@ tmp <- fits %>%
   filter(rank(dist) / n() <= span) %>%
   mutate(weight = (1 - (dist / max(dist)) ^ 3) ^ 3)
 
-if(!file.exists(file.path(img_path, "loess-multi-span-animation.gif"))){
-  p <- ggplot(tmp, aes(day, margin)) +
-    scale_size(range = c(0, 2)) +
-    geom_smooth(aes(group = center, frame = center, weight = weight), method = "lm", se = FALSE) +
-    geom_point(data = polls_2008, size = 2, alpha = .5, color = "grey") +
-    geom_line(aes(x=day, y = .fitted, frame = day, cumulative = TRUE), 
-              data = fits, color = "red") +
-    geom_point(aes(size = weight, frame = center)) +
-    facet_wrap(~span)
-  
-  gganimate(p, filename = file.path(img_path, "loess-multi-span-animation.gif"), interval= .1)
-}
+# if(!file.exists(file.path(img_path, "loess-multi-span-animation.gif"))){
+#   p <- ggplot(tmp, aes(day, margin)) +
+#     scale_size(range = c(0, 2)) +
+#     geom_smooth(aes(group = center, frame = center, weight = weight), method = "lm", se = FALSE) +
+#     geom_point(data = polls_2008, size = 2, alpha = .5, color = "grey") +
+#     geom_line(aes(x=day, y = .fitted, frame = day, cumulative = TRUE), 
+#               data = fits, color = "red") +
+#     geom_point(aes(size = weight, frame = center)) +
+#     facet_wrap(~span)
+#   
+#   gganimate(p, filename = file.path(img_path, "loess-multi-span-animation.gif"), interval= .1)
+# }
 if(knitr::is_html_output()){
   knitr::include_graphics(file.path(img_path,"loess-multi-span-animation.gif"))
 } else{
@@ -373,6 +373,12 @@ if(knitr::is_html_output()){
 Here are the final estimates:
 
 ```{r loess-final}
+spans <- c(.66, 0.25, 0.15, 0.10)
+
+fits <- tibble(span = spans) %>% 
+  group_by(span) %>% 
+  do(broom::augment(loess(margin ~ day, degree=1, span = .$span, data=polls_2008)))
+
 tmp %>% ggplot(aes(day, margin)) +
   geom_point(size = 2, alpha = .5, color = "grey") +
   geom_line(aes(day, .fitted), data = fits, color = "red") +
