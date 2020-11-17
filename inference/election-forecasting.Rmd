@@ -111,7 +111,7 @@ X <- sapply(1:I, function(i){
 The simulated data does not really seem to capture the features of the actual data:
 
 
-```{r simulated-data-without-bias, echo=FALSE, message=FALSE, warning=FALSE}
+```{r simulated-data-without-bias, message=FALSE, warning=FALSE}
 polls %>% group_by(pollster) %>% 
   filter(n() >= 6) %>% 
   ungroup() %>%
@@ -149,7 +149,7 @@ X <- sapply(1:I, function(i){
 
 The simulated data now looks more like the actual data:
 
-```{r simulated-pollster-data, fig.height=3.78, fig.width=3, out.width="35%", echo=FALSE}
+```{r simulated-pollster-data, fig.height=3.78, fig.width=3, out.width="35%"}
 data.frame(Spread = as.vector(X) , Pollster = as.factor(rep(1:I, each=J))) %>%
   ggplot(aes(Pollster, Spread)) +
   geom_point() +
@@ -258,7 +258,7 @@ results <- results %>%
 
 To make probabilistic arguments, we will use a Monte Carlo simulation. For each state, we apply the Bayesian approach to generate an election day $d$. We could construct the priors for each state based on recent history. However, to keep it simple, we assign a prior to each state that assumes we know nothing about what will happen. Since from election year to election year the results from a specific state don't change that much, we will assign a standard deviation of 2% or $\tau=0.02$. For now, we will assume, incorrectly, that the poll results from each state are independent. The code for the Bayesian calculation under these assumptions looks like this:
 
-```{r, echo=FALSE}
+```{r}
 mu <- 0
 tau <- 0.02
 results %>% mutate(sigma = sd/sqrt(n), 
@@ -269,7 +269,7 @@ results %>% mutate(sigma = sd/sqrt(n),
 
 The estimates based on posterior do move the estimates towards 0, although the states with many polls are influenced less. This is expected as the more poll data we collect, the more we trust those results:
 
-```{r posterior-versus-original-estimates, echo=FALSE}
+```{r posterior-versus-original-estimates}
 results %>% mutate(sigma = sd / sqrt(n), 
                    B = sigma^2 / (sigma^2 + tau^2),
                    posterior_mean = B * mu + (1 - B) * avg,
@@ -302,7 +302,7 @@ mean(clinton_EV > 269)
 This model gives Clinton over 99% chance of winning. 
 <!--Here is a histogram of the Monte Carlo outcomes:
 
-```{r election-forecast-posterior-no-bias, echo=FALSE}
+```{r election-forecast-posterior-no-bias}
 data.frame(clinton_EV) %>% 
   ggplot(aes(clinton_EV)) + 
   geom_histogram(binwidth = 1) +
@@ -334,7 +334,7 @@ mean(clinton_EV_2 > 269)
 
 This gives us a much more sensible estimate. Looking at the outcomes of the simulation, we see how the bias term adds variability to the final results.
 
-```{r comparison-forecast-with-and-without-bias, echo=FALSE}
+```{r comparison-forecast-with-and-without-bias}
 data.frame(no_bias=clinton_EV, with_bias=clinton_EV_2) %>% gather(approach, result) %>%
   ggplot(aes(result)) + 
   geom_histogram(binwidth = 1) +
@@ -370,14 +370,14 @@ se
 
 But the empirical standard deviation is higher than the highest possible theoretical estimate. Furthermore, the spread data does not look normal as the theory would predict:
 
-```{r time-trend-variability, echo=FALSE}
+```{r time-trend-variability}
 qplot(spread, geom = "histogram", binwidth = 0.01, data = one_pollster, color = I("black"))
 ```
 
 The models we have described include pollster-to-pollster variability and sampling error. But this plot is for one pollster and the variability we see is certainly not explained by sampling error. Where is the extra variability coming from? The following plots make a strong case that it comes from time fluctuations not accounted for by the theory that assumes $p$ is fixed:
 
 
-```{r time-trend-estimate, echo=FALSE}
+```{r time-trend-estimate}
 one_pollster %>% ggplot(aes(enddate, spread)) + 
   geom_point() + 
   geom_smooth(method = "loess", span = 0.1)
@@ -385,7 +385,7 @@ one_pollster %>% ggplot(aes(enddate, spread)) +
 
 Some of the peaks and valleys we see coincide with events such as the party conventions, which tend to give the candidate a boost. We can see the peaks and valleys are consistent across several pollsters:
 
-```{r time-trend-estimate-several-pollsters, echo=FALSE}
+```{r time-trend-estimate-several-pollsters}
 polls_us_election_2016 %>%
   filter(state == "U.S.") %>%
   group_by(pollster) %>%
@@ -415,7 +415,7 @@ $$
 
 We usually see the estimated $f(t)$ not for the difference, but for the actual percentages for each candidate like this:
 
-```{r trend-estimate-for-all-pollsters, warning=FALSE, message=FALSE, echo=FALSE}
+```{r trend-estimate-for-all-pollsters, warning=FALSE, message=FALSE}
 polls_us_election_2016 %>%
   filter(state == "U.S." & enddate>="2016-07-01") %>%
   select(enddate, pollster, rawpoll_clinton, rawpoll_trump) %>%

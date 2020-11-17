@@ -67,7 +67,7 @@ p_hat_bayes <- f1*pi / (f1*pi + f0*(1 - pi))
 
 Our Naive Bayes estimate $\hat{p}(x)$ looks a lot like our logistic regression estimate:
 
-```{r conditional-prob-glm-fit-2, echo=FALSE }
+```{r conditional-prob-glm-fit-2 }
 tmp <- heights %>% 
   mutate(x = round(height)) %>%
   group_by(x) %>%
@@ -180,7 +180,7 @@ confusionMatrix(y_hat, mnist_27$test$y)$overall["Accuracy"]
 
 The estimated conditional probability looks relatively good, although it does not fit as well as the kernel smoothers:
 
-```{r, echo=FALSE}
+```{r}
 plot_cond_prob <- function(p_hat=NULL){
   tmp <- mnist_27$true_p
   if(!is.null(p_hat)){
@@ -193,7 +193,7 @@ plot_cond_prob <- function(p_hat=NULL){
 }
 ```
 
-```{r qda-estimate, echo=FALSE, out.width="100%", warning=FALSE, message=FALSE}
+```{r qda-estimate, out.width="100%", warning=FALSE, message=FALSE}
 library(gridExtra)
 p1 <- plot_cond_prob() + ggtitle("True conditional probability")
 
@@ -238,7 +238,7 @@ params
 -->
 and the distributions looks like this:
 
-```{r lda-explained, echo=FALSE}
+```{r lda-explained}
 tmp <- lapply(1:2, function(i){
   with(params[i,], MASS::mvrnorm(1000, mu = c(avg_1, avg_2), Sigma = matrix(c(sd_1^2, sd_1*sd_2*r, sd_1*sd_2*r, sd_2^2), 2, 2))) %>%
     as.data.frame() %>% 
@@ -264,7 +264,7 @@ confusionMatrix(y_hat, mnist_27$test$y)$overall["Accuracy"]
 
 When we force this assumption, we can show mathematically that the boundary is a line, just as with logistic regression. For this reason, we call the method _linear_ discriminant analysis (LDA). Similarly, for QDA, we can show that the boundary must be a quadratic function.
 
-```{r lda-estimate, echo=FALSE, out.width="100%"}
+```{r lda-estimate, out.width="100%"}
 train_lda <- train(y ~ ., method = "lda", data = mnist_27$train)
 
 p1 <- plot_cond_prob() + ggtitle("True conditional probability")
@@ -355,7 +355,7 @@ Note that for sensitivity and specificity, we have a pair of values for **each**
 
 To visualize what parts of the region are called 1, 2, and 7 we now need three colors:
 
-```{r three-classes-plot, echo=FALSE}
+```{r three-classes-plot}
 GS <- 150
 new_x <- expand.grid(x_1 = seq(min(train_set$x_1), max(train_set$x_1), len=GS),
                      x_2 = seq(min(train_set$x_2), max(train_set$x_2), len=GS))
@@ -367,7 +367,7 @@ new_x %>% mutate(y_hat = predict(train_qda, new_x)) %>%
 ```
 
 
-```{r, echo=FALSE}
+```{r}
 train_lda <- train(y ~ ., method = "lda", data = train_set)
 ```
 
@@ -375,7 +375,7 @@ The accuracy for LDA,
 `r caret::confusionMatrix(predict(train_lda, test_set), test_set$y)$overall["Accuracy"]`,
 is much worse because the model is more rigid. This is what the decision rule looks like:
 
-```{r lda-too-rigid, echo=FALSE}
+```{r lda-too-rigid}
 new_x %>% mutate(y_hat = predict(train_lda, new_x)) %>%
   ggplot(aes(x_1, x_2, color = y_hat, z = as.numeric(y_hat))) +
   geom_point(size = 0.5, pch = 16) + 
@@ -393,7 +393,7 @@ train_knn <- train(y ~ ., method = "knn", data = train_set,
 are much better with an accuracy of 
 `r caret::confusionMatrix(predict(train_knn, test_set), test_set$y)$overall["Accuracy"]`. The decision rule looks like this:
 
-```{r three-classes-knn-better, echo=FALSE}
+```{r three-classes-knn-better}
 new_x %>% mutate(y_hat = predict(train_knn, new_x)) %>%
   ggplot(aes(x_1, x_2, color = y_hat, z = as.numeric(y_hat))) +
   geom_point(size = 0.5, pch = 16) + 

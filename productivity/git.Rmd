@@ -178,7 +178,7 @@ But what does _clone_ mean? Rather than download all these files to your compute
 You can quickly see an example of this by doing the following. Open a terminal and type:
 
 
-```{r, echo=FALSE}
+```{r}
 wd <- getwd() ##so we set back later. We are about to start switching dirs
 if(file.exists("git-example")) unlink("git-example", recursive=TRUE, force = TRUE)
 ```
@@ -412,7 +412,7 @@ git push
 In Section \@ref(organizing) we continue to work with this example, as we demonstrate how we can use RStudio to work with Git and keep a project synced on GitHub.
 
 
-```{r, echo=FALSE}
+```{r}
 if(file.exists("git-example")) unlink("git-example", recursive=TRUE, force = TRUE)
 ```
 

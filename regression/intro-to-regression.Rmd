@@ -78,7 +78,7 @@ galton_heights %>% summarize(r = cor(father, son)) %>% pull(r)
 
 To see what data looks like for different values of $\rho$, here are six examples of pairs with correlations ranging from -0.9 to 0.99:
 
-```{r what-correlation-looks-like, echo=FALSE}
+```{r what-correlation-looks-like}
 n <- 250
 cors <- c(-0.9,-0.5,0,0.5,0.9,0.99)
 sim_data <- lapply(cors,function(r) MASS::mvrnorm(n,c(0,0), matrix(c(1,r,r,1),2,2)))
@@ -222,7 +222,7 @@ galton_heights %>% mutate(father_strata = factor(round(father))) %>%
 Not surprisingly, the centers of the groups are increasing with height. 
 Furthermore, these centers appear to follow a linear relationship. Below we plot the averages of each group. If we take into account that these averages are random variables with standard errors, the data is consistent with these points following a straight line:
 
-```{r conditional-averages-follow-line, echo=FALSE, fig.height = 3, fig.width = 3, out.width="40%"}
+```{r conditional-averages-follow-line, fig.height = 3, fig.width = 3, out.width="40%"}
 galton_heights %>% 
   mutate(father = round(father)) %>% 
   group_by(father) %>%
@@ -341,7 +341,7 @@ The main way we motivate the use of correlation involves what is called the _biv
 When a pair of random variables is approximated by the bivariate normal distribution, scatterplots look like ovals. As we saw in Section \@ref(corr-coef), they can be thin (high correlation) or circle-shaped (no correlation). 
 
 <!--
-```{r bivariate-ovals, echo=FALSE}
+```{r bivariate-ovals}
 n <- 250
 cors <- c(-0.9,-0.5,0,0.5,0.9,0.99)
 sim_data <- lapply(cors,function(r) MASS::mvrnorm(n,c(0,0), matrix(c(1,r,r,1),2,2)))

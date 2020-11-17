@@ -130,7 +130,7 @@ train_knn$results %>%
 
 ## Example: fitting with loess
 
-```{r, echo=FALSE}
+```{r}
 plot_cond_prob <- function(p_hat=NULL){
   tmp <- mnist_27$true_p
   if(!is.null(p_hat)){
@@ -144,7 +144,7 @@ plot_cond_prob <- function(p_hat=NULL){
 ```
 
 The best fitting kNN model approximates the true conditional probability:
-```{r mnist27-optimal-knn-fit, echo=FALSE}
+```{r mnist27-optimal-knn-fit}
 plot_cond_prob(predict(train_knn, mnist_27$true_p, type = "prob")[,2])
 ```
 
@@ -186,7 +186,7 @@ confusionMatrix(data = predict(train_loess, mnist_27$test),
 
 and produces a smoother estimate of the conditional probability:
 
-```{r gam-smooth, warning=FALSE, echo=FALSE, out.width="100%"}
+```{r gam-smooth, warning=FALSE, , out.width="100%"}
 p1 <- plot_cond_prob() + ggtitle("True conditional probability")
 
 p2 <- plot_cond_prob(predict(train_loess, mnist_27$true_p, type = "prob")[,2]) + 

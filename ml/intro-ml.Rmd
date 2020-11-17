@@ -23,7 +23,7 @@ For example, in the digit reader data, $K=10$ with the classes being the digits 
 
 The general setup is as follows. We have a series of features and an unknown outcome we want to predict:
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(knitr)
 library(dslabs)
@@ -44,7 +44,7 @@ if(knitr::is_html_output()){
 
 To _build a model_ that provides a prediction for any set of observed values $X_1=x_1, X_2=x_2, \dots X_5=x_5$, we collect data for which we know the outcome:
 
-```{r, echo=FALSE}
+```{r}
 n <- 2
 tmp <- tibble(outcome = paste0("$y_{", 1:n,"}$"), 
               'feature 1' = paste0("$x_{",1:n,",1}$"),
@@ -84,7 +84,7 @@ Originally, humans had to sort these by hand. To do this, they had to read the z
 The first step in building an algorithm is to understand 
 what are the outcomes and features. Below are three images of written digits. These have already been read by a human and assigned an outcome $Y$. These are considered known and serve as the training set. 
 
-```{r digit-images-example, echo=FALSE, cache=TRUE}
+```{r digit-images-example, cache=TRUE}
 mnist <- read_mnist()
 tmp <- lapply( c(1,4,5), function(i){
     expand.grid(Row=1:28, Column=1:28) %>%  
@@ -101,7 +101,7 @@ tmp %>% ggplot(aes(Row, Column, fill=value)) +
 
 The images are converted into $28 \times 28 = 784$ pixels and, for each pixel, we obtain a grey scale intensity between 0 (white) and 255 (black), which we consider continuous for now. The following plot shows the individual features for each image:
 
-```{r example-images, echo=FALSE}
+```{r example-images}
 tmp %>% ggplot(aes(Row, Column, fill=value)) + 
     geom_point(pch=21) + 
     scale_y_reverse() +

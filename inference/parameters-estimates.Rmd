@@ -18,7 +18,7 @@ Although typically the results of these polls are kept private, similar polls ar
 
 Real Clear Politics^[http://www.realclearpolitics.com] is an example of a news aggregator that organizes and publishes poll results. For example, they present the following poll results reporting estimates of the popular vote for the 2016 presidential election^[http://www.realclearpolitics.com/epolls/2016/president/us/general_election_trump_vs_clinton-5491.html]:
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE}
 #knitr::include_graphics(file.path(img_path,"rcp-polls.png"))
 url <- "https://www.realclearpolitics.com/epolls/2016/president/us/general_election_trump_vs_clinton-5491.html"
 library(rvest)
@@ -56,7 +56,7 @@ We start by connecting probability theory to the task of using polls to learn ab
 To help us understand the connection between polls and what we have learned, let's construct a similar situation to the one pollsters face. To mimic the challenge real pollsters face in terms of competing with other pollsters for media attention, we will use an urn full of beads to represent  voters and pretend we are competing for a \$25 dollar prize. The challenge is to guess the spread between the proportion of blue and red beads in this urn (in this case, a pickle jar):
 
 
-```{r, echo=FALSE, out.width=300}
+```{r, out.width=300}
 #, out.width="1.5in"}
 knitr::include_graphics(file.path(img_path, "urn.jpg"))
 ```
@@ -71,7 +71,7 @@ library(dslabs)
 take_poll(25)
 ```
 
-```{r first-simulated-poll, message=FALSE, warning=FALSE, echo=FALSE}
+```{r first-simulated-poll, message=FALSE, warning=FALSE, }
 set.seed(1)
 library(tidyverse)
 library(dslabs)
@@ -94,7 +94,7 @@ Can we do this with the 25 observations above? It is certainly informative. For 
 We want to construct an estimate of $p$ using only the information we observe. An estimate should be thought of as a summary of the observed data that we think is informative about the parameter of interest. It seems intuitive to think that the proportion of blue beads in the sample $0.48$ must be at least related to the actual proportion $p$. But do we simply predict $p$ to be 0.48? First, remember that the sample proportion is a random variable. If we run the command `take_poll(25)` four times, we get a different answer each time, since the sample proportion is a random variable. 
 
 
-```{r four-simulated-polls, echo=FALSE}
+```{r four-simulated-polls, }
 par(mfrow=c(2,2), mar = c(3, 1, 3, 0), mgp = c(1.5, 0.5, 0)) 
 take_poll(25); take_poll(25); take_poll(25); take_poll(25)
 ```
@@ -146,7 +146,7 @@ If we take a large enough poll to make our standard error about 1%, we will be q
 
 One problem is that we do not know $p$, so we can't compute the standard error. However, for illustrative purposes, let's assume that $p=0.51$ and make a plot of the standard error versus the sample size $N$: 
 
-```{r standard-error-versus-sample-size, echo=FALSE, message=FALSE, warning=FALSE}
+```{r standard-error-versus-sample-size, , message=FALSE, warning=FALSE}
 p <- 0.51
 N <- 10^seq(1,5, len=100)
 data.frame(N=N, SE = sqrt(p*(1-p)/N)) %>% ggplot(aes(N, SE)) + geom_line() + scale_x_continuous(breaks = c(10,100,1000,10000), trans = "log10")

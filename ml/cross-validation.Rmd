@@ -58,7 +58,7 @@ confusionMatrix(y_hat_lm, mnist_27$test$y)$overall["Accuracy"]
 And we see that kNN, with the default parameter, already beats regression. To see why this is the case, we will plot $\hat{p}(x_1, x_2)$ and compare it to the true conditional probability $p(x_1, x_2)$:
 
 
-```{r, echo=FALSE}
+```{r}
 # We use this function to plot the estimated conditional probabilities
 plot_cond_prob <- function(p_hat=NULL){
   tmp <- mnist_27$true_p
@@ -73,7 +73,7 @@ plot_cond_prob <- function(p_hat=NULL){
 ```
 
 
-```{r knn-fit, echo=FALSE, message=FALSE, warning=FALSE, out.width="100%"}
+```{r knn-fit, message=FALSE, warning=FALSE, out.width="100%"}
 p1 <- plot_cond_prob() + ggtitle("True conditional probability")
 
 p2 <- plot_cond_prob(predict(knn_fit, mnist_27$true_p)[,2]) +
@@ -114,7 +114,7 @@ confusionMatrix(y_hat_knn_1, mnist_27$test$y)$overall["Accuracy"]
 ```
 
 We can see the over-fitting problem in this figure. 
-```{r knn-1-overfit, echo=FALSE, out.width="100%"}
+```{r knn-1-overfit, out.width="100%"}
 p1 <- mnist_27$true_p %>% 
   mutate(knn = predict(knn_fit_1, newdata = .)[,2]) %>%
   ggplot() +
@@ -151,7 +151,7 @@ confusionMatrix(y_hat_knn_401, mnist_27$test$y)$overall["Accuracy"]
 ```
 
 This turns out to be similar to regression:
-```{r mnist-27-glm-est, echo=FALSE, out.width="100%"}
+```{r mnist-27-glm-est, out.width="100%"}
 p_hat <- predict(fit_lm, newdata = mnist_27$true_p)
 p_hat <- scales::squish(p_hat, c(0, 1))
 p1 <- plot_cond_prob(p_hat) +
@@ -195,7 +195,7 @@ accuracy <- map_df(ks, function(k){
 
 Note that we estimate accuracy by using both the training set and the test set. We can now plot the accuracy estimates for each value of $k$:
 
-```{r accuracy-vs-k-knn, echo=FALSE}
+```{r accuracy-vs-k-knn}
 accuracy %>% mutate(k = ks) %>%
   gather(set, accuracy, -k) %>%
   mutate(set = factor(set, levels = c("train", "test"))) %>%

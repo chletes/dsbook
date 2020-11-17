@@ -2,7 +2,7 @@
 
 Confidence intervals are a very useful concept widely employed by data analysts. A version of these that are commonly seen come from the `ggplot` geometry `geom_smooth`. Here is an example using a temperature dataset available in R:
 
-```{r first-confidence-intervals-example, warning=FALSE, message=FALSE, echo=FALSE}
+```{r first-confidence-intervals-example, warning=FALSE, message=FALSE, }
 library(tidyverse)
 data("nhtemp")
 data.frame(year = as.numeric(time(nhtemp)), temperature=as.numeric(nhtemp)) %>%
@@ -129,7 +129,7 @@ mean(inside)
 
 The following plot shows the first 100 confidence intervals. In this case, we created the simulation so the black line denotes the parameter we are trying to estimate:
 
-```{r confidence-interval-coverage, message=FALSE, echo=FALSE, fig.height=6}
+```{r confidence-interval-coverage, message=FALSE, , fig.height=6}
 set.seed(1)
 tab <- replicate(100, {
   x <- sample(c(0,1), size = N, replace = TRUE, prob = c(1-p, p))

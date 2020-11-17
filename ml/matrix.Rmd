@@ -185,7 +185,7 @@ image(1:28, 1:28, grid)
 image(1:28, 1:28, grid[, 28:1])
 ```
 
-```{r matrix-image, fig.width = 8, fig.height = 4, echo=FALSE}
+```{r matrix-image, fig.width = 8, fig.height = 4}
 rafalib::mypar(1,2)
 image(1:28, 1:28, grid)
 image(1:28, 1:28, grid[, 28:1])
@@ -258,7 +258,7 @@ This makes sense since we don't write in some parts of the box. Here is the vari
 image(1:28, 1:28, matrix(sds, 28, 28)[, 28:1])
 ```
 
-```{r pixel-variance, fig.width = 3, fig.height = 3, echo=FALSE, out.width="50%"}
+```{r pixel-variance, fig.width = 3, fig.height = 3, out.width="50%"}
 rafalib::mypar()
 image(1:28, 1:28, matrix(sds, 28, 28)[, 28:1])
 ```
@@ -356,7 +356,7 @@ bin_X <- (x > 255/2)*1
 <!--
 We can see that at least the entry we looked at before does not change much:
 
-```{r binarized-image, echo=FALSE, out.width="100%", fig.width = 6, fig.height = 3.25}
+```{r binarized-image, out.width="100%", fig.width = 6, fig.height = 3.25}
 rafalib::mypar(1,2)
 rows <- 1:28
 columns <- 1:28

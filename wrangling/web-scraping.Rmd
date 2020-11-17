@@ -154,7 +154,7 @@ vignette^[https://cran.r-project.org/web/packages/rvest/vignettes/selectorgadget
 
 Sharing data on the internet has become more and more common. Unfortunately, providers use different formats, which makes it harder for data scientists to wrangle data into R. Yet there are some standards that are also becoming more common. Currently, a format that is widely being adopted is the JavaScript Object Notation or JSON. Because this format is very general, it is nothing like a spreadsheet. This JSON file looks more like the code you use to define a list. Here is an example of information stored in a JSON format:
 
-```{r, echo=FALSE}
+```{r}
 library(jsonlite)
 example <- data.frame(name= c("Miguel", "Sofia", "Aya", "Cheng"), student_id = 1:4, exam_1 = c(85, 94, 87, 90), exam_2 = c(86, 93, 88, 91))
 json <- toJSON(example, pretty = TRUE) 

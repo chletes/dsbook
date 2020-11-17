@@ -38,7 +38,7 @@ movielens %>%
 
 If we multiply those two numbers, we get a number larger than 5 million, yet our data table has about 100,000 rows. This implies that not every user rated every movie. So we can think of these data as a very large matrix, with users on the rows and movies on the columns, with many empty cells. The `gather` function permits us to convert it to this format, but if we try it for the entire matrix, it will crash R. Let's show the matrix for seven users and four movies.
 
-```{r, echo=FALSE}
+```{r}
 keep <- movielens %>% 
   count(movieId) %>% 
   top_n(4, n) %>% 
@@ -63,7 +63,7 @@ if(knitr::is_html_output()){
 
 You can think of the task of a recommendation system as filling in the `NA`s in the table above. To see how _sparse_ the matrix is, here is the matrix for a random sample of 100 movies and 100 users with yellow indicating a user/movie combination for which we have a rating.
 
-```{r sparsity-of-movie-recs, echo=FALSE, fig.width=3, fig.height=3, out.width="40%"}
+```{r sparsity-of-movie-recs, fig.width=3, fig.height=3, out.width="40%"}
 users <- sample(unique(movielens$userId), 100)
 rafalib::mypar()
 movielens %>% filter(userId %in% users) %>% 
@@ -80,7 +80,7 @@ Let's look at some of the general properties of the data to better understand th
 
 The first thing we notice is that some movies get rated more than others. Below is the distribution. This should not surprise us given that there are blockbuster movies watched by millions and artsy, independent movies watched by just a few. Our second observation is that some users are more active than others at rating movies:
 
-```{r movie-id-and-user-hists, echo=FALSE, fig.width=6, fig.height=3}
+```{r movie-id-and-user-hists, fig.width=6, fig.height=3}
 p1 <- movielens %>% 
   count(movieId) %>% 
   ggplot(aes(n)) + 
@@ -221,7 +221,7 @@ predicted_ratings <- mu + test_set %>%
 RMSE(predicted_ratings, test_set$rating)
 ```
 
-```{r echo=FALSE}
+```{r}
 model_1_rmse <- RMSE(predicted_ratings, test_set$rating)
 rmse_results <- bind_rows(rmse_results,
                           tibble(method="Movie Effect Model",  
@@ -279,7 +279,7 @@ predicted_ratings <- test_set %>%
 RMSE(predicted_ratings, test_set$rating)
 ```
 
-```{r echo=FALSE}
+```{r}
 model_2_rmse <- RMSE(predicted_ratings, test_set$rating)
 rmse_results <- bind_rows(rmse_results,
                           tibble(method="Movie + User Effects Model",  
@@ -492,7 +492,7 @@ predicted_ratings <- test_set %>%
 RMSE(predicted_ratings, test_set$rating)
 ```
 
-```{r echo=FALSE}
+```{r}
 model_3_rmse <- RMSE(predicted_ratings, test_set$rating)
 rmse_results <- bind_rows(rmse_results,
                           tibble(method="Regularized Movie Effect Model",  
@@ -574,7 +574,7 @@ lambda
 ```
 
 
-```{r, echo=FALSE}
+```{r}
 rmse_results <- bind_rows(
   rmse_results,
   tibble(method="Regularized Movie + User Effect Model",  
@@ -745,7 +745,7 @@ These results tell us that there is structure in the data. But how can we model 
 
 Here is an illustration, using a simulation, of how we can use some structure to predict the $r_{u,i}$. Suppose our residuals `r` look like this:
 
-```{r, echo=FALSE}
+```{r}
 q <- matrix(c(1 , 1, 1, -1, -1), ncol = 1)
 rownames(q) <- short_names
 p <- matrix(rep(c(2, 0, -2), c(3, 5, 4)), ncol = 1)
@@ -794,7 +794,7 @@ $$
 However, we motivated the need for the $p_u q_i$ term with a simple simulation. The structure found in data is usually more complex. For example, in this first simulation we assumed there were was just one factor $p_u$ that determined which of the two genres movie $u$ belongs to. But the structure in our movie data seems to be much more complicated than gangster movie versus romance. We may have many other factors. Here we present a slightly more complex simulation. We now add a sixth movie.
 
 
-```{r, echo=FALSE}
+```{r}
 set.seed(1988)
 m_6 <- "Scent of a Woman"
 q <- cbind(c(1 , 1, 1, -1, -1, -1), 
@@ -898,7 +898,7 @@ qplot(1:nrow(x), var_explained, xlab = "PC")
 
 We also notice that the first two principal components are related to the structure in opinions about movies:
 
-```{r movies-pca, echo=FALSE}
+```{r movies-pca}
 library(ggrepel)
 
 pcs <- data.frame(pca$rotation, name = str_trunc(colnames(y), 30), 
@@ -913,25 +913,25 @@ pcs %>%  ggplot(aes(PC1, PC2)) + geom_point() +
 
 Just by looking at the top 10 in each direction, we see a meaningful pattern. The first PC shows the difference between critically acclaimed movies on one side:
 
-```{r, echo=FALSE}
+```{r}
 pcs %>% select(name, PC1) %>% arrange(PC1) %>% slice(1:10) %>% pull(name)
 ```
 
 and Hollywood blockbusters on the other:
 
-```{r, echo=FALSE}
+```{r}
 pcs %>% select(name, PC1) %>% arrange(desc(PC1)) %>% slice(1:10)  %>% pull(name)
 ```
 
 While the second PC seems to go from artsy, independent films:
 
-```{r, echo=FALSE}
+```{r}
 pcs %>% select(name, PC2) %>% arrange(PC2) %>% slice(1:10) %>% pull(name)
 ```
 
 to nerd favorites:
 
-```{r, echo=FALSE}
+```{r}
 pcs %>% select(name, PC2) %>% arrange(desc(PC2)) %>% slice(1:10) %>% pull(name)
 ```
 

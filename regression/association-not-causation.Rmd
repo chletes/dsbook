@@ -8,7 +8,7 @@ There are many reasons that a variable $X$ can be correlated with a variable $Y$
 
 The following comical example underscores that correlation is not causation. It shows a very strong correlation between divorce rates and margarine consumption. 
 
-```{r divorce-versus-margarine, echo=FALSE, message=FALSE, warning=FALSE}
+```{r divorce-versus-margarine, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(dslabs)
 the_title <- paste("Correlation =", 
@@ -227,7 +227,7 @@ There seems to be association. The plot suggests that women were much more likel
 
 The following plot shows the number of applicants that were admitted and those that were not by:
 
-```{r confounding, echo=FALSE}
+```{r confounding}
 admissions %>%
   mutate(yes = round(admitted/100*applicants), no = applicants - yes) %>%
   select(-applicants, -admitted) %>%
@@ -271,7 +271,7 @@ admissions %>%  group_by(gender) %>% summarize(average = mean(admitted))
 
 The case we have just covered is an example of Simpson's paradox. It is called a paradox because we see the sign of the correlation  flip when comparing the entire publication and specific strata. As an illustrative example, suppose you have three random variables $X$, $Y$, and $Z$ and that we observe realizations of these. Here is a plot of simulated observations for $X$ and $Y$ along with the sample correlation:
 
-```{r simpsons-paradox, echo=FALSE}
+```{r simpsons-paradox}
 N <- 100
 Sigma <- matrix(c(1,0.75,0.75, 1), 2, 2)*1.5
 means <- list(c(x = 11, y = 3), 
@@ -296,7 +296,7 @@ dat %>% ggplot(aes(x, y)) + geom_point(alpha = .5) +
 You can see that $X$ and $Y$ are negatively correlated. However, once we stratify by $Z$ (shown in different colors below) another pattern emerges:
 
 
-```{r simpsons-paradox-explained, echo=FALSE}
+```{r simpsons-paradox-explained}
 means <- do.call(rbind, means) %>% 
   as_tibble() %>%
   mutate(z = as.character(seq_along(means)))

@@ -8,7 +8,7 @@ Exploratory data visualization is perhaps the greatest strength of R. One can qu
 
 Throughout the book, we will be creating plots using the __ggplot2__^[https://ggplot2.tidyverse.org/] package. 
 
-```{r, message=FALSE, warning=FALSE, echo=FALSE}
+```{r, message=FALSE, warning=FALSE}
 library(dplyr)
 library(ggplot2)
 ```

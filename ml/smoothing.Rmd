@@ -6,7 +6,7 @@ img_path <- "ml/img/"
 
 Before continuing learning about machine learning algorithms, we introduce the important concept of _smoothing_. Smoothing is a very powerful technique used all across data analysis. Other names given to this technique are _curve fitting_ and _low pass filtering_. It is designed to detect trends in the presence of noisy data in cases in which the shape of the trend is unknown. The _smoothing_ name comes from the fact that to accomplish this feat, we assume that the trend is _smooth_, as in a smooth surface. In contrast, the noise, or deviation from the trend, is unpredictably wobbly:
 
-```{r signal-plus-noise-example, message=FALSE, warning=FALSE, fig.height=6, echo=FALSE}
+```{r signal-plus-noise-example, message=FALSE, warning=FALSE, fig.height=6}
 library(tidyverse)
 set.seed(1)
 n <- 100
@@ -41,7 +41,7 @@ $$
 
 To think of this as a machine learning problem, consider that we want to predict $Y$ given a day $x$. If we knew the conditional expectation $f(x) = \mbox{E}(Y \mid X=x)$, we would use it. But since we don't know this conditional expectation, we have to estimate it. Let's use regression, since it is the only method we have learned up to now.
 
-```{r linear-regression-not-flexible, echo=FALSE}
+```{r linear-regression-not-flexible}
 resid <- ifelse(lm(margin~day, data = polls_2008)$resid > 0, "+", "-")
 polls_2008 %>% 
   mutate(resid = resid) %>% 
@@ -71,7 +71,7 @@ $$
 
 The idea behind _bin smoothing_ is to make this calculation with each value of $x$ as the center. In the poll example, for each day, we would compute the average of the values within a week with that day in the center. Here are two examples: $x_0 = -125$ and $x_0 = -55$. The blue segment represents the resulting average.
 
-```{r binsmoother-expained, echo=FALSE}
+```{r binsmoother-expained}
 span <- 3.5
 tmp <- polls_2008 %>%
   crossing(center = polls_2008$day) %>%
@@ -89,7 +89,7 @@ tmp %>% filter(center %in% c(-125, -55)) %>%
 
 By computing this mean for every point, we form an estimate of the underlying curve $f(x)$. Below we show the procedure happening as we move from the -155 up to 0. At each value of $x_0$, we keep the estimate $\hat{f}(x_0)$ and move on to the next point:
 
-```{r binsmoother-animation, echo=FALSE, warning=FALSE} 
+```{r binsmoother-animation, warning=FALSE} 
 library(gganimate)
 span <- 7
 fit <- with(polls_2008, ksmooth(day, margin, kernel="box", x.points = day, bandwidth = span))
@@ -152,7 +152,7 @@ $$
 in which each point receives a weight of either $0$ or $1/N_0$, with $N_0$ the number of points in the week. In the code above, we used the argument `kernel="box"` in our call to the function `ksmooth`. This is because the weight function looks like a box.
 The `ksmooth` function provides a "smoother" option which uses the normal density to assign weights.
 
-```{r gaussian-kernel, echo=FALSE, out.width="80%", fig.height=3, fig.width=6}
+```{r gaussian-kernel, out.width="80%", fig.height=3, fig.width=6}
 x_0 <- -125
 
 p1 <- data.frame(x = polls_2008$day) %>% mutate(w_0 = 1*I(abs(x - x_0)<=span/2)) %>%
@@ -174,7 +174,7 @@ gridExtra::grid.arrange(p1, p2, ncol = 2)
 <!--
 With this animation, we see that points on the edge get less weight (the size of the point is proportional to its weight):
 
-```{r kernel-animation, echo=FALSE, warning=FALSE} 
+```{r kernel-animation, warning=FALSE} 
 tmp <- polls_2008 %>%
   crossing(center = polls_2008$day) %>%
   mutate(dist = abs(day - center)) %>%
@@ -252,7 +252,7 @@ $$
 
 For every point $x_0$, loess defines a window and fits a line within that window. Here is an example showing the fits for $x_0=-125$ and $x_0 = -55$:
 
-```{r loess, echo=FALSE}
+```{r loess}
 span <- 21/diff(range(polls_2008$day))
 
 tmp <- polls_2008 %>%
@@ -274,7 +274,7 @@ tmp %>%
 
 The fitted value at $x_0$ becomes our estimate $\hat{f}(x_0)$. Below we show the procedure happening as we move from the -155 up to 0. 
 
-```{r loess-animation, echo=FALSE, warning=FALSE} 
+```{r loess-animation, warning=FALSE} 
 library(broom)
 fit <- loess(margin ~ day, degree=1, span = span, data=polls_2008)
 loess_fit <- augment(fit)
@@ -325,7 +325,7 @@ polls_2008 %>% mutate(smooth = fit$fitted) %>%
 
 Different spans give us different estimates. We can see how different window sizes lead to different estimates:
 
-```{r loess-multi-span-animation, echo=FALSE, warning=FALSE} 
+```{r loess-multi-span-animation, warning=FALSE} 
 spans <- c(.66, 0.25, 0.15, 0.10)
 
 fits <- tibble(span = spans) %>% 
@@ -372,7 +372,7 @@ if(knitr::is_html_output()){
 
 Here are the final estimates:
 
-```{r loess-final, echo=FALSE}
+```{r loess-final}
 tmp %>% ggplot(aes(day, margin)) +
   geom_point(size = 2, alpha = .5, color = "grey") +
   geom_line(aes(day, .fitted), data = fits, color = "red") +
@@ -403,7 +403,7 @@ $$
 
 This kernel differs from the Gaussian kernel in that more points get values closer to the max:
 
-```{r triweight-kernel, echo=FALSE, out.width="80%", fig.height=3, fig.width=6}
+```{r triweight-kernel, out.width="80%", fig.height=3, fig.width=6}
 x_0 <- -125
 
 tmp <- with(data.frame(day = seq(min(polls_2008$day), max(polls_2008$day), .25)), 

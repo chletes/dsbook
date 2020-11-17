@@ -188,7 +188,7 @@ cm$overall["Accuracy"]
 ```
 <!--
 Here are some examples of the original images and our calls:
-```{r mnist-examples-of-calls, echo=FALSE, out.width="100%"}
+```{r mnist-examples-of-calls, out.width="100%"}
 rafalib::mypar(3,4)
 for(i in 1:12){
   image(matrix(x_test[i,], 28, 28)[, 28:1], 
@@ -231,7 +231,7 @@ We can compare what we get with kNN to random forest.
 
 <!--Here are some errors for kNN:
 
-```{r knn-images, echo=FALSE, out.width="100%", fig.width=6, fig.height=1.65}
+```{r knn-images, , out.width="100%", fig.width=6, fig.height=1.65}
 p_max <- predict(fit_knn, x_test[,col_index])
 p_max <- apply(p_max, 1, max)
 ind  <- which(y_hat_knn != y_test)
@@ -249,7 +249,7 @@ And -->
 
 Here are some errors for the random forest:
 
-```{r rf-images,, echo=FALSE, out.width="100%", fig.width=6, fig.height=1.65}
+```{r rf-images,, , out.width="100%", fig.width=6, fig.height=1.65}
 p_max <- predict(fit_rf, x_test[,col_index], type = "prob") 
 p_max <- p_max / rowSums(p_max)
 p_max <- apply(p_max, 1, max)

@@ -45,7 +45,7 @@ polls <- map_df(Ns, function(N) {
 
 Here is a visualization showing the intervals the pollsters would have reported for the difference between Obama and Romney:
 
-```{r simulated-polls, message=FALSE, echo=FALSE}
+```{r simulated-polls, message=FALSE, }
 ggplot(polls, aes(poll, estimate, ymin=low, ymax=high)) + 
   geom_hline(yintercept = 0) + 
   geom_point(col="#00B6EB")+
@@ -78,7 +78,7 @@ Once we have an estimate of $d$, we can construct an estimate for the proportion
 
 Thus, we can predict that the spread will be `r round(d_hat*100,1)` plus or minus `r round(moe*100 ,1)`, which not only includes the actual result we eventually observed on election night, but is quite far from including 0. Once we combine the 12 polls, we become quite certain that Obama will win the popular vote.
 
-```{r confidence-coverage-2008-election, echo=FALSE}
+```{r confidence-coverage-2008-election, }
 p_hat <- (1+d_hat)/2
 moe <- 2*1.96*sqrt(p_hat*(1-p_hat)/sum(polls$sample_size))
 new_row <- tibble(d_hat, d_hat-moe, d_hat+moe, sum(polls$sample_size),13)
@@ -101,7 +101,7 @@ Of course, this was just a simulation to illustrate the idea. The actual data sc
 Since the 2008 elections, other organizations have started their own election forecasting group that, like Nate Silver's, aggregates polling data and uses statistical models to make predictions. In 2016, forecasters underestimated Trump's chances of winning greatly. The day before the election the _New York Times_ reported^[https://www.nytimes.com/interactive/2016/upshot/presidential-polls-forecast.html] the following probabilities for Hillary Clinton winning the presidency:
 
 
-```{r, echo=FALSE, out.width="100%"}
+```{r, out.width="100%"}
 #knitr::include_graphics(file.path(img_path, "pollster-2016-predictions.png"))
 tmp <- data.frame(NYT = "  85%", `538` = "  71%", HuffPost = "  98%", PW = "  89%", PEC = " >99%", DK = "  92%", Cook = " Lean Dem", Roth = " Lean Dem", check.names = FALSE, row.names = "Win Prob")
 if(knitr::is_html_output()){
@@ -121,7 +121,7 @@ By understanding statistical models and how these forecasters use them, we will 
 Although not nearly as interesting as predicting the electoral college, for illustrative purposes we will start by looking at predictions for the popular vote. FiveThirtyEight predicted a 3.6% advantage for Clinton^[https://projects.fivethirtyeight.com/2016-election-forecast/], included the actual result of 2.1% (48.2% to 46.1%) in their interval, and was much more confident about Clinton winning the election, giving her an 81.4% chance. Their prediction was summarized with a chart like this: 
 
 
-```{r fivethirtyeight-densities, echo=FALSE, out.width="80%", fig.height=2}
+```{r fivethirtyeight-densities, , out.width="80%", fig.height=2}
 ## knitr::include_graphics(file.path(img_path, "popular-vote-538.png"))
 
 my_dgamma <- function(x, mean = 1, sd = 1){
@@ -249,7 +249,7 @@ polls %>% group_by(pollster) %>% summarize(n())
 
 Let's visualize the data for the pollsters that are regularly polling:
 
-```{r pollster-bias, echo=FALSE}
+```{r pollster-bias, }
 polls %>% group_by(pollster) %>% 
   filter(n() >= 6) %>%
   ggplot(aes(pollster, spread)) + 

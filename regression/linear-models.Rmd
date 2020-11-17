@@ -253,7 +253,7 @@ lse <- data.frame(beta_0 = lse[1,], beta_1 = lse[2,])
 
 We can see the variability of the estimates by plotting their distributions:
 
-```{r lse-distributions, out.width="100%", fig.width=6, fig.height=3, echo=FALSE}
+```{r lse-distributions, out.width="100%", fig.width=6, fig.height=3}
 library(gridExtra)
 p1 <- lse %>% ggplot(aes(beta_0)) + 
   geom_histogram(binwidth = 5, color = "black") 
@@ -738,7 +738,7 @@ players %>% filter(year(debut) < 1998) %>%
 -->
 We can search for good deals by looking at players who produce many more runs than others with similar salaries. We can use this table to decide what players to pick and keep our total salary below the 40 million dollars Billy Beane had to work with. This can be done using what computer scientists call linear programming. This is not something we teach, but here are the position players selected with this approach:
 
-```{r, message=FALSE, warning=FALSE, echo=FALSE}
+```{r, message=FALSE, warning=FALSE}
 library(reshape2)
 library(lpSolve)
 
@@ -767,7 +767,7 @@ if(knitr::is_html_output()){
 
 We see that all these players have above average BB and most have above average HR rates, while the same is not true for singles. Here is a table with statistics standardized across players so that, for example, above average HR hitters have values above 0.
 
-```{r, echo=FALSE}
+```{r}
 my_scale <- function(x) (x - median(x))/mad(x)
 tmp <- players %>% mutate(BB = my_scale(BB), 
                    singles = my_scale(singles),
@@ -800,7 +800,7 @@ Does the data confirm the existence of a sophomore slump? Let's take a look. Exa
 
 <!--The data is available in the Lahman library, but we have to do some work to create a table with the statistics for all the ROY. First we create a table with player ID, their names, and their most played position.-->
 
-```{r, echo=FALSE}
+```{r}
 library(Lahman)
 playerInfo <- Fielding %>% 
   group_by(playerID) %>% 
@@ -815,7 +815,7 @@ playerInfo <- Fielding %>%
 Now, we will create a table with only the ROY award winners and add their batting statistics. We filter out pitchers, since pitchers are not given awards for batting and we are going to focus on offense. Specifically, we will focus on batting average since it is the summary that most pundits talk about when discussing the sophomore slump:
 -->
 
-```{r, echo=FALSE}
+```{r}
 ROY <- AwardsPlayers %>%
   filter(awardID == "Rookie of the Year") %>% 
   left_join(playerInfo, by="playerID") %>%
@@ -828,7 +828,7 @@ ROY <- AwardsPlayers %>%
 <!--
 We also will keep only the rookie and sophomore seasons and remove players that did not play sophomore seasons:
 -->
-```{r, echo=FALSE}
+```{r}
 ROY <- ROY %>%  
   filter(yearID == rookie_year | yearID == rookie_year+1) %>% 
   group_by(playerID) %>% 
@@ -841,7 +841,7 @@ ROY <- ROY %>%
 Finally, we will use the `spread` function to have one column for the rookie and sophomore years batting averages:
 -->
 
-```{r, echo=FALSE}
+```{r}
 ROY <- ROY %>% spread(rookie, AVG) %>% arrange(desc(rookie)) 
 tmp <- ROY %>% slice(1:5) %>%
   select(nameFirst, nameLast, rookie_year, rookie, sophomore)
@@ -861,7 +861,7 @@ So is it "jitters" or "jinx"? To answer this question, let's turn our attention 
 
 <!--We perform similar operations to what we did above: -->
 
-```{r, echo=FALSE}
+```{r}
 two_years <- Batting %>% 
   filter(yearID %in% 2013:2014) %>% 
   group_by(playerID, yearID) %>%  
@@ -879,7 +879,7 @@ two_years <- Batting %>%
 
 The same pattern arises when we look at the top performers: batting averages go down for most of the top performers.
 
-```{r, echo=FALSE}
+```{r}
 tmp <- two_years %>% slice(1:5) 
 if(knitr::is_html_output()){
   knitr::kable(tmp, "html") %>%
@@ -892,7 +892,7 @@ if(knitr::is_html_output()){
 
 But these are not rookies! Also, look at what happens to the worst performers of 2013:
 
-```{r, echo=FALSE}
+```{r}
 tmp <- arrange(two_years, `2013`) %>% slice(1:5)
 if(knitr::is_html_output()){
   knitr::kable(tmp, "html") %>%
@@ -905,7 +905,7 @@ if(knitr::is_html_output()){
 
 Their batting averages mostly go up! Is this some sort of reverse sophomore slump? It is not. There is no such thing as the sophomore slump. This is all explained with a simple statistical fact: the correlation for performance in two separate years is high, but not perfect:
 
-```{r regression-fallacy, echo=FALSE, fig.height=3, fig.width=3, out.width="40%"}
+```{r regression-fallacy, fig.height=3, fig.width=3, out.width="40%"}
 qplot(`2013`, `2014`, data = two_years)
 ```
 

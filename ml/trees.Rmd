@@ -12,7 +12,7 @@ A useful way of understanding the curse of dimensionality is by considering how 
 
 For example, suppose we have one continuous predictor with equally spaced points in the [0,1] interval and we want to create windows that include 1/10th of data. Then it's easy to see that our windows have to be of size 0.1:
 
-```{r curse-of-dim, echo=FALSE, out.width="50%", fig.height=1.5}
+```{r curse-of-dim, out.width="50%", fig.height=1.5}
 rafalib::mypar()
 x <- seq(0,1,len=100)
 y <- rep(1, 100)
@@ -25,7 +25,7 @@ text(x[c(15,35)], y[c(15,35)], c("[","]"))
 
 Now, for two predictors, if we decide to keep the neighborhood just as small, 10% for each dimension, we include only 1 point. If we want to include 10% of the data, then we need to increase the size of each side of the square to $\sqrt{.10} \approx .316$:
 
-```{r curse-of-dim-2, echo=FALSE, fig.width=7, fig.height=3.5, out.width="50%",}
+```{r curse-of-dim-2, fig.width=7, fig.height=3.5, out.width="50%",}
 rafalib::mypar(1,2)
 tmp <- expand.grid(1:10, 1:10)
 x <- tmp[,1]
@@ -115,7 +115,7 @@ olive %>%
 In Section \@ref(predictor-space) we define predictor spaces. The predictor space here consists of eight-dimensional points with values between 0 and 100. In the plot above, we show the space defined by the two predictors eicosenoic and linoleic, and, by eye, 
 we can construct a prediction rule that partitions the predictor space so that each partition contains only outcomes of a one category. This in turn can be used to define an algorithm with perfect accuracy. Specifically, we define the following decision rule. If eicosenoic is larger than 0.065, predict Southern Italy. If not, then if linoleic is larger than $10.535$, predict Sardinia, and if lower, predict Northern Italy. We can draw this decision tree like this:
 
-```{r olive-tree, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.5, out.width="50%"}
+```{r olive-tree, warning=FALSE, message=FALSE, fig.height=4.5, out.width="50%"}
 library(caret)
 library(rpart)
 rafalib::mypar()
@@ -185,7 +185,7 @@ plot(fit, margin = 0.1)
 text(fit, cex = 0.75)
 ```
 
-```{r polls-2008-tree, fig.height=5, out.width="60%", echo=FALSE}
+```{r polls-2008-tree, fig.height=5, out.width="60%"}
 rafalib::mypar()
 plot(fit, margin = 0.1)
 text(fit, cex = 0.75)
@@ -240,7 +240,7 @@ plot(train_rpart$finalModel, margin = 0.1)
 text(train_rpart$finalModel, cex = 0.75)
 ```
 
-```{r polls-2008-final-model, fig.height=5, out.width="80%", echo=FALSE}
+```{r polls-2008-final-model, fig.height=5, out.width="80%"}
 rafalib::mypar()
 plot(train_rpart$finalModel, margin = 0.1)
 text(train_rpart$finalModel, cex = 0.75)
@@ -292,7 +292,7 @@ library(dslabs)
 data("mnist_27")
 ```
 
-```{r, echo=FALSE}
+```{r}
 plot_cond_prob <- function(p_hat=NULL){
   tmp <- mnist_27$true_p
   if(!is.null(p_hat)){
@@ -323,7 +323,7 @@ confusionMatrix(y_hat, mnist_27$test$y)$overall["Accuracy"]
 
 The plot of the estimated conditional probability shows us the limitations of classification trees:
 
-```{r rf-cond-prob, echo=FALSE, out.width="100%", warning=FALSE, message=FALSE}
+```{r rf-cond-prob, out.width="100%", warning=FALSE, message=FALSE}
 library(gridExtra)
 p1 <- plot_cond_prob() + ggtitle("True conditional probability")
 
@@ -370,7 +370,7 @@ rafalib::mypar()
 plot(fit)
 ```
 
-```{r more-trees-better-fit, echo=FALSE}
+```{r more-trees-better-fit}
 rafalib::mypar()
 plot(fit)
 ```
@@ -389,7 +389,7 @@ polls_2008 %>%
 
 Notice that the random forest estimate is much smoother than what we achieved with the regression tree in the previous section. This is possible because the average of many step functions can be smooth. We can see this by visually examining how the estimate changes as we add more trees. In the following figure you see each of the bootstrap samples for several values of $b$ and for each one we see the tree that is fitted in grey, the previous trees that were fitted in lighter grey, and the result of averaging all the trees estimated up to that point.
 
-```{r rf-animation, echo=FALSE, out.width="100%"}
+```{r rf-animation, out.width="100%"}
 library(rafalib)
 set.seed(1)
 ntrees <- 50
@@ -522,7 +522,7 @@ confusionMatrix(predict(train_rf_2, mnist_27$test),
 
 The selected model improves accuracy and provides a smoother estimate.
 
-```{r cond-prob-final-rf, echo=FALSE, out.width="100%"}
+```{r cond-prob-final-rf, out.width="100%"}
 p1 <- plot_cond_prob() + ggtitle("True conditional probability")
 
 p2 <- plot_cond_prob(predict(train_rf_2, newdata = mnist_27$true_p, type="prob")[,2]) +

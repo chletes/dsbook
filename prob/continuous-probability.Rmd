@@ -56,7 +56,7 @@ s <- sd(x)
 
 The normal distribution is derived mathematically: we do not need data to define it. For practicing data scientists, almost everything we do involves data. Data is always, technically speaking, discrete. For example, we could consider our height data categorical with each specific height a unique category. The probability distribution is defined by the proportion of students reporting each height. Here is a plot of that probability distribution:
 
-```{r plot-of-height-frequencies, echo=FALSE}
+```{r plot-of-height-frequencies}
 rafalib::mypar()
 plot(prop.table(table(x)), xlab = "a = Height in inches", ylab = "Pr(X = a)")
 ```
@@ -125,7 +125,7 @@ For example, to use the normal approximation to estimate the probability of some
 
 which mathematically is the grey area below:
 
-```{r intergrals, echo=FALSE}
+```{r intergrals}
 dat <- tibble(x = seq(-4, 4, length=100) * s + m,
               y = dnorm(x, m, s))
 
@@ -153,7 +153,7 @@ simulated_heights <- rnorm(n, m, s)
 
 Not surprisingly, the distribution looks normal:
 
-```{r simulated-heights, echo=FALSE}
+```{r simulated-heights}
 data.frame(simulated_heights = simulated_heights) %>%
   ggplot(aes(simulated_heights)) + 
   geom_histogram(color="black", binwidth = 1) 
@@ -179,7 +179,7 @@ mean(tallest >= 7*12)
 
 Here is the resulting distribution:
 
-```{r simulated-tallest-height, echo=FALSE}
+```{r simulated-tallest-height}
 data.frame(tallest = tallest) %>% ggplot(aes(tallest)) + 
   geom_histogram(color="black", binwidth = 1) 
 ```

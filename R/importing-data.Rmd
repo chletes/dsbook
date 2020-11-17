@@ -235,7 +235,7 @@ Use the `readLines` function to read in just the first line (we later learn how 
 
 Another common place for data to reside is on the internet. When these data are in files, we can download them and then import them or even read them directly from the web. For example, we note that because our __dslabs__ package is on GitHub, the file we downloaded with the package has a url:
 
-```{r, echo=FALSE}
+```{r}
 url <- 
   "https://raw.githubusercontent.com/rafalab/dslabs/master/inst/extdata/murders.csv"
 ```
@@ -329,7 +329,7 @@ we summarize the recommendations made in paper by Karl Broman and Kara Woo^[http
 1\. Pick a measurement you can take on a regular basis. For example, your daily weight or how long it takes you to run 5 miles. Keep a spreadsheet that includes the date, the hour, the measurement, and any other informative variable you think is worth keeping. Do this for 2 weeks. Then make a plot.
 
 
-```{r, message=FALSE, echo=FALSE}
+```{r, message=FALSE}
 tmp <- file.remove("murders.csv")
 ```
 

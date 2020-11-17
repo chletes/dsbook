@@ -199,7 +199,7 @@ d. Unless we include all predictors, we have no predicting power.
 
 The regression approach can be extended to categorical data. In this section we first illustrate how, for binary data, one can simply assign numeric values of 0 and 1 to the outcomes $y$, and apply regression as if the data were continuous. We will then point out a limitation with this approach and introduce _logistic regression_ as a solution. Logistic regression is a specific case of a set of _generalized linear models_. To illustrate logistic regression, we will apply it to our previous predicting sex example:
 
-```{r, echo=FALSE}
+```{r}
 library(dslabs)
 data("heights")
 
@@ -297,7 +297,7 @@ $$ g(p) = \log \frac{p}{1-p}$$
 
 This logistic transformation converts probability to log odds. As discussed in the data visualization lecture, the odds tell us how much more likely it is something will happen compared to not happening. $p=0.5$ means the odds are 1 to 1, thus the odds are 1. If $p=0.75$, the odds are 3 to 1. A nice characteristic of this transformation is that it converts probabilities to be symmetric around 0. Here is a plot of $g(p)$ versus $p$:
 
-```{r p-versus-logistic-of-p, echo=FALSE}
+```{r p-versus-logistic-of-p}
 p <- seq(0.01,.99,len=100)
 qplot(p, log( p/(1-p) ), geom="line")
 ```
@@ -329,7 +329,7 @@ When using `predict` with a `glm` object, we have to specify that we want `type=
 
 This model fits the data slightly better than the line:
 
-```{r conditional-prob-glm-fit, echo=FALSE }
+```{r conditional-prob-glm-fit}
 tmp <- heights %>% 
   mutate(x = round(height)) %>%
   group_by(x) %>%
@@ -395,7 +395,7 @@ confusionMatrix(y_hat_glm, mnist_27$test$y)$overall["Accuracy"]
 Comparing to the results we obtained in Section \@ref(two-or-seven), we see that logistic regression performs similarly to regression. 
 This is not surprising, given that the estimate of  $\hat{p}(x_1, x_2)$ looks similar as well:
 
-```{r, echo=FALSE}
+```{r}
 # We use this function to plot the estimated conditional probabilities
 plot_cond_prob <- function(p_hat=NULL){
   tmp <- mnist_27$true_p

@@ -109,7 +109,7 @@ accuracy <- map_dbl(cutoff, function(x){
 
 We can make a plot showing the accuracy obtained on the training set for males and females:
 
-```{r accuracy-vs-cutoff, echo=FALSE}
+```{r accuracy-vs-cutoff}
 data.frame(cutoff, accuracy) %>% 
   ggplot(aes(cutoff, accuracy)) + 
   geom_point() + 
@@ -186,7 +186,7 @@ Although the above is often considered the definition of specificity, another wa
 
 To provide precise definitions, we name the four entries of the confusion matrix:
 
-```{r, echo=FALSE}
+```{r}
 mat <- matrix(c("True positives (TP)", "False negatives (FN)", 
                 "False positives (FP)", "True negatives (TN)"), 2, 2)
 colnames(mat) <- c("Actually Positive", "Actually Negative")
@@ -273,7 +273,7 @@ F_1 <- map_dbl(cutoff, function(x){
 
 As before, we can plot these $F_1$ measures versus the cutoffs:
 
-```{r f_1-vs-cutoff, echo=FALSE}
+```{r f_1-vs-cutoff}
 data.frame(cutoff, F_1) %>% 
   ggplot(aes(cutoff, F_1)) + 
   geom_point() + 
@@ -351,7 +351,7 @@ We can use similar code to compute these values for our our second approach. By 
 
 <!--We can construct an ROC curve for the height-based approach:-->
 
-```{r, echo=FALSE}
+```{r}
 cutoffs <- c(50, seq(60, 75), 80)
 height_cutoff <- map_df(cutoffs, function(x){
   y_hat <- ifelse(test_set$height > x, "Male", "Female") %>% 
@@ -362,7 +362,7 @@ height_cutoff <- map_df(cutoffs, function(x){
 })
 ```
 <!--
-```{r roc-2, echo=FALSE}
+```{r roc-2}
 bind_rows(guessing, height_cutoff) %>%
   ggplot(aes(FPR, TPR, color = method)) +
   geom_line() +
@@ -372,7 +372,7 @@ bind_rows(guessing, height_cutoff) %>%
 ```
 -->
 
-```{r roc-3, echo=FALSE, fig.width=6, fig.height=3}
+```{r roc-3, fig.width=6, fig.height=3}
 library(ggrepel)
 tmp_1 <- map_df(cutoffs, function(x){
   y_hat <- ifelse(test_set$height > x, "Male", "Female") %>% 
@@ -406,7 +406,7 @@ The packages __pROC__ and __plotROC__ are useful for generating these plots.
 ROC curves have one weakness and it is that neither of the measures plotted depends on prevalence. In cases in which prevalence matters, we may instead make a precision-recall plot. The idea is similar, but we instead plot precision against recall:
 
 
-```{r precision-recall-1, warning=FALSE, message=FALSE, echo=FALSE}
+```{r precision-recall-1, warning=FALSE, message=FALSE}
 guessing <- map_df(probs, function(p){
   y_hat <- sample(c("Male", "Female"), length(test_index), 
                   replace = TRUE, prob=c(p, 1-p)) %>% 

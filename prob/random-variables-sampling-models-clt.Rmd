@@ -101,7 +101,7 @@ mean(S<0)
 
 We can visualize the distribution of $S$ by creating a histogram showing the probability $F(b)-F(a)$ for several intervals $(a,b]$: 
 
-```{r normal-approximates-distribution, echo=FALSE}
+```{r normal-approximates-distribution}
 s <- seq(min(S), max(S), length = 100)
 normal_density <- data.frame(s = s, f=dnorm(s, mean(S), sd(S)))
 data.frame(S=S) %>% ggplot(aes(S, ..density..)) +

@@ -67,7 +67,7 @@ result <- ifelse(a > 0, 1/a, NA)
 ```
 
 This table helps us see what happened:
-```{r, echo=FALSE}
+```{r}
 tmp <- data.frame(a = a, is_a_positive = a > 0, answer1 = 1/a, answer2 = NA, result = result)
 if(knitr::is_html_output()){
   knitr::kable(tmp, "html") %>%
@@ -225,7 +225,7 @@ n <- 1:m
 plot(n, s_n)
 ```
 
-```{r sum-of-consecutive-squares, out.width="50%", echo=FALSE}
+```{r sum-of-consecutive-squares, out.width="50%"}
 rafalib::mypar()
 n <- 1:m
 plot(n, s_n)

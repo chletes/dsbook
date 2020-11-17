@@ -186,7 +186,7 @@ A first step in this type of task is to survey the problematic entries and try t
 
 To look for such patterns, it helps to remove the entries that are consistent with being in inches and to view only the problematic entries. We thus write a function to automatically do this. We keep entries that either result in `NA`s when applying `as.numeric` or are outside a range of plausible heights. We permit a range that covers about 99.9999% of the adult population. We also use `suppressWarnings` to avoid the warning message we know `as.numeric` will gives us.
 
-```{r, echo=FALSE, eval=FALSE}
+```{r, eval=FALSE}
 alpha <- 1 / 10^6
 qnorm(1 - alpha / 2, 69.1, 2.9)
 qnorm(alpha / 2, 63.7, 2.7)
@@ -213,14 +213,14 @@ We can now view all the cases by simply printing them. We don't do that here bec
 
 1\. A pattern of the form `x'y` or `x' y''` or `x'y"` with `x` and `y` representing feet and inches, respectively. Here are ten examples:
 
-```{r, echo=FALSE}
+```{r}
 pattern <- "^\\d\\s*'\\s*\\d{1,2}\\.*\\d*'*\"*$"
 str_subset(problems, pattern) %>% head(n=10) %>% cat()
 ```
 
 2\. A pattern of the form `x.y` or `x,y` with `x` feet and `y` inches. Here are ten examples:
 
-```{r, echo=FALSE}
+```{r}
 pattern <- "^[4-6]\\s*[\\.|,]\\s*([0-9]|10|11)$"
 str_subset(problems, pattern) %>% head(n=10) %>% cat()
 ```
@@ -228,7 +228,7 @@ str_subset(problems, pattern) %>% head(n=10) %>% cat()
 
 3\. Entries that were reported in centimeters rather than inches. Here are ten examples:
 
-```{r, echo=FALSE}
+```{r}
 ind <- which(between(suppressWarnings(as.numeric(problems))/2.54, 54, 81) )
 ind <- ind[!is.na(ind)]
 problems[ind] %>% head(n=10) %>% cat
@@ -456,7 +456,7 @@ s <- c(yes, no)
 str_view_all(s, pattern)
 ```
 
-```{r, echo=FALSE}
+```{r}
 pattern <- "^\\d$"
 yes <- c("1", "5", "9")
 no <- c("12", "123", " 1", "a4", "b")
@@ -1127,7 +1127,7 @@ the_names_2 <- tab[4]
 
 The first of these rows looks like this:
 
-```{r, echo=FALSE}
+```{r}
 cat(substr(the_names_1, 1, options()$width))
 cat(substr(the_names_1, options()$width, nchar(the_names_1)))
 ```
@@ -1144,7 +1144,7 @@ the_names_1
 
 
 Now we will look at `the_names_2`: 
-```{r, echo=FALSE}
+```{r}
 cat(substr(the_names_2, 1, options()$width))
 cat(substr(the_names_2, options()$width, nchar(the_names_2)))
 ```
