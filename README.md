@@ -13,3 +13,11 @@ For updates follow
 The `install-libraries.Rmd`, contributed by `Emmanuel-R8` installs all the libraries needed to have all chapters of the book run on your computer. 
 
 This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0)
+
+## How to update [Note to me]
+
+`git remote add upstream git@github.com:rafalab/dsbook.git`
+
+`git remote -v` will show the rafalab upstream.
+
+`git merge upstream/master --allow-unrelated-histories` and then fix conflicts.
