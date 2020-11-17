@@ -108,7 +108,8 @@ The most common test score is the minimum passing grade, with very few scores ju
 
 This is an example of how data visualization can lead to discoveries which would otherwise be missed if we simply subjected the data to a battery of data analysis tools or procedures. Data visualization is the strongest tool of what we call _exploratory data analysis_ (EDA). John W. Tukey^[https://en.wikipedia.org/wiki/John_Tukey], considered the father of EDA, once said,
 
->> "The greatest value of a picture is when it forces us to notice what we never expected to see." 
+>> "The greatest value of a picture is when it forces us to notice what we never 
+expected to see." 
 
 Many widely used data analysis tools were initiated by discoveries made via EDA. EDA is perhaps the most important part of data analysis, yet it is one that is often overlooked.
 

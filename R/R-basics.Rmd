@@ -459,13 +459,14 @@ It is important to know that the order of the entries in `murders$population` pr
 The object `murders$population` is not one number but several. We call these types of objects _vectors_. A single number is technically a vector of length 1, but in general we use the term vectors to refer to objects with several entries. The function `length` tells you how many entries are in the vector:
 
 ```{r}
-length(murders$population)
+pop <- murders$population
+length(pop)
 ```
 
 This particular vector is _numeric_ since population sizes are numbers:
 
 ```{r}
-class(murders$population)
+class(pop)
 ```
 In a numeric vector, every entry must be a number. 
 
@@ -864,13 +865,13 @@ R also offers functions to change from one type to another. For example, you can
 ```{r}
 x <- 1:5
 y <- as.character(x)
-class(y)
+y
 ```
 
 You can turn it back with `as.numeric`:
 
 ```{r}
-class(as.numeric(y))
+as.numeric(y)
 ```
  
 This function is actually quite useful since datasets that include numbers as character strings are common. 

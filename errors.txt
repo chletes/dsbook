@@ -171,6 +171,92 @@ Should be
 Although this book focuses almost exclusively on data analysis, data management is also an important part of data science. As explained in the introduction, we do not cover this topic. However, quite often data analysts needs to collect data, or work with others collecting data, in a way that is most conveniently stored in a spreadsheet. Although filling out a spreadsheet by hand is a practice we highly discourage, we instead recommend the process be automatized as much as possible, sometimes you just have to do it. Therefore, in this section, we provide recommendations on how to organize data in a spreadsheet. Although there are R packages designed to read Microsoft Excel spreadsheets, we generally want to avoid this format. Instead, we recommend Google Sheets as a free software tool. Below 
 we summarize the recommendations made in paper by Karl Broman and Kara Woo^[https://www.tandfonline.com/doi/abs/10.1080/00031305.2017.1375989]. Please read the paper for important details.
 
+page 97 in pdf
+
+Replace
+
+One other important difference is that by default `data.frame` coerces characters into factors without providing a warning or message:
+
+```{r}
+grades <- data.frame(names = c("John", "Juan", "Jean", "Yao"), 
+                     exam_1 = c(95, 80, 90, 85), 
+                     exam_2 = c(90, 85, 85, 90))
+class(grades$names)
+```
+
+To avoid this, we use the rather cumbersome argument `stringsAsFactors`:
+```{r}
+grades <- data.frame(names = c("John", "Juan", "Jean", "Yao"), 
+                     exam_1 = c(95, 80, 90, 85), 
+                     exam_2 = c(90, 85, 85, 90),
+                     stringsAsFactors = FALSE)
+class(grades$names)
+```
+
+with 
+
+
+```{r}
+grades <- data.frame(names = c("John", "Juan", "Jean", "Yao"), 
+                     exam_1 = c(95, 80, 90, 85), 
+                     exam_2 = c(90, 85, 85, 90))
+```
+
+
+
+
+page 110 in pdf
+Change 
+
+However, there are a couple of important differences. To show this we read-in the data with an R-base function:
+
+```{r}
+dat2 <- read.csv(filename)
+```
+
+An important difference is that the characters are converted to factors:
+
+```{r}
+class(dat2$abb)
+class(dat2$region)
+```
+
+This can be avoided by setting the argument `stringsAsFactors` to `FALSE`. 
+
+```{r}
+dat <- read.csv("murders.csv", stringsAsFactors = FALSE)
+class(dat$state)
+```
+
+In our experience this can be a cause for confusion since a variable that was saved as characters in file is converted to factors regardless of what the variable represents. In fact, we **highly** recommend setting `stringsAsFactors=FALSE` to be your default approach when using the R-base parsers. You can easily convert the desired columns to factors after importing data.
+
+to
+
+You can obtain an data frame like `dat` using:
+
+```{r}
+dat2 <- read.csv(filename)
+```
+
+page 100 in pdf
+
+Replace the scan subsection.
+
+
+Change 
+
+### `scan` 
+
+to 
+
+
+An often useful R-base importing function is `scan`, as it provides much flexibility.
+
+
+also added space between `=` here:
+
+x <- scan(file.path(path, filename), sep=",", what = "c")
+x <- scan(file.path(path, filename), sep = ",", what = "c")
 
 Page 132, 160 in pdf
 
@@ -343,6 +429,34 @@ Page 449, 477 in pdf
 
 There should be a space between "epoch" and "The".
 
+page 472 in pdf
+
+Remove the stringAsFactors
+
+
+```{r}
+new_research_funding_rates <- tab[6:14] %>%
+  str_trim %>%
+  str_split("\\s{2,}", simplify = TRUE) %>%
+  data.frame(stringsAsFactors = FALSE) %>%
+  setNames(the_names) %>%
+  mutate_at(-1, parse_number)
+new_research_funding_rates %>% as_tibble()
+```
+
+should be
+
+
+```{r}
+new_research_funding_rates <- tab[6:14] %>%
+  str_trim %>%
+  str_split("\\s{2,}", simplify = TRUE) %>%
+  data.frame() %>%
+  setNames(the_names) %>%
+  mutate_at(-1, parse_number)
+new_research_funding_rates %>% as_tibble()
+```
+
 
 Page 485, 513 in pdf
  
@@ -368,6 +482,11 @@ y_hat_glm <- factor(ifelse(p_hat_glm > 0.5, 7, 2))
 confusionMatrix(y_hat_glm, mnist_27$test$y)$overall["Accuracy"]
 #> Accuracy #> 0.75
 
+Page 621 in pdf
+The first two numbers are seven and the third one is a 2. 
+should be
+
+The first and third numbers are sevens and the second one is a two.
 
 Page 667, 695 in pdf
 
@@ -444,6 +563,31 @@ library(dslabs)
 mnist <- read_mnist()
 y <- mnist$train$labels
 
+Page 626 in the pdf
+The average distance function has i,j and instead should have 1,j and 2,j
+
+$$\sqrt{ \frac{1}{2} \sum_{j=1}^2 (X_{i,j}-X_{i,j})^2 },$$
+
+Should be 
+
+$$\sqrt{ \frac{1}{2} \sum_{j=1}^2 (X_{1,j}-X_{2,j})^2 },$$
+
+page 659 in pdf
+
+The m shoud be an n at the end of the first equation: 
+
+$$
+r_{u,i} = p_{u,1} q_{1,i} + p_{u,2} q_{2,i} + \dots + p_{u,m} q_{m,i} 
+$$
+
+should be 
+$$
+r_{u,i} = p_{u,1} q_{1,i} + p_{u,2} q_{2,i} + \dots + p_{u,n} q_{n,i} 
+$$
+
+
+NEED to FIX JSON PART. Search for citi_bike
+ALSO IN SPANISH VERSION
 =====================================
 Improvements (not errors)
 

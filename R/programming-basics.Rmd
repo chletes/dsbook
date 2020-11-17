@@ -233,7 +233,6 @@ plot(n, s_n)
 
 
 If you noticed that it appears to be a quadratic, you are on the right track because the formula is $n(n+1)/2$.
-
 which we can confirm with a table:
 
 ```{r show_s_n_table}
